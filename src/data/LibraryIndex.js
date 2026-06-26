@@ -13,7 +13,7 @@
  */
 
 // Ruta base de la librería
-const LIBRARY_BASE = '/src/library/';
+const LIBRARY_BASE = './src/library/';
 const INDEX_PATH   = `${LIBRARY_BASE}index.json`;
 
 class _LibraryIndex {

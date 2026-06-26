@@ -6,25 +6,38 @@
     <title>Quantum View</title>
 
     <!-- PWA & Icons -->
-    <link rel="manifest" href="site.webmanifest">
-    <link rel="icon" type="image/svg+xml" href="assets/icons/favicon.svg">
-    <link rel="icon" type="image/x-icon"  href="assets/icons/favicon.ico">
-    <link rel="apple-touch-icon"          href="assets/icons/apple-touch-icon.png">
+    <link rel="manifest" href="./site.webmanifest">
+    <link rel="icon" type="image/svg+xml" href="./assets/icons/favicon.svg">
+    <link rel="icon" type="image/x-icon"  href="./assets/icons/favicon.ico">
+    <link rel="apple-touch-icon"          href="./assets/icons/apple-touch-icon.png">
 
     <script type="importmap">
-    {
-      "imports": {
-        "three":         "/lib/three/build/three.module.js",
-        "three/addons/": "/lib/three/examples/jsm/",
-        "three/webgpu":  "/lib/three/build/three.webgpu.js",
-        "three/tsl":     "/lib/three/build/three.tsl.js"
-      }
-    }
+        {
+            "imports": {
+                "three": "https://cdn.jsdelivr.net/npm/three@0.184.0/build/three.module.js",
+                "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.184.0/examples/jsm/",
+                "three/webgpu":   "https://cdn.jsdelivr.net/npm/three@0.184.0/build/three.webgpu.js",
+                "three/tsl":      "https://cdn.jsdelivr.net/npm/three@0.184.0/build/three.tsl.js"
+            }
+        }
     </script>
+    <!-- Three.js importmap -
 
-    <link rel="stylesheet" href="css/variables.css">
-    <link rel="stylesheet" href="css/base.css">
-    <link rel="stylesheet" href="css/quantum-view.css">
+        <script type="importmap">
+            {
+                "imports": {
+                    "three":          "./lib/three/build/three.module.js",
+                    "three/addons/":  "./lib/three/examples/jsm/",
+                    "three/webgpu":   "./lib/three/build/three.webgpu.js",
+                    "three/tsl":      "./lib/three/build/three.tsl.js"
+                }
+            }
+        </script> 
+    -->
+
+    <link rel="stylesheet" href="./css/variables.css">
+    <link rel="stylesheet" href="./css/base.css">
+    <link rel="stylesheet" href="./css/quantum-view.css">
 </head>
 <body>
 
@@ -32,7 +45,7 @@
 <div id="qv-overlay"></div>
 
 <header id="qv-header">
-    <a id="qv-back" href="index.html" data-i18n-title="tooltips.back" data-i18n="quantum.back_short">← SIM</a>
+    <a id="qv-back" href="./index.html" data-i18n-title="tooltips.back" data-i18n="quantum.back_short">← SIM</a>
     <span id="qv-title">Quantum View</span>
     <button id="qv-fullscreen-btn" title="Pantalla completa" data-i18n-title="tooltips.fullscreen">⛶</button>
 </header>
@@ -202,7 +215,7 @@
     </div>
 </div>
 
-<script type="module" src="js/quantum-view.js"></script>
+<script type="module" src="./js/quantum-view.js"></script>
 
 </body>
 </html>

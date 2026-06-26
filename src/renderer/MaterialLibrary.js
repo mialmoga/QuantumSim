@@ -28,7 +28,7 @@
  *   const mat = await MaterialLibrary.getForElement('Fe', 'transition_metal');
  */
 
-const MATERIALS_BASE = '/src/materials';
+const MATERIALS_BASE = './src/materials';
 
 // Mapa grupo → elemento representativo como fallback
 // Si un elemento no tiene su propio material, usa el del elemento más representativo del grupo

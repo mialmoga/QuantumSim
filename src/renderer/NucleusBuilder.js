@@ -39,7 +39,7 @@ let _deformData = null;
 async function _loadDeformData() {
     if (_deformData) return _deformData;
     try {
-        const resp = await fetch('data/deformaciones_nucleares_qcs.json');
+        const resp = await fetch('./data/deformaciones_nucleares_qcs.json');
         const arr  = await resp.json();
         _deformData = new Map(arr.map(e => [e.Z, e]));
     } catch (e) {
