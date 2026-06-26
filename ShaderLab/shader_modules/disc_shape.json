@@ -1,0 +1,41 @@
+{
+  "id": "disc_shape",
+  "name": "Disc Shape",
+  "stage": "frag",
+  "target": [
+    "orbital",
+    "sphere"
+  ],
+  "color": "#fb923c",
+  "desc": "Forma del punto \u2014 c\u00edrculo con borde suave y ring opcional",
+  "sub": "d = dot(uv,uv) \u2192 alpha suave",
+  "params": {
+    "radius": {
+      "label": "Radio",
+      "min": 0.05,
+      "max": 0.5,
+      "step": 0.01,
+      "val": 0.05
+    },
+    "soft": {
+      "label": "Borde suave",
+      "min": 0.0,
+      "max": 0.4,
+      "step": 0.01,
+      "val": 0.0
+    },
+    "ring": {
+      "label": "Ring hole",
+      "min": 0.0,
+      "max": 0.22,
+      "step": 0.01,
+      "val": 0.0
+    }
+  },
+  "glsl": "{vec2 _uv=gl_PointCoord-0.5;d=dot(_uv,_uv);if(d>{{radius}})discard;if({{ring}}>0.005&&d<{{ring}})discard;alpha=1.0-smoothstep({{soft}},{{radius}},d);}",
+  "requires": [],
+  "provides": [
+    "d",
+    "alpha"
+  ]
+}

@@ -1,0 +1,121 @@
+{
+  "symbol": "Nb",
+  "identity": {
+    "name_es": "Niobio",
+    "name_eng": "Niobium",
+    "number": 41,
+    "category_es": "Metal de transición",
+    "category_eng": "Transition metal",
+    "color": "0xA8A8B0",
+    "cpk_color": "0x73C2C2",
+    "discovery_year": "1801"
+  },
+  "physical_properties": {
+    "mass": 92.906,
+    "density_g_cm3": 8.57,
+    "standard_state_es": "Sólido",
+    "standard_state_eng": "Solid",
+    "melt_K": 2750,
+    "boil_K": 5017,
+    "allotropes_es": null,
+    "allotropes_eng": null,
+    "lattice_structure": "bcc"
+  },
+  "atomic_structure": {
+    "electronegativity": 1.6,
+    "valence": 5,
+    "ionization_energy_eV": 6.7589,
+    "electron_affinity_ev": 0.893,
+    "electron_affinity_kj_mol": 86.1,
+    "radius_atomic_pm": 146,
+    "radius_covalent_pm": 164,
+    "vanderwaals_radius_pm": 207,
+    "ionic_radius_pm": 64,
+    "effective_nuclear_charge": 5.43,
+    "electron_configuration_string": "[Kr] 4d4 5s1",
+    "shells": [
+      2,
+      8,
+      18,
+      12,
+      1
+    ],
+    "quantum_numbers": {
+      "s": 1,
+      "p": 0,
+      "d": 4,
+      "f": 0
+    },
+    "work_function_ev": 4.3
+  },
+  "thermodynamics": {
+    "enthalpy_formation_kj_mol": 0,
+    "entropy_j_molk": 36.4,
+    "heat_capacity_j_molk": 24.6,
+    "specific_heat_j_gK": 0.265,
+    "latent_heat_fusion_kj_mol": 30,
+    "latent_heat_vaporization_kj_mol": 680,
+    "fusion_heat_kj_mol": 26.4,
+    "evaporation_heat_kj_mol": 689.9
+  },
+  "kinetics_and_phase": {
+    "vapor_pressure_constants": {
+      "A": 5.1,
+      "B": 28500,
+      "C": -10
+    },
+    "vapor_pressure_pa": null,
+    "viscosity_liquid_pas": 0.04,
+    "viscosity_pa_s": null,
+    "critical_temp_K": null,
+    "critical_press_MPa": null,
+    "surface_tension_nm": 1.9
+  },
+  "electromagnetism_and_mechanics": {
+    "thermal_conductivity_wmk": 53.7,
+    "electrical_conductivity_sm": 8000000,
+    "magnetic_susceptibility": 0.000228,
+    "thermal_expansion_coefficient": 7.3e-06,
+    "polarizability_angstrom3": 15.7,
+    "refractive_index": null,
+    "youngs_modulus_gba": 105,
+    "poisson_ratio": 0.4,
+    "brinell_hardness_m_pa": 736
+  },
+  "reactivity": {
+    "max_bonds": 5,
+    "geometry_preference_es": "Octaédrica",
+    "geometry_preference_eng": "Octahedral",
+    "ideal_bond_angle": null,
+    "bond_energy_ev": null,
+    "dissociation_energy_kj_mol": null,
+    "standard_potential_v": -1.1,
+    "oxidation_states": [
+      5,
+      3
+    ],
+    "common_ions": [
+      "Nb5+"
+    ]
+  },
+  "nuclear_and_environmental": {
+    "isotopes": [
+      {
+        "mass": 92.906,
+        "abundance": 100,
+        "stable": true,
+        "name_es": "Niobio-93",
+        "name_eng": "Niobium-93"
+      }
+    ],
+    "neutron_cross_section_barns": 1.1,
+    "nuclear_binding_energy_mev": 8.664,
+    "abundance_crust_mg_kg": 20,
+    "toxicity_level": 1
+  },
+  "cryogenic_data": {
+    "critical_solidification_pressure_mpa": null,
+    "lambda_point_k": 9.25,
+    "superfluid_viscosity_pas": null
+  }
+}

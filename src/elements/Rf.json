@@ -1,0 +1,126 @@
+{
+  "symbol": "Rf",
+  "identity": {
+    "name_es": "Rutherfordio",
+    "name_eng": "Rutherfordium",
+    "number": 104,
+    "category_es": "Metal de transición",
+    "category_eng": "Transition metal",
+    "color": "0xA0A0A0",
+    "cpk_color": "0xCC0059",
+    "discovery_year": "1964"
+  },
+  "physical_properties": {
+    "mass": 267.12,
+    "density_g_cm3": 23.2,
+    "standard_state_es": "Sólido (predicho)",
+    "standard_state_eng": "Solid (predicted)",
+    "melt_K": 2400,
+    "boil_K": 5800,
+    "allotropes_es": null,
+    "allotropes_eng": null,
+    "lattice_structure": "hcp (predicho)"
+  },
+  "atomic_structure": {
+    "electronegativity": 1.3,
+    "valence": 4,
+    "ionization_energy_eV": 6.01,
+    "electron_affinity_ev": null,
+    "electron_affinity_kj_mol": null,
+    "radius_atomic_pm": 150,
+    "radius_covalent_pm": 140,
+    "vanderwaals_radius_pm": 232,
+    "ionic_radius_pm": 76,
+    "effective_nuclear_charge": 6.5,
+    "electron_configuration_string": "[Rn] 5f14 6d2 7s2",
+    "shells": [
+      2,
+      8,
+      18,
+      32,
+      32,
+      10,
+      2
+    ],
+    "quantum_numbers": {
+      "s": 2,
+      "p": 0,
+      "d": 2,
+      "f": 14
+    },
+    "work_function_ev": null
+  },
+  "thermodynamics": {
+    "enthalpy_formation_kj_mol": 0,
+    "entropy_j_molk": null,
+    "heat_capacity_j_molk": 26,
+    "specific_heat_j_gK": 0.1,
+    "latent_heat_fusion_kj_mol": 28,
+    "latent_heat_vaporization_kj_mol": 580,
+    "fusion_heat_kj_mol": 28,
+    "evaporation_heat_kj_mol": 580
+  },
+  "kinetics_and_phase": {
+    "vapor_pressure_constants": {
+      "A": null,
+      "B": null,
+      "C": null
+    },
+    "vapor_pressure_pa": null,
+    "viscosity_liquid_pas": null,
+    "viscosity_pa_s": null,
+    "critical_temp_K": null,
+    "critical_press_MPa": null,
+    "surface_tension_nm": null
+  },
+  "electromagnetism_and_mechanics": {
+    "thermal_conductivity_wmk": 11,
+    "electrical_conductivity_sm": null,
+    "magnetic_susceptibility": null,
+    "thermal_expansion_coefficient": null,
+    "polarizability_angstrom3": 15,
+    "refractive_index": null,
+    "youngs_modulus_gba": null,
+    "poisson_ratio": null,
+    "brinell_hardness_m_pa": null
+  },
+  "reactivity": {
+    "max_bonds": 4,
+    "geometry_preference_es": "Tetraédrica (predicho)",
+    "geometry_preference_eng": "Tetrahedral (predicted)",
+    "ideal_bond_angle": 109.5,
+    "bond_energy_ev": 2.1,
+    "dissociation_energy_kj_mol": null,
+    "standard_potential_v": -1.5,
+    "oxidation_states": [
+      4
+    ],
+    "common_ions": [
+      "Rf4+"
+    ]
+  },
+  "nuclear_and_environmental": {
+    "isotopes": [
+      {
+        "mass": 261.11,
+        "abundance": null,
+        "stable": false,
+        "half_life_s": 68,
+        "name_es": "Rutherfordio-261",
+        "name_eng": "Rutherfordium-261"
+      },
+      {
+        "mass": 267.12,
+        "abundance": null,
+        "stable": false,
+        "half_life_s": 4800,
+        "name_es": "Rutherfordio-267",
+        "name_eng": "Rutherfordium-267"
+      }
+    ],
+    "neutron_cross_section_barns": null,
+    "nuclear_binding_energy_mev": 7.2,
+    "abundance_crust_mg_kg": 0,
+    "toxicity_level": 5
+  }
+}

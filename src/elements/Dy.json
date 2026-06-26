@@ -1,0 +1,170 @@
+{
+  "symbol": "Dy",
+  "identity": {
+    "name_es": "Disprosio",
+    "name_eng": "Dysprosium",
+    "number": 66,
+    "category_es": "Lantánido",
+    "category_eng": "Lanthanide",
+    "color": "0xC0C0C0",
+    "cpk_color": "0x1FFFC7",
+    "discovery_year": "1886"
+  },
+  "physical_properties": {
+    "mass": 162.5,
+    "density_g_cm3": 8.54,
+    "standard_state_es": "Sólido",
+    "standard_state_eng": "Solid",
+    "melt_K": 1680,
+    "boil_K": 2840,
+    "allotropes_es": [
+      "Alfa (hcp)",
+      "Beta (bcc)"
+    ],
+    "allotropes_eng": [
+      "Alpha (hcp)",
+      "Beta (bcc)"
+    ],
+    "lattice_structure": "hcp"
+  },
+  "atomic_structure": {
+    "electronegativity": 1.22,
+    "valence": 3,
+    "ionization_energy_eV": 5.9389,
+    "electron_affinity_ev": 0.352,
+    "electron_affinity_kj_mol": 33.9,
+    "radius_atomic_pm": 175,
+    "radius_covalent_pm": 192,
+    "vanderwaals_radius_pm": 229,
+    "ionic_radius_pm": 91.2,
+    "effective_nuclear_charge": 6.3,
+    "electron_configuration_string": "[Xe] 4f10 6s2",
+    "shells": [
+      2,
+      8,
+      18,
+      28,
+      8,
+      2
+    ],
+    "quantum_numbers": {
+      "s": 2,
+      "p": 0,
+      "d": 0,
+      "f": 10
+    },
+    "work_function_ev": 3.1
+  },
+  "thermodynamics": {
+    "enthalpy_formation_kj_mol": 0,
+    "entropy_j_molk": 74.8,
+    "heat_capacity_j_molk": 27.7,
+    "specific_heat_j_gK": 0.17,
+    "latent_heat_fusion_kj_mol": 11.06,
+    "latent_heat_vaporization_kj_mol": 280,
+    "fusion_heat_kj_mol": 11.1,
+    "evaporation_heat_kj_mol": 293
+  },
+  "kinetics_and_phase": {
+    "vapor_pressure_constants": {
+      "A": 5.1,
+      "B": 15000,
+      "C": -10
+    },
+    "vapor_pressure_pa": null,
+    "viscosity_liquid_pas": null,
+    "viscosity_pa_s": null,
+    "critical_temp_K": null,
+    "critical_press_MPa": null,
+    "surface_tension_nm": 0.648
+  },
+  "electromagnetism_and_mechanics": {
+    "thermal_conductivity_wmk": 10.7,
+    "electrical_conductivity_sm": 1100000,
+    "magnetic_susceptibility": 0.00059,
+    "thermal_expansion_coefficient": 9.9e-06,
+    "polarizability_angstrom3": 24.1,
+    "refractive_index": null,
+    "youngs_modulus_gba": 61.4,
+    "poisson_ratio": 0.247,
+    "brinell_hardness_m_pa": 550
+  },
+  "reactivity": {
+    "max_bonds": 3,
+    "geometry_preference_es": "Octaédrica",
+    "geometry_preference_eng": "Octahedral",
+    "ideal_bond_angle": null,
+    "bond_energy_ev": null,
+    "dissociation_energy_kj_mol": null,
+    "standard_potential_v": -2.29,
+    "oxidation_states": [
+      3,
+      4
+    ],
+    "common_ions": [
+      "Dy3+"
+    ]
+  },
+  "nuclear_and_environmental": {
+    "isotopes": [
+      {
+        "mass": 155.924,
+        "abundance": 0.06,
+        "stable": true,
+        "name_es": "Disprosio-156",
+        "name_eng": "Dysprosium-156"
+      },
+      {
+        "mass": 157.924,
+        "abundance": 0.1,
+        "stable": true,
+        "name_es": "Disprosio-158",
+        "name_eng": "Dysprosium-158"
+      },
+      {
+        "mass": 159.925,
+        "abundance": 2.34,
+        "stable": true,
+        "name_es": "Disprosio-160",
+        "name_eng": "Dysprosium-160"
+      },
+      {
+        "mass": 160.926,
+        "abundance": 18.91,
+        "stable": true,
+        "name_es": "Disprosio-161",
+        "name_eng": "Dysprosium-161"
+      },
+      {
+        "mass": 161.926,
+        "abundance": 25.51,
+        "stable": true,
+        "name_es": "Disprosio-162",
+        "name_eng": "Dysprosium-162"
+      },
+      {
+        "mass": 162.928,
+        "abundance": 24.9,
+        "stable": true,
+        "name_es": "Disprosio-163",
+        "name_eng": "Dysprosium-163"
+      },
+      {
+        "mass": 163.929,
+        "abundance": 28.18,
+        "stable": true,
+        "name_es": "Disprosio-164",
+        "name_eng": "Dysprosium-164"
+      }
+    ],
+    "neutron_cross_section_barns": 940,
+    "nuclear_binding_energy_mev": 8.18,
+    "abundance_crust_mg_kg": 5.2,
+    "toxicity_level": 1
+  },
+  "cryogenic_data": {
+    "critical_solidification_pressure_mpa": null,
+    "lambda_point_k": 85,
+    "superfluid_viscosity_pas": null
+  }
+}

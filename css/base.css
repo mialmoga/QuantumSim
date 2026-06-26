@@ -1,0 +1,32 @@
+/* ========================================
+   QUANTUM CHEMISTRY SIMULATOR - BASE CSS
+   ======================================== */
+
+/* Reset & Base */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    -webkit-tap-highlight-color: transparent;
+    -webkit-user-select: none;
+    user-select: none;
+}
+
+/* --- Carga de Fuentes Personalizadas --- */
+@font-face {
+    font-family: 'MiSansVF';
+    src: url('../ShaderLab/assets/fonts/MiSansVF_Overlay.woff2') format('woff2'),
+         url('../ShaderLab/assets/fonts/MiSansVF_Overlay.woff') format('woff'),
+         url('../ShaderLab/assets/fonts/MiSansVF_Overlay.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+body {
+    background: radial-gradient(ellipse at center, #0a0a15 0%, #000000 100%);
+    overflow: hidden;
+    font-family: 'MiSansVF', system-ui, sans-serif;
+    touch-action: none;
+    color: #64c8ff;
+}

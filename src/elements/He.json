@@ -1,0 +1,117 @@
+{
+  "symbol": "He",
+  "identity": {
+    "name_es": "Helio",
+    "name_eng": "Helium",
+    "number": 2,
+    "category_es": "Gas noble",
+    "category_eng": "Noble gas",
+    "color": "0xFFF5D4",
+    "cpk_color": "0xFFC0CB",
+    "discovery_year": "1868"
+  },
+  "physical_properties": {
+    "mass": 4.0026,
+    "density_g_cm3": 0.0001785,
+    "standard_state_es": "Gas",
+    "standard_state_eng": "Gas",
+    "melt_K": 0.95,
+    "boil_K": 4.22,
+    "allotropes_es": null,
+    "allotropes_eng": null,
+    "lattice_structure": "hcp"
+  },
+  "atomic_structure": {
+    "electronegativity": null,
+    "valence": 0,
+    "ionization_energy_eV": 24.5874,
+    "electron_affinity_ev": 0,
+    "electron_affinity_kj_mol": 0,
+    "radius_atomic_pm": 31,
+    "radius_covalent_pm": 28,
+    "vanderwaals_radius_pm": 140,
+    "ionic_radius_pm": null,
+    "effective_nuclear_charge": 1.688,
+    "electron_configuration_string": "1s2",
+    "shells": [
+      2
+    ],
+    "quantum_numbers": {
+      "s": 1,
+      "p": 0,
+      "d": 0,
+      "f": 0
+    },
+    "work_function_ev": null
+  },
+  "thermodynamics": {
+    "enthalpy_formation_kj_mol": 0,
+    "entropy_j_molk": 126.15,
+    "heat_capacity_j_molk": 20.786,
+    "specific_heat_j_gK": 5.193,
+    "latent_heat_fusion_kj_mol": 0.02,
+    "latent_heat_vaporization_kj_mol": 0.08,
+    "fusion_heat_kj_mol": 0.0138,
+    "evaporation_heat_kj_mol": 0.0829
+  },
+  "kinetics_and_phase": {
+    "vapor_pressure_constants": null,
+    "vapor_pressure_pa": null,
+    "viscosity_liquid_pas": 3.3e-06,
+    "viscosity_pa_s": 1.86e-05,
+    "critical_temp_K": 5.19,
+    "critical_press_MPa": 0.227,
+    "surface_tension_nm": 0.00012
+  },
+  "electromagnetism_and_mechanics": {
+    "thermal_conductivity_wmk": 0.1513,
+    "electrical_conductivity_sm": 0,
+    "magnetic_susceptibility": -1.88e-06,
+    "thermal_expansion_coefficient": null,
+    "polarizability_angstrom3": 0.2051,
+    "refractive_index": 1.000035,
+    "youngs_modulus_gba": 0,
+    "poisson_ratio": 0,
+    "brinell_hardness_m_pa": 0
+  },
+  "reactivity": {
+    "max_bonds": 0,
+    "geometry_preference_es": null,
+    "geometry_preference_eng": null,
+    "ideal_bond_angle": null,
+    "bond_energy_ev": 0,
+    "dissociation_energy_kj_mol": null,
+    "standard_potential_v": null,
+    "oxidation_states": [
+      0
+    ],
+    "common_ions": null
+  },
+  "nuclear_and_environmental": {
+    "isotopes": [
+      {
+        "mass": 3.016,
+        "abundance": 0.000137,
+        "stable": true,
+        "name_es": "Helio-3",
+        "name_eng": "Helium-3"
+      },
+      {
+        "mass": 4.0026,
+        "abundance": 99.999863,
+        "stable": true,
+        "name_es": "Helio-4",
+        "name_eng": "Helium-4"
+      }
+    ],
+    "neutron_cross_section_barns": 0.007,
+    "nuclear_binding_energy_mev": 7.07,
+    "abundance_crust_mg_kg": 0.008,
+    "toxicity_level": 0
+  },
+  "cryogenic_data": {
+    "critical_solidification_pressure_mpa": 2.5,
+    "lambda_point_k": 2.17,
+    "superfluid_viscosity_pas": 0
+  }
+}

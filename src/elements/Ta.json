@@ -1,0 +1,137 @@
+{
+  "symbol": "Ta",
+  "identity": {
+    "name_es": "Tántalo",
+    "name_eng": "Tantalum",
+    "number": 73,
+    "category_es": "Metal de transición",
+    "category_eng": "Transition metal",
+    "color": "0xA8A8B0",
+    "cpk_color": "0x4DA6FF",
+    "discovery_year": "1802"
+  },
+  "physical_properties": {
+    "mass": 180.947,
+    "density_g_cm3": 16.69,
+    "standard_state_es": "Sólido",
+    "standard_state_eng": "Solid",
+    "melt_K": 3290,
+    "boil_K": 5731,
+    "allotropes_es": [
+      "Alfa (bcc)",
+      "Beta (tetragonal, frágil)"
+    ],
+    "allotropes_eng": [
+      "Alpha (bcc)",
+      "Beta (tetragonal, brittle)"
+    ],
+    "lattice_structure": "bcc"
+  },
+  "atomic_structure": {
+    "electronegativity": 1.5,
+    "valence": 5,
+    "ionization_energy_eV": 7.5496,
+    "electron_affinity_ev": 0.322,
+    "electron_affinity_kj_mol": 31,
+    "radius_atomic_pm": 146,
+    "radius_covalent_pm": 170,
+    "vanderwaals_radius_pm": 217,
+    "ionic_radius_pm": 64,
+    "effective_nuclear_charge": 6.3,
+    "electron_configuration_string": "[Xe] 4f14 5d3 6s2",
+    "shells": [
+      2,
+      8,
+      18,
+      32,
+      11,
+      2
+    ],
+    "quantum_numbers": {
+      "s": 2,
+      "p": 0,
+      "d": 3,
+      "f": 14
+    },
+    "work_function_ev": 4.25
+  },
+  "thermodynamics": {
+    "enthalpy_formation_kj_mol": 0,
+    "entropy_j_molk": 41.51,
+    "heat_capacity_j_molk": 25.36,
+    "specific_heat_j_gK": 0.14,
+    "latent_heat_fusion_kj_mol": 31.4,
+    "latent_heat_vaporization_kj_mol": 753,
+    "fusion_heat_kj_mol": 36,
+    "evaporation_heat_kj_mol": 732
+  },
+  "kinetics_and_phase": {
+    "vapor_pressure_constants": {
+      "A": 5.15,
+      "B": 35000,
+      "C": -10
+    },
+    "vapor_pressure_pa": null,
+    "viscosity_liquid_pas": null,
+    "viscosity_pa_s": null,
+    "critical_temp_K": null,
+    "critical_press_MPa": null,
+    "surface_tension_nm": 2.15
+  },
+  "electromagnetism_and_mechanics": {
+    "thermal_conductivity_wmk": 57.5,
+    "electrical_conductivity_sm": 7700000,
+    "magnetic_susceptibility": 8.5e-05,
+    "thermal_expansion_coefficient": 6.3e-06,
+    "polarizability_angstrom3": 13.1,
+    "refractive_index": null,
+    "youngs_modulus_gba": 186,
+    "poisson_ratio": 0.34,
+    "brinell_hardness_m_pa": 800
+  },
+  "reactivity": {
+    "max_bonds": 5,
+    "geometry_preference_es": "Bipirámide trigonal",
+    "geometry_preference_eng": "Trigonal bipyramidal",
+    "ideal_bond_angle": 90,
+    "bond_energy_ev": null,
+    "dissociation_energy_kj_mol": null,
+    "standard_potential_v": -0.75,
+    "oxidation_states": [
+      5,
+      4,
+      3,
+      -1
+    ],
+    "common_ions": [
+      "Ta5+"
+    ]
+  },
+  "nuclear_and_environmental": {
+    "isotopes": [
+      {
+        "mass": 179.947,
+        "abundance": 0.012,
+        "stable": true,
+        "name_es": "Tántalo-180m",
+        "name_eng": "Tantalum-180m"
+      },
+      {
+        "mass": 180.947,
+        "abundance": 99.988,
+        "stable": true,
+        "name_es": "Tántalo-181",
+        "name_eng": "Tantalum-181"
+      }
+    ],
+    "neutron_cross_section_barns": 21,
+    "nuclear_binding_energy_mev": 8.016,
+    "abundance_crust_mg_kg": 2,
+    "toxicity_level": 1
+  },
+  "cryogenic_data": {
+    "critical_solidification_pressure_mpa": null,
+    "lambda_point_k": null,
+    "superfluid_viscosity_pas": null
+  }
+}

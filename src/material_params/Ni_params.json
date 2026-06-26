@@ -1,0 +1,48 @@
+{
+  "symbol": "Ni",
+  "generated_by": "generate_materials.py v1.2 (Stevens perceptual)",
+  "source_props": {
+    "mass": 58.693,
+    "melt_K": 1728,
+    "density": 8.908,
+    "ionization_eV": 7.6398,
+    "electronegativity": 1.91,
+    "polarizability": 6.8,
+    "standard_state": "Solid"
+  },
+  "shader_params": {
+    "sphere_pulse": {
+      "freq": 1.305,
+      "amp": 0.309
+    },
+    "blink": {
+      "amp": 0.0,
+      "speed": 0.392
+    },
+    "brightness": {
+      "bright": 1.141,
+      "base": 0.3,
+      "vari": 0.0
+    },
+    "disc_shape": {
+      "soft": 0.302,
+      "radius": 0.22,
+      "ring": 0.0
+    },
+    "point_size": {
+      "sz": 0.328,
+      "bAmp": 0.0,
+      "persp": 61.0
+    },
+    "alpha_curve": {
+      "opacity": 0.928,
+      "curve": 1.036,
+      "floor": 0.0
+    },
+    "color": {
+      "r": 0.6902,
+      "g": 0.6902,
+      "b": 0.6588
+    }
+  }
+}

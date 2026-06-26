@@ -1,0 +1,48 @@
+{
+  "symbol": "Er",
+  "generated_by": "generate_materials.py v1.2 (Stevens perceptual)",
+  "source_props": {
+    "mass": 167.259,
+    "melt_K": 1802,
+    "density": 9.066,
+    "ionization_eV": 6.1077,
+    "electronegativity": 1.24,
+    "polarizability": 23.2,
+    "standard_state": "Solid"
+  },
+  "shader_params": {
+    "sphere_pulse": {
+      "freq": 0.773,
+      "amp": 0.307
+    },
+    "blink": {
+      "amp": 0.0,
+      "speed": 0.232
+    },
+    "brightness": {
+      "bright": 0.859,
+      "base": 0.3,
+      "vari": 0.0
+    },
+    "disc_shape": {
+      "soft": 0.384,
+      "radius": 0.22,
+      "ring": 0.0
+    },
+    "point_size": {
+      "sz": 0.398,
+      "bAmp": 0.0,
+      "persp": 77.2
+    },
+    "alpha_curve": {
+      "opacity": 0.93,
+      "curve": 1.035,
+      "floor": 0.0
+    },
+    "color": {
+      "r": 0.7529,
+      "g": 0.7529,
+      "b": 0.6902
+    }
+  }
+}

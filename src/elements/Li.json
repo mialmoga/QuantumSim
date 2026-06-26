@@ -1,0 +1,124 @@
+{
+  "symbol": "Li",
+  "identity": {
+    "name_es": "Litio",
+    "name_eng": "Lithium",
+    "number": 3,
+    "category_es": "Metal alcalino",
+    "category_eng": "Alkali metal",
+    "color": "0xC8C8C8",
+    "cpk_color": "0xB22222",
+    "discovery_year": "1817"
+  },
+  "physical_properties": {
+    "mass": 6.94,
+    "density_g_cm3": 0.534,
+    "standard_state_es": "Sólido",
+    "standard_state_eng": "Solid",
+    "melt_K": 453.65,
+    "boil_K": 1603,
+    "allotropes_es": null,
+    "allotropes_eng": null,
+    "lattice_structure": "bcc"
+  },
+  "atomic_structure": {
+    "electronegativity": 0.98,
+    "valence": 1,
+    "ionization_energy_eV": 5.3917,
+    "electron_affinity_ev": 0.618,
+    "electron_affinity_kj_mol": 59.6,
+    "radius_atomic_pm": 152,
+    "radius_covalent_pm": 128,
+    "vanderwaals_radius_pm": 182,
+    "ionic_radius_pm": 76,
+    "effective_nuclear_charge": 1.279,
+    "electron_configuration_string": "1s2 2s1",
+    "shells": [
+      2,
+      1
+    ],
+    "quantum_numbers": {
+      "s": 1,
+      "p": 0,
+      "d": 0,
+      "f": 0
+    },
+    "work_function_ev": 2.9
+  },
+  "thermodynamics": {
+    "enthalpy_formation_kj_mol": 0,
+    "entropy_j_molk": 29.1,
+    "heat_capacity_j_molk": 24.86,
+    "specific_heat_j_gK": 3.582,
+    "latent_heat_fusion_kj_mol": 3,
+    "latent_heat_vaporization_kj_mol": 147,
+    "fusion_heat_kj_mol": 3,
+    "evaporation_heat_kj_mol": 145.9
+  },
+  "kinetics_and_phase": {
+    "vapor_pressure_constants": {
+      "A": 4.988,
+      "B": 7918,
+      "C": -9.52
+    },
+    "vapor_pressure_pa": null,
+    "viscosity_liquid_pas": 0.000592,
+    "viscosity_pa_s": null,
+    "critical_temp_K": 3223,
+    "critical_press_MPa": 67,
+    "surface_tension_nm": 0.398
+  },
+  "electromagnetism_and_mechanics": {
+    "thermal_conductivity_wmk": 84.8,
+    "electrical_conductivity_sm": 11000000,
+    "magnetic_susceptibility": 1.42e-05,
+    "thermal_expansion_coefficient": 4.6e-05,
+    "polarizability_angstrom3": 24.33,
+    "refractive_index": null,
+    "youngs_modulus_gba": 4.9,
+    "poisson_ratio": 0.36,
+    "brinell_hardness_m_pa": 5
+  },
+  "reactivity": {
+    "max_bonds": 1,
+    "geometry_preference_es": "Metálica / Red",
+    "geometry_preference_eng": "Metallic / Lattice",
+    "ideal_bond_angle": null,
+    "bond_energy_ev": 1.1,
+    "dissociation_energy_kj_mol": 106,
+    "standard_potential_v": -3.0401,
+    "oxidation_states": [
+      1
+    ],
+    "common_ions": [
+      "Li+"
+    ]
+  },
+  "nuclear_and_environmental": {
+    "isotopes": [
+      {
+        "mass": 6.015,
+        "abundance": 7.59,
+        "stable": true,
+        "name_es": "Litio-6",
+        "name_eng": "Lithium-6"
+      },
+      {
+        "mass": 7.016,
+        "abundance": 92.41,
+        "stable": true,
+        "name_es": "Litio-7",
+        "name_eng": "Lithium-7"
+      }
+    ],
+    "neutron_cross_section_barns": 70.5,
+    "nuclear_binding_energy_mev": 5.606,
+    "abundance_crust_mg_kg": 20,
+    "toxicity_level": 2
+  },
+  "cryogenic_data": {
+    "critical_solidification_pressure_mpa": null,
+    "lambda_point_k": null,
+    "superfluid_viscosity_pas": null
+  }
+}

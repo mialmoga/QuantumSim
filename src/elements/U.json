@@ -1,0 +1,274 @@
+{
+  "symbol": "U",
+  "identity": {
+    "name_es": "Uranio",
+    "name_eng": "Uranium",
+    "number": 92,
+    "category_es": "Actínido",
+    "category_eng": "Actinide",
+    "color": "0xB0B0A0",
+    "cpk_color": "0x008FFF",
+    "discovery_year": "1789"
+  },
+  "physical_properties": {
+    "mass": 238.028,
+    "density_g_cm3": 19.1,
+    "standard_state_es": "Sólido",
+    "standard_state_eng": "Solid",
+    "melt_K": 1405.3,
+    "boil_K": 4404,
+    "allotropes_es": [
+      "Alfa (ortorrómbica)",
+      "Beta (tetragonal)",
+      "Gamma (bcc)"
+    ],
+    "allotropes_eng": [
+      "Alpha (orthorhombic)",
+      "Beta (tetragonal)",
+      "Gamma (bcc)"
+    ],
+    "lattice_structure": "orthorhombic"
+  },
+  "atomic_structure": {
+    "electronegativity": 1.38,
+    "valence": 6,
+    "ionization_energy_eV": 6.1941,
+    "electron_affinity_ev": null,
+    "electron_affinity_kj_mol": null,
+    "radius_atomic_pm": 138,
+    "radius_covalent_pm": 196,
+    "vanderwaals_radius_pm": 186,
+    "ionic_radius_pm": 102.5,
+    "effective_nuclear_charge": 6.3,
+    "electron_configuration_string": "[Rn] 5f3 6d1 7s2",
+    "shells": [
+      2,
+      8,
+      18,
+      32,
+      21,
+      9,
+      2
+    ],
+    "quantum_numbers": {
+      "s": 2,
+      "p": 0,
+      "d": 1,
+      "f": 3
+    },
+    "work_function_ev": 3.6
+  },
+  "thermodynamics": {
+    "enthalpy_formation_kj_mol": 0,
+    "entropy_j_molk": 50.2,
+    "heat_capacity_j_molk": 27.67,
+    "specific_heat_j_gK": 0.116,
+    "latent_heat_fusion_kj_mol": 9.14,
+    "latent_heat_vaporization_kj_mol": 417,
+    "fusion_heat_kj_mol": 12.6,
+    "evaporation_heat_kj_mol": 417.1
+  },
+  "kinetics_and_phase": {
+    "vapor_pressure_constants": {
+      "A": 5.1,
+      "B": 23000,
+      "C": -0.5
+    },
+    "vapor_pressure_pa": null,
+    "viscosity_liquid_pas": 0.0065,
+    "viscosity_pa_s": null,
+    "critical_temp_K": null,
+    "critical_press_MPa": null,
+    "surface_tension_nm": null
+  },
+  "electromagnetism_and_mechanics": {
+    "thermal_conductivity_wmk": 27.5,
+    "electrical_conductivity_sm": 3800000,
+    "magnetic_susceptibility": 0.0004,
+    "thermal_expansion_coefficient": 1.39e-05,
+    "polarizability_angstrom3": 25,
+    "refractive_index": null,
+    "youngs_modulus_gba": 208,
+    "poisson_ratio": 0.23,
+    "brinell_hardness_m_pa": 2400
+  },
+  "reactivity": {
+    "max_bonds": 6,
+    "geometry_preference_es": "Octaédrica",
+    "geometry_preference_eng": "Octahedral",
+    "ideal_bond_angle": 90,
+    "bond_energy_ev": null,
+    "dissociation_energy_kj_mol": null,
+    "standard_potential_v": -1.798,
+    "oxidation_states": [
+      6,
+      5,
+      4,
+      3
+    ],
+    "common_ions": [
+      "UO2^2+",
+      "U4+",
+      "U3+"
+    ]
+  },
+  "nuclear_and_environmental": {
+    "isotopes": [
+      {
+        "mass": 234.04,
+        "abundance": 0.005,
+        "stable": false,
+        "half_life_s": 7700000000000,
+        "name_es": "Uranio-234",
+        "name_eng": "Uranium-234"
+      },
+      {
+        "mass": 235.043,
+        "abundance": 0.72,
+        "stable": false,
+        "half_life_s": 22000000000000000,
+        "name_es": "Uranio-235",
+        "name_eng": "Uranium-235"
+      },
+      {
+        "mass": 238.05,
+        "abundance": 99.27,
+        "stable": false,
+        "half_life_s": 140000000000000000,
+        "name_es": "Uranio-238",
+        "name_eng": "Uranium-238"
+      }
+    ],
+    "neutron_cross_section_barns": 7.6,
+    "nuclear_binding_energy_mev": 7.57,
+    "abundance_crust_mg_kg": 2.7,
+    "toxicity_level": 4
+  },
+  "cryogenic_data": {
+    "critical_solidification_pressure_mpa": null,
+    "lambda_point_k": 0.68,
+    "superfluid_viscosity_pas": null
+  },
+  "decay_chain": [
+    {
+      "isotope": "U-238",
+      "Z": 92,
+      "A": 238,
+      "decay_mode": "alpha",
+      "half_life_s": 141000000000000000,
+      "daughter": "Th-234"
+    },
+    {
+      "isotope": "Th-234",
+      "Z": 90,
+      "A": 234,
+      "decay_mode": "beta_minus",
+      "half_life_s": 2080000,
+      "daughter": "Pa-234m"
+    },
+    {
+      "isotope": "Pa-234m",
+      "Z": 91,
+      "A": 234,
+      "decay_mode": "beta_minus",
+      "half_life_s": 72,
+      "daughter": "U-234"
+    },
+    {
+      "isotope": "U-234",
+      "Z": 92,
+      "A": 234,
+      "decay_mode": "alpha",
+      "half_life_s": 7740000000000,
+      "daughter": "Th-230"
+    },
+    {
+      "isotope": "Th-230",
+      "Z": 90,
+      "A": 230,
+      "decay_mode": "alpha",
+      "half_life_s": 2370000000000,
+      "daughter": "Ra-226"
+    },
+    {
+      "isotope": "Ra-226",
+      "Z": 88,
+      "A": 226,
+      "decay_mode": "alpha",
+      "half_life_s": 50500000000,
+      "daughter": "Rn-222"
+    },
+    {
+      "isotope": "Rn-222",
+      "Z": 86,
+      "A": 222,
+      "decay_mode": "alpha",
+      "half_life_s": 330307,
+      "daughter": "Po-218"
+    },
+    {
+      "isotope": "Po-218",
+      "Z": 84,
+      "A": 218,
+      "decay_mode": "alpha",
+      "half_life_s": 185,
+      "daughter": "Pb-214"
+    },
+    {
+      "isotope": "Pb-214",
+      "Z": 82,
+      "A": 214,
+      "decay_mode": "beta_minus",
+      "half_life_s": 1608,
+      "daughter": "Bi-214"
+    },
+    {
+      "isotope": "Bi-214",
+      "Z": 83,
+      "A": 214,
+      "decay_mode": "beta_minus",
+      "half_life_s": 1194,
+      "daughter": "Po-214"
+    },
+    {
+      "isotope": "Po-214",
+      "Z": 84,
+      "A": 214,
+      "decay_mode": "alpha",
+      "half_life_s": 0.0001643,
+      "daughter": "Pb-210"
+    },
+    {
+      "isotope": "Pb-210",
+      "Z": 82,
+      "A": 210,
+      "decay_mode": "beta_minus",
+      "half_life_s": 703000000,
+      "daughter": "Bi-210"
+    },
+    {
+      "isotope": "Bi-210",
+      "Z": 83,
+      "A": 210,
+      "decay_mode": "beta_minus",
+      "half_life_s": 433036,
+      "daughter": "Po-210"
+    },
+    {
+      "isotope": "Po-210",
+      "Z": 84,
+      "A": 210,
+      "decay_mode": "alpha",
+      "half_life_s": 11960000,
+      "daughter": "Pb-206"
+    },
+    {
+      "isotope": "Pb-206",
+      "Z": 82,
+      "A": 206,
+      "decay_mode": "stable",
+      "half_life_s": null,
+      "daughter": null
+    }
+  ]
+}

@@ -1,0 +1,67 @@
+{
+  "version": "3.0",
+  "created": "2026-03-10T01:41:26.356Z",
+  "mode": "custom",
+  "target": "orbital",
+  "layer": "semi",
+  "element": "Fe",
+  "pipeline": [
+    {
+      "key": "blink",
+      "enabled": true,
+      "params": {
+        "speed": 1.9,
+        "amp": 0.74,
+        "fMul": 1.4
+      },
+      "custom": false
+    },
+    {
+      "key": "point_size",
+      "enabled": true,
+      "params": {
+        "sz": 0.45,
+        "bAmp": 5.8,
+        "persp": 130
+      },
+      "custom": false
+    },
+    {
+      "key": "brightness",
+      "enabled": true,
+      "params": {
+        "bright": 1.2,
+        "base": 0.33,
+        "vari": 0.06
+      },
+      "custom": false
+    },
+    {
+      "key": "disc_shape",
+      "enabled": true,
+      "params": {
+        "radius": 0.18,
+        "soft": 0.09,
+        "ring": 0.15
+      },
+      "custom": false
+    },
+    {
+      "key": "phase_color",
+      "enabled": true,
+      "params": {
+        "inner": 2.45,
+        "outer": 0.18,
+        "pow": 0.85
+      },
+      "custom": false
+    }
+  ],
+  "compiled": {
+    "vert": "// ShaderLab Custom \u2014 Orbital\nuniform float uTime,uScale,uLevel,uPmScale,uSpeed,uAmp,uSize;\nattribute float aPhase;\nvarying float vBlink;\nvarying float vPhase;\nvoid main(){\n  vBlink=0.0;\n  vPhase=aPhase;\n  vec3 wpos=position*uPmScale;\n  vec4 mvP=modelViewMatrix*vec4(wpos,1.0);\n  gl_PointSize=0.0;\n  vBlink = sin(uTime*(1.40+uLevel)*1.90+aPhase*6.2832)*0.74;\n  gl_PointSize=uScale*0.45*(1.1+vBlink*5.80)*130.0/-mvP.z;\n  if(gl_PointSize<=0.0)\n    gl_PointSize=uScale*uSize*(1.1+vBlink*4.0)*350.0/-mvP.z;\n  gl_Position=projectionMatrix*mvP;\n}",
+    "frag": "// ShaderLab Custom \u2014 Orbital\nuniform vec3 uColor;\nuniform float uBright,uEdge;\nvarying float vBlink;\nvarying float vPhase;\nvoid main(){\n  vec3  col=uColor*uBright;\n  float alpha=1.0;\n  float d=0.0;\n  // Disc base \u2014 siempre activo como fallback\n  {vec2 _uv=gl_PointCoord-0.5;d=dot(_uv,_uv);if(d>0.25)discard;alpha=1.0-smoothstep(uEdge,0.25,d);}\n  col=uColor*(1.20*(0.33+vBlink*0.060));\n  {vec2 _uv=gl_PointCoord-0.5;d=dot(_uv,_uv);if(d>0.18)discard;if(0.15>0.005&&d<0.15)discard;alpha=1.0-smoothstep(0.090,0.18,d);}\n  {float _pw=pow(clamp(vPhase,0.0,1.0),0.85);col*=mix(2.45,0.18,_pw);}\n  if(alpha<=0.0)discard;\n  gl_FragColor=vec4(col,clamp(alpha,0.0,1.0));\n}"
+  },
+  "name": "Fe 3d Rings",
+  "description": "Anillos de fuego \u2014 3d semi, phase_color dram\u00e1tico",
+  "author": "Brujo"
+}

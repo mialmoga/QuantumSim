@@ -1,0 +1,48 @@
+{
+  "symbol": "He",
+  "generated_by": "generate_materials.py v1.2 (Stevens perceptual)",
+  "source_props": {
+    "mass": 4.0026,
+    "melt_K": 0.95,
+    "density": 0.0001785,
+    "ionization_eV": 24.5874,
+    "electronegativity": null,
+    "polarizability": 0.2051,
+    "standard_state": "Solid"
+  },
+  "shader_params": {
+    "sphere_pulse": {
+      "freq": 4.998,
+      "amp": 0.4
+    },
+    "blink": {
+      "amp": 0.0,
+      "speed": 1.5
+    },
+    "brightness": {
+      "bright": 3.0,
+      "base": 0.3,
+      "vari": 0.0
+    },
+    "disc_shape": {
+      "soft": 0.25,
+      "radius": 0.22,
+      "ring": 0.0
+    },
+    "point_size": {
+      "sz": 0.3,
+      "bAmp": 0.0,
+      "persp": 28.1
+    },
+    "alpha_curve": {
+      "opacity": 0.13,
+      "curve": 1.435,
+      "floor": 0.0
+    },
+    "color": {
+      "r": 1.0,
+      "g": 0.9608,
+      "b": 0.8314
+    }
+  }
+}

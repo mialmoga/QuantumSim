@@ -1,0 +1,131 @@
+{
+  "symbol": "Cl",
+  "identity": {
+    "name_es": "Cloro",
+    "name_eng": "Chlorine",
+    "number": 17,
+    "category_es": "No metal reactivo",
+    "category_eng": "Reactive nonmetal",
+    "color": "0xC8E8A0",
+    "cpk_color": "0x1FF01F",
+    "discovery_year": "1774"
+  },
+  "physical_properties": {
+    "mass": 35.45,
+    "density_g_cm3": 0.0032,
+    "standard_state_es": "Gas",
+    "standard_state_eng": "Gas",
+    "melt_K": 171.6,
+    "boil_K": 239.11,
+    "allotropes_es": null,
+    "allotropes_eng": null,
+    "lattice_structure": "orthorhombic"
+  },
+  "atomic_structure": {
+    "electronegativity": 3.16,
+    "valence": 7,
+    "ionization_energy_eV": 12.9676,
+    "electron_affinity_ev": 3.6127,
+    "electron_affinity_kj_mol": 348.6,
+    "radius_atomic_pm": 79,
+    "radius_covalent_pm": 99,
+    "vanderwaals_radius_pm": 175,
+    "ionic_radius_pm": 181,
+    "effective_nuclear_charge": 6.116,
+    "electron_configuration_string": "1s2 2s2 2p6 3s2 3p5",
+    "shells": [
+      2,
+      8,
+      7
+    ],
+    "quantum_numbers": {
+      "s": 2,
+      "p": 2,
+      "d": 0,
+      "f": 0
+    },
+    "work_function_ev": null
+  },
+  "thermodynamics": {
+    "enthalpy_formation_kj_mol": 0,
+    "entropy_j_molk": 223.07,
+    "heat_capacity_j_molk": 33.949,
+    "specific_heat_j_gK": 0.479,
+    "latent_heat_fusion_kj_mol": 6.41,
+    "latent_heat_vaporization_kj_mol": 20.41,
+    "fusion_heat_kj_mol": 3.2,
+    "evaporation_heat_kj_mol": 10.2
+  },
+  "kinetics_and_phase": {
+    "vapor_pressure_constants": {
+      "A": 4.062,
+      "B": 861,
+      "C": -17
+    },
+    "vapor_pressure_pa": null,
+    "viscosity_liquid_pas": 0.000345,
+    "viscosity_pa_s": 1.33e-05,
+    "critical_temp_K": 416.9,
+    "critical_press_MPa": 7.99,
+    "surface_tension_nm": 0.0184
+  },
+  "electromagnetism_and_mechanics": {
+    "thermal_conductivity_wmk": 0.0089,
+    "electrical_conductivity_sm": null,
+    "magnetic_susceptibility": -4.05e-05,
+    "thermal_expansion_coefficient": null,
+    "polarizability_angstrom3": 2.18,
+    "refractive_index": 1.000773,
+    "youngs_modulus_gba": null,
+    "poisson_ratio": null,
+    "brinell_hardness_m_pa": null
+  },
+  "reactivity": {
+    "max_bonds": 7,
+    "geometry_preference_es": "Lineal / Angular",
+    "geometry_preference_eng": "Linear / Bent",
+    "ideal_bond_angle": 180,
+    "bond_energy_ev": 2.51,
+    "dissociation_energy_kj_mol": 242,
+    "standard_potential_v": 1.358,
+    "oxidation_states": [
+      7,
+      5,
+      3,
+      1,
+      -1
+    ],
+    "common_ions": [
+      "Cl-",
+      "ClO-",
+      "ClO4-"
+    ]
+  },
+  "nuclear_and_environmental": {
+    "isotopes": [
+      {
+        "mass": 34.969,
+        "abundance": 75.78,
+        "stable": true,
+        "name_es": "Cloro-35",
+        "name_eng": "Chlorine-35"
+      },
+      {
+        "mass": 36.966,
+        "abundance": 24.22,
+        "stable": true,
+        "name_es": "Cloro-37",
+        "name_eng": "Chlorine-37"
+      }
+    ],
+    "neutron_cross_section_barns": 33.5,
+    "nuclear_binding_energy_mev": 8.52,
+    "abundance_crust_mg_kg": 145,
+    "toxicity_level": 4
+  },
+  "cryogenic_data": {
+    "critical_solidification_pressure_mpa": null,
+    "lambda_point_k": null,
+    "superfluid_viscosity_pas": null
+  }
+}

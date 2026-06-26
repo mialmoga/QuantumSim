@@ -1,0 +1,117 @@
+{
+  "symbol": "F",
+  "identity": {
+    "name_es": "Flúor",
+    "name_eng": "Fluorine",
+    "number": 9,
+    "category_es": "No metal reactivo",
+    "category_eng": "Reactive nonmetal",
+    "color": "0xD8E8D0",
+    "cpk_color": "0x90E050",
+    "discovery_year": "1886"
+  },
+  "physical_properties": {
+    "mass": 18.998,
+    "density_g_cm3": 0.001696,
+    "standard_state_es": "Gas",
+    "standard_state_eng": "Gas",
+    "melt_K": 53.48,
+    "boil_K": 85.03,
+    "allotropes_es": null,
+    "allotropes_eng": null,
+    "lattice_structure": "cubic"
+  },
+  "atomic_structure": {
+    "electronegativity": 3.98,
+    "valence": 1,
+    "ionization_energy_eV": 17.4228,
+    "electron_affinity_ev": 3.4011,
+    "electron_affinity_kj_mol": 328,
+    "radius_atomic_pm": 50,
+    "radius_covalent_pm": 64,
+    "vanderwaals_radius_pm": 135,
+    "ionic_radius_pm": 133,
+    "effective_nuclear_charge": 5.1,
+    "electron_configuration_string": "1s2 2s2 2p5",
+    "shells": [
+      2,
+      7
+    ],
+    "quantum_numbers": {
+      "s": 1,
+      "p": 1,
+      "d": 0,
+      "f": 0
+    },
+    "work_function_ev": null
+  },
+  "thermodynamics": {
+    "enthalpy_formation_kj_mol": 0,
+    "entropy_j_molk": 202.79,
+    "heat_capacity_j_molk": 31.304,
+    "specific_heat_j_gK": 0.824,
+    "latent_heat_fusion_kj_mol": 0.51,
+    "latent_heat_vaporization_kj_mol": 6.51,
+    "fusion_heat_kj_mol": 0.26,
+    "evaporation_heat_kj_mol": 3.27
+  },
+  "kinetics_and_phase": {
+    "vapor_pressure_constants": {
+      "A": 3.655,
+      "B": 288,
+      "C": -6.4
+    },
+    "vapor_pressure_pa": null,
+    "viscosity_liquid_pas": null,
+    "viscosity_pa_s": 2.18e-05,
+    "critical_temp_K": 144.13,
+    "critical_press_MPa": 5.17,
+    "surface_tension_nm": 0.0146
+  },
+  "electromagnetism_and_mechanics": {
+    "thermal_conductivity_wmk": 0.0277,
+    "electrical_conductivity_sm": null,
+    "magnetic_susceptibility": -6e-08,
+    "thermal_expansion_coefficient": null,
+    "polarizability_angstrom3": 0.557,
+    "refractive_index": 1.000195,
+    "youngs_modulus_gba": null,
+    "poisson_ratio": null,
+    "brinell_hardness_m_pa": null
+  },
+  "reactivity": {
+    "max_bonds": 1,
+    "geometry_preference_es": "Lineal",
+    "geometry_preference_eng": "Linear",
+    "ideal_bond_angle": 180,
+    "bond_energy_ev": 1.63,
+    "dissociation_energy_kj_mol": 157,
+    "standard_potential_v": 2.87,
+    "oxidation_states": [
+      -1
+    ],
+    "common_ions": [
+      "F-"
+    ]
+  },
+  "nuclear_and_environmental": {
+    "isotopes": [
+      {
+        "mass": 18.998,
+        "abundance": 100,
+        "stable": true,
+        "name_es": "Flúor-19",
+        "name_eng": "Fluorine-19"
+      }
+    ],
+    "neutron_cross_section_barns": 0.0096,
+    "nuclear_binding_energy_mev": 7.779,
+    "abundance_crust_mg_kg": 585,
+    "toxicity_level": 5
+  },
+  "cryogenic_data": {
+    "critical_solidification_pressure_mpa": null,
+    "lambda_point_k": null,
+    "superfluid_viscosity_pas": null
+  }
+}

@@ -1,0 +1,48 @@
+{
+  "symbol": "Rb",
+  "generated_by": "generate_materials.py v1.2 (Stevens perceptual)",
+  "source_props": {
+    "mass": 85.4678,
+    "melt_K": 312.46,
+    "density": 1.532,
+    "ionization_eV": 4.1771,
+    "electronegativity": 0.82,
+    "polarizability": 47.3,
+    "standard_state": "Solid"
+  },
+  "shader_params": {
+    "sphere_pulse": {
+      "freq": 1.082,
+      "amp": 0.4
+    },
+    "blink": {
+      "amp": 0.082,
+      "speed": 0.325
+    },
+    "brightness": {
+      "bright": 0.323,
+      "base": 0.3,
+      "vari": 0.033
+    },
+    "disc_shape": {
+      "soft": 0.435,
+      "radius": 0.22,
+      "ring": 0.0
+    },
+    "point_size": {
+      "sz": 0.5,
+      "bAmp": 0.247,
+      "persp": 83.7
+    },
+    "alpha_curve": {
+      "opacity": 0.793,
+      "curve": 1.104,
+      "floor": 0.0
+    },
+    "color": {
+      "r": 0.7216,
+      "g": 0.7216,
+      "b": 0.7529
+    }
+  }
+}

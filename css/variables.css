@@ -1,0 +1,37 @@
+/* ========================================
+   QUANTUM CHEMISTRY SIMULATOR - VARIABLES
+   ======================================== */
+
+:root {
+    /* Colors */
+    --primary-color: #64c8ff;
+    --secondary-color: #3264ff;
+    --background-dark: #000000;
+    --background-light: #0a0a15;
+    --glass-background: rgba(0, 0, 0, 0.85);
+    --border-color: rgba(100, 200, 255, 0.3);
+    --border-color-hover: #64c8ff;
+    --text-primary: #ffffff;
+    --text-secondary: #64c8ff;
+    --shadow-color: rgba(0, 0, 0, 0.8);
+    --glow-color: rgba(100, 200, 255, 0.5);
+    
+    /* Spacing */
+    --spacing-xs: 8px;
+    --spacing-sm: 12px;
+    --spacing-md: 16px;
+    --spacing-lg: 20px;
+    --spacing-xl: 24px;
+    
+    /* Border Radius */
+    --radius-sm: 8px;
+    --radius-md: 12px;
+    --radius-lg: 16px;
+    
+    /* Transitions */
+    --transition-fast: 0.2s;
+    --transition-normal: 0.3s;
+    
+    /* Blur */
+    --blur-amount: blur(10px);
+}

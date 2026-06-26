@@ -1,0 +1,48 @@
+{
+  "symbol": "Zn",
+  "generated_by": "generate_materials.py v1.2 (Stevens perceptual)",
+  "source_props": {
+    "mass": 65.38,
+    "melt_K": 692.68,
+    "density": 7.14,
+    "ionization_eV": 9.3942,
+    "electronegativity": 1.65,
+    "polarizability": 7.1,
+    "standard_state": "Solid"
+  },
+  "shader_params": {
+    "sphere_pulse": {
+      "freq": 1.237,
+      "amp": 0.352
+    },
+    "blink": {
+      "amp": 0.0,
+      "speed": 0.371
+    },
+    "brightness": {
+      "bright": 1.41,
+      "base": 0.3,
+      "vari": 0.0
+    },
+    "disc_shape": {
+      "soft": 0.334,
+      "radius": 0.22,
+      "ring": 0.0
+    },
+    "point_size": {
+      "sz": 0.329,
+      "bAmp": 0.0,
+      "persp": 61.2
+    },
+    "alpha_curve": {
+      "opacity": 0.911,
+      "curve": 1.044,
+      "floor": 0.0
+    },
+    "color": {
+      "r": 0.7216,
+      "g": 0.7529,
+      "b": 0.7843
+    }
+  }
+}

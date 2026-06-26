@@ -1,0 +1,118 @@
+{
+  "symbol": "Na",
+  "identity": {
+    "name_es": "Sodio",
+    "name_eng": "Sodium",
+    "number": 11,
+    "category_es": "Metal alcalino",
+    "category_eng": "Alkali metal",
+    "color": "0xC8C8D0",
+    "cpk_color": "0xAB5CF2",
+    "discovery_year": "1807"
+  },
+  "physical_properties": {
+    "mass": 22.989,
+    "density_g_cm3": 0.968,
+    "standard_state_es": "Sólido",
+    "standard_state_eng": "Solid",
+    "melt_K": 370.87,
+    "boil_K": 1156,
+    "allotropes_es": null,
+    "allotropes_eng": null,
+    "lattice_structure": "bcc"
+  },
+  "atomic_structure": {
+    "electronegativity": 0.93,
+    "valence": 1,
+    "ionization_energy_eV": 5.1391,
+    "electron_affinity_ev": 0.5479,
+    "electron_affinity_kj_mol": 52.8,
+    "radius_atomic_pm": 186,
+    "radius_covalent_pm": 166,
+    "vanderwaals_radius_pm": 227,
+    "ionic_radius_pm": 102,
+    "effective_nuclear_charge": 2.507,
+    "electron_configuration_string": "1s2 2s2 2p6 3s1",
+    "shells": [
+      2,
+      8,
+      1
+    ],
+    "quantum_numbers": {
+      "s": 2,
+      "p": 1,
+      "d": 0,
+      "f": 0
+    },
+    "work_function_ev": 2.36
+  },
+  "thermodynamics": {
+    "enthalpy_formation_kj_mol": 0,
+    "entropy_j_molk": 51.21,
+    "heat_capacity_j_molk": 28.23,
+    "specific_heat_j_gK": 1.228,
+    "latent_heat_fusion_kj_mol": 2.6,
+    "latent_heat_vaporization_kj_mol": 97.4,
+    "fusion_heat_kj_mol": 2.598,
+    "evaporation_heat_kj_mol": 97.42
+  },
+  "kinetics_and_phase": {
+    "vapor_pressure_constants": {
+      "A": 4.521,
+      "B": 5377,
+      "C": -12.7
+    },
+    "vapor_pressure_pa": null,
+    "viscosity_liquid_pas": 0.00068,
+    "viscosity_pa_s": null,
+    "critical_temp_K": 2573,
+    "critical_press_MPa": 35,
+    "surface_tension_nm": 0.192
+  },
+  "electromagnetism_and_mechanics": {
+    "thermal_conductivity_wmk": 142,
+    "electrical_conductivity_sm": 21000000,
+    "magnetic_susceptibility": 8.5e-06,
+    "thermal_expansion_coefficient": 7.1e-05,
+    "polarizability_angstrom3": 24.11,
+    "refractive_index": null,
+    "youngs_modulus_gba": 10,
+    "poisson_ratio": 0.312,
+    "brinell_hardness_m_pa": 0.69
+  },
+  "reactivity": {
+    "max_bonds": 1,
+    "geometry_preference_es": "Metálica / Red bcc",
+    "geometry_preference_eng": "Metallic / bcc Lattice",
+    "ideal_bond_angle": null,
+    "bond_energy_ev": 0.75,
+    "dissociation_energy_kj_mol": 72,
+    "standard_potential_v": -2.71,
+    "oxidation_states": [
+      1
+    ],
+    "common_ions": [
+      "Na+"
+    ]
+  },
+  "nuclear_and_environmental": {
+    "isotopes": [
+      {
+        "mass": 22.989,
+        "abundance": 100,
+        "stable": true,
+        "name_es": "Sodio-23",
+        "name_eng": "Sodium-23"
+      }
+    ],
+    "neutron_cross_section_barns": 0.53,
+    "nuclear_binding_energy_mev": 8.11,
+    "abundance_crust_mg_kg": 23600,
+    "toxicity_level": 1
+  },
+  "cryogenic_data": {
+    "critical_solidification_pressure_mpa": null,
+    "lambda_point_k": null,
+    "superfluid_viscosity_pas": null
+  }
+}

@@ -1,0 +1,145 @@
+{
+  "symbol": "S",
+  "identity": {
+    "name_es": "Azufre",
+    "name_eng": "Sulfur",
+    "number": 16,
+    "category_es": "No metal reactivo",
+    "category_eng": "Reactive nonmetal",
+    "color": "0xE8D020",
+    "cpk_color": "0xFFFF30",
+    "discovery_year": "Antigüedad"
+  },
+  "physical_properties": {
+    "mass": 32.06,
+    "density_g_cm3": 2.07,
+    "standard_state_es": "Sólido",
+    "standard_state_eng": "Solid",
+    "melt_K": 388.36,
+    "boil_K": 717.8,
+    "allotropes_es": [
+      "Azufre rómbico (Alfa)",
+      "Azufre monoclínico (Beta)",
+      "Azufre plástico"
+    ],
+    "allotropes_eng": [
+      "Rhombic sulfur (Alpha)",
+      "Monoclinic sulfur (Beta)",
+      "Plastic sulfur"
+    ],
+    "lattice_structure": "orthorhombic"
+  },
+  "atomic_structure": {
+    "electronegativity": 2.58,
+    "valence": 6,
+    "ionization_energy_eV": 10.36,
+    "electron_affinity_ev": 2.0771,
+    "electron_affinity_kj_mol": 200.4,
+    "radius_atomic_pm": 88,
+    "radius_covalent_pm": 105,
+    "vanderwaals_radius_pm": 180,
+    "ionic_radius_pm": 184,
+    "effective_nuclear_charge": 5.434,
+    "electron_configuration_string": "1s2 2s2 2p6 3s2 3p4",
+    "shells": [
+      2,
+      8,
+      6
+    ],
+    "quantum_numbers": {
+      "s": 2,
+      "p": 2,
+      "d": 0,
+      "f": 0
+    },
+    "work_function_ev": null
+  },
+  "thermodynamics": {
+    "enthalpy_formation_kj_mol": 0,
+    "entropy_j_molk": 31.8,
+    "heat_capacity_j_molk": 22.75,
+    "specific_heat_j_gK": 0.708,
+    "latent_heat_fusion_kj_mol": 1.73,
+    "latent_heat_vaporization_kj_mol": 45,
+    "fusion_heat_kj_mol": 1.727,
+    "evaporation_heat_kj_mol": 45
+  },
+  "kinetics_and_phase": {
+    "vapor_pressure_constants": {
+      "A": 4.152,
+      "B": 3180,
+      "C": -77
+    },
+    "vapor_pressure_pa": null,
+    "viscosity_liquid_pas": 0.017,
+    "viscosity_pa_s": null,
+    "critical_temp_K": 1314,
+    "critical_press_MPa": 20.7,
+    "surface_tension_nm": 0.061
+  },
+  "electromagnetism_and_mechanics": {
+    "thermal_conductivity_wmk": 0.205,
+    "electrical_conductivity_sm": 1e-15,
+    "magnetic_susceptibility": -1.55e-05,
+    "thermal_expansion_coefficient": 7.4e-05,
+    "polarizability_angstrom3": 2.9,
+    "refractive_index": 1.957,
+    "youngs_modulus_gba": null,
+    "poisson_ratio": null,
+    "brinell_hardness_m_pa": null
+  },
+  "reactivity": {
+    "max_bonds": 6,
+    "geometry_preference_es": "Angular / Octaédrica",
+    "geometry_preference_eng": "Bent / Octahedral",
+    "ideal_bond_angle": 104.5,
+    "bond_energy_ev": 2.7,
+    "dissociation_energy_kj_mol": 263,
+    "standard_potential_v": 0.14,
+    "oxidation_states": [
+      6,
+      4,
+      2,
+      -2
+    ],
+    "common_ions": [
+      "SO4 2-",
+      "S2-",
+      "SO3 2-"
+    ]
+  },
+  "nuclear_and_environmental": {
+    "isotopes": [
+      {
+        "mass": 31.972,
+        "abundance": 94.93,
+        "stable": true,
+        "name_es": "Azufre-32",
+        "name_eng": "Sulfur-32"
+      },
+      {
+        "mass": 32.971,
+        "abundance": 0.76,
+        "stable": true,
+        "name_es": "Azufre-33",
+        "name_eng": "Sulfur-33"
+      },
+      {
+        "mass": 33.967,
+        "abundance": 4.29,
+        "stable": true,
+        "name_es": "Azufre-34",
+        "name_eng": "Sulfur-34"
+      }
+    ],
+    "neutron_cross_section_barns": 0.53,
+    "nuclear_binding_energy_mev": 8.493,
+    "abundance_crust_mg_kg": 350,
+    "toxicity_level": 1
+  },
+  "cryogenic_data": {
+    "critical_solidification_pressure_mpa": null,
+    "lambda_point_k": null,
+    "superfluid_viscosity_pas": null
+  }
+}

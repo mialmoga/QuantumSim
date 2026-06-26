@@ -1,0 +1,170 @@
+{
+  "symbol": "Gd",
+  "identity": {
+    "name_es": "Gadolinio",
+    "name_eng": "Gadolinium",
+    "number": 64,
+    "category_es": "Lantánido",
+    "category_eng": "Lanthanide",
+    "color": "0xC0C0C0",
+    "cpk_color": "0x45FFC7",
+    "discovery_year": "1880"
+  },
+  "physical_properties": {
+    "mass": 157.25,
+    "density_g_cm3": 7.9,
+    "standard_state_es": "Sólido",
+    "standard_state_eng": "Solid",
+    "melt_K": 1585,
+    "boil_K": 3546,
+    "allotropes_es": [
+      "Alfa (hcp)",
+      "Beta (bcc)"
+    ],
+    "allotropes_eng": [
+      "Alpha (hcp)",
+      "Beta (bcc)"
+    ],
+    "lattice_structure": "hcp"
+  },
+  "atomic_structure": {
+    "electronegativity": 1.2,
+    "valence": 3,
+    "ionization_energy_eV": 6.1498,
+    "electron_affinity_ev": 0.137,
+    "electron_affinity_kj_mol": 13.2,
+    "radius_atomic_pm": 179,
+    "radius_covalent_pm": 196,
+    "vanderwaals_radius_pm": 233,
+    "ionic_radius_pm": 93.8,
+    "effective_nuclear_charge": 6.3,
+    "electron_configuration_string": "[Xe] 4f7 5d1 6s2",
+    "shells": [
+      2,
+      8,
+      18,
+      25,
+      9,
+      2
+    ],
+    "quantum_numbers": {
+      "s": 2,
+      "p": 0,
+      "d": 1,
+      "f": 7
+    },
+    "work_function_ev": 2.9
+  },
+  "thermodynamics": {
+    "enthalpy_formation_kj_mol": 0,
+    "entropy_j_molk": 68.42,
+    "heat_capacity_j_molk": 37.03,
+    "specific_heat_j_gK": 0.236,
+    "latent_heat_fusion_kj_mol": 10.05,
+    "latent_heat_vaporization_kj_mol": 301.3,
+    "fusion_heat_kj_mol": 10,
+    "evaporation_heat_kj_mol": 398
+  },
+  "kinetics_and_phase": {
+    "vapor_pressure_constants": {
+      "A": 5.15,
+      "B": 21000,
+      "C": -10
+    },
+    "vapor_pressure_pa": null,
+    "viscosity_liquid_pas": null,
+    "viscosity_pa_s": null,
+    "critical_temp_K": null,
+    "critical_press_MPa": null,
+    "surface_tension_nm": 0.569
+  },
+  "electromagnetism_and_mechanics": {
+    "thermal_conductivity_wmk": 10.6,
+    "electrical_conductivity_sm": 770000,
+    "magnetic_susceptibility": 0.48,
+    "thermal_expansion_coefficient": 9.4e-06,
+    "polarizability_angstrom3": 24.5,
+    "refractive_index": null,
+    "youngs_modulus_gba": 54.8,
+    "poisson_ratio": 0.24,
+    "brinell_hardness_m_pa": 570
+  },
+  "reactivity": {
+    "max_bonds": 3,
+    "geometry_preference_es": "Octaédrica",
+    "geometry_preference_eng": "Octahedral",
+    "ideal_bond_angle": null,
+    "bond_energy_ev": null,
+    "dissociation_energy_kj_mol": null,
+    "standard_potential_v": -2.279,
+    "oxidation_states": [
+      3
+    ],
+    "common_ions": [
+      "Gd3+"
+    ]
+  },
+  "nuclear_and_environmental": {
+    "isotopes": [
+      {
+        "mass": 151.92,
+        "abundance": 0.2,
+        "stable": false,
+        "half_life_s": 3.4e+21,
+        "name_es": "Gadolinio-152",
+        "name_eng": "Gadolinium-152"
+      },
+      {
+        "mass": 153.922,
+        "abundance": 2.18,
+        "stable": true,
+        "name_es": "Gadolinio-154",
+        "name_eng": "Gadolinium-154"
+      },
+      {
+        "mass": 154.923,
+        "abundance": 14.8,
+        "stable": true,
+        "name_es": "Gadolinio-155",
+        "name_eng": "Gadolinium-155"
+      },
+      {
+        "mass": 155.922,
+        "abundance": 20.47,
+        "stable": true,
+        "name_es": "Gadolinio-156",
+        "name_eng": "Gadolinium-156"
+      },
+      {
+        "mass": 156.924,
+        "abundance": 15.65,
+        "stable": true,
+        "name_es": "Gadolinio-157",
+        "name_eng": "Gadolinium-157"
+      },
+      {
+        "mass": 157.924,
+        "abundance": 24.84,
+        "stable": true,
+        "name_es": "Gadolinio-158",
+        "name_eng": "Gadolinium-158"
+      },
+      {
+        "mass": 159.927,
+        "abundance": 21.86,
+        "stable": true,
+        "name_es": "Gadolinio-160",
+        "name_eng": "Gadolinium-160"
+      }
+    ],
+    "neutron_cross_section_barns": 49000,
+    "nuclear_binding_energy_mev": 8.213,
+    "abundance_crust_mg_kg": 6.2,
+    "toxicity_level": 1
+  },
+  "cryogenic_data": {
+    "critical_solidification_pressure_mpa": null,
+    "lambda_point_k": 292,
+    "superfluid_viscosity_pas": null
+  }
+}

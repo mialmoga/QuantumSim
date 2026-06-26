@@ -1,0 +1,171 @@
+{
+  "symbol": "Nd",
+  "identity": {
+    "name_es": "Neodimio",
+    "name_eng": "Neodymium",
+    "number": 60,
+    "category_es": "Lantánido",
+    "category_eng": "Lanthanide",
+    "color": "0xC0C0B0",
+    "cpk_color": "0xC7FFC7",
+    "discovery_year": "1885"
+  },
+  "physical_properties": {
+    "mass": 144.242,
+    "density_g_cm3": 7.01,
+    "standard_state_es": "Sólido",
+    "standard_state_eng": "Solid",
+    "melt_K": 1297,
+    "boil_K": 3347,
+    "allotropes_es": [
+      "Alfa (dhcp)",
+      "Beta (bcc)"
+    ],
+    "allotropes_eng": [
+      "Alpha (dhcp)",
+      "Beta (bcc)"
+    ],
+    "lattice_structure": "dhcp"
+  },
+  "atomic_structure": {
+    "electronegativity": 1.14,
+    "valence": 3,
+    "ionization_energy_eV": 5.525,
+    "electron_affinity_ev": 0.095,
+    "electron_affinity_kj_mol": 9.2,
+    "radius_atomic_pm": 181,
+    "radius_covalent_pm": 201,
+    "vanderwaals_radius_pm": 229,
+    "ionic_radius_pm": 98.3,
+    "effective_nuclear_charge": 6.3,
+    "electron_configuration_string": "[Xe] 4f4 6s2",
+    "shells": [
+      2,
+      8,
+      18,
+      22,
+      8,
+      2
+    ],
+    "quantum_numbers": {
+      "s": 2,
+      "p": 0,
+      "d": 0,
+      "f": 4
+    },
+    "work_function_ev": 3.2
+  },
+  "thermodynamics": {
+    "enthalpy_formation_kj_mol": 0,
+    "entropy_j_molk": 71.5,
+    "heat_capacity_j_molk": 27.45,
+    "specific_heat_j_gK": 0.19,
+    "latent_heat_fusion_kj_mol": 7.14,
+    "latent_heat_vaporization_kj_mol": 289,
+    "fusion_heat_kj_mol": 7.1,
+    "evaporation_heat_kj_mol": 273
+  },
+  "kinetics_and_phase": {
+    "vapor_pressure_constants": {
+      "A": 5.1,
+      "B": 18500,
+      "C": -10
+    },
+    "vapor_pressure_pa": null,
+    "viscosity_liquid_pas": null,
+    "viscosity_pa_s": null,
+    "critical_temp_K": null,
+    "critical_press_MPa": null,
+    "surface_tension_nm": 0.686
+  },
+  "electromagnetism_and_mechanics": {
+    "thermal_conductivity_wmk": 16.5,
+    "electrical_conductivity_sm": 1570000,
+    "magnetic_susceptibility": 0.00028,
+    "thermal_expansion_coefficient": 9.6e-06,
+    "polarizability_angstrom3": 31.4,
+    "refractive_index": null,
+    "youngs_modulus_gba": 41.4,
+    "poisson_ratio": 0.28,
+    "brinell_hardness_m_pa": 265
+  },
+  "reactivity": {
+    "max_bonds": 3,
+    "geometry_preference_es": "Octaédrica",
+    "geometry_preference_eng": "Octahedral",
+    "ideal_bond_angle": null,
+    "bond_energy_ev": null,
+    "dissociation_energy_kj_mol": null,
+    "standard_potential_v": -2.32,
+    "oxidation_states": [
+      3
+    ],
+    "common_ions": [
+      "Nd3+"
+    ]
+  },
+  "nuclear_and_environmental": {
+    "isotopes": [
+      {
+        "mass": 141.907,
+        "abundance": 27.13,
+        "stable": true,
+        "name_es": "Neodimio-142",
+        "name_eng": "Neodymium-142"
+      },
+      {
+        "mass": 142.909,
+        "abundance": 12.18,
+        "stable": true,
+        "name_es": "Neodimio-143",
+        "name_eng": "Neodymium-143"
+      },
+      {
+        "mass": 143.91,
+        "abundance": 23.8,
+        "stable": false,
+        "half_life_s": 7.2e+22,
+        "name_es": "Neodimio-144",
+        "name_eng": "Neodymium-144"
+      },
+      {
+        "mass": 144.912,
+        "abundance": 8.3,
+        "stable": true,
+        "name_es": "Neodimio-145",
+        "name_eng": "Neodymium-145"
+      },
+      {
+        "mass": 145.913,
+        "abundance": 17.19,
+        "stable": true,
+        "name_es": "Neodimio-146",
+        "name_eng": "Neodymium-146"
+      },
+      {
+        "mass": 147.916,
+        "abundance": 5.76,
+        "stable": true,
+        "name_es": "Neodimio-148",
+        "name_eng": "Neodymium-148"
+      },
+      {
+        "mass": 149.92,
+        "abundance": 5.64,
+        "stable": false,
+        "half_life_s": 2.2e+26,
+        "name_es": "Neodimio-150",
+        "name_eng": "Neodymium-150"
+      }
+    ],
+    "neutron_cross_section_barns": 50,
+    "nuclear_binding_energy_mev": 8.291,
+    "abundance_crust_mg_kg": 41.5,
+    "toxicity_level": 1
+  },
+  "cryogenic_data": {
+    "critical_solidification_pressure_mpa": null,
+    "lambda_point_k": null,
+    "superfluid_viscosity_pas": null
+  }
+}

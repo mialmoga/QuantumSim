@@ -1,0 +1,48 @@
+{
+  "symbol": "Ir",
+  "generated_by": "generate_materials.py v1.2 (Stevens perceptual)",
+  "source_props": {
+    "mass": 192.217,
+    "melt_K": 2719,
+    "density": 22.56,
+    "ionization_eV": 8.967,
+    "electronegativity": 2.2,
+    "polarizability": 7.6,
+    "standard_state": "Solid"
+  },
+  "shader_params": {
+    "sphere_pulse": {
+      "freq": 0.721,
+      "amp": 0.291
+    },
+    "blink": {
+      "amp": 0.0,
+      "speed": 0.216
+    },
+    "brightness": {
+      "bright": 1.348,
+      "base": 0.3,
+      "vari": 0.0
+    },
+    "disc_shape": {
+      "soft": 0.267,
+      "radius": 0.22,
+      "ring": 0.0
+    },
+    "point_size": {
+      "sz": 0.331,
+      "bAmp": 0.0,
+      "persp": 66.1
+    },
+    "alpha_curve": {
+      "opacity": 1.0,
+      "curve": 1.0,
+      "floor": 0.0
+    },
+    "color": {
+      "r": 0.7529,
+      "g": 0.7529,
+      "b": 0.7529
+    }
+  }
+}

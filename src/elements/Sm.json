@@ -1,0 +1,175 @@
+{
+  "symbol": "Sm",
+  "identity": {
+    "name_es": "Samario",
+    "name_eng": "Samarium",
+    "number": 62,
+    "category_es": "Lantánido",
+    "category_eng": "Lanthanide",
+    "color": "0xB8B8B0",
+    "cpk_color": "0x8FFFC7",
+    "discovery_year": "1879"
+  },
+  "physical_properties": {
+    "mass": 150.36,
+    "density_g_cm3": 7.52,
+    "standard_state_es": "Sólido",
+    "standard_state_eng": "Solid",
+    "melt_K": 1345,
+    "boil_K": 2067,
+    "allotropes_es": [
+      "Alfa (romboédrica)",
+      "Beta (hcp)",
+      "Gamma (bcc)"
+    ],
+    "allotropes_eng": [
+      "Alpha (rhombohedral)",
+      "Beta (hcp)",
+      "Gamma (bcc)"
+    ],
+    "lattice_structure": "rhombohedral"
+  },
+  "atomic_structure": {
+    "electronegativity": 1.17,
+    "valence": 3,
+    "ionization_energy_eV": 5.6439,
+    "electron_affinity_ev": 0.16,
+    "electron_affinity_kj_mol": 15.6,
+    "radius_atomic_pm": 180,
+    "radius_covalent_pm": 198,
+    "vanderwaals_radius_pm": 229,
+    "ionic_radius_pm": 95.8,
+    "effective_nuclear_charge": 6.3,
+    "electron_configuration_string": "[Xe] 4f6 6s2",
+    "shells": [
+      2,
+      8,
+      18,
+      24,
+      8,
+      2
+    ],
+    "quantum_numbers": {
+      "s": 2,
+      "p": 0,
+      "d": 0,
+      "f": 6
+    },
+    "work_function_ev": 2.7
+  },
+  "thermodynamics": {
+    "enthalpy_formation_kj_mol": 0,
+    "entropy_j_molk": 69.5,
+    "heat_capacity_j_molk": 29.54,
+    "specific_heat_j_gK": 0.197,
+    "latent_heat_fusion_kj_mol": 8.62,
+    "latent_heat_vaporization_kj_mol": 165,
+    "fusion_heat_kj_mol": 8.6,
+    "evaporation_heat_kj_mol": 166
+  },
+  "kinetics_and_phase": {
+    "vapor_pressure_constants": {
+      "A": 5.12,
+      "B": 11000,
+      "C": -10
+    },
+    "vapor_pressure_pa": null,
+    "viscosity_liquid_pas": null,
+    "viscosity_pa_s": null,
+    "critical_temp_K": null,
+    "critical_press_MPa": null,
+    "surface_tension_nm": 0.44
+  },
+  "electromagnetism_and_mechanics": {
+    "thermal_conductivity_wmk": 13.3,
+    "electrical_conductivity_sm": 1100000,
+    "magnetic_susceptibility": 1.86e-05,
+    "thermal_expansion_coefficient": 1.27e-05,
+    "polarizability_angstrom3": 28.8,
+    "refractive_index": null,
+    "youngs_modulus_gba": 49.7,
+    "poisson_ratio": 0.27,
+    "brinell_hardness_m_pa": 412
+  },
+  "reactivity": {
+    "max_bonds": 3,
+    "geometry_preference_es": "Octaédrica",
+    "geometry_preference_eng": "Octahedral",
+    "ideal_bond_angle": null,
+    "bond_energy_ev": null,
+    "dissociation_energy_kj_mol": null,
+    "standard_potential_v": -2.3,
+    "oxidation_states": [
+      3,
+      2
+    ],
+    "common_ions": [
+      "Sm3+",
+      "Sm2+"
+    ]
+  },
+  "nuclear_and_environmental": {
+    "isotopes": [
+      {
+        "mass": 143.912,
+        "abundance": 3.07,
+        "stable": true,
+        "name_es": "Samario-144",
+        "name_eng": "Samarium-144"
+      },
+      {
+        "mass": 146.915,
+        "abundance": 15,
+        "stable": false,
+        "half_life_s": 3.3e+22,
+        "name_es": "Samario-147",
+        "name_eng": "Samarium-147"
+      },
+      {
+        "mass": 147.915,
+        "abundance": 11.24,
+        "stable": false,
+        "half_life_s": 2.2e+23,
+        "name_es": "Samario-148",
+        "name_eng": "Samarium-148"
+      },
+      {
+        "mass": 148.917,
+        "abundance": 13.82,
+        "stable": true,
+        "name_es": "Samario-149",
+        "name_eng": "Samarium-149"
+      },
+      {
+        "mass": 149.917,
+        "abundance": 7.38,
+        "stable": true,
+        "name_es": "Samario-150",
+        "name_eng": "Samarium-150"
+      },
+      {
+        "mass": 151.919,
+        "abundance": 26.75,
+        "stable": true,
+        "name_es": "Samario-152",
+        "name_eng": "Samarium-152"
+      },
+      {
+        "mass": 153.922,
+        "abundance": 22.74,
+        "stable": true,
+        "name_es": "Samario-154",
+        "name_eng": "Samarium-154"
+      }
+    ],
+    "neutron_cross_section_barns": 5922,
+    "nuclear_binding_energy_mev": 8.243,
+    "abundance_crust_mg_kg": 6,
+    "toxicity_level": 1
+  },
+  "cryogenic_data": {
+    "critical_solidification_pressure_mpa": null,
+    "lambda_point_k": null,
+    "superfluid_viscosity_pas": null
+  }
+}

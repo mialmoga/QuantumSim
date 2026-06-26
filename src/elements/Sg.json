@@ -1,0 +1,130 @@
+{
+  "symbol": "Sg",
+  "identity": {
+    "name_es": "Seaborgio",
+    "name_eng": "Seaborgium",
+    "number": 106,
+    "category_es": "Metal de transición",
+    "category_eng": "Transition metal",
+    "color": "0xA0A0A0",
+    "cpk_color": "0xD90045",
+    "discovery_year": "1974"
+  },
+  "physical_properties": {
+    "mass": 269.128,
+    "density_g_cm3": 35,
+    "standard_state_es": "Sólido (predicho)",
+    "standard_state_eng": "Solid (predicted)",
+    "melt_K": 2800,
+    "boil_K": null,
+    "allotropes_es": null,
+    "allotropes_eng": null,
+    "lattice_structure": "bcc (predicho)"
+  },
+  "atomic_structure": {
+    "electronegativity": 1.3,
+    "valence": 6,
+    "ionization_energy_eV": 6.4,
+    "electron_affinity_ev": null,
+    "electron_affinity_kj_mol": null,
+    "radius_atomic_pm": 132,
+    "radius_covalent_pm": 143,
+    "vanderwaals_radius_pm": 230,
+    "ionic_radius_pm": 65,
+    "effective_nuclear_charge": 7.1,
+    "electron_configuration_string": "[Rn] 5f14 6d4 7s2",
+    "shells": [
+      2,
+      8,
+      18,
+      32,
+      32,
+      12,
+      2
+    ],
+    "quantum_numbers": {
+      "s": 2,
+      "p": 0,
+      "d": 4,
+      "f": 14
+    },
+    "work_function_ev": null
+  },
+  "thermodynamics": {
+    "enthalpy_formation_kj_mol": 0,
+    "entropy_j_molk": null,
+    "heat_capacity_j_molk": 25,
+    "specific_heat_j_gK": 0.09,
+    "latent_heat_fusion_kj_mol": 30,
+    "latent_heat_vaporization_kj_mol": 610,
+    "fusion_heat_kj_mol": 30,
+    "evaporation_heat_kj_mol": 610
+  },
+  "kinetics_and_phase": {
+    "vapor_pressure_constants": {
+      "A": null,
+      "B": null,
+      "C": null
+    },
+    "vapor_pressure_pa": null,
+    "viscosity_liquid_pas": null,
+    "viscosity_pa_s": null,
+    "critical_temp_K": null,
+    "critical_press_MPa": null,
+    "surface_tension_nm": null
+  },
+  "electromagnetism_and_mechanics": {
+    "thermal_conductivity_wmk": 11.5,
+    "electrical_conductivity_sm": null,
+    "magnetic_susceptibility": null,
+    "thermal_expansion_coefficient": null,
+    "polarizability_angstrom3": 12.8,
+    "refractive_index": null,
+    "youngs_modulus_gba": null,
+    "poisson_ratio": null,
+    "brinell_hardness_m_pa": null
+  },
+  "reactivity": {
+    "max_bonds": 6,
+    "geometry_preference_es": "Octaédrica (predicho)",
+    "geometry_preference_eng": "Octahedral (predicted)",
+    "ideal_bond_angle": 90,
+    "bond_energy_ev": 2.3,
+    "dissociation_energy_kj_mol": null,
+    "standard_potential_v": -1,
+    "oxidation_states": [
+      6,
+      5,
+      4,
+      3,
+      0
+    ],
+    "common_ions": [
+      "Sg6+"
+    ]
+  },
+  "nuclear_and_environmental": {
+    "isotopes": [
+      {
+        "mass": 269.128,
+        "abundance": null,
+        "stable": false,
+        "half_life_s": 126,
+        "name_es": "Seaborgio-269",
+        "name_eng": "Seaborgium-269"
+      },
+      {
+        "mass": 271.13,
+        "abundance": null,
+        "stable": false,
+        "half_life_s": 114,
+        "name_es": "Seaborgio-271",
+        "name_eng": "Seaborgium-271"
+      }
+    ],
+    "neutron_cross_section_barns": null,
+    "nuclear_binding_energy_mev": 7.15,
+    "abundance_crust_mg_kg": 0,
+    "toxicity_level": 5
+  }
+}

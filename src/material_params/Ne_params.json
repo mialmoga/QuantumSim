@@ -1,0 +1,48 @@
+{
+  "symbol": "Ne",
+  "generated_by": "generate_materials.py v1.2 (Stevens perceptual)",
+  "source_props": {
+    "mass": 20.18,
+    "melt_K": 24.56,
+    "density": 0.0008999,
+    "ionization_eV": 21.5645,
+    "electronegativity": null,
+    "polarizability": 0.3956,
+    "standard_state": "Solid"
+  },
+  "shader_params": {
+    "sphere_pulse": {
+      "freq": 2.226,
+      "amp": 0.4
+    },
+    "blink": {
+      "amp": 0.0,
+      "speed": 0.668
+    },
+    "brightness": {
+      "bright": 2.738,
+      "base": 0.3,
+      "vari": 0.0
+    },
+    "disc_shape": {
+      "soft": 0.25,
+      "radius": 0.22,
+      "ring": 0.0
+    },
+    "point_size": {
+      "sz": 0.301,
+      "bAmp": 0.0,
+      "persp": 41.3
+    },
+    "alpha_curve": {
+      "opacity": 0.228,
+      "curve": 1.386,
+      "floor": 0.0
+    },
+    "color": {
+      "r": 1.0,
+      "g": 0.3765,
+      "b": 0.1882
+    }
+  }
+}

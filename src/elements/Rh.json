@@ -1,0 +1,122 @@
+{
+  "symbol": "Rh",
+  "identity": {
+    "name_es": "Rodio",
+    "name_eng": "Rhodium",
+    "number": 45,
+    "category_es": "Metal de transición",
+    "category_eng": "Transition metal",
+    "color": "0xC0C0C0",
+    "cpk_color": "0x0A7D8C",
+    "discovery_year": "1803"
+  },
+  "physical_properties": {
+    "mass": 102.905,
+    "density_g_cm3": 12.41,
+    "standard_state_es": "Sólido",
+    "standard_state_eng": "Solid",
+    "melt_K": 2237,
+    "boil_K": 3968,
+    "allotropes_es": null,
+    "allotropes_eng": null,
+    "lattice_structure": "fcc"
+  },
+  "atomic_structure": {
+    "electronegativity": 2.28,
+    "valence": 3,
+    "ionization_energy_eV": 7.4589,
+    "electron_affinity_ev": 1.137,
+    "electron_affinity_kj_mol": 109.7,
+    "radius_atomic_pm": 134,
+    "radius_covalent_pm": 142,
+    "vanderwaals_radius_pm": 195,
+    "ionic_radius_pm": 66.5,
+    "effective_nuclear_charge": 5.43,
+    "electron_configuration_string": "[Kr] 4d8 5s1",
+    "shells": [
+      2,
+      8,
+      18,
+      16,
+      1
+    ],
+    "quantum_numbers": {
+      "s": 1,
+      "p": 0,
+      "d": 8,
+      "f": 0
+    },
+    "work_function_ev": 4.98
+  },
+  "thermodynamics": {
+    "enthalpy_formation_kj_mol": 0,
+    "entropy_j_molk": 31.5,
+    "heat_capacity_j_molk": 24.98,
+    "specific_heat_j_gK": 0.243,
+    "latent_heat_fusion_kj_mol": 26.59,
+    "latent_heat_vaporization_kj_mol": 494,
+    "fusion_heat_kj_mol": 21.7,
+    "evaporation_heat_kj_mol": 494
+  },
+  "kinetics_and_phase": {
+    "vapor_pressure_constants": {
+      "A": 5.15,
+      "B": 24300,
+      "C": -10
+    },
+    "vapor_pressure_pa": null,
+    "viscosity_liquid_pas": null,
+    "viscosity_pa_s": null,
+    "critical_temp_K": null,
+    "critical_press_MPa": null,
+    "surface_tension_nm": 2
+  },
+  "electromagnetism_and_mechanics": {
+    "thermal_conductivity_wmk": 150,
+    "electrical_conductivity_sm": 23000000,
+    "magnetic_susceptibility": 9.9e-05,
+    "thermal_expansion_coefficient": 8.2e-06,
+    "polarizability_angstrom3": 8.6,
+    "refractive_index": null,
+    "youngs_modulus_gba": 379,
+    "poisson_ratio": 0.26,
+    "brinell_hardness_m_pa": 1100
+  },
+  "reactivity": {
+    "max_bonds": 6,
+    "geometry_preference_es": "Octaédrica",
+    "geometry_preference_eng": "Octahedral",
+    "ideal_bond_angle": null,
+    "bond_energy_ev": null,
+    "dissociation_energy_kj_mol": null,
+    "standard_potential_v": 0.76,
+    "oxidation_states": [
+      3,
+      4,
+      2
+    ],
+    "common_ions": [
+      "Rh3+"
+    ]
+  },
+  "nuclear_and_environmental": {
+    "isotopes": [
+      {
+        "mass": 102.905,
+        "abundance": 100,
+        "stable": true,
+        "name_es": "Rodio-103",
+        "name_eng": "Rhodium-103"
+      }
+    ],
+    "neutron_cross_section_barns": 145,
+    "nuclear_binding_energy_mev": 8.632,
+    "abundance_crust_mg_kg": 0.001,
+    "toxicity_level": 1
+  },
+  "cryogenic_data": {
+    "critical_solidification_pressure_mpa": null,
+    "lambda_point_k": 0.0003,
+    "superfluid_viscosity_pas": null
+  }
+}

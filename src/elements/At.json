@@ -1,0 +1,135 @@
+{
+  "symbol": "At",
+  "identity": {
+    "name_es": "Astato",
+    "name_eng": "Astatine",
+    "number": 85,
+    "category_es": "Metaloide / Halógeno",
+    "category_eng": "Metalloid / Halogen",
+    "color": "0x908060",
+    "cpk_color": "0x754F45",
+    "discovery_year": "1940"
+  },
+  "physical_properties": {
+    "mass": 210,
+    "density_g_cm3": 7,
+    "standard_state_es": "Sólido (predicho)",
+    "standard_state_eng": "Solid (predicted)",
+    "melt_K": 575,
+    "boil_K": 610,
+    "allotropes_es": null,
+    "allotropes_eng": null,
+    "lattice_structure": "fcc (predicho)"
+  },
+  "atomic_structure": {
+    "electronegativity": 2.2,
+    "valence": 1,
+    "ionization_energy_eV": 9.3175,
+    "electron_affinity_ev": 2.8,
+    "electron_affinity_kj_mol": 270.1,
+    "radius_atomic_pm": 150,
+    "radius_covalent_pm": 150,
+    "vanderwaals_radius_pm": 202,
+    "ionic_radius_pm": 62,
+    "effective_nuclear_charge": 6.3,
+    "electron_configuration_string": "[Xe] 4f14 5d10 6s2 6p5",
+    "shells": [
+      2,
+      8,
+      18,
+      32,
+      18,
+      7
+    ],
+    "quantum_numbers": {
+      "s": 2,
+      "p": 5,
+      "d": 10,
+      "f": 14
+    },
+    "work_function_ev": 4.5
+  },
+  "thermodynamics": {
+    "enthalpy_formation_kj_mol": null,
+    "entropy_j_molk": null,
+    "heat_capacity_j_molk": null,
+    "specific_heat_j_gK": null,
+    "latent_heat_fusion_kj_mol": 6,
+    "latent_heat_vaporization_kj_mol": 40,
+    "fusion_heat_kj_mol": 114,
+    "evaporation_heat_kj_mol": 40
+  },
+  "kinetics_and_phase": {
+    "vapor_pressure_constants": {
+      "A": null,
+      "B": null,
+      "C": null
+    },
+    "vapor_pressure_pa": null,
+    "viscosity_liquid_pas": null,
+    "viscosity_pa_s": null,
+    "critical_temp_K": null,
+    "critical_press_MPa": null,
+    "surface_tension_nm": null
+  },
+  "electromagnetism_and_mechanics": {
+    "thermal_conductivity_wmk": 1.7,
+    "electrical_conductivity_sm": null,
+    "magnetic_susceptibility": null,
+    "thermal_expansion_coefficient": null,
+    "polarizability_angstrom3": 8.1,
+    "refractive_index": null,
+    "youngs_modulus_gba": null,
+    "poisson_ratio": null,
+    "brinell_hardness_m_pa": null
+  },
+  "reactivity": {
+    "max_bonds": 1,
+    "geometry_preference_es": "Lineal",
+    "geometry_preference_eng": "Linear",
+    "ideal_bond_angle": 180,
+    "bond_energy_ev": null,
+    "dissociation_energy_kj_mol": null,
+    "standard_potential_v": 0.3,
+    "oxidation_states": [
+      -1,
+      1,
+      3,
+      5,
+      7
+    ],
+    "common_ions": [
+      "At-",
+      "At+"
+    ]
+  },
+  "nuclear_and_environmental": {
+    "isotopes": [
+      {
+        "mass": 209.98,
+        "abundance": null,
+        "stable": false,
+        "half_life_s": 29160,
+        "name_es": "Astato-210",
+        "name_eng": "Astatine-210"
+      },
+      {
+        "mass": 210.98,
+        "abundance": null,
+        "stable": false,
+        "half_life_s": 25920,
+        "name_es": "Astato-211",
+        "name_eng": "Astatine-211"
+      }
+    ],
+    "neutron_cross_section_barns": 10,
+    "nuclear_binding_energy_mev": 7.8,
+    "abundance_crust_mg_kg": 3e-20,
+    "toxicity_level": 5
+  },
+  "cryogenic_data": {
+    "critical_solidification_pressure_mpa": null,
+    "lambda_point_k": null,
+    "superfluid_viscosity_pas": null
+  }
+}

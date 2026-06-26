@@ -1,0 +1,48 @@
+{
+  "symbol": "Cd",
+  "generated_by": "generate_materials.py v1.2 (Stevens perceptual)",
+  "source_props": {
+    "mass": 112.414,
+    "melt_K": 594.22,
+    "density": 8.65,
+    "ionization_eV": 8.9938,
+    "electronegativity": 1.69,
+    "polarizability": 7.2,
+    "standard_state": "Solid"
+  },
+  "shader_params": {
+    "sphere_pulse": {
+      "freq": 0.943,
+      "amp": 0.36
+    },
+    "blink": {
+      "amp": 0.0,
+      "speed": 0.283
+    },
+    "brightness": {
+      "bright": 1.352,
+      "base": 0.3,
+      "vari": 0.0
+    },
+    "disc_shape": {
+      "soft": 0.329,
+      "radius": 0.22,
+      "ring": 0.0
+    },
+    "point_size": {
+      "sz": 0.33,
+      "bAmp": 0.0,
+      "persp": 66.9
+    },
+    "alpha_curve": {
+      "opacity": 0.926,
+      "curve": 1.037,
+      "floor": 0.0
+    },
+    "color": {
+      "r": 0.8157,
+      "g": 0.8157,
+      "b": 0.7843
+    }
+  }
+}

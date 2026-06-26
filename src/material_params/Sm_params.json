@@ -1,0 +1,48 @@
+{
+  "symbol": "Sm",
+  "generated_by": "generate_materials.py v1.2 (Stevens perceptual)",
+  "source_props": {
+    "mass": 150.36,
+    "melt_K": 1345,
+    "density": 7.52,
+    "ionization_eV": 5.6439,
+    "electronegativity": 1.17,
+    "polarizability": 28.8,
+    "standard_state": "Solid"
+  },
+  "shader_params": {
+    "sphere_pulse": {
+      "freq": 0.816,
+      "amp": 0.32
+    },
+    "blink": {
+      "amp": 0.0,
+      "speed": 0.245
+    },
+    "brightness": {
+      "bright": 0.76,
+      "base": 0.3,
+      "vari": 0.0
+    },
+    "disc_shape": {
+      "soft": 0.393,
+      "radius": 0.22,
+      "ring": 0.0
+    },
+    "point_size": {
+      "sz": 0.422,
+      "bAmp": 0.0,
+      "persp": 79.2
+    },
+    "alpha_curve": {
+      "opacity": 0.915,
+      "curve": 1.042,
+      "floor": 0.0
+    },
+    "color": {
+      "r": 0.7216,
+      "g": 0.7216,
+      "b": 0.6902
+    }
+  }
+}

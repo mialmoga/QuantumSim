@@ -1,0 +1,128 @@
+{
+  "symbol": "Rb",
+  "identity": {
+    "name_es": "Rubidio",
+    "name_eng": "Rubidium",
+    "number": 37,
+    "category_es": "Metal alcalino",
+    "category_eng": "Alkali metal",
+    "color": "0xB8B8C0",
+    "cpk_color": "0x702EB0",
+    "discovery_year": "1861"
+  },
+  "physical_properties": {
+    "mass": 85.4678,
+    "density_g_cm3": 1.532,
+    "standard_state_es": "Sólido",
+    "standard_state_eng": "Solid",
+    "melt_K": 312.46,
+    "boil_K": 961,
+    "allotropes_es": null,
+    "allotropes_eng": null,
+    "lattice_structure": "bcc"
+  },
+  "atomic_structure": {
+    "electronegativity": 0.82,
+    "valence": 1,
+    "ionization_energy_eV": 4.1771,
+    "electron_affinity_ev": 0.4859,
+    "electron_affinity_kj_mol": 46.9,
+    "radius_atomic_pm": 248,
+    "radius_covalent_pm": 220,
+    "vanderwaals_radius_pm": 303,
+    "ionic_radius_pm": 152,
+    "effective_nuclear_charge": 4.98,
+    "electron_configuration_string": "[Kr] 5s1",
+    "shells": [
+      2,
+      8,
+      18,
+      8,
+      1
+    ],
+    "quantum_numbers": {
+      "s": 1,
+      "p": 0,
+      "d": 0,
+      "f": 0
+    },
+    "work_function_ev": 2.16
+  },
+  "thermodynamics": {
+    "enthalpy_formation_kj_mol": 0,
+    "entropy_j_molk": 76.78,
+    "heat_capacity_j_molk": 31.06,
+    "specific_heat_j_gK": 0.363,
+    "latent_heat_fusion_kj_mol": 2.19,
+    "latent_heat_vaporization_kj_mol": 69,
+    "fusion_heat_kj_mol": 2.19,
+    "evaporation_heat_kj_mol": 69
+  },
+  "kinetics_and_phase": {
+    "vapor_pressure_constants": {
+      "A": 4.045,
+      "B": 3850,
+      "C": -10
+    },
+    "vapor_pressure_pa": null,
+    "viscosity_liquid_pas": 0.00048,
+    "viscosity_pa_s": null,
+    "critical_temp_K": 2093,
+    "critical_press_MPa": 16,
+    "surface_tension_nm": 0.077
+  },
+  "electromagnetism_and_mechanics": {
+    "thermal_conductivity_wmk": 58.2,
+    "electrical_conductivity_sm": 8300000,
+    "magnetic_susceptibility": 1.7e-05,
+    "thermal_expansion_coefficient": 9e-05,
+    "polarizability_angstrom3": 47.3,
+    "refractive_index": null,
+    "youngs_modulus_gba": 2.4,
+    "poisson_ratio": null,
+    "brinell_hardness_m_pa": 0.216
+  },
+  "reactivity": {
+    "max_bonds": 1,
+    "geometry_preference_es": "Esférica (S)",
+    "geometry_preference_eng": "Spherical (S)",
+    "ideal_bond_angle": null,
+    "bond_energy_ev": 0.49,
+    "dissociation_energy_kj_mol": 47,
+    "standard_potential_v": -2.93,
+    "oxidation_states": [
+      1
+    ],
+    "common_ions": [
+      "Rb+"
+    ]
+  },
+  "nuclear_and_environmental": {
+    "isotopes": [
+      {
+        "mass": 84.911,
+        "abundance": 72.17,
+        "stable": true,
+        "name_es": "Rubidio-85",
+        "name_eng": "Rubidium-85"
+      },
+      {
+        "mass": 86.909,
+        "abundance": 27.83,
+        "stable": false,
+        "half_life_s": 1540000000000000000,
+        "name_es": "Rubidio-87",
+        "name_eng": "Rubidium-87"
+      }
+    ],
+    "neutron_cross_section_barns": 0.38,
+    "nuclear_binding_energy_mev": 8.697,
+    "abundance_crust_mg_kg": 90,
+    "toxicity_level": 1
+  },
+  "cryogenic_data": {
+    "critical_solidification_pressure_mpa": null,
+    "lambda_point_k": null,
+    "superfluid_viscosity_pas": null
+  }
+}

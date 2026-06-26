@@ -1,0 +1,48 @@
+{
+  "symbol": "Tm",
+  "generated_by": "generate_materials.py v1.2 (Stevens perceptual)",
+  "source_props": {
+    "mass": 168.934,
+    "melt_K": 1818,
+    "density": 9.32,
+    "ionization_eV": 6.1843,
+    "electronegativity": 1.25,
+    "polarizability": 21.8,
+    "standard_state": "Solid"
+  },
+  "shader_params": {
+    "sphere_pulse": {
+      "freq": 0.769,
+      "amp": 0.307
+    },
+    "blink": {
+      "amp": 0.0,
+      "speed": 0.231
+    },
+    "brightness": {
+      "bright": 0.875,
+      "base": 0.3,
+      "vari": 0.0
+    },
+    "disc_shape": {
+      "soft": 0.383,
+      "radius": 0.22,
+      "ring": 0.0
+    },
+    "point_size": {
+      "sz": 0.392,
+      "bAmp": 0.0,
+      "persp": 77.4
+    },
+    "alpha_curve": {
+      "opacity": 0.932,
+      "curve": 1.034,
+      "floor": 0.0
+    },
+    "color": {
+      "r": 0.7529,
+      "g": 0.7529,
+      "b": 0.7529
+    }
+  }
+}

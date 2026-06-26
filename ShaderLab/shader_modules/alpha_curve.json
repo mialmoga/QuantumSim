@@ -1,0 +1,42 @@
+{
+  "id": "alpha_curve",
+  "name": "Alpha Curve",
+  "stage": "frag",
+  "target": [
+    "orbital",
+    "sphere"
+  ],
+  "color": "#4ade80",
+  "desc": "Curva de transparencia final con piso m\u00ednimo",
+  "sub": "alpha = pow(alpha, curve) \u00b7 opacity + floor",
+  "params": {
+    "curve": {
+      "label": "Curva",
+      "min": 0.2,
+      "max": 3.0,
+      "step": 0.05,
+      "val": 0.8
+    },
+    "opacity": {
+      "label": "Opacidad",
+      "min": 0.0,
+      "max": 1.0,
+      "step": 0.01,
+      "val": 0.7
+    },
+    "floor": {
+      "label": "M\u00ednimo",
+      "min": 0.0,
+      "max": 0.2,
+      "step": 0.01,
+      "val": 0.0
+    }
+  },
+  "glsl": "alpha=pow(max(alpha,0.0),{{curve}})*{{opacity}}+{{floor}};",
+  "requires": [
+    "disc_shape"
+  ],
+  "provides": [
+    "alpha_final"
+  ]
+}

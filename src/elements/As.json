@@ -1,0 +1,130 @@
+{
+  "symbol": "As",
+  "identity": {
+    "name_es": "Arsénico",
+    "name_eng": "Arsenic",
+    "number": 33,
+    "category_es": "Metaloide",
+    "category_eng": "Metalloid",
+    "color": "0x808080",
+    "cpk_color": "0xBD80E3",
+    "discovery_year": "1250"
+  },
+  "physical_properties": {
+    "mass": 74.921,
+    "density_g_cm3": 5.727,
+    "standard_state_es": "Sólido",
+    "standard_state_eng": "Solid",
+    "melt_K": 1090,
+    "boil_K": 887,
+    "allotropes_es": [
+      "Gris (Metálico)",
+      "Amarillo",
+      "Negro"
+    ],
+    "allotropes_eng": [
+      "Gray (Metallic)",
+      "Yellow",
+      "Black"
+    ],
+    "lattice_structure": "rhombohedral"
+  },
+  "atomic_structure": {
+    "electronegativity": 2.18,
+    "valence": 5,
+    "ionization_energy_eV": 9.7886,
+    "electron_affinity_ev": 0.81,
+    "electron_affinity_kj_mol": 78,
+    "radius_atomic_pm": 119,
+    "radius_covalent_pm": 121,
+    "vanderwaals_radius_pm": 185,
+    "ionic_radius_pm": 46,
+    "effective_nuclear_charge": 6.3,
+    "electron_configuration_string": "[Ar] 3d10 4s2 4p3",
+    "shells": [
+      2,
+      8,
+      18,
+      5
+    ],
+    "quantum_numbers": {
+      "s": 2,
+      "p": 3,
+      "d": 0,
+      "f": 0
+    },
+    "work_function_ev": 3.75
+  },
+  "thermodynamics": {
+    "enthalpy_formation_kj_mol": 0,
+    "entropy_j_molk": 35.1,
+    "heat_capacity_j_molk": 24.64,
+    "specific_heat_j_gK": 0.329,
+    "latent_heat_fusion_kj_mol": 24.44,
+    "latent_heat_vaporization_kj_mol": 34.76,
+    "fusion_heat_kj_mol": 24.44,
+    "evaporation_heat_kj_mol": 34.76
+  },
+  "kinetics_and_phase": {
+    "vapor_pressure_constants": {
+      "A": 6.69,
+      "B": 2460,
+      "C": -60
+    },
+    "vapor_pressure_pa": null,
+    "viscosity_liquid_pas": null,
+    "viscosity_pa_s": null,
+    "critical_temp_K": 1593,
+    "critical_press_MPa": null,
+    "surface_tension_nm": null
+  },
+  "electromagnetism_and_mechanics": {
+    "thermal_conductivity_wmk": 50.2,
+    "electrical_conductivity_sm": 3450000,
+    "magnetic_susceptibility": -5.5e-06,
+    "thermal_expansion_coefficient": 4.7e-06,
+    "polarizability_angstrom3": 4.31,
+    "refractive_index": null,
+    "youngs_modulus_gba": 8,
+    "poisson_ratio": null,
+    "brinell_hardness_m_pa": null
+  },
+  "reactivity": {
+    "max_bonds": 5,
+    "geometry_preference_es": "Trigonal piramidal",
+    "geometry_preference_eng": "Trigonal pyramidal",
+    "ideal_bond_angle": 92,
+    "bond_energy_ev": 1.5,
+    "dissociation_energy_kj_mol": 146,
+    "standard_potential_v": 0.24,
+    "oxidation_states": [
+      5,
+      3,
+      -3
+    ],
+    "common_ions": [
+      "AsO4 3-",
+      "AsO3 3-"
+    ]
+  },
+  "nuclear_and_environmental": {
+    "isotopes": [
+      {
+        "mass": 74.921,
+        "abundance": 100,
+        "stable": true,
+        "name_es": "Arsénico-75",
+        "name_eng": "Arsenic-75"
+      }
+    ],
+    "neutron_cross_section_barns": 4.3,
+    "nuclear_binding_energy_mev": 8.703,
+    "abundance_crust_mg_kg": 1.8,
+    "toxicity_level": 5
+  },
+  "cryogenic_data": {
+    "critical_solidification_pressure_mpa": 3.6,
+    "lambda_point_k": null,
+    "superfluid_viscosity_pas": null
+  }
+}

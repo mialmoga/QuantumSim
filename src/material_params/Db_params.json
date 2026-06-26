@@ -1,0 +1,48 @@
+{
+  "symbol": "Db",
+  "generated_by": "generate_materials.py v1.2 (Stevens perceptual)",
+  "source_props": {
+    "mass": 268.12,
+    "melt_K": 2500,
+    "density": 29.3,
+    "ionization_eV": 6.35,
+    "electronegativity": 1.3,
+    "polarizability": 13.5,
+    "standard_state": "Solid"
+  },
+  "shader_params": {
+    "sphere_pulse": {
+      "freq": 0.611,
+      "amp": 0.294
+    },
+    "blink": {
+      "amp": 0.0,
+      "speed": 0.2
+    },
+    "brightness": {
+      "bright": 0.908,
+      "base": 0.3,
+      "vari": 0.0
+    },
+    "disc_shape": {
+      "soft": 0.377,
+      "radius": 0.22,
+      "ring": 0.0
+    },
+    "point_size": {
+      "sz": 0.357,
+      "bAmp": 0.0,
+      "persp": 68.1
+    },
+    "alpha_curve": {
+      "opacity": 1.0,
+      "curve": 1.0,
+      "floor": 0.0
+    },
+    "color": {
+      "r": 0.6275,
+      "g": 0.6275,
+      "b": 0.6275
+    }
+  }
+}

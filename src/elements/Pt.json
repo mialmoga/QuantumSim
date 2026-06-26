@@ -1,0 +1,158 @@
+{
+  "symbol": "Pt",
+  "identity": {
+    "name_es": "Platino",
+    "name_eng": "Platinum",
+    "number": 78,
+    "category_es": "Metal de transición",
+    "category_eng": "Transition metal",
+    "color": "0xD0D0D0",
+    "cpk_color": "0xD0D0E0",
+    "discovery_year": "1735"
+  },
+  "physical_properties": {
+    "mass": 195.084,
+    "density_g_cm3": 21.45,
+    "standard_state_es": "Sólido",
+    "standard_state_eng": "Solid",
+    "melt_K": 2041.4,
+    "boil_K": 4098,
+    "allotropes_es": null,
+    "allotropes_eng": null,
+    "lattice_structure": "fcc"
+  },
+  "atomic_structure": {
+    "electronegativity": 2.28,
+    "valence": 4,
+    "ionization_energy_eV": 8.9587,
+    "electron_affinity_ev": 2.125,
+    "electron_affinity_kj_mol": 205.3,
+    "radius_atomic_pm": 139,
+    "radius_covalent_pm": 136,
+    "vanderwaals_radius_pm": 175,
+    "ionic_radius_pm": 62.5,
+    "effective_nuclear_charge": 6.3,
+    "electron_configuration_string": "[Xe] 4f14 5d9 6s1",
+    "shells": [
+      2,
+      8,
+      18,
+      32,
+      17,
+      1
+    ],
+    "quantum_numbers": {
+      "s": 1,
+      "p": 0,
+      "d": 9,
+      "f": 14
+    },
+    "work_function_ev": 5.65
+  },
+  "thermodynamics": {
+    "enthalpy_formation_kj_mol": 0,
+    "entropy_j_molk": 41.6,
+    "heat_capacity_j_molk": 25.86,
+    "specific_heat_j_gK": 0.133,
+    "latent_heat_fusion_kj_mol": 22.17,
+    "latent_heat_vaporization_kj_mol": 469,
+    "fusion_heat_kj_mol": 19.6,
+    "evaporation_heat_kj_mol": 510
+  },
+  "kinetics_and_phase": {
+    "vapor_pressure_constants": {
+      "A": 5.15,
+      "B": 24000,
+      "C": -10
+    },
+    "vapor_pressure_pa": null,
+    "viscosity_liquid_pas": null,
+    "viscosity_pa_s": null,
+    "critical_temp_K": null,
+    "critical_press_MPa": null,
+    "surface_tension_nm": 1.8
+  },
+  "electromagnetism_and_mechanics": {
+    "thermal_conductivity_wmk": 71.6,
+    "electrical_conductivity_sm": 9400000,
+    "magnetic_susceptibility": 0.0002,
+    "thermal_expansion_coefficient": 8.8e-06,
+    "polarizability_angstrom3": 6.5,
+    "refractive_index": null,
+    "youngs_modulus_gba": 168,
+    "poisson_ratio": 0.38,
+    "brinell_hardness_m_pa": 392
+  },
+  "reactivity": {
+    "max_bonds": 6,
+    "geometry_preference_es": "Cuadrada plana / Octaédrica",
+    "geometry_preference_eng": "Square planar / Octahedral",
+    "ideal_bond_angle": 90,
+    "bond_energy_ev": null,
+    "dissociation_energy_kj_mol": null,
+    "standard_potential_v": 1.18,
+    "oxidation_states": [
+      4,
+      2
+    ],
+    "common_ions": [
+      "Pt4+",
+      "Pt2+"
+    ]
+  },
+  "nuclear_and_environmental": {
+    "isotopes": [
+      {
+        "mass": 189.96,
+        "abundance": 0.012,
+        "stable": true,
+        "name_es": "Platino-190",
+        "name_eng": "Platinum-190"
+      },
+      {
+        "mass": 191.961,
+        "abundance": 0.782,
+        "stable": true,
+        "name_es": "Platino-192",
+        "name_eng": "Platinum-192"
+      },
+      {
+        "mass": 193.963,
+        "abundance": 32.86,
+        "stable": true,
+        "name_es": "Platino-194",
+        "name_eng": "Platinum-194"
+      },
+      {
+        "mass": 194.965,
+        "abundance": 33.78,
+        "stable": true,
+        "name_es": "Platino-195",
+        "name_eng": "Platinum-195"
+      },
+      {
+        "mass": 195.965,
+        "abundance": 25.21,
+        "stable": true,
+        "name_es": "Platino-196",
+        "name_eng": "Platinum-196"
+      },
+      {
+        "mass": 197.968,
+        "abundance": 7.36,
+        "stable": true,
+        "name_es": "Platino-198",
+        "name_eng": "Platinum-198"
+      }
+    ],
+    "neutron_cross_section_barns": 10.3,
+    "nuclear_binding_energy_mev": 7.906,
+    "abundance_crust_mg_kg": 0.005,
+    "toxicity_level": 1
+  },
+  "cryogenic_data": {
+    "critical_solidification_pressure_mpa": null,
+    "lambda_point_k": null,
+    "superfluid_viscosity_pas": null
+  }
+}

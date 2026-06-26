@@ -1,0 +1,48 @@
+{
+  "symbol": "Au",
+  "generated_by": "generate_materials.py v1.2 (Stevens perceptual)",
+  "source_props": {
+    "mass": 196.966,
+    "melt_K": 1337.33,
+    "density": 19.3,
+    "ionization_eV": 9.2255,
+    "electronegativity": 2.54,
+    "polarizability": 5.8,
+    "standard_state": "Solid"
+  },
+  "shader_params": {
+    "sphere_pulse": {
+      "freq": 0.713,
+      "amp": 0.32
+    },
+    "blink": {
+      "amp": 0.0,
+      "speed": 0.214
+    },
+    "brightness": {
+      "bright": 1.386,
+      "base": 0.3,
+      "vari": 0.0
+    },
+    "disc_shape": {
+      "soft": 0.226,
+      "radius": 0.22,
+      "ring": 0.0
+    },
+    "point_size": {
+      "sz": 0.324,
+      "bAmp": 0.0,
+      "persp": 64.9
+    },
+    "alpha_curve": {
+      "opacity": 0.988,
+      "curve": 1.006,
+      "floor": 0.0
+    },
+    "color": {
+      "r": 0.9098,
+      "g": 0.7843,
+      "b": 0.251
+    }
+  }
+}

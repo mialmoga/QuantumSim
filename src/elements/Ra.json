@@ -1,0 +1,147 @@
+{
+  "symbol": "Ra",
+  "identity": {
+    "name_es": "Radio",
+    "name_eng": "Radium",
+    "number": 88,
+    "category_es": "Metal alcalinotérreo",
+    "category_eng": "Alkaline earth metal",
+    "color": "0xA8A8A8",
+    "cpk_color": "0x0022EE",
+    "discovery_year": "1898"
+  },
+  "physical_properties": {
+    "mass": 226.025,
+    "density_g_cm3": 5.5,
+    "standard_state_es": "Sólido",
+    "standard_state_eng": "Solid",
+    "melt_K": 973,
+    "boil_K": 2010,
+    "allotropes_es": null,
+    "allotropes_eng": null,
+    "lattice_structure": "bcc"
+  },
+  "atomic_structure": {
+    "electronegativity": 0.9,
+    "valence": 2,
+    "ionization_energy_eV": 5.2784,
+    "electron_affinity_ev": 0.1,
+    "electron_affinity_kj_mol": 9.7,
+    "radius_atomic_pm": 215,
+    "radius_covalent_pm": 221,
+    "vanderwaals_radius_pm": 283,
+    "ionic_radius_pm": 148,
+    "effective_nuclear_charge": 6.3,
+    "electron_configuration_string": "[Rn] 7s2",
+    "shells": [
+      2,
+      8,
+      18,
+      32,
+      18,
+      8,
+      2
+    ],
+    "quantum_numbers": {
+      "s": 2,
+      "p": 0,
+      "d": 0,
+      "f": 0
+    },
+    "work_function_ev": 3.3
+  },
+  "thermodynamics": {
+    "enthalpy_formation_kj_mol": 0,
+    "entropy_j_molk": 71,
+    "heat_capacity_j_molk": 27.2,
+    "specific_heat_j_gK": 0.12,
+    "latent_heat_fusion_kj_mol": 8.5,
+    "latent_heat_vaporization_kj_mol": 113,
+    "fusion_heat_kj_mol": 37,
+    "evaporation_heat_kj_mol": 113
+  },
+  "kinetics_and_phase": {
+    "vapor_pressure_constants": {
+      "A": 5.15,
+      "B": 9000,
+      "C": -0.5
+    },
+    "vapor_pressure_pa": null,
+    "viscosity_liquid_pas": null,
+    "viscosity_pa_s": null,
+    "critical_temp_K": null,
+    "critical_press_MPa": null,
+    "surface_tension_nm": null
+  },
+  "electromagnetism_and_mechanics": {
+    "thermal_conductivity_wmk": 18.6,
+    "electrical_conductivity_sm": 1000000,
+    "magnetic_susceptibility": 1.05e-05,
+    "thermal_expansion_coefficient": 2.02e-05,
+    "polarizability_angstrom3": 38.3,
+    "refractive_index": null,
+    "youngs_modulus_gba": null,
+    "poisson_ratio": null,
+    "brinell_hardness_m_pa": null
+  },
+  "reactivity": {
+    "max_bonds": 2,
+    "geometry_preference_es": "Lineal",
+    "geometry_preference_eng": "Linear",
+    "ideal_bond_angle": 180,
+    "bond_energy_ev": null,
+    "dissociation_energy_kj_mol": null,
+    "standard_potential_v": -2.912,
+    "oxidation_states": [
+      2
+    ],
+    "common_ions": [
+      "Ra2+"
+    ]
+  },
+  "nuclear_and_environmental": {
+    "isotopes": [
+      {
+        "mass": 223.018,
+        "abundance": null,
+        "stable": false,
+        "half_life_s": 987552,
+        "name_es": "Radio-223",
+        "name_eng": "Radium-223"
+      },
+      {
+        "mass": 224.02,
+        "abundance": null,
+        "stable": false,
+        "half_life_s": 313700,
+        "name_es": "Radio-224",
+        "name_eng": "Radium-224"
+      },
+      {
+        "mass": 226.025,
+        "abundance": null,
+        "stable": false,
+        "half_life_s": 50000000000,
+        "name_es": "Radio-226",
+        "name_eng": "Radium-226"
+      },
+      {
+        "mass": 228.031,
+        "abundance": null,
+        "stable": false,
+        "half_life_s": 180000000,
+        "name_es": "Radio-228",
+        "name_eng": "Radium-228"
+      }
+    ],
+    "neutron_cross_section_barns": 20,
+    "nuclear_binding_energy_mev": 7.66,
+    "abundance_crust_mg_kg": 9e-07,
+    "toxicity_level": 5
+  },
+  "cryogenic_data": {
+    "critical_solidification_pressure_mpa": null,
+    "lambda_point_k": null,
+    "superfluid_viscosity_pas": null
+  }
+}

@@ -1,0 +1,48 @@
+{
+  "symbol": "Eu",
+  "generated_by": "generate_materials.py v1.2 (Stevens perceptual)",
+  "source_props": {
+    "mass": 151.964,
+    "melt_K": 1099,
+    "density": 5.244,
+    "ionization_eV": 5.6704,
+    "electronegativity": 1.2,
+    "polarizability": 27.7,
+    "standard_state": "Solid"
+  },
+  "shader_params": {
+    "sphere_pulse": {
+      "freq": 0.811,
+      "amp": 0.329
+    },
+    "blink": {
+      "amp": 0.0,
+      "speed": 0.243
+    },
+    "brightness": {
+      "bright": 0.766,
+      "base": 0.3,
+      "vari": 0.0
+    },
+    "disc_shape": {
+      "soft": 0.389,
+      "radius": 0.22,
+      "ring": 0.0
+    },
+    "point_size": {
+      "sz": 0.417,
+      "bAmp": 0.0,
+      "persp": 79.2
+    },
+    "alpha_curve": {
+      "opacity": 0.888,
+      "curve": 1.056,
+      "floor": 0.0
+    },
+    "color": {
+      "r": 0.7216,
+      "g": 0.7216,
+      "b": 0.6902
+    }
+  }
+}

@@ -1,0 +1,104 @@
+{
+  "project": "Quantum Chemistry Simulator",
+  "version": "1.0.0",
+  "groups": {
+    "nonmetals": {
+      "name": "No Metales",
+      "name_en": "Nonmetals",
+      "color": "0x00d2ff",
+      "count": 7,
+      "enabled": true,
+      "description": "Elementos esenciales para la vida y compuestos orgánicos, malos conductores de calor y electricidad."
+    },
+    "alkali_metals": {
+      "name": "Metales Alcalinos",
+      "name_en": "Alkali Metals",
+      "color": "0xff6b6b",
+      "count": 6,
+      "enabled": true,
+      "description": "Metales altamente reactivos, sólidos blandos con un solo electrón en su capa de valencia."
+    },
+    "alkaline_earth": {
+      "name": "Alcalinotérreos",
+      "name_en": "Alkaline Earth Metals",
+      "color": "0xffd93d",
+      "count": 6,
+      "enabled": true,
+      "description": "Metales plateados, algo reactivos, que forman óxidos básicos y tienen dos electrones de valencia."
+    },
+    "transition_metals": {
+      "name": "Metales de Transición",
+      "name_en": "Transition Metals",
+      "color": "0x95e1d3",
+      "count": 29,
+      "enabled": true,
+      "description": "Metales con orbitales d parcialmente llenos, conocidos por su dureza y múltiples estados de oxidación."
+    },
+    "post_transition": {
+      "name": "Post-Transición",
+      "name_en": "Post-Transition Metals",
+      "color": "0xa8e6cf",
+      "count": 7,
+      "enabled": true,
+      "description": "Metales situados entre los de transición y los metaloides (Al hasta Bi)."
+    },
+    "metalloids": {
+      "name": "Metaloides",
+      "name_en": "Metalloids",
+      "color": "0xdcedc1",
+      "count": 7,
+      "enabled": true,
+      "description": "Elementos con propiedades intermedias entre metales y no metales (B hasta Po)."
+    },
+    "halogens": {
+      "name": "Halógenos",
+      "name_en": "Halogens",
+      "color": "0xf093fb",
+      "count": 5,
+      "enabled": true,
+      "description": "Elementos altamente reactivos que forman sales (F hasta At)."
+    },
+    "noble_gases": {
+      "name": "Gases Nobles",
+      "name_en": "Noble Gases",
+      "color": "0xc471f5",
+      "count": 6,
+      "enabled": true,
+      "description": "Gases incoloros e inodoros con capa de valencia completa (He hasta Rn)."
+    },
+    "lanthanides": {
+      "name": "Lantánidos",
+      "name_en": "Lanthanides",
+      "color": "0xfa709a",
+      "count": 15,
+      "enabled": true,
+      "description": "Tierras raras del periodo 6 (La hasta Lu)."
+    },
+    "actinides": {
+      "name": "Actínidos",
+      "name_en": "Actinides",
+      "color": "0xfee140",
+      "count": 15,
+      "enabled": true,
+      "description": "Elementos radiactivos del periodo 7 (Ac hasta Lr)."
+    },
+    "superheavy": {
+      "name": "Elementos Superpesados",
+      "name_en": "Superheavy Elements",
+      "color": "0xff1493",
+      "count": 15,
+      "enabled": true,
+      "description": "Elementos transuránicos sintéticos y altamente inestables (Rf hasta Og)."
+    }
+  },
+  "total_elements": 118,
+  "config": {
+    "default_temp_K": 293.15,
+    "units": {
+      "temperature": "Kelvin",
+      "mass": "amu",
+      "distance": "picometers",
+      "energy": "electronvolts"
+    }
+  }
+}

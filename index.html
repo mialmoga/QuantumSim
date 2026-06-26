@@ -1,0 +1,855 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <title>Quantum Chemistry Simulator</title>
+
+    <!-- PWA & Icons -->
+    <link rel="manifest" href="site.webmanifest">
+    <link rel="icon" type="image/svg+xml" href="ShaderLab/assets/icons/favicon.svg">
+    <link rel="icon" type="image/x-icon"  href="ShaderLab/assets/icons/favicon.ico">
+    <link rel="apple-touch-icon" href="ShaderLab/assets/icons/apple-touch-icon.png">
+    
+    
+<script type="importmap">
+    {
+        "imports": {
+            "three": "https://cdn.jsdelivr.net/npm/three@0.184.0/build/three.module.js",
+            "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.184.0/examples/jsm/",
+            "three/webgpu":   "https://cdn.jsdelivr.net/npm/three@0.184.0/build/three.webgpu.js",
+            "three/tsl":      "https://cdn.jsdelivr.net/npm/three@0.184.0/build/three.tsl.js"
+        }
+    }
+</script>
+    <!-- Three.js importmap -
+
+        <script type="importmap">
+            {
+                "imports": {
+                    "three":          "./lib/three/build/three.module.js",
+                    "three/addons/":  "./lib/three/examples/jsm/",
+                    "three/webgpu":   "./lib/three/build/three.webgpu.js",
+                    "three/tsl":      "./lib/three/build/three.tsl.js"
+                }
+            }
+        </script> 
+    -->
+
+    <!-- Styles — rutas originales del proyecto -->
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/loader.css">
+    <link rel="stylesheet" href="css/variables.css">
+    <link rel="stylesheet" href="css/panels.css">
+</head>
+<body data-mode="design">
+
+<!-- ═══════════════════════════════════════════════════════
+     HEADER — siempre visible
+═══════════════════════════════════════════════════════ -->
+<header id="app-header">
+    <div class="header__left">
+        <button id="forceReloadBtn" class="header__logo" title="Forzar recarga" data-i18n-title="tooltips.force_reload">
+            <svg width="22" height="22" viewBox="0 0 204.6 204.6" fill="none">
+                <circle cx="102.3" cy="102.3" r="18" fill="currentColor" opacity=".9"/>
+                <ellipse cx="102.3" cy="102.3" rx="90" ry="34" stroke="currentColor" stroke-width="6" fill="none" opacity=".6"/>
+                <ellipse cx="102.3" cy="102.3" rx="90" ry="34" stroke="currentColor" stroke-width="6" fill="none" opacity=".6" transform="rotate(60 102.3 102.3)"/>
+                <ellipse cx="102.3" cy="102.3" rx="90" ry="34" stroke="currentColor" stroke-width="6" fill="none" opacity=".6" transform="rotate(120 102.3 102.3)"/>
+            </svg>
+        </button>
+        <span class="header__title"><span class="title-full">Quantum Chemistry Simulator</span><span class="title-short">QSim</span></span>
+    </div>
+
+    <div class="header__center">
+        <div class="mode-toggle" id="modeToggle">
+            <button class="mode-toggle__btn mode-toggle__btn--active" id="modeDesign" data-mode="design">
+                <span class="mode-toggle__icon">✏️</span>
+                <span class="mode-toggle__label" data-i18n="modes.design">Diseño</span>
+            </button>
+            <div class="mode-toggle__divider"></div>
+            <button class="mode-toggle__btn" id="modeSim" data-mode="sim">
+                <span class="mode-toggle__icon">▶</span>
+                <span class="mode-toggle__label" data-i18n="modes.sim_short">Sim</span>
+            </button>
+        </div>
+    </div>
+
+    <div class="header__right">
+        <div class="header__stats">
+            <span class="hstat hstat--mode hstat--active" id="modeAtom" title="Modo: seleccionar átomos" data-i18n-title="tooltips.mode_atoms">⚛ <b id="atomCount">0</b></span>
+            <span class="hstat hstat--mode" id="modeMolecule" title="Modo: seleccionar moléculas" data-i18n-title="tooltips.mode_molecules">⬡ <b id="moleculeCount">0</b></span>
+            <span class="hstat" title="Enlaces" data-i18n-title="stats.bonds">— <b id="bondCount">0</b></span>
+        </div>
+        <!-- ⚙️ Settings toggle -->
+        <div class="settings-wrap" id="settingsWrap">
+            <button class="header__fs-btn" id="settingsBtn" title="Configuración" data-i18n-title="panels.settings">⚙️</button>
+            <div class="settings-dropdown hidden" id="settingsDropdown">
+                <button class="settings-opt" id="rawModeBtn" title="Modo Raw — shader sin bloom" data-i18n-title="tooltips.raw_mode">
+                    <span class="settings-opt__icon">💎</span><span data-i18n="settings.raw_mode">Raw Mode</span>
+                </button>
+                <button class="settings-opt" id="soundBtn" title="Sonido atómico" data-i18n-title="tooltips.sound">
+                    <span class="settings-opt__icon">🎧</span><span data-i18n="settings.audio">Audio</span>
+                </button>
+                <button class="settings-opt" id="visorBtn" title="Filtro óptico — atenuar brillo" data-i18n-title="tooltips.visor">
+                    <span class="settings-opt__icon">🕶</span><span data-i18n="settings.visor">Visor</span>
+                </button>
+                <div class="settings-slider" id="visorSliderWrap">
+                    <input type="range" id="visorSlider" min="0.05" max="1.0" step="0.05" value="0.25">
+                    <span id="visorValue">25%</span>
+                </div>
+                <button class="settings-opt" id="gestureBtn" title="Control gestual — webcam" data-i18n-title="tooltips.gestures">
+                    <span class="settings-opt__icon">✋</span><span data-i18n="settings.gestures">Gestos</span>
+                </button>
+                <button class="settings-opt" id="lodBtn" title="LOD Orbitales — renderizar orbitales en escena (desactivar = solo esfera)" data-i18n-title="tooltips.lod_orbitals">
+                    <span class="settings-opt__icon">🔬</span><span data-i18n="settings.lod_orbitals">LOD Orbitales</span>
+                </button>
+            </div>
+        </div>
+        <button class="header__fs-btn" id="fullscreenBtn" title="Pantalla completa" data-i18n-title="tooltips.fullscreen">⛶</button>
+    </div>
+</header>
+
+<!-- Visor slider ahora dentro del panel ⚙️ -->
+
+<!-- ⚪ Restore button — siempre visible, restaura paneles completos -->
+<button id="ui-restore-btn" title="Mostrar paneles" data-i18n-title="tooltips.show_panels">⚪</button>
+
+<!-- ═══════════════════════════════════════════════════════
+     CANVAS AREA
+═══════════════════════════════════════════════════════ -->
+<div id="canvas-wrap">
+    <div class="canvas-hint" id="canvasHint" data-i18n="app.canvas_hint">
+        Tap para agregar · Arrastra para rotar · Pinch para zoom
+    </div>
+</div>
+
+<!-- ═══════════════════════════════════════════════════════
+     PANEL IZQUIERDO — Física / Geometría / Lab / Temperatura
+═══════════════════════════════════════════════════════ -->
+<aside id="panel-left" class="side-panel side-panel--left hidden">
+    <nav class="side-panel__tabs">
+        <button class="sptab sptab--active" data-tab="physics">⚛️ <span data-i18n="panels.physics">Física</span></button>
+        <button class="sptab" data-tab="geometry">📐 <span data-i18n="panels.geometry_short">Geo</span></button>
+        <button class="sptab" data-tab="lab">🧪 <span data-i18n="panels.lab_short">Lab</span></button>
+        <button class="sptab" data-tab="temperature">🌡️ <span data-i18n="panels.temperature_short">Temp</span></button>
+    </nav>
+
+    <div class="side-panel__body">
+
+        <!-- ── TAB FÍSICA ── -->
+        <div class="tab-content" id="tab-physics">
+            <div class="panel-section">
+                <label class="check-row"><input type="checkbox" id="gravityToggle"><span>🌍 <span data-i18n="physics.gravity">Gravedad</span></span></label>
+                <p class="hint" data-i18n="physics.gravity_hint">A escala atómica la gravedad es imperceptible — usa el multiplicador del Lab para exagerarla</p>
+                <div class="slider-wrap">
+                    <input type="range" id="gravitySlider" min="0" max="10" value="5" step="0.5">
+                    <span class="slider-val" id="gravityValue">x5</span>
+                </div>
+            </div>
+            <div class="panel-section">
+                <label class="check-row"><input type="checkbox" id="repulsionToggle" checked><span>⚛️ <span data-i18n="physics.atomic_repulsion">Repulsión Atómica</span></span></label>
+                <p class="hint" data-i18n="physics.atomic_repulsion_hint">Evita colapso de estructuras</p>
+            </div>
+            <div class="panel-section">
+                <label class="check-row"><input type="checkbox" id="cpkColorToggle"><span>🎨 <span data-i18n="physics.cpk_colors">Colores CPK</span></span></label>
+                <p class="hint" data-i18n="physics.cpk_colors_hint">Estándar internacional de colores</p>
+            </div>
+            <div class="panel-section">
+                <label class="check-row"><input type="checkbox" id="bondsToggle" checked><span>🔗 <span data-i18n="physics.show_bonds">Mostrar Enlaces</span></span></label>
+                <p class="hint" data-i18n="physics.show_bonds_hint">Oculta cilindros y electrones de enlace</p>
+            </div>
+            <div class="panel-section">
+                <label class="check-row"><input type="checkbox" id="bondAnglesToggle" checked><span>📐 <span data-i18n="physics.bond_angles">Ángulos de Enlace</span></span></label>
+                <p class="hint" data-i18n="physics.bond_angles_hint">Geometría molecular realista (H₂O bent, CH₄ tetrahedral)</p>
+            </div>
+            <div class="panel-section">
+                <label class="check-row"><input type="checkbox" id="lennardJonesToggle"><span>🌊 <span data-i18n="physics.lj_toggle">Fuerzas Van der Waals</span></span></label>
+                <p class="hint" data-i18n="physics.lj_hint">Lennard-Jones potential</p>
+            </div>
+            <div class="panel-section panel-section--accent">
+                <div class="section-title">⚛️ <span data-i18n="physics.mode_section">Modo de Física</span></div>
+                <label class="check-row"><input type="checkbox" id="strictBondingToggle"><span><b>⚗️ <span data-i18n="physics.strict_bonding">Afinidad Estricta</span></b></span></label>
+                <p class="hint" data-i18n="physics.strict_bonding_hint">H, F, Cl, Br, I respetan su valencia máxima</p>
+                <label class="check-row" class="mt-sm"><input type="checkbox" id="physicsModeToggle" checked><span>🔬 <span data-i18n="physics.realistic_mode">Modo Realista</span></span></label>
+                <p class="hint"><b>OFF:</b> Pedagógico (enlaces discretos)<br><b>ON:</b> Realista (campos continuos)</p>
+            </div>
+            <div class="panel-section">
+                <label class="check-row"><input type="checkbox" id="toggleVisualization"><span>☁️ <span data-i18n="physics.electron_clouds">Nubes electrónicas</span></span></label>
+                <label class="check-row" class="mt-xs"><input type="checkbox" id="toggleElectrons" checked><span>⚛️ <span data-i18n="physics.show_all_electrons">Mostrar todos los e⁻</span></span></label>
+            </div>
+        </div>
+
+        <!-- ── TAB GEOMETRÍA ── -->
+        <div class="tab-content tab-content--hidden" id="tab-geometry">
+            <div class="section-title">🏠 <span data-i18n="geometry.ceiling_section">Techo</span></div>
+            <div class="panel-section">
+                <div class="row-with-btn">
+                    <label class="check-row"><input type="checkbox" id="ceilingToggle"><span data-i18n="geometry.ceiling_physics">Techo (física)</span></label>
+                    <button id="ceilingVisibilityBtn" class="btn-sm">👁 <span data-i18n="geometry.visible_btn">Visible</span></button>
+                </div>
+                <div class="slider-row"><span data-i18n="geometry.opacity">Opacidad</span><input type="range" id="ceilingOpacitySlider" min="0" max="0.6" value="0.15" step="0.05"><span class="slider-val" id="ceilingOpacityValue">0.15</span></div>
+                <div class="slider-row"><span data-i18n="geometry.brightness">Brillo</span><input type="range" id="ceilingBrightnessSlider" min="0" max="1" value="0.1" step="0.1"><span class="slider-val" id="ceilingBrightnessValue">0.1</span></div>
+                <div class="slider-row"><span data-i18n="geometry.bounce">Rebote</span><input type="range" id="ceilingBounceSlider" min="0" max="1" value="0.6" step="0.1"><span class="slider-val" id="ceilingBounceValue">0.6</span></div>
+                <div class="slider-row"><span data-i18n="geometry.height">Altura</span><input type="range" id="ceilingYSlider" min="5" max="40" step="1" value="15"><span class="slider-val" id="ceilingYValue">15</span></div>
+                <div class="slider-row"><span data-i18n="geometry.curvature">Curvatura</span><input type="range" id="ceilingCurvatureSlider" min="-0.5" max="0.5" step="0.01" value="0"><span class="slider-val" id="ceilingCurvatureValue">0.00</span></div>
+                <p class="hint" data-i18n="geometry.curvature_hint_ceiling">← cóncavo | plano | convexo (cúpula) →</p>
+            </div>
+
+            <div class="section-title" class="mt-lg">🌍 <span data-i18n="geometry.floor_section">Piso</span></div>
+            <div class="panel-section">
+                <div class="row-with-btn">
+                    <label class="check-row"><input type="checkbox" id="floorToggle" checked><span data-i18n="geometry.floor_physics">Piso (física)</span></label>
+                    <button id="floorVisibilityBtn" class="btn-sm">👁 <span data-i18n="geometry.visible_btn">Visible</span></button>
+                </div>
+                <div class="slider-row"><span data-i18n="geometry.opacity">Opacidad</span><input type="range" id="floorOpacitySlider" min="0" max="1" value="0.15" step="0.05"><span class="slider-val" id="floorOpacityValue">0.15</span></div>
+                <div class="slider-row"><span data-i18n="geometry.brightness">Brillo</span><input type="range" id="floorBrightnessSlider" min="0" max="1" value="0.1" step="0.1"><span class="slider-val" id="floorBrightnessValue">0.1</span></div>
+                <div class="slider-row"><span data-i18n="geometry.bounce">Rebote</span><input type="range" id="bounceSlider" min="0" max="1" value="0.6" step="0.1"><span class="slider-val" id="bounceValue">0.6</span></div>
+                <div class="slider-row"><span data-i18n="geometry.curvature">Curvatura</span><input type="range" id="floorCurvatureSlider" min="-0.5" max="0.5" step="0.01" value="0"><span class="slider-val" id="floorCurvatureValue">0.0</span></div>
+                <p class="hint" data-i18n="geometry.curvature_hint_floor">← cóncavo (bowl) | plano | convexo (dome) →</p>
+            </div>
+
+            <div class="section-title" class="mt-lg">🔮 <span data-i18n="geometry.sphere_section">Esfera recipiente</span></div>
+            <div class="panel-section">
+                <div class="row-with-btn">
+                    <label class="check-row"><input type="checkbox" id="sphereToggle"><span data-i18n="geometry.sphere_physics">Esfera (física)</span></label>
+                    <button id="sphereVisibilityBtn" class="btn-sm">👁 <span data-i18n="geometry.visible_btn">Visible</span></button>
+                </div>
+                <div class="slider-row"><span data-i18n="geometry.opacity">Opacidad</span><input type="range" id="sphereOpacitySlider" min="0" max="0.5" value="0.08" step="0.02"><span class="slider-val" id="sphereOpacityValue">0.08</span></div>
+                <div class="slider-row"><span data-i18n="geometry.bounce">Rebote</span><input type="range" id="sphereBounceSlider" min="0" max="1" value="0.6" step="0.1"><span class="slider-val" id="sphereBounceValue">0.6</span></div>
+                <div class="slider-row"><span data-i18n="geometry.sphere_center_y">Centro Y</span><input type="range" id="sphereCenterYSlider" min="-15" max="15" value="0" step="1"><span class="slider-val" id="sphereCenterYValue">0</span></div>
+                <div class="slider-row"><span data-i18n="geometry.sphere_radius">Radio</span><input type="range" id="sphereRadiusSlider" min="5" max="50" step="1" value="20"><span class="slider-val" id="sphereRadiusValue">20</span></div>
+                <div class="section-title" class="mt-sm text-xs">🌡️ <span data-i18n="geometry.thermal_poles_section">Polos térmicos</span></div>
+                <div class="slider-row"><span>🔴 <span data-i18n="geometry.pole_south">Polo Sur</span></span><input type="range" id="sphereBottomTempSlider" min="0" max="2000" step="10" value="0"><span class="slider-val" id="sphereBottomTempValue">0 K</span></div>
+                <div class="slider-row"><span>🔵 <span data-i18n="geometry.pole_north">Polo Norte</span></span><input type="range" id="sphereTopTempSlider" min="0" max="2000" step="10" value="0"><span class="slider-val" id="sphereTopTempValue">0 K</span></div>
+                <p class="hint" data-i18n="geometry.thermal_gradient_hint">Gradiente vertical: calor abajo ↔ frío arriba</p>
+            </div>
+        </div>
+
+        <!-- ── TAB LABORATORIO ── -->
+        <div class="tab-content tab-content--hidden" id="tab-lab">
+            <p class="lab-warning">⚠️ <span data-i18n="lab.warning">Valores por defecto = física real</span><br><span data-i18n="lab.caution">Experimenta bajo tu propio riesgo</span></p>
+            <div class="slider-row"><span>🌍 <span data-i18n="lab.gravity">Gravedad</span></span><input type="range" id="gravityLabSlider" min="0" max="1e-10" step="1e-12" value="0"><span class="slider-val" id="gravityLabValue">0</span></div>
+            <div class="slider-row"><span>⚛️ <span data-i18n="lab.pauli_strength">Pauli Strength</span></span><input type="range" id="pauliStrengthSlider" min="0" max="1000" step="10" value="500"><span class="slider-val" id="pauliStrengthValue">500</span></div>
+            <div class="slider-row"><span>⚛️ <span data-i18n="lab.pauli_factor">Pauli Factor</span></span><input type="range" id="pauliFactorSlider" min="1.0" max="3.0" step="0.1" value="2.0"><span class="slider-val" id="pauliFactorValue">2.0</span></div>
+            <div class="slider-row"><span>💨 <span data-i18n="lab.friction">Fricción</span></span><input type="range" id="frictionSlider" min="0.80" max="1.0" step="0.01" value="0.98"><span class="slider-val" id="frictionValue">0.98</span></div>
+            <div class="slider-row"><span>🚀 <span data-i18n="lab.terminal_velocity_short">Vel. Terminal</span></span><input type="range" id="terminalVelSlider" min="0.5" max="10" step="0.5" value="2.0"><span class="slider-val" id="terminalVelValue">2.0</span></div>
+            <div class="slider-row"><span>🔗 <span data-i18n="lab.bond_spring_short">Spring Enlace</span></span><input type="range" id="bondSpringSlider" min="0.1" max="3.0" step="0.1" value="1.0"><span class="slider-val" id="bondSpringValue">1.0</span></div>
+            <div class="slider-row"><span>📐 <span data-i18n="lab.angle_force">Fuerza Ángulos</span></span><input type="range" id="bondAnglesSlider" min="0" max="1.0" step="0.05" value="0.5"><span class="slider-val" id="bondAnglesValue">0.5</span></div>
+            <div class="slider-row"><span>🌊 <span data-i18n="lab.lennard_jones">Lennard-Jones</span></span><input type="range" id="lennardJonesSlider" min="0" max="1.0" step="0.05" value="0.1"><span class="slider-val" id="lennardJonesValue">0.1</span></div>
+            <div class="slider-row"><span>🌡️ <span data-i18n="lab.radiation_range_short">Rango Irrad.</span></span><input type="range" id="surfaceRadRangeSlider" min="1" max="20" step="0.5" value="6.0"><span class="slider-val" id="surfaceRadRangeValue">6.0</span></div>
+            <div class="slider-row"><span>🔥 <span data-i18n="lab.radiation_intensity_short">Int. Irrad.</span></span><input type="range" id="surfaceRadStrengthSlider" min="0" max="1" step="0.05" value="0.4"><span class="slider-val" id="surfaceRadStrengthValue">0.4</span></div>
+            <div class="btn-row" class="mt-lg">
+                <button id="resetPhysicsDefaults" class="btn btn--blue">🔄 <span data-i18n="lab.reset">Reset</span></button>
+                <button id="randomizePhysics" class="btn btn--gold">🎲 <span data-i18n="lab.random">Random</span></button>
+            </div>
+        </div>
+
+        <!-- ── TAB TEMPERATURA ── -->
+        <div class="tab-content tab-content--hidden" id="tab-temperature">
+            <div class="mode-row">
+                <span class="label-xs" data-i18n="temperature.mode_label">Modo:</span>
+                <div class="seg-ctrl">
+                    <button class="seg-btn seg-btn--active" id="tempModeDidactic">🎓 <span data-i18n="temperature.mode_didactic">Didáctico</span></button>
+                    <button class="seg-btn" id="tempModeRealistic">⚗️ <span data-i18n="temperature.mode_realistic">Realista</span></button>
+                </div>
+            </div>
+            <p class="hint" id="tempModeDesc">Escala pedagógica — valores inventados para visibilidad.</p>
+            <div class="panel-section">
+                <label class="check-row"><input type="checkbox" id="tempEnabledToggle"><span data-i18n="temperature.activate">Activar sistema de temperatura</span></label>
+            </div>
+            <div class="section-title" class="mt-md">🌍 <span data-i18n="temperature.ambient_section">Temperatura Ambiental</span></div>
+            <div class="slider-row"><span>🌡️ <span data-i18n="temperature.target_short">Objetivo</span></span><input type="range" id="tempSlider" min="0" max="2000" step="10" value="300"><span class="slider-val" id="tempTargetValue">300 K</span></div>
+            <div class="readout-box">
+                <div class="readout-row"><span>T actual:</span><span id="tempCurrentValue" class="readout-val">— K</span></div>
+                <div class="readout-row"><span>Fase:</span><span id="tempPhaseValue" class="readout-phase">—</span></div>
+            </div>
+            <div class="panel-section">
+                <label class="check-row"><input type="checkbox" id="tempColorToggle" checked><span>🎨 <span data-i18n="temperature.color_by_temp">Color de ambiente por temperatura</span></span></label>
+                <p class="hint" data-i18n="temperature.color_by_temp_desc">azul = frío · naranja = caliente · ámbar = plasma</p>
+            </div>
+            <div class="panel-section">
+                <label class="check-row"><input type="checkbox" id="tempBondBreakToggle"><span>🔥 <span data-i18n="temperature.bond_rupture">Ruptura de enlaces por calor</span></span></label>
+                <label class="check-row"><input type="checkbox" id="thermalDissociationToggle"><span>⚛️ <span data-i18n="temperature.thermal_dissociation">Disociación Térmica (Boltzmann)</span></span></label>
+                <label class="check-row"><input type="checkbox" id="metathesisToggle"><span>⚗️ <span data-i18n="temperature.metathesis">Metátesis (A-B + C-D → A-C + B-D)</span></span></label>
+            </div>
+            <div class="slider-row"><span>⏱️ <span data-i18n="temperature.thermostat_speed_short">Vel. termostato</span></span><input type="range" id="tempTauSlider" min="5" max="200" step="5" value="60"><span class="slider-val" id="tempTauValue">60</span></div>
+            <p class="hint" data-i18n="temperature.thermostat_desc">Bajo = brusco · Alto = gradual y suave</p>
+            <div class="section-title" class="mt-md">🔥 <span data-i18n="temperature.floor_temp_section">Temperatura del Suelo</span></div>
+            <label class="check-row"><input type="checkbox" id="floorTempToggle"><span data-i18n="temperature.floor_temp_toggle">Irradiar calor desde el suelo</span></label>
+            <div class="slider-row"><span data-i18n="temperature.floor_temp_short">T suelo</span><input type="range" id="floorTempSlider" min="0" max="3000" step="50" value="0"><span class="slider-val" id="floorTempValue">0 K</span></div>
+            <p class="hint" data-i18n="temperature.floor_temp_desc">Calienta átomos por contacto y proximidad</p>
+            <div class="section-title" class="mt-md">❄️ <span data-i18n="temperature.ceiling_temp_section">Temperatura del Techo</span></div>
+            <label class="check-row"><input type="checkbox" id="ceilingTempToggle"><span data-i18n="temperature.ceiling_temp_toggle">Irradiar calor desde el techo</span></label>
+            <div class="slider-row"><span data-i18n="temperature.ceiling_temp_short">T techo</span><input type="range" id="ceilingTempSlider" min="0" max="3000" step="50" value="0"><span class="slider-val" id="ceilingTempValue">0 K</span></div>
+            <p class="hint" data-i18n="temperature.ceiling_temp_desc">Enfría o calienta átomos por proximidad</p>
+            <div class="section-title" class="mt-md">🌐 <span data-i18n="temperature.sphere_temp_section">Temperatura de la Esfera</span></div>
+            <label class="check-row"><input type="checkbox" id="sphereTempToggle"><span data-i18n="temperature.sphere_temp_toggle">Irradiar calor desde la esfera</span></label>
+        </div>
+
+    </div><!-- /side-panel__body -->
+</aside>
+
+<!-- ═══════════════════════════════════════════════════════
+     PANEL DERECHO — Quantum View (átomo seleccionado)
+═══════════════════════════════════════════════════════ -->
+<aside id="panel-right" class="side-panel side-panel--right hidden">
+    <div class="qv-header">
+        <div class="qv-atom-id">
+            <span class="qv-symbol" id="qvSymbol">—</span>
+            <div class="qv-meta">
+                <span class="qv-name" id="qvName" data-i18n="quantum.no_selection">Sin selección</span>
+                <span class="qv-config" id="qvConfig"></span>
+            </div>
+        </div>
+        <button class="btn-close-panel" id="closeQV">✕</button>
+    </div>
+    <div class="qv-bohr-wrap" id="qvBohrWrap">
+        <div class="qv-bohr-placeholder" id="qvBohrPlaceholder">
+            <span data-i18n="quantum.select_atom_hint">Selecciona un átomo para ver su configuración</span>
+        </div>
+        <object id="qvBohrSvg" type="image/svg+xml" data=""
+                style="width:100%;height:100%;display:none;border-radius:8px 8px 0 0">
+        </object>
+        <div id="qvBohrNav" style="display:none;position:absolute;bottom:6px;
+             left:0;right:0;display:flex;align-items:center;justify-content:center;
+             gap:8px;pointer-events:none;">
+            <button id="qvBohrPrev" style="pointer-events:all;background:rgba(0,0,0,0.45);
+                border:1px solid rgba(255,255,255,0.15);color:rgba(255,255,255,0.6);
+                border-radius:6px;padding:2px 8px;font-size:13px;cursor:pointer">‹</button>
+            <span id="qvBohrLabel" style="font-family:monospace;font-size:9px;
+                color:rgba(255,255,255,0.4)" data-i18n="quantum.subshells">Subshells</span>
+            <button id="qvBohrNext" style="pointer-events:all;background:rgba(0,0,0,0.45);
+                border:1px solid rgba(255,255,255,0.15);color:rgba(255,255,255,0.6);
+                border-radius:6px;padding:2px 8px;font-size:13px;cursor:pointer">›</button>
+        </div>
+    </div>
+    <div class="side-panel__body">
+        <div class="qv-layers">
+            <div class="section-title" data-i18n="quantum.layers">Capas</div>
+            <div id="qvLayerList" class="qv-layer-list"></div>
+        </div>
+        <div class="qv-material" class="mt-md">
+            <div class="section-title" data-i18n="quantum.material_section">Material</div>
+            <div class="slider-row"><span data-i18n="quantum.brightness">Brillo</span><input type="range" id="qvBrightness" min="0" max="2" step="0.05" value="1"><span class="slider-val" id="qvBrightnessVal">1.0</span></div>
+            <div class="slider-row"><span data-i18n="quantum.pt_size_short">Tamaño pt</span><input type="range" id="qvPtSize" min="0.5" max="4" step="0.1" value="1.5"><span class="slider-val" id="qvPtSizeVal">1.5</span></div>
+            <div class="btn-row" class="mt-sm">
+                <button id="qvOpenMaterials" class="btn btn--blue" class="flex-1">🎨 <span data-i18n="quantum.materials_btn">Materiales</span></button>
+                <button id="qvLoadProfile"   class="btn btn--panel" class="flex-1">📂 <span data-i18n="library.load">Cargar</span></button>
+                <button id="qvSaveProfile"   class="btn btn--gold"  class="flex-1">💾 <span data-i18n="console.save">Guardar</span></button>
+            </div>
+            <input type="file" id="qvProfileInput" accept=".json" hidden>
+        </div>
+    </div>
+</aside>
+
+<!-- ═══════════════════════════════════════════════════════
+     PANEL GRUPOS (lateral derecho, flotante)
+═══════════════════════════════════════════════════════ -->
+<div id="groupPanel" class="group-panel hidden"></div>
+
+<!-- ═══════════════════════════════════════════════════════
+     BOTTOM SHEETS
+═══════════════════════════════════════════════════════ -->
+
+<!-- Selector de Elementos (bottom-center) -->
+<div class="bottom-sheet hidden" id="elementSelector">
+    <input class="element-search" id="elementSearch" type="search" placeholder="Buscar…" data-i18n-placeholder="elements.search" autocomplete="off">
+    <div class="element-grid" id="elementGrid"></div>
+</div>
+
+<!-- Panel Agregar (bottom-right) -->
+<div class="bottom-sheet bottom-sheet--right hidden" id="addPanel">
+    <h4 class="bs-title">➕ <span data-i18n="panels.add">Agregar</span></h4>
+    <div class="seg-ctrl seg-ctrl--3" class="mb-md">
+        <button class="seg-btn seg-btn--active" id="showMolecules">⚗️ <span data-i18n="add.molecules">Moléculas</span></button>
+        <button class="seg-btn" id="showCrystals">💎 <span data-i18n="add.crystals">Cristales</span></button>
+        <button class="seg-btn" id="showSnowflake">❄️ <span data-i18n="add.snowflake">Copo</span></button>
+    </div>
+    <div id="moleculesSection"><div id="moleculeButtons" class="add-grid"></div></div>
+    <div id="crystalsSection" class="hidden">
+        <div class="add-grid-2">
+            <button class="btn btn--panel" id="crystalNaCl">🧂 NaCl</button>
+            <button class="btn btn--panel" id="crystalFe">🔩 <span data-i18n="add.crystal_iron">Hierro</span></button>
+            <button class="btn btn--panel" id="crystalDiamond">💎 <span data-i18n="add.crystal_diamond">Diamante</span></button>
+            <button class="btn btn--panel" id="crystalIce">❄️ <span data-i18n="add.crystal_ice">Hielo</span></button>
+        </div>
+        <div class="slider-row" class="mt-sm">
+            <span data-i18n="add.crystal_size">Tamaño</span>
+            <input type="range" id="crystalSizeSlider" min="2" max="6" value="3" step="1">
+            <span class="slider-val"><span id="crystalSizeValue">3</span>×<span id="crystalSizeValue2">3</span>×<span id="crystalSizeValue3">3</span></span>
+        </div>
+        <label class="check-row" class="mt-xs"><input type="checkbox" id="freezeCrystalToggle"><span data-i18n="add.freeze_structure">Congelar estructura</span></label>
+    </div>
+    <div id="snowflakeSection" class="hidden">
+        <div class="slider-row"><span data-i18n="add.snowflake_complexity">Complejidad</span><input type="range" id="sfComplexitySlider" min="1" max="5" value="2" step="1"><span class="slider-val" id="sfComplexityValue">2</span></div>
+        <div class="slider-row"><span data-i18n="add.snowflake_humidity">Humedad</span><input type="range" id="sfHumiditySlider" min="0" max="1" value="0.7" step="0.05"><span class="slider-val" id="sfHumidityValue">0.7</span></div>
+        <div class="slider-row"><span data-i18n="add.snowflake_variety">Variedad ADN</span><input type="range" id="sfChaosSlider" min="0" max="1" value="0.4" step="0.05"><span class="slider-val" id="sfChaosValue">0.4</span></div>
+        <div class="btn-row" class="mt-sm">
+            <button class="btn btn--blue" id="sfGenerate" class="flex-1">❄️ <span data-i18n="add.snowflake_generate">Generar</span></button>
+            <button class="btn btn--gold" id="sfSave" class="flex-1">💾 <span data-i18n="console.save">Guardar</span></button>
+        </div>
+        <button class="btn btn--panel" id="sfSilverBlue" class="btn--silverblue mt-xs">✨ <span data-i18n="add.snowflake_silverblue">Azul Plata</span></button>
+        <div class="btn-row" class="mt-xs">
+            <button class="btn btn--panel" id="sfLoad" class="flex-1">📂 Cargar</button>
+        </div>
+        <input type="file" id="sfFileInput" accept=".json" class="u-hidden">
+    </div>
+</div>
+
+<!-- ═══════════════════════════════════════════════════════
+     CONSOLA DEL MOTOR (panel flotante)
+═══════════════════════════════════════════════════════ -->
+<div id="devConsole" class="dev-console hidden">
+    <div class="dev-console__header">
+        <span class="dev-console__title">⌨️ <span data-i18n="console.title">Consola</span></span>
+        <div class="dev-console__actions">
+            <button id="consoleClear" class="btn-sm" title="Limpiar" data-i18n-title="console.clear">🗑</button>
+            <button id="consoleClose" class="btn-close-panel">✕</button>
+        </div>
+    </div>
+    <div class="dev-console__log" id="consoleLog"></div>
+    <div class="dev-console__input-row">
+        <span class="dev-console__prompt">❯</span>
+        <input type="search" id="consoleInput" class="dev-console__input"
+               placeholder="QSim.world.addAtom('Fe') · Tab para completar" data-i18n-placeholder="console.input_placeholder"
+               autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"
+               enterkeyhint="go">
+        <button id="consoleRun" class="btn btn--blue btn--compact" data-i18n="console.run">Run</button>
+    </div>
+</div>
+
+<!-- ═══════════════════════════════════════════════════════
+     DOCK — botones de panel
+═══════════════════════════════════════════════════════ -->
+<div id="dock">
+    <button class="dock-btn" id="dockPhysics">
+        <span class="dock-icon">⚛️</span>
+        <span class="dock-label" data-i18n="panels.physics">Física</span>
+    </button>
+    <button class="dock-btn" id="dockShaderLab" onclick="location.href='ShaderLab/index.html'">
+        <span class="dock-icon">🎨</span>
+        <span class="dock-label">ShaderLab</span>
+    </button>
+    <button class="dock-btn dock-btn--center" id="dockElements">
+        <span class="dock-icon">▲</span>
+    </button>
+    <button class="dock-btn" id="dockQuantumView" onclick="location.href='QuantumView.html'">
+        <span class="dock-icon">🔬</span>
+        <span class="dock-label">Quantum</span>
+    </button>
+    <button class="dock-btn" id="dockAdd">
+        <span class="dock-icon">➕</span>
+        <span class="dock-label" data-i18n="panels.add">Agregar</span>
+    </button>
+</div>
+
+<!-- Grupos lateral + Consola -->
+<button class="collapse-side collapse-side--groups" id="collapseGroups">◀ <span data-i18n="groups.title">Grupos</span></button>
+<button class="collapse-side collapse-side--console" id="collapseConsole">⌨️</button>
+
+<!-- ═══════════════════════════════════════════════════════
+     TEMPERATURE HUD
+═══════════════════════════════════════════════════════ -->
+<div id="temp-hud" class="temp-hud hidden">
+    <div class="temp-hud__row"><span class="temp-hud__label">🌡️ Ambiente</span><span class="temp-hud__value" id="hudAmbientTemp">— K</span><span class="temp-hud__phase" id="hudPhase">—</span></div>
+    <div class="temp-hud__divider"></div>
+    <div class="temp-hud__row"><span class="temp-hud__label">🔥 Suelo</span><span class="temp-hud__value" id="hudFloorTemp">— K</span></div>
+    <div class="temp-hud__row"><span class="temp-hud__label">❄️ Techo</span><span class="temp-hud__value" id="hudCeilingTemp">— K</span></div>
+</div>
+
+<!-- ═══════════════════════════════════════════════════════
+     HINT NOTIFICATION
+═══════════════════════════════════════════════════════ -->
+<div id="hint"></div>
+
+<!-- ═══════════════════════════════════════════════════════
+     LOADING MODAL (con config idioma + calidad)
+═══════════════════════════════════════════════════════ -->
+<div id="loading-modal">
+    <div class="loading-modal__box">
+        <!-- Columna izquierda: logo + título + barra de carga -->
+        <div class="loading-modal__left">
+        <div class="loading-modal__icon wrapper">
+            <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 204.6 204.6" class="loading-svg" xml:space="preserve" width="120" height="120">
+<style type="text/css">.st0{fill:#333351;}.st1{fill:#FF99CC;}.st2{fill:#333333;}.st3{fill:#CCFFFF;}.st4{fill:#4A474C;}.st5{fill:#B5CEF5;enable-background:new;}</style>
+<path class="st0 svg-elem-1" d="M125.6,127.4c1.4,0.2,2,1.5,0.7,2.3c-1.1,0.7-2.3,1.4-3.4,2l-7.1,4.2c-1.5,0.9-3,1.8-4.5,2.7c-0.9,0.5-2,1.2-2.9,1.7c-1,0-1.7-0.8-1.4-1.6c0.4-0.9,3-2.2,3.8-2.6l6.2-3.7l5.4-3.2C123.4,128.6,124.7,127.8,125.6,127.4z"/>
+<path class="st0 svg-elem-2" d="M107.6,66.1c0.5,0,0.8,0,1.3,0.2c5.4,3.4,11,6.7,16.5,10c0.6,0.3,1.5,0.8,1.3,1.6c-0.1,0.5-0.4,0.7-0.8,1c-0.5,0.1-0.8,0-1.2-0.2c-1.2-0.7-2.4-1.4-3.6-2.2c-2.9-1.7-5.7-3.4-8.5-5.2c-1.8-1.1-3.7-2.1-5.3-3.4C106.4,67.4,107.1,66.5,107.6,66.1z"/>
+<path class="st0 svg-elem-3" d="M135.2,92c0.2,0,0.3,0,0.5,0.1c0.3,0.1,0.6,0.3,0.8,0.6c0.1,0.2,0.2,20.8,0,21.1c-0.2,0.3-0.6,0.5-1,0.6c-1.4-0.3-1.3-0.9-1.3-2.2c0-1.7,0.1-3.4,0.1-5.2v-9.4c0-1.3-0.1-3.6,0-5C134.4,92.4,134.9,92.1,135.2,92z"/>
+<path class="st1 svg-elem-4" d="M99.4,74.3c1.3-0.2,2.6,0.3,3.4,1.3s1,2.4,0.5,3.6s-1.6,2.1-2.9,2.2c-2,0.2-3.8-1.1-4-3.1C96.1,76.5,97.4,74.6,99.4,74.3z"/>
+<path class="st1 svg-elem-5" d="M89.4,121.6c1.9-0.4,3.8,0.9,4.3,2.8c0.4,1.9-0.8,3.9-2.8,4.3c-1.3,0.3-2.6-0.1-3.5-1.1c-0.9-1-1.2-2.3-0.8-3.6C87.1,122.8,88.1,121.9,89.4,121.6z"/>
+<path class="st1 svg-elem-6" d="M89.3,77.7c2-0.1,3.8,1.4,3.9,3.4s-1.4,3.7-3.4,3.9c-2,0.1-3.7-1.4-3.8-3.4C85.8,79.6,87.3,77.9,89.3,77.7z"/>
+<path class="st1 svg-elem-7" d="M109.3,122.3c2-0.1,3.7,1.4,3.8,3.3c0.1,2-1.3,3.7-3.3,3.9c-1.3,0.1-2.6-0.5-3.3-1.6c-0.7-1.1-0.8-2.5-0.3-3.6C106.8,123.1,108,122.4,109.3,122.3z"/>
+<path class="st1 svg-elem-8" d="M122.5,105.9c2-0.3,3.8,1,4.2,3c0.3,2-1,3.8-2.9,4.2c-2,0.3-3.9-1-4.2-3C119.2,108.1,120.5,106.2,122.5,105.9z"/>
+<path class="st1 svg-elem-9" d="M76.2,94.2c2-0.2,3.8,1.1,4,3.1c0.3,2-1.1,3.8-3.1,4c-2,0.3-3.8-1.1-4.1-3.1C72.8,96.2,74.2,94.4,76.2,94.2z"/>
+<path class="st1 svg-elem-10" d="M118.2,84.4c1.3-0.2,2.6,0.4,3.4,1.4s1,2.4,0.4,3.6c-0.5,1.2-1.6,2.1-2.9,2.2c-2,0.2-3.7-1.2-4-3.1C114.9,86.4,116.3,84.6,118.2,84.4z"/>
+<path class="st1 svg-elem-11" d="M99,124.8c2-0.4,3.9,0.8,4.3,2.7c0.4,2-0.8,3.9-2.8,4.3c-1.9,0.4-3.8-0.8-4.3-2.8C95.9,127.1,97.1,125.2,99,124.8z"/>
+<path class="st1 svg-elem-12" d="M76,104.9c2-0.4,3.9,0.9,4.2,2.9c0.4,2-0.9,3.9-2.9,4.2c-2,0.4-3.8-0.9-4.2-2.9C72.7,107.2,74,105.3,76,104.9z"/>
+<path class="st1 svg-elem-13" d="M80.7,114.6c1.9-0.4,3.9,0.8,4.3,2.7s-0.8,3.9-2.7,4.3c-1.9,0.4-3.9-0.8-4.3-2.7S78.8,115,80.7,114.6z"/>
+<path class="st1 svg-elem-14" d="M80.5,84.6c2-0.2,3.7,1.2,3.9,3.2c0.2,2-1.2,3.7-3.1,4C80,92,78.7,91.4,78,90.4c-0.8-1-0.9-2.4-0.4-3.6S79.2,84.7,80.5,84.6z"/>
+<path class="st1 svg-elem-15" d="M109.2,77.7c1.9-0.5,3.9,0.7,4.4,2.7c0.5,1.9-0.7,3.9-2.7,4.3c-1.9,0.4-3.8-0.8-4.3-2.7C106.1,80.1,107.2,78.1,109.2,77.7z"/>
+<path class="st1 svg-elem-16" d="M122.4,94.6c1.3-0.3,2.6,0.2,3.4,1.2s1.1,2.3,0.6,3.6c-0.4,1.2-1.5,2.1-2.8,2.3c-1.9,0.3-3.7-1-4.1-2.9C119.2,96.8,120.4,94.9,122.4,94.6z"/>
+<path class="st1 svg-elem-17" d="M118,116c1.3-0.1,2.5,0.5,3.3,1.5c0.7,1.1,0.8,2.4,0.3,3.6c-0.6,1.2-1.7,1.9-3,2c-2,0.1-3.6-1.3-3.8-3.3C114.6,117.9,116,116.2,118,116z"/>
+<path class="st2 svg-elem-18" d="M97.5,44.3c1.5-0.3,3-0.3,4.4,0c3.3,0.7,6.2,2.8,7.8,5.8c1.6,3,1.8,6.6,0.6,9.7c-0.6,1.4-1.4,2.7-2.4,3.7c-2.2,2.3-5.2,3.5-8.4,3.5c-3.2,0-6.2-1.3-8.3-3.6c-1-1.1-1.8-2.3-2.4-3.7c-1.2-3.2-1-6.8,0.7-9.8C91.2,47,94.1,44.9,97.5,44.3z"/>
+<path class="st2 svg-elem-19" d="M91.3,142.7c2.2-2.3,5.2-3.6,8.4-3.6c3.2,0,6.2,1.3,8.4,3.7c1,1.1,1.8,2.3,2.3,3.7c1.2,3.2,1,6.7-0.6,9.7s-4.5,5.1-7.9,5.8c-1.4,0.3-2.8,0.3-4.2,0c-3.4-0.6-6.4-2.7-8.1-5.8c-1.7-3-1.9-6.7-0.6-9.9C89.5,145,90.3,143.7,91.3,142.7z"/>
+<path class="st2 svg-elem-20" d="M130.9,72.3c2.2-2.5,5.3-4,8.7-4c3.3,0,6.5,1.4,8.7,3.9c1,1.1,1.7,2.4,2.2,3.8c1,3,0.8,6.2-0.7,9c-1.4,2.8-3.9,4.8-6.9,5.7c-1.4,0.4-2.9,0.6-4.4,0.4c-3.5-0.4-6.6-2.3-8.4-5.2c-1.9-2.9-2.4-6.5-1.3-9.8C129.2,74.8,129.9,73.5,130.9,72.3z"/>
+<path class="st2 svg-elem-21" d="M51,72.1c2.2-2.4,5.2-3.7,8.4-3.7s6.3,1.3,8.5,3.7c1,1.1,1.8,2.4,2.3,3.8c1.2,3.2,0.9,6.7-0.8,9.7c-1.7,2.9-4.6,5-7.9,5.6c-1.4,0.3-2.9,0.2-4.3,0c-3.3-0.7-6.1-2.7-7.7-5.6c-1.6-2.9-1.9-6.4-0.8-9.5C49.2,74.5,50,73.2,51,72.1z"/>
+<path class="st2 svg-elem-22" d="M138.5,115.1c1.5-0.2,3,0,4.4,0.4c3,0.9,5.5,2.9,6.9,5.7c1.4,2.7,1.7,6,0.7,8.9c-0.5,1.4-1.2,2.7-2.1,3.8c-2.1,2.5-5.3,4-8.6,4s-6.5-1.3-8.7-3.8c-1-1.1-1.8-2.4-2.3-3.8c-1.2-3.3-0.8-7,1.1-9.9C131.9,117.5,135,115.5,138.5,115.1z"/>
+<path class="st2 svg-elem-23" d="M57.2,115.3c1.4-0.3,2.9-0.3,4.3,0c3.3,0.6,6.2,2.6,7.9,5.6c1.7,2.9,2,6.4,0.8,9.6c-0.5,1.4-1.3,2.6-2.2,3.7c-2.2,2.4-5.3,3.8-8.6,3.8s-6.4-1.5-8.5-4c-0.9-1.1-1.7-2.4-2.1-3.8c-1-3.1-0.7-6.5,0.9-9.3C51.3,118,54,116,57.2,115.3z"/>
+<path class="st3 svg-elem-24" d="M97.6,172.3c1.4-0.4,3-0.4,4.4,0.1c3.6,1.2,5.9,4.8,5.2,8.5c-0.6,3.8-3.9,6.5-7.7,6.4c-3.8-0.1-7-2.9-7.5-6.7C91.6,176.9,93.9,173.4,97.6,172.3z"/>
+<path class="st3 svg-elem-25" d="M158.4,134.4c2.7-2.7,6.9-2.9,10-0.6c3,2.3,3.9,6.5,2.1,9.8c-1.8,3.3-5.8,4.8-9.4,3.5c-3.5-1.3-5.6-5.1-4.8-8.8C156.6,136.8,157.3,135.5,158.4,134.4z"/>
+<path class="st3 svg-elem-26" d="M97.6,32.3c-3.7-1-6-4.6-5.5-8.3c0.5-3.8,3.7-6.6,7.5-6.6s7.1,2.7,7.6,6.5c0.6,3.8-1.7,7.4-5.3,8.5C100.5,32.6,99,32.6,97.6,32.3z"/>
+<path class="st3 svg-elem-27" d="M42.8,138.3c0.8,3.7-1.3,7.4-4.8,8.7c-3.6,1.3-7.5-0.2-9.3-3.5s-0.9-7.5,2.2-9.7c3-2.3,7.3-1.9,10,0.8C41.8,135.6,42.5,136.9,42.8,138.3z"/>
+<path class="st3 svg-elem-28" d="M40.6,71.3c-2.7,2.6-7,2.8-9.9,0.5c-3-2.3-3.8-6.5-1.9-9.8s5.9-4.7,9.4-3.3c3.5,1.4,5.5,5.1,4.6,8.8C42.5,68.9,41.7,70.2,40.6,71.3z"/>
+<path class="st3 svg-elem-29" d="M156.4,67.6c-0.4-2-0.1-4.3,1-6.1c1.1-1.7,2.9-2.9,4.9-3.3c4.3-0.8,8.2,1.9,9,6.2c0.3,2-0.2,4-1.3,5.6c-1.2,1.6-2.9,2.7-4.9,3.1c-2.1,0.3-4.2-0.2-5.9-1.4l-0.6-0.4C157.4,70.3,156.8,69.2,156.4,67.6z"/>
+<path class="st4 svg-elem-30" d="M110.4,59.9c1.3,0.7,3.2,1.9,4.6,2.7l7,4.2c2.4,1.5,6.8,3.9,9,5.5c-1,1.1-1.7,2.4-2.2,3.9c-4.6-2.4-9.1-5.6-13.7-8.2c-2.3-1.3-4.9-2.9-7.1-4.4C109,62.6,109.8,61.3,110.4,59.9z"/>
+<path class="st4 svg-elem-31" d="M88.9,59.8c0.5,1.4,1.3,2.6,2.4,3.7c-6.9,4.1-14.1,8.2-21,12.2C69.8,74.3,69,73,68,71.9c0.2-0.1,1.5-0.9,1.8-1l3.9-2.3L88.9,59.8z"/>
+<path class="st4 svg-elem-32" d="M138.5,91.2c1.5,0.2,3,0,4.4-0.4v24.8c-1.4-0.4-2.9-0.6-4.4-0.4c-0.2-2.3,0-6.2,0-8.6V91.2z"/>
+<path class="st4 svg-elem-33" d="M108.1,142.8c1.1-0.5,3-1.8,4.1-2.5c3.4-2,6.7-4,10.1-6c2.2-1.3,4.4-2.7,6.7-3.9c0.5,1.4,1.3,2.7,2.3,3.8c-6.7,4-14,8.5-20.8,12.3C109.8,145.1,109.1,143.8,108.1,142.8z"/>
+<path class="st4 svg-elem-34" d="M70.2,130.4c1.4,0.6,4.2,2.4,5.6,3.2l10.9,6.4c0.6,0.4,4.1,2.5,4.5,2.7c-1,1.1-1.8,2.3-2.4,3.6c-2.6-1.3-5.6-3.2-8.2-4.7c-4.1-2.5-8.7-4.9-12.8-7.4C69,133.1,69.7,131.8,70.2,130.4z"/>
+<path class="st4 svg-elem-35" d="M57.2,91c1.4,0.3,2.9,0.3,4.3,0v24.2c-1.4-0.3-2.9-0.2-4.3,0C57.2,107.2,57.2,99.1,57.2,91z"/>
+<path class="st0 svg-elem-36" d="M113.1,57c1.5-0.2,11.7,6.9,13.9,8c1.5,1,3.3,1.8,4.6,2.9c0.7,0.6,0.2,1.5-0.4,1.9c-1.3,0.1-2.7-1.1-3.8-1.8l-5.3-3.2c-1.9-1.1-3.8-2.3-5.7-3.4c-1.2-0.7-2.8-1.6-3.9-2.4C112.1,58,112.3,57.6,113.1,57z"/>
+<path class="st5 svg-elem-37" d="M97.6,32.3c1.4,0.4,2.9,0.4,4.2,0c0,2.6,0,5.2,0,7.8c0,1.1,0,3.3,0.1,4.3c-1.5-0.3-3-0.3-4.4,0c0.1-0.8,0.1-3,0.1-3.9C97.6,37.7,97.6,35,97.6,32.3z"/>
+<path class="st5 svg-elem-38" d="M97.6,162c1.4,0.3,2.8,0.2,4.2,0v6.4c0,1.2,0,3,0.1,4.1c-1.4-0.4-2.9-0.5-4.4-0.1L97.6,162z"/>
+<path class="st5 svg-elem-39" d="M42.8,67.5c0.5,0.3,0.9,0.5,1.4,0.8c2.3,1.2,4.5,2.6,6.8,3.8c-1,1.1-1.8,2.4-2.3,3.8c-0.3-0.2-1.9-1.1-2.4-1.4c-1.9-1.1-3.9-2.1-5.7-3.3C41.7,70.2,42.5,68.9,42.8,67.5z"/>
+<path class="st5 svg-elem-40" d="M156.4,67.6c0.5,1.5,1.1,2.7,2.3,3.8c-1.8,1.1-3.7,2.1-5.5,3.2c-0.5,0.3-2.2,1.2-2.6,1.5c-0.5-1.4-1.2-2.7-2.2-3.8C150.7,70.7,153.8,69,156.4,67.6z"/>
+<path class="st5 svg-elem-41" d="M150.5,130.1c1.8,1,3.7,1.9,5.5,2.9c0.5,0.3,1.9,1,2.3,1.4c-1.1,1-1.8,2.4-2.1,3.8c-2.6-1.5-5.3-2.8-7.9-4.3C149.4,132.8,150.1,131.5,150.5,130.1z"/>
+<path class="st5 svg-elem-42" d="M48.7,130.1c0.5,1.4,1.2,2.7,2.1,3.8c-2.7,1.4-5.3,3-8,4.4c-0.3-1.4-1-2.7-2-3.8C43,133.2,46.4,131.4,48.7,130.1z"/>
+            </svg>
+        </div>
+        <div class="loading-modal__title">Quantum Chemistry Simulator</div>
+        <div class="loading-modal__status" id="loadingStatus" data-i18n="app.starting">Iniciando...</div>
+        <div class="loading-modal__bar-wrap">
+            <div class="loading-modal__bar" id="loadingBar"></div>
+        </div>
+        <div class="loading-modal__detail" id="loadingDetail"></div>
+        </div><!-- /.loading-modal__left -->
+
+        <!-- Panel de configuración — aparece tras la carga completa -->
+        <div class="loading-modal__config" id="loadingConfig">
+            <div class="config-divider"></div>
+
+            <!-- Idioma -->
+            <div class="config-section">
+               <!-- <span class="config-label" data-i18n="session.language_label">Idioma / Language</span>-->
+                <div class="config-pills" role="radiogroup" aria-label="Idioma">
+                    <button class="config-pill active" data-lang="es" aria-pressed="true">ES</button>
+                    <button class="config-pill" data-lang="en" aria-pressed="false">EN</button>
+                </div>
+            </div>
+
+            <!-- Calidad visual -->
+            <div class="config-section">
+                <span class="config-label" data-i18n="settings.graphics_quality">Calidad visual</span>
+                <div class="config-quality" role="radiogroup" aria-label="Calidad visual">
+                    <label class="quality-option" data-res="standard">
+                        <input type="radio" name="quality" value="standard" hidden>
+                        <div class="quality-dot"></div>
+                        <div class="quality-text">
+                            <span class="quality-name" data-i18n="settings.quality_low">Básica</span>
+                            <span class="quality-desc" data-i18n="session.q_standard_desc">5 k pts · rápido</span>
+                        </div>
+                    </label>
+                    <label class="quality-option active" data-res="high">
+                        <input type="radio" name="quality" value="high" checked hidden>
+                        <div class="quality-dot"></div>
+                        <div class="quality-text">
+                            <span class="quality-name" data-i18n="settings.quality_high">Alta</span>
+                            <span class="quality-desc" data-i18n="session.q_high_desc">10 k pts · recomendado</span>
+                        </div>
+                    </label>
+                    <label class="quality-option" data-res="ultra">
+                        <input type="radio" name="quality" value="ultra" hidden>
+                        <div class="quality-dot"></div>
+                        <div class="quality-text">
+                            <span class="quality-name" data-i18n="session.q_ultra">Cuántica™</span>
+                            <span class="quality-desc" data-i18n="session.q_ultra_desc">20 k pts · exigente</span>
+                        </div>
+                    </label>
+                </div>
+            </div>
+
+            <!-- Botón de inicio -->
+            <button class="config-launch" id="launchBtn" aria-label="Iniciar simulador">
+                <span class="config-launch__text" data-i18n="session.continue">Iniciar</span>
+                <svg class="config-launch__arrow" width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+                    <path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+            </button>
+        </div>
+    </div>
+</div>
+
+<script>
+    setTimeout(() => {
+        const svg = document.querySelector('#loading-modal .wrapper svg');
+        if (svg) svg.classList.add('active');
+    }, 100);
+</script>
+
+<!-- UI: fade approach + settings dropdown -->
+<script>
+(function() {
+    const header       = document.getElementById('app-header');
+    const dock         = document.getElementById('dock');
+    const restoreBtn   = document.getElementById('ui-restore-btn');
+    const settingsBtn  = document.getElementById('settingsBtn');
+    const settingsDrop = document.getElementById('settingsDropdown');
+    const visorSliderWrap = document.getElementById('visorSliderWrap');
+    const visorBtn     = document.getElementById('visorBtn');
+
+    let faded = false;
+    let idleTimer = null;
+    const IDLE_MS = 5000;
+
+    function fadeUI() {
+        // Don't fade if a panel is open
+        const anyPanelOpen = document.querySelector('.side-panel:not(.hidden)') ||
+                             document.querySelector('.bottom-sheet:not(.hidden)') ||
+                             document.querySelector('.dev-console:not(.hidden)');
+        if (anyPanelOpen) { resetIdleTimer(); return; }
+        if (settingsDrop.classList.contains('open')) { resetIdleTimer(); return; }
+
+        faded = true;
+        header.classList.add('ui-faded');
+        dock.classList.add('ui-faded');
+        restoreBtn.classList.add('visible');
+    }
+
+    function restoreUI() {
+        faded = false;
+        header.classList.remove('ui-faded');
+        dock.classList.remove('ui-faded');
+        restoreBtn.classList.remove('visible');
+        resetIdleTimer();
+    }
+
+    function resetIdleTimer() {
+        clearTimeout(idleTimer);
+        idleTimer = setTimeout(fadeUI, IDLE_MS);
+    }
+
+    // ⚪ restore button
+    restoreBtn.addEventListener('click', (e) => {
+        e.stopPropagation();
+        restoreUI();
+    });
+
+    // Stats buttons (atom/molecule mode) still work when faded
+    // Dock center button (▲) still works when faded
+    // These are kept pointer-events:auto via CSS
+
+    // Settings dropdown toggle
+    settingsBtn.addEventListener('click', (e) => {
+        e.stopPropagation();
+        settingsDrop.classList.remove('hidden');
+        const open = settingsDrop.classList.contains('open');
+        if (open) {
+            settingsDrop.classList.remove('open');
+        } else {
+            settingsDrop.classList.add('open');
+            restoreUI(); // ensure UI is visible when settings open
+        }
+    });
+
+    // Close dropdown on outside click
+    document.addEventListener('click', (e) => {
+        if (!e.target.closest('.settings-wrap')) {
+            settingsDrop.classList.remove('open');
+        }
+    });
+
+    // Visor slider visibility
+    visorBtn?.addEventListener('click', () => {
+        setTimeout(() => {
+            const active = visorBtn.classList.contains('active');
+            visorSliderWrap.classList.toggle('visible', active);
+        }, 50);
+    });
+
+    // Start idle timer after load
+    window.addEventListener('load', () => {
+        setTimeout(resetIdleTimer, 2000);
+    });
+})();
+</script>
+
+<!-- ☢ Nuclear Tuner Panel — shown/hidden by tool-panel button in app.js -->
+<div id="nuclear-tuner-panel" class="nuclear-tuner hidden">
+    <div class="nt-header">
+        <span class="nt-title">☢ <span data-i18n="nuclear.title">Nuclear Tuner</span></span>
+        <button type="button" class="nt-close" id="ntClose">✕</button>
+    </div>
+    <div class="nt-body">
+        <label class="nt-row"><span data-i18n="nuclear.omega">Omega</span> <span class="nt-val" id="vOmega">3.0</span>
+            <input type="range" id="sOmega" min="0.5" max="12" step="0.1" value="3.0">
+        </label>
+        <label class="nt-row"><span data-i18n="nuclear.confinement">Confinement</span> <span class="nt-val" id="vConf">2.2</span>
+            <input type="range" id="sConf" min="0.5" max="10" step="0.1" value="2.2">
+        </label>
+        <label class="nt-row"><span data-i18n="nuclear.density">Densidad</span> <span class="nt-val" id="vGain">0.14</span>
+            <input type="range" id="sGain" min="0.01" max="0.5" step="0.01" value="0.14">
+        </label>
+        <label class="nt-row"><span data-i18n="nuclear.threshold">Threshold</span> <span class="nt-val" id="vThresh">0.12</span>
+            <input type="range" id="sThresh" min="0.001" max="0.5" step="0.005" value="0.12">
+        </label>
+        <label class="nt-row"><span data-i18n="nuclear.gradient">Gradiente</span> <span class="nt-val" id="vGrad">0.08</span>
+            <input type="range" id="sGrad" min="0.01" max="0.5" step="0.01" value="0.08">
+        </label>
+        <label class="nt-row"><span data-i18n="nuclear.iridescence">Iridiscencia</span> <span class="nt-val" id="vIrid">0.04</span>
+            <input type="range" id="sIrid" min="0.005" max="0.3" step="0.005" value="0.04">
+        </label>
+        <label class="nt-row"><span data-i18n="nuclear.pulse">Pulso</span> <span class="nt-val" id="vPulse">0.3</span>
+            <input type="range" id="sPulse" min="0" max="0.5" step="0.05" value="0.3">
+        </label>
+        <div class="nt-footer">
+            <button type="button" class="nt-btn nt-btn--export" id="ntExport">📋 <span data-i18n="nuclear.copy_json">Copiar JSON</span></button>
+            <button type="button" class="nt-btn nt-btn--reset" id="ntReset" data-i18n="controls.reset">Reset</button>
+        </div>
+        <div class="nt-footer" style="margin-top:4px">
+            <button type="button" class="nt-btn nt-btn--export" id="ntImport" style="flex:2">📂 <span data-i18n="nuclear.edit_json">Editar JSON</span></button>
+            <button type="button" class="nt-btn nt-btn--reset" id="ntImportApply" data-i18n="nuclear.apply">Aplicar</button>
+        </div>
+        <pre class="nt-json hidden" id="ntJson"></pre>
+    </div>
+</div>
+
+<script>
+(function() {
+    const LS_KEY = 'qcs_nuclear_tuner';
+
+    const SLIDERS = [
+        ['sOmega',  'vOmega',  'uOmega'],
+        ['sConf',   'vConf',   'uConfinement'],
+        ['sGain',   'vGain',   'uAlphaBase'],
+        ['sThresh', 'vThresh', 'uDensityThresh'],
+        ['sGrad',   'vGrad',   'uGradThresh'],
+        ['sIrid',   'vIrid',   'uIridAlpha'],
+        ['sPulse',  'vPulse',  'uPulseRange'],
+    ];
+
+    // ── Cargar desde localStorage ──
+    const state = {};
+    const saved = (() => { try { return JSON.parse(localStorage.getItem(LS_KEY) || '{}'); } catch { return {}; } })();
+
+    const keyMap = { sOmega:'uOmega', sConf:'uConfinement', sGain:'uAlphaBase',
+        sThresh:'uDensityThresh', sGrad:'uGradThresh', sIrid:'uIridAlpha', sPulse:'uPulseRange' };
+
+    SLIDERS.forEach(([sid, vid]) => {
+        const el = document.getElementById(sid);
+        if (!el) return;
+        const savedVal = saved[keyMap[sid]];
+        if (savedVal !== undefined) { el.value = savedVal; }
+        state[sid] = parseFloat(el.value);
+        document.getElementById(vid).textContent = el.value;
+        el.addEventListener('input', () => {
+            state[sid] = parseFloat(el.value);
+            document.getElementById(vid).textContent = el.value;
+            saveState();
+        });
+    });
+
+    function saveState() {
+        const json = buildJson();
+        try { localStorage.setItem(LS_KEY, JSON.stringify(json)); } catch {}
+    }
+
+    function buildJson() {
+        return { uOmega: state.sOmega, uConfinement: state.sConf,
+            uAlphaBase: state.sGain, uDensityThresh: state.sThresh,
+            uGradThresh: state.sGrad, uIridAlpha: state.sIrid, uPulseRange: state.sPulse };
+    }
+
+    function applyJson(json) {
+        const revMap = { uOmega:'sOmega', uConfinement:'sConf', uAlphaBase:'sGain',
+            uDensityThresh:'sThresh', uGradThresh:'sGrad', uIridAlpha:'sIrid', uPulseRange:'sPulse' };
+        Object.entries(json).forEach(([key, val]) => {
+            const sid = revMap[key]; if (!sid) return;
+            const el = document.getElementById(sid); if (!el) return;
+            el.value = val; state[sid] = parseFloat(val);
+            const vid = SLIDERS.find(s => s[0] === sid)?.[1];
+            if (vid) document.getElementById(vid).textContent = val;
+        });
+        saveState();
+    }
+
+    // ── Cerrar ──
+    document.getElementById('ntClose')?.addEventListener('click', () => {
+        document.getElementById('nuclear-tuner-panel').classList.add('hidden');
+    });
+
+    // ── Export ──
+    document.getElementById('ntExport')?.addEventListener('click', () => {
+        const str = JSON.stringify(buildJson(), null, 2);
+        const el = document.getElementById('ntJson');
+        el.textContent = str; el.classList.remove('hidden');
+        navigator.clipboard?.writeText(str).then(() => {
+            const btn = document.getElementById('ntExport');
+            btn.textContent = '✅ Copiado';
+            setTimeout(() => btn.textContent = '📋 Copiar JSON', 1500);
+        });
+    });
+
+    // ── Import JSON ──
+    document.getElementById('ntImport')?.addEventListener('click', () => {
+        const el = document.getElementById('ntJson');
+        el.classList.remove('hidden');
+        el.contentEditable = 'true';
+        el.textContent = el.textContent || JSON.stringify(buildJson(), null, 2);
+        el.focus();
+    });
+
+    document.getElementById('ntImportApply')?.addEventListener('click', () => {
+        try {
+            const json = JSON.parse(document.getElementById('ntJson').textContent);
+            applyJson(json);
+            document.getElementById('ntJson').contentEditable = 'false';
+            document.getElementById('ntImportApply').textContent = '✅';
+            setTimeout(() => document.getElementById('ntImportApply').textContent = 'Aplicar', 1500);
+        } catch { alert('JSON inválido'); }
+    });
+
+    // ── Reset ──
+    document.getElementById('ntReset')?.addEventListener('click', () => {
+        SLIDERS.forEach(([sid, vid]) => {
+            const el = document.getElementById(sid); if (!el) return;
+            el.value = el.defaultValue;
+            state[sid] = parseFloat(el.defaultValue);
+            document.getElementById(vid).textContent = el.defaultValue;
+        });
+        document.getElementById('ntJson').classList.add('hidden');
+        saveState();
+    });
+
+    // ── Tick: patch uniforms + auto-show tool-panel en LOD nuclear ──
+    let wasNuclear = false;
+    function tick() {
+        requestAnimationFrame(tick);
+        const isNuclear = window._mainQR?._lodState === 'nuclear';
+
+        // Auto-show tool-panel cuando entramos en nuclear
+        if (isNuclear && !wasNuclear) {
+            // Forzar re-render del tool-panel para que aparezca el botón ☢
+            const tp = document.getElementById('tool-panel');
+            if (tp) {
+                // Disparar showToolPanel si está disponible en el scope global
+                window._showToolPanel?.();
+            }
+        }
+        wasNuclear = isNuclear;
+
+        // Patch uniforms si el panel está abierto
+        const panel = document.getElementById('nuclear-tuner-panel');
+        if (!panel || panel.classList.contains('hidden')) return;
+        const vu = window._mainQR?._nucleusBuilder?._volUniforms;
+        if (!vu) return;
+        SLIDERS.forEach(([sid,, key]) => {
+            if (vu[key] !== undefined) vu[key].value = state[sid];
+        });
+    }
+    requestAnimationFrame(tick);
+})();
+</script>
+
+<script type="module" src="app.js"></script>
+</body>
+</html>

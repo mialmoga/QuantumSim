@@ -1,0 +1,156 @@
+{
+  "symbol": "Er",
+  "identity": {
+    "name_es": "Erbio",
+    "name_eng": "Erbium",
+    "number": 68,
+    "category_es": "Lantánido",
+    "category_eng": "Lanthanide",
+    "color": "0xC0C0B0",
+    "cpk_color": "0x00E675",
+    "discovery_year": "1843"
+  },
+  "physical_properties": {
+    "mass": 167.259,
+    "density_g_cm3": 9.066,
+    "standard_state_es": "Sólido",
+    "standard_state_eng": "Solid",
+    "melt_K": 1802,
+    "boil_K": 3141,
+    "allotropes_es": null,
+    "allotropes_eng": null,
+    "lattice_structure": "hcp"
+  },
+  "atomic_structure": {
+    "electronegativity": 1.24,
+    "valence": 3,
+    "ionization_energy_eV": 6.1077,
+    "electron_affinity_ev": null,
+    "electron_affinity_kj_mol": null,
+    "radius_atomic_pm": 175,
+    "radius_covalent_pm": 189,
+    "vanderwaals_radius_pm": 226,
+    "ionic_radius_pm": 89,
+    "effective_nuclear_charge": 6.3,
+    "electron_configuration_string": "[Xe] 4f12 6s2",
+    "shells": [
+      2,
+      8,
+      18,
+      30,
+      8,
+      2
+    ],
+    "quantum_numbers": {
+      "s": 2,
+      "p": 0,
+      "d": 0,
+      "f": 12
+    },
+    "work_function_ev": 2.97
+  },
+  "thermodynamics": {
+    "enthalpy_formation_kj_mol": 0,
+    "entropy_j_molk": 73.18,
+    "heat_capacity_j_molk": 28.12,
+    "specific_heat_j_gK": 0.168,
+    "latent_heat_fusion_kj_mol": 19.9,
+    "latent_heat_vaporization_kj_mol": 280,
+    "fusion_heat_kj_mol": 19.9,
+    "evaporation_heat_kj_mol": 280
+  },
+  "kinetics_and_phase": {
+    "vapor_pressure_constants": {
+      "A": 5.1,
+      "B": 17000,
+      "C": -10
+    },
+    "vapor_pressure_pa": null,
+    "viscosity_liquid_pas": null,
+    "viscosity_pa_s": null,
+    "critical_temp_K": null,
+    "critical_press_MPa": null,
+    "surface_tension_nm": 0.612
+  },
+  "electromagnetism_and_mechanics": {
+    "thermal_conductivity_wmk": 14.5,
+    "electrical_conductivity_sm": 1170000,
+    "magnetic_susceptibility": 0.000263,
+    "thermal_expansion_coefficient": 1.22e-05,
+    "polarizability_angstrom3": 23.2,
+    "refractive_index": null,
+    "youngs_modulus_gba": 69.9,
+    "poisson_ratio": 0.237,
+    "brinell_hardness_m_pa": 550
+  },
+  "reactivity": {
+    "max_bonds": 3,
+    "geometry_preference_es": "Octaédrica",
+    "geometry_preference_eng": "Octahedral",
+    "ideal_bond_angle": null,
+    "bond_energy_ev": null,
+    "dissociation_energy_kj_mol": null,
+    "standard_potential_v": -2.31,
+    "oxidation_states": [
+      3
+    ],
+    "common_ions": [
+      "Er3+"
+    ]
+  },
+  "nuclear_and_environmental": {
+    "isotopes": [
+      {
+        "mass": 161.928,
+        "abundance": 0.14,
+        "stable": true,
+        "name_es": "Erbio-162",
+        "name_eng": "Erbium-162"
+      },
+      {
+        "mass": 163.929,
+        "abundance": 1.6,
+        "stable": true,
+        "name_es": "Erbio-164",
+        "name_eng": "Erbium-164"
+      },
+      {
+        "mass": 165.93,
+        "abundance": 33.5,
+        "stable": true,
+        "name_es": "Erbio-166",
+        "name_eng": "Erbium-166"
+      },
+      {
+        "mass": 166.932,
+        "abundance": 22.87,
+        "stable": true,
+        "name_es": "Erbio-167",
+        "name_eng": "Erbium-167"
+      },
+      {
+        "mass": 167.932,
+        "abundance": 26.98,
+        "stable": true,
+        "name_es": "Erbio-168",
+        "name_eng": "Erbium-168"
+      },
+      {
+        "mass": 169.935,
+        "abundance": 14.91,
+        "stable": true,
+        "name_es": "Erbio-170",
+        "name_eng": "Erbium-170"
+      }
+    ],
+    "neutron_cross_section_barns": 160,
+    "nuclear_binding_energy_mev": 8.147,
+    "abundance_crust_mg_kg": 3.5,
+    "toxicity_level": 1
+  },
+  "cryogenic_data": {
+    "critical_solidification_pressure_mpa": null,
+    "lambda_point_k": 20,
+    "superfluid_viscosity_pas": null
+  }
+}

@@ -1,0 +1,139 @@
+{
+  "symbol": "H",
+  "identity": {
+    "name_es": "Hidrógeno",
+    "name_eng": "Hydrogen",
+    "number": 1,
+    "category_es": "No metal reactivo",
+    "category_eng": "Reactive nonmetal",
+    "color": "0xE8E8F0",
+    "cpk_color": "0xFFFFFF",
+    "discovery_year": "1766"
+  },
+  "physical_properties": {
+    "mass": 1.008,
+    "density_g_cm3": 8.988e-05,
+    "standard_state_es": "Gas",
+    "standard_state_eng": "Gas",
+    "melt_K": 13.99,
+    "boil_K": 20.27,
+    "allotropes_es": [
+      "Dihidrógeno atómico",
+      "Hidrógeno metálico"
+    ],
+    "allotropes_eng": [
+      "Atomic dihydrogen",
+      "Metallic hydrogen"
+    ],
+    "lattice_structure": "hcp"
+  },
+  "atomic_structure": {
+    "electronegativity": 2.2,
+    "valence": 1,
+    "ionization_energy_eV": 13.5984,
+    "electron_affinity_ev": 0.7542,
+    "electron_affinity_kj_mol": 72.77,
+    "radius_atomic_pm": 53,
+    "radius_covalent_pm": 31,
+    "vanderwaals_radius_pm": 120,
+    "ionic_radius_pm": 154,
+    "effective_nuclear_charge": 1,
+    "electron_configuration_string": "1s1",
+    "shells": [
+      1
+    ],
+    "quantum_numbers": {
+      "s": 1,
+      "p": 0,
+      "d": 0,
+      "f": 0
+    },
+    "work_function_ev": 4.5
+  },
+  "thermodynamics": {
+    "enthalpy_formation_kj_mol": 0,
+    "entropy_j_molk": 130.68,
+    "heat_capacity_j_molk": 28.836,
+    "specific_heat_j_gK": 14.3,
+    "latent_heat_fusion_kj_mol": 0.117,
+    "latent_heat_vaporization_kj_mol": 0.9,
+    "fusion_heat_kj_mol": 0.117,
+    "evaporation_heat_kj_mol": 0.45
+  },
+  "kinetics_and_phase": {
+    "vapor_pressure_constants": {
+      "A": 3.543,
+      "B": 99.31,
+      "C": 270.4
+    },
+    "vapor_pressure_pa": 209000,
+    "viscosity_liquid_pas": 1.3e-05,
+    "viscosity_pa_s": 8.6e-06,
+    "critical_temp_K": 33.145,
+    "critical_press_MPa": 1.296,
+    "surface_tension_nm": 0.0019
+  },
+  "electromagnetism_and_mechanics": {
+    "thermal_conductivity_wmk": 0.1805,
+    "electrical_conductivity_sm": null,
+    "magnetic_susceptibility": -3.98e-06,
+    "thermal_expansion_coefficient": 1.6e-05,
+    "polarizability_angstrom3": 0.6667,
+    "refractive_index": 1.000132,
+    "youngs_modulus_gba": null,
+    "poisson_ratio": null,
+    "brinell_hardness_m_pa": null
+  },
+  "reactivity": {
+    "max_bonds": 1,
+    "geometry_preference_es": "Lineal",
+    "geometry_preference_eng": "Linear",
+    "ideal_bond_angle": 180,
+    "bond_energy_ev": 4.52,
+    "dissociation_energy_kj_mol": 436,
+    "standard_potential_v": 0,
+    "oxidation_states": [
+      1,
+      -1
+    ],
+    "common_ions": [
+      "H+",
+      "H-"
+    ]
+  },
+  "nuclear_and_environmental": {
+    "isotopes": [
+      {
+        "mass": 1.0078,
+        "abundance": 99.985,
+        "stable": true,
+        "name_es": "Protio",
+        "name_eng": "Protium"
+      },
+      {
+        "mass": 2.0141,
+        "abundance": 0.015,
+        "stable": true,
+        "name_es": "Deuterio",
+        "name_eng": "Deuterium"
+      },
+      {
+        "mass": 3.016,
+        "abundance": null,
+        "stable": false,
+        "half_life_s": 388800000,
+        "name_es": "Tritio",
+        "name_eng": "Tritium"
+      }
+    ],
+    "neutron_cross_section_barns": 0.332,
+    "nuclear_binding_energy_mev": 0,
+    "abundance_crust_mg_kg": 1400,
+    "toxicity_level": 1
+  },
+  "cryogenic_data": {
+    "critical_solidification_pressure_mpa": null,
+    "lambda_point_k": null,
+    "superfluid_viscosity_pas": null
+  }
+}

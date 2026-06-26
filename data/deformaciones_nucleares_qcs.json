@@ -1,0 +1,828 @@
+[
+    {
+        "Z": 1,
+        "Simbolo": "H",
+        "Nombre": "Hidrógeno",
+        "Nucleo_Magico": false,
+        "Geometria_Nuclear": "Casi Esférico (Vibracional)"
+    },
+    {
+        "Z": 2,
+        "Simbolo": "He",
+        "Nombre": "Helio",
+        "Nucleo_Magico": true,
+        "Geometria_Nuclear": "Esférico (Número Mágico)"
+    },
+    {
+        "Z": 3,
+        "Simbolo": "Li",
+        "Nombre": "Litio",
+        "Nucleo_Magico": false,
+        "Geometria_Nuclear": "Casi Esférico (Vibracional)"
+    },
+    {
+        "Z": 4,
+        "Simbolo": "Be",
+        "Nombre": "Berilio",
+        "Nucleo_Magico": false,
+        "Geometria_Nuclear": "Casi Esférico (Vibracional)"
+    },
+    {
+        "Z": 5,
+        "Simbolo": "B",
+        "Nombre": "Boro",
+        "Nucleo_Magico": false,
+        "Geometria_Nuclear": "Esferoide Prolato (Común)"
+    },
+    {
+        "Z": 6,
+        "Simbolo": "C",
+        "Nombre": "Carbono",
+        "Nucleo_Magico": false,
+        "Geometria_Nuclear": "Casi Esférico (Vibracional)"
+    },
+    {
+        "Z": 7,
+        "Simbolo": "N",
+        "Nombre": "Nitrógeno",
+        "Nucleo_Magico": false,
+        "Geometria_Nuclear": "Casi Esférico (Vibracional)"
+    },
+    {
+        "Z": 8,
+        "Simbolo": "O",
+        "Nombre": "Oxígeno",
+        "Nucleo_Magico": true,
+        "Geometria_Nuclear": "Esférico (Número Mágico)"
+    },
+    {
+        "Z": 9,
+        "Simbolo": "F",
+        "Nombre": "Flúor",
+        "Nucleo_Magico": false,
+        "Geometria_Nuclear": "Casi Esférico (Vibracional)"
+    },
+    {
+        "Z": 10,
+        "Simbolo": "Ne",
+        "Nombre": "Neón",
+        "Nucleo_Magico": false,
+        "Geometria_Nuclear": "Casi Esférico (Vibracional)"
+    },
+    {
+        "Z": 11,
+        "Simbolo": "Na",
+        "Nombre": "Sodio",
+        "Nucleo_Magico": false,
+        "Geometria_Nuclear": "Esferoide Prolato (Común)"
+    },
+    {
+        "Z": 12,
+        "Simbolo": "Mg",
+        "Nombre": "Magnesio",
+        "Nucleo_Magico": false,
+        "Geometria_Nuclear": "Esferoide Prolato (Común)"
+    },
+    {
+        "Z": 13,
+        "Simbolo": "Al",
+        "Nombre": "Aluminio",
+        "Nucleo_Magico": false,
+        "Geometria_Nuclear": "Esferoide Prolato (Común)"
+    },
+    {
+        "Z": 14,
+        "Simbolo": "Si",
+        "Nombre": "Silicio",
+        "Nucleo_Magico": false,
+        "Geometria_Nuclear": "Esferoide Prolato (Común)"
+    },
+    {
+        "Z": 15,
+        "Simbolo": "P",
+        "Nombre": "Fósforo",
+        "Nucleo_Magico": false,
+        "Geometria_Nuclear": "Esferoide Prolato (Común)"
+    },
+    {
+        "Z": 16,
+        "Simbolo": "S",
+        "Nombre": "Azufre",
+        "Nucleo_Magico": false,
+        "Geometria_Nuclear": "Esferoide Prolato (Común)"
+    },
+    {
+        "Z": 17,
+        "Simbolo": "Cl",
+        "Nombre": "Cloro",
+        "Nucleo_Magico": false,
+        "Geometria_Nuclear": "Esferoide Prolato (Común)"
+    },
+    {
+        "Z": 18,
+        "Simbolo": "Ar",
+        "Nombre": "Argón",
+        "Nucleo_Magico": false,
+        "Geometria_Nuclear": "Casi Esférico (Vibracional)"
+    },
+    {
+        "Z": 19,
+        "Simbolo": "K",
+        "Nombre": "Potasio",
+        "Nucleo_Magico": false,
+        "Geometria_Nuclear": "Casi Esférico (Vibracional)"
+    },
+    {
+        "Z": 20,
+        "Simbolo": "Ca",
+        "Nombre": "Calcio",
+        "Nucleo_Magico": true,
+        "Geometria_Nuclear": "Esférico (Número Mágico)"
+    },
+    {
+        "Z": 21,
+        "Simbolo": "Sc",
+        "Nombre": "Escandio",
+        "Nucleo_Magico": false,
+        "Geometria_Nuclear": "Casi Esférico (Vibracional)"
+    },
+    {
+        "Z": 22,
+        "Simbolo": "Ti",
+        "Nombre": "Titanio",
+        "Nucleo_Magico": false,
+        "Geometria_Nuclear": "Casi Esférico (Vibracional)"
+    },
+    {
+        "Z": 23,
+        "Simbolo": "V",
+        "Nombre": "Vanadio",
+        "Nucleo_Magico": false,
+        "Geometria_Nuclear": "Esferoide Prolato (Común)"
+    },
+    {
+        "Z": 24,
+        "Simbolo": "Cr",
+        "Nombre": "Cromo",
+        "Nucleo_Magico": false,
+        "Geometria_Nuclear": "Esferoide Prolato (Común)"
+    },
+    {
+        "Z": 25,
+        "Simbolo": "Mn",
+        "Nombre": "Manganeso",
+        "Nucleo_Magico": false,
+        "Geometria_Nuclear": "Esferoide Prolato (Común)"
+    },
+    {
+        "Z": 26,
+        "Simbolo": "Fe",
+        "Nombre": "Hierro",
+        "Nucleo_Magico": false,
+        "Geometria_Nuclear": "Casi Esférico (Vibracional)"
+    },
+    {
+        "Z": 27,
+        "Simbolo": "Co",
+        "Nombre": "Cobalto",
+        "Nucleo_Magico": false,
+        "Geometria_Nuclear": "Casi Esférico (Vibracional)"
+    },
+    {
+        "Z": 28,
+        "Simbolo": "Ni",
+        "Nombre": "Níquel",
+        "Nucleo_Magico": true,
+        "Geometria_Nuclear": "Esférico (Número Mágico)"
+    },
+    {
+        "Z": 29,
+        "Simbolo": "Cu",
+        "Nombre": "Cobre",
+        "Nucleo_Magico": false,
+        "Geometria_Nuclear": "Casi Esférico (Vibracional)"
+    },
+    {
+        "Z": 30,
+        "Simbolo": "Zn",
+        "Nombre": "Zinc",
+        "Nucleo_Magico": false,
+        "Geometria_Nuclear": "Casi Esférico (Vibracional)"
+    },
+    {
+        "Z": 31,
+        "Simbolo": "Ga",
+        "Nombre": "Galio",
+        "Nucleo_Magico": false,
+        "Geometria_Nuclear": "Esferoide Prolato (Común)"
+    },
+    {
+        "Z": 32,
+        "Simbolo": "Ge",
+        "Nombre": "Germanio",
+        "Nucleo_Magico": false,
+        "Geometria_Nuclear": "Esferoide Prolato (Común)"
+    },
+    {
+        "Z": 33,
+        "Simbolo": "As",
+        "Nombre": "Arsénico",
+        "Nucleo_Magico": false,
+        "Geometria_Nuclear": "Esferoide Prolato (Común)"
+    },
+    {
+        "Z": 34,
+        "Simbolo": "Se",
+        "Nombre": "Selenio",
+        "Nucleo_Magico": false,
+        "Geometria_Nuclear": "Esferoide Prolato (Común)"
+    },
+    {
+        "Z": 35,
+        "Simbolo": "Br",
+        "Nombre": "Bromo",
+        "Nucleo_Magico": false,
+        "Geometria_Nuclear": "Esferoide Prolato (Común)"
+    },
+    {
+        "Z": 36,
+        "Simbolo": "Kr",
+        "Nombre": "Kriptón",
+        "Nucleo_Magico": false,
+        "Geometria_Nuclear": "Deformación Triaxial / Prolato"
+    },
+    {
+        "Z": 37,
+        "Simbolo": "Rb",
+        "Nombre": "Rubidio",
+        "Nucleo_Magico": false,
+        "Geometria_Nuclear": "Deformación Triaxial / Prolato"
+    },
+    {
+        "Z": 38,
+        "Simbolo": "Sr",
+        "Nombre": "Estroncio",
+        "Nucleo_Magico": false,
+        "Geometria_Nuclear": "Deformación Triaxial / Prolato"
+    },
+    {
+        "Z": 39,
+        "Simbolo": "Y",
+        "Nombre": "Itrio",
+        "Nucleo_Magico": false,
+        "Geometria_Nuclear": "Deformación Triaxial / Prolato"
+    },
+    {
+        "Z": 40,
+        "Simbolo": "Zr",
+        "Nombre": "Circonio",
+        "Nucleo_Magico": false,
+        "Geometria_Nuclear": "Deformación Triaxial / Prolato"
+    },
+    {
+        "Z": 41,
+        "Simbolo": "Nb",
+        "Nombre": "Niobio",
+        "Nucleo_Magico": false,
+        "Geometria_Nuclear": "Deformación Triaxial / Prolato"
+    },
+    {
+        "Z": 42,
+        "Simbolo": "Mo",
+        "Nombre": "Molibdeno",
+        "Nucleo_Magico": false,
+        "Geometria_Nuclear": "Deformación Triaxial / Prolato"
+    },
+    {
+        "Z": 43,
+        "Simbolo": "Tc",
+        "Nombre": "Tecnecio",
+        "Nucleo_Magico": false,
+        "Geometria_Nuclear": "Deformación Triaxial / Prolato"
+    },
+    {
+        "Z": 44,
+        "Simbolo": "Ru",
+        "Nombre": "Rutenio",
+        "Nucleo_Magico": false,
+        "Geometria_Nuclear": "Deformación Triaxial / Prolato"
+    },
+    {
+        "Z": 45,
+        "Simbolo": "Rh",
+        "Nombre": "Rodio",
+        "Nucleo_Magico": false,
+        "Geometria_Nuclear": "Deformación Triaxial / Prolato"
+    },
+    {
+        "Z": 46,
+        "Simbolo": "Pd",
+        "Nombre": "Paladio",
+        "Nucleo_Magico": false,
+        "Geometria_Nuclear": "Deformación Triaxial / Prolato"
+    },
+    {
+        "Z": 47,
+        "Simbolo": "Ag",
+        "Nombre": "Plata",
+        "Nucleo_Magico": false,
+        "Geometria_Nuclear": "Deformación Triaxial / Prolato"
+    },
+    {
+        "Z": 48,
+        "Simbolo": "Cd",
+        "Nombre": "Cadmio",
+        "Nucleo_Magico": false,
+        "Geometria_Nuclear": "Deformación Triaxial / Prolato"
+    },
+    {
+        "Z": 49,
+        "Simbolo": "In",
+        "Nombre": "Indio",
+        "Nucleo_Magico": false,
+        "Geometria_Nuclear": "Casi Esférico (Vibracional)"
+    },
+    {
+        "Z": 50,
+        "Simbolo": "Sn",
+        "Nombre": "Estaño",
+        "Nucleo_Magico": true,
+        "Geometria_Nuclear": "Esférico (Número Mágico)"
+    },
+    {
+        "Z": 51,
+        "Simbolo": "Sb",
+        "Nombre": "Antimonio",
+        "Nucleo_Magico": false,
+        "Geometria_Nuclear": "Casi Esférico (Vibracional)"
+    },
+    {
+        "Z": 52,
+        "Simbolo": "Te",
+        "Nombre": "Telurio",
+        "Nucleo_Magico": false,
+        "Geometria_Nuclear": "Casi Esférico (Vibracional)"
+    },
+    {
+        "Z": 53,
+        "Simbolo": "I",
+        "Nombre": "Yodo",
+        "Nucleo_Magico": false,
+        "Geometria_Nuclear": "Esferoide Prolato (Común)"
+    },
+    {
+        "Z": 54,
+        "Simbolo": "Xe",
+        "Nombre": "Xenón",
+        "Nucleo_Magico": false,
+        "Geometria_Nuclear": "Esferoide Prolato (Común)"
+    },
+    {
+        "Z": 55,
+        "Simbolo": "Cs",
+        "Nombre": "Cesio",
+        "Nucleo_Magico": false,
+        "Geometria_Nuclear": "Esferoide Prolato (Común)"
+    },
+    {
+        "Z": 56,
+        "Simbolo": "Ba",
+        "Nombre": "Bario",
+        "Nucleo_Magico": false,
+        "Geometria_Nuclear": "Esferoide Prolato (Común)"
+    },
+    {
+        "Z": 57,
+        "Simbolo": "La",
+        "Nombre": "Lantano",
+        "Nucleo_Magico": false,
+        "Geometria_Nuclear": "Esferoide Prolato (Común)"
+    },
+    {
+        "Z": 58,
+        "Simbolo": "Ce",
+        "Nombre": "Cerio",
+        "Nucleo_Magico": false,
+        "Geometria_Nuclear": "Esferoide Prolato (Lantánido)"
+    },
+    {
+        "Z": 59,
+        "Simbolo": "Pr",
+        "Nombre": "Praseodimio",
+        "Nucleo_Magico": false,
+        "Geometria_Nuclear": "Esferoide Prolato (Lantánido)"
+    },
+    {
+        "Z": 60,
+        "Simbolo": "Nd",
+        "Nombre": "Neodimio",
+        "Nucleo_Magico": false,
+        "Geometria_Nuclear": "Esferoide Prolato (Lantánido)"
+    },
+    {
+        "Z": 61,
+        "Simbolo": "Pm",
+        "Nombre": "Prometio",
+        "Nucleo_Magico": false,
+        "Geometria_Nuclear": "Esferoide Prolato (Lantánido)"
+    },
+    {
+        "Z": 62,
+        "Simbolo": "Sm",
+        "Nombre": "Samario",
+        "Nucleo_Magico": false,
+        "Geometria_Nuclear": "Esferoide Prolato (Lantánido)"
+    },
+    {
+        "Z": 63,
+        "Simbolo": "Eu",
+        "Nombre": "Europio",
+        "Nucleo_Magico": false,
+        "Geometria_Nuclear": "Esferoide Prolato (Lantánido)"
+    },
+    {
+        "Z": 64,
+        "Simbolo": "Gd",
+        "Nombre": "Gadolinio",
+        "Nucleo_Magico": false,
+        "Geometria_Nuclear": "Esferoide Prolato (Lantánido)"
+    },
+    {
+        "Z": 65,
+        "Simbolo": "Tb",
+        "Nombre": "Terbio",
+        "Nucleo_Magico": false,
+        "Geometria_Nuclear": "Esferoide Prolato (Lantánido)"
+    },
+    {
+        "Z": 66,
+        "Simbolo": "Dy",
+        "Nombre": "Disprosio",
+        "Nucleo_Magico": false,
+        "Geometria_Nuclear": "Esferoide Prolato (Lantánido)"
+    },
+    {
+        "Z": 67,
+        "Simbolo": "Ho",
+        "Nombre": "Holmio",
+        "Nucleo_Magico": false,
+        "Geometria_Nuclear": "Esferoide Prolato (Lantánido)"
+    },
+    {
+        "Z": 68,
+        "Simbolo": "Er",
+        "Nombre": "Erbio",
+        "Nucleo_Magico": false,
+        "Geometria_Nuclear": "Esferoide Prolato (Lantánido)"
+    },
+    {
+        "Z": 69,
+        "Simbolo": "Tm",
+        "Nombre": "Tulio",
+        "Nucleo_Magico": false,
+        "Geometria_Nuclear": "Esferoide Prolato (Lantánido)"
+    },
+    {
+        "Z": 70,
+        "Simbolo": "Yb",
+        "Nombre": "Iterbio",
+        "Nucleo_Magico": false,
+        "Geometria_Nuclear": "Esferoide Prolato (Lantánido)"
+    },
+    {
+        "Z": 71,
+        "Simbolo": "Lu",
+        "Nombre": "Lutecio",
+        "Nucleo_Magico": false,
+        "Geometria_Nuclear": "Esferoide Prolato (Lantánido)"
+    },
+    {
+        "Z": 72,
+        "Simbolo": "Hf",
+        "Nombre": "Hafnio",
+        "Nucleo_Magico": false,
+        "Geometria_Nuclear": "Esferoide Prolato (Común)"
+    },
+    {
+        "Z": 73,
+        "Simbolo": "Ta",
+        "Nombre": "Tántalo",
+        "Nucleo_Magico": false,
+        "Geometria_Nuclear": "Esferoide Prolato (Común)"
+    },
+    {
+        "Z": 74,
+        "Simbolo": "W",
+        "Nombre": "Wolframio",
+        "Nucleo_Magico": false,
+        "Geometria_Nuclear": "Esferoide Oblato / Deformación Triaxial"
+    },
+    {
+        "Z": 75,
+        "Simbolo": "Re",
+        "Nombre": "Renio",
+        "Nucleo_Magico": false,
+        "Geometria_Nuclear": "Esferoide Oblato / Deformación Triaxial"
+    },
+    {
+        "Z": 76,
+        "Simbolo": "Os",
+        "Nombre": "Osmio",
+        "Nucleo_Magico": false,
+        "Geometria_Nuclear": "Esferoide Oblato / Deformación Triaxial"
+    },
+    {
+        "Z": 77,
+        "Simbolo": "Ir",
+        "Nombre": "Iridio",
+        "Nucleo_Magico": false,
+        "Geometria_Nuclear": "Esferoide Oblato / Deformación Triaxial"
+    },
+    {
+        "Z": 78,
+        "Simbolo": "Pt",
+        "Nombre": "Platino",
+        "Nucleo_Magico": false,
+        "Geometria_Nuclear": "Esferoide Oblato / Deformación Triaxial"
+    },
+    {
+        "Z": 79,
+        "Simbolo": "Au",
+        "Nombre": "Oro",
+        "Nucleo_Magico": false,
+        "Geometria_Nuclear": "Esferoide Prolato (Común)"
+    },
+    {
+        "Z": 80,
+        "Simbolo": "Hg",
+        "Nombre": "Mercurio",
+        "Nucleo_Magico": false,
+        "Geometria_Nuclear": "Casi Esférico (Vibracional)"
+    },
+    {
+        "Z": 81,
+        "Simbolo": "Tl",
+        "Nombre": "Talio",
+        "Nucleo_Magico": false,
+        "Geometria_Nuclear": "Casi Esférico (Vibracional)"
+    },
+    {
+        "Z": 82,
+        "Simbolo": "Pb",
+        "Nombre": "Plomo",
+        "Nucleo_Magico": true,
+        "Geometria_Nuclear": "Esférico (Número Mágico)"
+    },
+    {
+        "Z": 83,
+        "Simbolo": "Bi",
+        "Nombre": "Bismuto",
+        "Nucleo_Magico": false,
+        "Geometria_Nuclear": "Casi Esférico (Vibracional)"
+    },
+    {
+        "Z": 84,
+        "Simbolo": "Po",
+        "Nombre": "Polonio",
+        "Nucleo_Magico": false,
+        "Geometria_Nuclear": "Casi Esférico (Vibracional)"
+    },
+    {
+        "Z": 85,
+        "Simbolo": "At",
+        "Nombre": "Astato",
+        "Nucleo_Magico": false,
+        "Geometria_Nuclear": "Esferoide Prolato (Común)"
+    },
+    {
+        "Z": 86,
+        "Simbolo": "Rn",
+        "Nombre": "Radón",
+        "Nucleo_Magico": false,
+        "Geometria_Nuclear": "Esferoide Prolato (Común)"
+    },
+    {
+        "Z": 87,
+        "Simbolo": "Fr",
+        "Nombre": "Francio",
+        "Nucleo_Magico": false,
+        "Geometria_Nuclear": "Esferoide Prolato (Común)"
+    },
+    {
+        "Z": 88,
+        "Simbolo": "Ra",
+        "Nombre": "Radio",
+        "Nucleo_Magico": false,
+        "Geometria_Nuclear": "Esferoide Prolato (Común)"
+    },
+    {
+        "Z": 89,
+        "Simbolo": "Ac",
+        "Nombre": "Actinio",
+        "Nucleo_Magico": false,
+        "Geometria_Nuclear": "Esferoide Prolato (Común)"
+    },
+    {
+        "Z": 90,
+        "Simbolo": "Th",
+        "Nombre": "Torio",
+        "Nucleo_Magico": false,
+        "Geometria_Nuclear": "Forma de Pera (Octupolar)"
+    },
+    {
+        "Z": 91,
+        "Simbolo": "Pa",
+        "Nombre": "Protactinio",
+        "Nucleo_Magico": false,
+        "Geometria_Nuclear": "Esferoide Prolato (Actínido)"
+    },
+    {
+        "Z": 92,
+        "Simbolo": "U",
+        "Nombre": "Uranio",
+        "Nucleo_Magico": false,
+        "Geometria_Nuclear": "Forma de Pera (Octupolar)"
+    },
+    {
+        "Z": 93,
+        "Simbolo": "Np",
+        "Nombre": "Neptunio",
+        "Nucleo_Magico": false,
+        "Geometria_Nuclear": "Esferoide Prolato (Actínido)"
+    },
+    {
+        "Z": 94,
+        "Simbolo": "Pu",
+        "Nombre": "Plutonio",
+        "Nucleo_Magico": false,
+        "Geometria_Nuclear": "Esferoide Prolato (Actínido)"
+    },
+    {
+        "Z": 95,
+        "Simbolo": "Am",
+        "Nombre": "Americio",
+        "Nucleo_Magico": false,
+        "Geometria_Nuclear": "Esferoide Prolato (Actínido)"
+    },
+    {
+        "Z": 96,
+        "Simbolo": "Cm",
+        "Nombre": "Curio",
+        "Nucleo_Magico": false,
+        "Geometria_Nuclear": "Esferoide Prolato (Actínido)"
+    },
+    {
+        "Z": 97,
+        "Simbolo": "Bk",
+        "Nombre": "Berkelio",
+        "Nucleo_Magico": false,
+        "Geometria_Nuclear": "Esferoide Prolato (Actínido)"
+    },
+    {
+        "Z": 98,
+        "Simbolo": "Cf",
+        "Nombre": "Californio",
+        "Nucleo_Magico": false,
+        "Geometria_Nuclear": "Esferoide Prolato (Actínido)"
+    },
+    {
+        "Z": 99,
+        "Simbolo": "Es",
+        "Nombre": "Einstenio",
+        "Nucleo_Magico": false,
+        "Geometria_Nuclear": "Esferoide Prolato (Actínido)"
+    },
+    {
+        "Z": 100,
+        "Simbolo": "Fm",
+        "Nombre": "Fermio",
+        "Nucleo_Magico": false,
+        "Geometria_Nuclear": "Esferoide Prolato (Actínido)"
+    },
+    {
+        "Z": 101,
+        "Simbolo": "Md",
+        "Nombre": "Mendelevio",
+        "Nucleo_Magico": false,
+        "Geometria_Nuclear": "Esferoide Prolato (Actínido)"
+    },
+    {
+        "Z": 102,
+        "Simbolo": "No",
+        "Nombre": "Nobelio",
+        "Nucleo_Magico": false,
+        "Geometria_Nuclear": "Esferoide Prolato (Actínido)"
+    },
+    {
+        "Z": 103,
+        "Simbolo": "Lr",
+        "Nombre": "Lawrencio",
+        "Nucleo_Magico": false,
+        "Geometria_Nuclear": "Esferoide Prolato (Actínido)"
+    },
+    {
+        "Z": 104,
+        "Simbolo": "Rf",
+        "Nombre": "Rutherfordio",
+        "Nucleo_Magico": false,
+        "Geometria_Nuclear": "Esferoide Prolato (Común)"
+    },
+    {
+        "Z": 105,
+        "Simbolo": "Db",
+        "Nombre": "Dubnio",
+        "Nucleo_Magico": false,
+        "Geometria_Nuclear": "Esferoide Prolato (Común)"
+    },
+    {
+        "Z": 106,
+        "Simbolo": "Sg",
+        "Nombre": "Seaborgio",
+        "Nucleo_Magico": false,
+        "Geometria_Nuclear": "Esferoide Prolato (Común)"
+    },
+    {
+        "Z": 107,
+        "Simbolo": "Bh",
+        "Nombre": "Bohrio",
+        "Nucleo_Magico": false,
+        "Geometria_Nuclear": "Esferoide Prolato (Común)"
+    },
+    {
+        "Z": 108,
+        "Simbolo": "Hs",
+        "Nombre": "Hassio",
+        "Nucleo_Magico": false,
+        "Geometria_Nuclear": "Esferoide Prolato (Común)"
+    },
+    {
+        "Z": 109,
+        "Simbolo": "Mt",
+        "Nombre": "Meitnerio",
+        "Nucleo_Magico": false,
+        "Geometria_Nuclear": "Esferoide Prolato (Común)"
+    },
+    {
+        "Z": 110,
+        "Simbolo": "Ds",
+        "Nombre": "Darmstadtio",
+        "Nucleo_Magico": false,
+        "Geometria_Nuclear": "Esferoide Prolato (Común)"
+    },
+    {
+        "Z": 111,
+        "Simbolo": "Rg",
+        "Nombre": "Roentgenio",
+        "Nucleo_Magico": false,
+        "Geometria_Nuclear": "Esferoide Prolato (Común)"
+    },
+    {
+        "Z": 112,
+        "Simbolo": "Cn",
+        "Nombre": "Copernicio",
+        "Nucleo_Magico": false,
+        "Geometria_Nuclear": "Casi Esférico (Vibracional)"
+    },
+    {
+        "Z": 113,
+        "Simbolo": "Nh",
+        "Nombre": "Nihonio",
+        "Nucleo_Magico": false,
+        "Geometria_Nuclear": "Casi Esférico (Vibracional)"
+    },
+    {
+        "Z": 114,
+        "Simbolo": "Fl",
+        "Nombre": "Flerovio",
+        "Nucleo_Magico": true,
+        "Geometria_Nuclear": "Esférico (Número Mágico)"
+    },
+    {
+        "Z": 115,
+        "Simbolo": "Mc",
+        "Nombre": "Moscovio",
+        "Nucleo_Magico": false,
+        "Geometria_Nuclear": "Casi Esférico (Vibracional)"
+    },
+    {
+        "Z": 116,
+        "Simbolo": "Lv",
+        "Nombre": "Livermorio",
+        "Nucleo_Magico": false,
+        "Geometria_Nuclear": "Casi Esférico (Vibracional)"
+    },
+    {
+        "Z": 117,
+        "Simbolo": "Ts",
+        "Nombre": "Teneso",
+        "Nucleo_Magico": false,
+        "Geometria_Nuclear": "Esferoide Prolato (Común)"
+    },
+    {
+        "Z": 118,
+        "Simbolo": "Og",
+        "Nombre": "Oganesón",
+        "Nucleo_Magico": false,
+        "Geometria_Nuclear": "Esferoide Prolato (Común)"
+    }
+]

@@ -1,0 +1,173 @@
+{
+  "symbol": "Os",
+  "identity": {
+    "name_es": "Osmio",
+    "name_eng": "Osmium",
+    "number": 76,
+    "category_es": "Metal de transición",
+    "category_eng": "Transition metal",
+    "color": "0xA0A8B8",
+    "cpk_color": "0x266696",
+    "discovery_year": "1803"
+  },
+  "physical_properties": {
+    "mass": 190.23,
+    "density_g_cm3": 22.59,
+    "standard_state_es": "Sólido",
+    "standard_state_eng": "Solid",
+    "melt_K": 3306,
+    "boil_K": 5285,
+    "allotropes_es": null,
+    "allotropes_eng": null,
+    "lattice_structure": "hcp"
+  },
+  "atomic_structure": {
+    "electronegativity": 2.2,
+    "valence": 8,
+    "ionization_energy_eV": 8.4382,
+    "electron_affinity_ev": 1.1,
+    "electron_affinity_kj_mol": 106.1,
+    "radius_atomic_pm": 135,
+    "radius_covalent_pm": 144,
+    "vanderwaals_radius_pm": 216,
+    "ionic_radius_pm": 63,
+    "effective_nuclear_charge": 6.3,
+    "electron_configuration_string": "[Xe] 4f14 5d6 6s2",
+    "shells": [
+      2,
+      8,
+      18,
+      32,
+      14,
+      2
+    ],
+    "quantum_numbers": {
+      "s": 2,
+      "p": 0,
+      "d": 6,
+      "f": 14
+    },
+    "work_function_ev": 4.83
+  },
+  "thermodynamics": {
+    "enthalpy_formation_kj_mol": 0,
+    "entropy_j_molk": 32.6,
+    "heat_capacity_j_molk": 24.7,
+    "specific_heat_j_gK": 0.13,
+    "latent_heat_fusion_kj_mol": 31,
+    "latent_heat_vaporization_kj_mol": 738,
+    "fusion_heat_kj_mol": 57.8,
+    "evaporation_heat_kj_mol": 738
+  },
+  "kinetics_and_phase": {
+    "vapor_pressure_constants": {
+      "A": 5.15,
+      "B": 35000,
+      "C": -10
+    },
+    "vapor_pressure_pa": null,
+    "viscosity_liquid_pas": null,
+    "viscosity_pa_s": null,
+    "critical_temp_K": null,
+    "critical_press_MPa": null,
+    "surface_tension_nm": 2.5
+  },
+  "electromagnetism_and_mechanics": {
+    "thermal_conductivity_wmk": 87.6,
+    "electrical_conductivity_sm": 12000000,
+    "magnetic_susceptibility": 1.08e-05,
+    "thermal_expansion_coefficient": 5.1e-06,
+    "polarizability_angstrom3": 8.5,
+    "refractive_index": null,
+    "youngs_modulus_gba": 550,
+    "poisson_ratio": 0.25,
+    "brinell_hardness_m_pa": 3920
+  },
+  "reactivity": {
+    "max_bonds": 8,
+    "geometry_preference_es": "Octaédrica",
+    "geometry_preference_eng": "Octahedral",
+    "ideal_bond_angle": 90,
+    "bond_energy_ev": null,
+    "dissociation_energy_kj_mol": null,
+    "standard_potential_v": 0.85,
+    "oxidation_states": [
+      8,
+      7,
+      6,
+      5,
+      4,
+      3,
+      2,
+      1,
+      0,
+      -2
+    ],
+    "common_ions": [
+      "OsO4",
+      "Os4+"
+    ]
+  },
+  "nuclear_and_environmental": {
+    "isotopes": [
+      {
+        "mass": 183.952,
+        "abundance": 0.02,
+        "stable": true,
+        "name_es": "Osmio-184",
+        "name_eng": "Osmium-184"
+      },
+      {
+        "mass": 185.953,
+        "abundance": 1.59,
+        "stable": true,
+        "name_es": "Osmio-186",
+        "name_eng": "Osmium-186"
+      },
+      {
+        "mass": 186.955,
+        "abundance": 1.96,
+        "stable": true,
+        "name_es": "Osmio-187",
+        "name_eng": "Osmium-187"
+      },
+      {
+        "mass": 187.955,
+        "abundance": 13.24,
+        "stable": true,
+        "name_es": "Osmio-188",
+        "name_eng": "Osmium-188"
+      },
+      {
+        "mass": 188.958,
+        "abundance": 16.15,
+        "stable": true,
+        "name_es": "Osmio-189",
+        "name_eng": "Osmium-189"
+      },
+      {
+        "mass": 189.958,
+        "abundance": 26.26,
+        "stable": true,
+        "name_es": "Osmio-190",
+        "name_eng": "Osmium-190"
+      },
+      {
+        "mass": 191.961,
+        "abundance": 40.78,
+        "stable": true,
+        "name_es": "Osmio-192",
+        "name_eng": "Osmium-192"
+      }
+    ],
+    "neutron_cross_section_barns": 160,
+    "nuclear_binding_energy_mev": 7.943,
+    "abundance_crust_mg_kg": 0.0015,
+    "toxicity_level": 4
+  },
+  "cryogenic_data": {
+    "critical_solidification_pressure_mpa": null,
+    "lambda_point_k": null,
+    "superfluid_viscosity_pas": null
+  }
+}

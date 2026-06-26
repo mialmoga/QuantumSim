@@ -1,0 +1,48 @@
+{
+  "symbol": "Ba",
+  "generated_by": "generate_materials.py v1.2 (Stevens perceptual)",
+  "source_props": {
+    "mass": 137.327,
+    "melt_K": 1000,
+    "density": 3.62,
+    "ionization_eV": 5.2117,
+    "electronegativity": 0.89,
+    "polarizability": 39.7,
+    "standard_state": "Solid"
+  },
+  "shader_params": {
+    "sphere_pulse": {
+      "freq": 0.853,
+      "amp": 0.333
+    },
+    "blink": {
+      "amp": 0.0,
+      "speed": 0.256
+    },
+    "brightness": {
+      "bright": 0.657,
+      "base": 0.3,
+      "vari": 0.0
+    },
+    "disc_shape": {
+      "soft": 0.427,
+      "radius": 0.22,
+      "ring": 0.0
+    },
+    "point_size": {
+      "sz": 0.468,
+      "bAmp": 0.0,
+      "persp": 79.2
+    },
+    "alpha_curve": {
+      "opacity": 0.859,
+      "curve": 1.07,
+      "floor": 0.0
+    },
+    "color": {
+      "r": 0.7529,
+      "g": 0.7529,
+      "b": 0.6275
+    }
+  }
+}

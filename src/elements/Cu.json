@@ -1,0 +1,128 @@
+{
+  "symbol": "Cu",
+  "identity": {
+    "name_es": "Cobre",
+    "name_eng": "Copper",
+    "number": 29,
+    "category_es": "Metal de transición",
+    "category_eng": "Transition metal",
+    "color": "0xD08050",
+    "cpk_color": "0xC88033",
+    "discovery_year": "Antigüedad"
+  },
+  "physical_properties": {
+    "mass": 63.546,
+    "density_g_cm3": 8.96,
+    "standard_state_es": "Sólido",
+    "standard_state_eng": "Solid",
+    "melt_K": 1357.77,
+    "boil_K": 2835,
+    "allotropes_es": null,
+    "allotropes_eng": null,
+    "lattice_structure": "fcc"
+  },
+  "atomic_structure": {
+    "electronegativity": 1.9,
+    "valence": 2,
+    "ionization_energy_eV": 7.7264,
+    "electron_affinity_ev": 1.235,
+    "electron_affinity_kj_mol": 119.2,
+    "radius_atomic_pm": 128,
+    "radius_covalent_pm": 132,
+    "vanderwaals_radius_pm": 140,
+    "ionic_radius_pm": 73,
+    "effective_nuclear_charge": 5.845,
+    "electron_configuration_string": "[Ar] 3d10 4s1",
+    "shells": [
+      2,
+      8,
+      18,
+      1
+    ],
+    "quantum_numbers": {
+      "s": 2,
+      "p": 3,
+      "d": 10,
+      "f": 0
+    },
+    "work_function_ev": 4.65
+  },
+  "thermodynamics": {
+    "enthalpy_formation_kj_mol": 0,
+    "entropy_j_molk": 33.15,
+    "heat_capacity_j_molk": 24.44,
+    "specific_heat_j_gK": 0.385,
+    "latent_heat_fusion_kj_mol": 13.26,
+    "latent_heat_vaporization_kj_mol": 300.4,
+    "fusion_heat_kj_mol": 13.1,
+    "evaporation_heat_kj_mol": 300.3
+  },
+  "kinetics_and_phase": {
+    "vapor_pressure_constants": {
+      "A": 5.449,
+      "B": 17520,
+      "C": -10
+    },
+    "vapor_pressure_pa": null,
+    "viscosity_liquid_pas": 0.004,
+    "viscosity_pa_s": null,
+    "critical_temp_K": null,
+    "critical_press_MPa": null,
+    "surface_tension_nm": 1.285
+  },
+  "electromagnetism_and_mechanics": {
+    "thermal_conductivity_wmk": 401,
+    "electrical_conductivity_sm": 59600000,
+    "magnetic_susceptibility": -9.63e-06,
+    "thermal_expansion_coefficient": 1.65e-05,
+    "polarizability_angstrom3": 6.1,
+    "refractive_index": null,
+    "youngs_modulus_gba": 110,
+    "poisson_ratio": 0.34,
+    "brinell_hardness_m_pa": 874
+  },
+  "reactivity": {
+    "max_bonds": 4,
+    "geometry_preference_es": "Octaédrica / Cuadrada plana",
+    "geometry_preference_eng": "Octahedral / Square planar",
+    "ideal_bond_angle": null,
+    "bond_energy_ev": null,
+    "dissociation_energy_kj_mol": null,
+    "standard_potential_v": 0.3419,
+    "oxidation_states": [
+      2,
+      1
+    ],
+    "common_ions": [
+      "Cu2+",
+      "Cu+"
+    ]
+  },
+  "nuclear_and_environmental": {
+    "isotopes": [
+      {
+        "mass": 62.93,
+        "abundance": 69.15,
+        "stable": true,
+        "name_es": "Cobre-63",
+        "name_eng": "Copper-63"
+      },
+      {
+        "mass": 64.928,
+        "abundance": 30.85,
+        "stable": true,
+        "name_es": "Cobre-65",
+        "name_eng": "Copper-65"
+      }
+    ],
+    "neutron_cross_section_barns": 3.78,
+    "nuclear_binding_energy_mev": 8.757,
+    "abundance_crust_mg_kg": 60,
+    "toxicity_level": 1
+  },
+  "cryogenic_data": {
+    "critical_solidification_pressure_mpa": null,
+    "lambda_point_k": null,
+    "superfluid_viscosity_pas": null
+  }
+}

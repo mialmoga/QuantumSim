@@ -1,0 +1,48 @@
+{
+  "symbol": "Tb",
+  "generated_by": "generate_materials.py v1.2 (Stevens perceptual)",
+  "source_props": {
+    "mass": 158.925,
+    "melt_K": 1629,
+    "density": 8.23,
+    "ionization_eV": 5.8638,
+    "electronegativity": 1.1,
+    "polarizability": 25.5,
+    "standard_state": "Solid"
+  },
+  "shader_params": {
+    "sphere_pulse": {
+      "freq": 0.793,
+      "amp": 0.311
+    },
+    "blink": {
+      "amp": 0.0,
+      "speed": 0.238
+    },
+    "brightness": {
+      "bright": 0.808,
+      "base": 0.3,
+      "vari": 0.0
+    },
+    "disc_shape": {
+      "soft": 0.401,
+      "radius": 0.22,
+      "ring": 0.0
+    },
+    "point_size": {
+      "sz": 0.408,
+      "bAmp": 0.0,
+      "persp": 78.3
+    },
+    "alpha_curve": {
+      "opacity": 0.922,
+      "curve": 1.039,
+      "floor": 0.0
+    },
+    "color": {
+      "r": 0.7529,
+      "g": 0.7529,
+      "b": 0.7529
+    }
+  }
+}

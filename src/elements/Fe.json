@@ -1,0 +1,150 @@
+{
+  "symbol": "Fe",
+  "identity": {
+    "name_es": "Hierro",
+    "name_eng": "Iron",
+    "number": 26,
+    "category_es": "Metal de transición",
+    "category_eng": "Transition metal",
+    "color": "0xA0A0A0",
+    "cpk_color": "0xE06633",
+    "discovery_year": "Antigüedad"
+  },
+  "physical_properties": {
+    "mass": 55.845,
+    "density_g_cm3": 7.874,
+    "standard_state_es": "Sólido",
+    "standard_state_eng": "Solid",
+    "melt_K": 1811,
+    "boil_K": 3134,
+    "allotropes_es": [
+      "Alfa (Ferrita - bcc)",
+      "Gamma (Austenita - fcc)",
+      "Delta (bcc)"
+    ],
+    "allotropes_eng": [
+      "Alpha (Ferrite - bcc)",
+      "Gamma (Austenite - fcc)",
+      "Delta (bcc)"
+    ],
+    "lattice_structure": "bcc"
+  },
+  "atomic_structure": {
+    "electronegativity": 1.83,
+    "valence": 6,
+    "ionization_energy_eV": 7.9024,
+    "electron_affinity_ev": 0.151,
+    "electron_affinity_kj_mol": 14.6,
+    "radius_atomic_pm": 126,
+    "radius_covalent_pm": 132,
+    "vanderwaals_radius_pm": 194,
+    "ionic_radius_pm": 64.5,
+    "effective_nuclear_charge": 5.434,
+    "electron_configuration_string": "[Ar] 3d6 4s2",
+    "shells": [
+      2,
+      8,
+      14,
+      2
+    ],
+    "quantum_numbers": {
+      "s": 2,
+      "p": 3,
+      "d": 6,
+      "f": 0
+    },
+    "work_function_ev": 4.5
+  },
+  "thermodynamics": {
+    "enthalpy_formation_kj_mol": 0,
+    "entropy_j_molk": 27.3,
+    "heat_capacity_j_molk": 25.1,
+    "specific_heat_j_gK": 0.449,
+    "latent_heat_fusion_kj_mol": 13.8,
+    "latent_heat_vaporization_kj_mol": 340,
+    "fusion_heat_kj_mol": 13.8,
+    "evaporation_heat_kj_mol": 349.6
+  },
+  "kinetics_and_phase": {
+    "vapor_pressure_constants": {
+      "A": 5.006,
+      "B": 19500,
+      "C": -10
+    },
+    "vapor_pressure_pa": null,
+    "viscosity_liquid_pas": 0.006,
+    "viscosity_pa_s": null,
+    "critical_temp_K": null,
+    "critical_press_MPa": null,
+    "surface_tension_nm": 1.872
+  },
+  "electromagnetism_and_mechanics": {
+    "thermal_conductivity_wmk": 80.4,
+    "electrical_conductivity_sm": 10000000,
+    "magnetic_susceptibility": null,
+    "thermal_expansion_coefficient": 1.18e-05,
+    "polarizability_angstrom3": 8.4,
+    "refractive_index": null,
+    "youngs_modulus_gba": 211,
+    "poisson_ratio": 0.29,
+    "brinell_hardness_m_pa": 608
+  },
+  "reactivity": {
+    "max_bonds": 6,
+    "geometry_preference_es": "Octaédrica / Tetraédrica",
+    "geometry_preference_eng": "Octahedral / Tetrahedral",
+    "ideal_bond_angle": null,
+    "bond_energy_ev": null,
+    "dissociation_energy_kj_mol": null,
+    "standard_potential_v": -0.447,
+    "oxidation_states": [
+      3,
+      2
+    ],
+    "common_ions": [
+      "Fe2+",
+      "Fe3+"
+    ]
+  },
+  "nuclear_and_environmental": {
+    "isotopes": [
+      {
+        "mass": 53.939,
+        "abundance": 5.845,
+        "stable": true,
+        "name_es": "Hierro-54",
+        "name_eng": "Iron-54"
+      },
+      {
+        "mass": 55.934,
+        "abundance": 91.754,
+        "stable": true,
+        "name_es": "Hierro-56",
+        "name_eng": "Iron-56"
+      },
+      {
+        "mass": 56.935,
+        "abundance": 2.119,
+        "stable": true,
+        "name_es": "Hierro-57",
+        "name_eng": "Iron-57"
+      },
+      {
+        "mass": 57.933,
+        "abundance": 0.282,
+        "stable": true,
+        "name_es": "Hierro-58",
+        "name_eng": "Iron-58"
+      }
+    ],
+    "neutron_cross_section_barns": 2.56,
+    "nuclear_binding_energy_mev": 8.79,
+    "abundance_crust_mg_kg": 56300,
+    "toxicity_level": 0
+  },
+  "cryogenic_data": {
+    "critical_solidification_pressure_mpa": null,
+    "lambda_point_k": null,
+    "superfluid_viscosity_pas": null
+  }
+}

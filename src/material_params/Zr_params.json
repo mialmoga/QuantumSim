@@ -1,0 +1,48 @@
+{
+  "symbol": "Zr",
+  "generated_by": "generate_materials.py v1.2 (Stevens perceptual)",
+  "source_props": {
+    "mass": 91.224,
+    "melt_K": 2128,
+    "density": 6.52,
+    "ionization_eV": 6.6339,
+    "electronegativity": 1.33,
+    "polarizability": 17.9,
+    "standard_state": "Solid"
+  },
+  "shader_params": {
+    "sphere_pulse": {
+      "freq": 1.047,
+      "amp": 0.3
+    },
+    "blink": {
+      "amp": 0.0,
+      "speed": 0.314
+    },
+    "brightness": {
+      "bright": 0.963,
+      "base": 0.3,
+      "vari": 0.0
+    },
+    "disc_shape": {
+      "soft": 0.373,
+      "radius": 0.22,
+      "ring": 0.0
+    },
+    "point_size": {
+      "sz": 0.375,
+      "bAmp": 0.0,
+      "persp": 74.1
+    },
+    "alpha_curve": {
+      "opacity": 0.904,
+      "curve": 1.048,
+      "floor": 0.0
+    },
+    "color": {
+      "r": 0.7529,
+      "g": 0.7529,
+      "b": 0.7529
+    }
+  }
+}

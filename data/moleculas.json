@@ -1,0 +1,2268 @@
+[
+  {
+    "name": "Agua",
+    "name_en": "Water",
+    "formula": "H₂O",
+    "icon": "💧",
+    "atoms": [
+      {
+        "element": "O",
+        "position": [
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "element": "H",
+        "position": [
+          82.2,
+          -63.7,
+          0
+        ]
+      },
+      {
+        "element": "H",
+        "position": [
+          -82.2,
+          -63.7,
+          0
+        ]
+      }
+    ],
+    "bonds": [
+      {
+        "from": 0,
+        "to": 1,
+        "order": 1
+      },
+      {
+        "from": 0,
+        "to": 2,
+        "order": 1
+      }
+    ]
+  },
+  {
+    "name": "Dióxido de Carbono",
+    "name_en": "Carbon Dioxide",
+    "formula": "CO₂",
+    "icon": "🌫️",
+    "atoms": [
+      {
+        "element": "C",
+        "position": [
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "element": "O",
+        "position": [
+          150,
+          0,
+          0
+        ]
+      },
+      {
+        "element": "O",
+        "position": [
+          -150,
+          0,
+          0
+        ]
+      }
+    ],
+    "bonds": [
+      {
+        "from": 0,
+        "to": 1,
+        "order": 2
+      },
+      {
+        "from": 0,
+        "to": 2,
+        "order": 2
+      }
+    ]
+  },
+  {
+    "name": "Metano",
+    "name_en": "Methane",
+    "formula": "CH₄",
+    "icon": "🔥",
+    "atoms": [
+      {
+        "element": "C",
+        "position": [
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "element": "H",
+        "position": [
+          62.4,
+          62.4,
+          62.4
+        ]
+      },
+      {
+        "element": "H",
+        "position": [
+          62.4,
+          -62.4,
+          -62.4
+        ]
+      },
+      {
+        "element": "H",
+        "position": [
+          -62.4,
+          62.4,
+          -62.4
+        ]
+      },
+      {
+        "element": "H",
+        "position": [
+          -62.4,
+          -62.4,
+          62.4
+        ]
+      }
+    ],
+    "bonds": [
+      {
+        "from": 0,
+        "to": 1,
+        "order": 1
+      },
+      {
+        "from": 0,
+        "to": 2,
+        "order": 1
+      },
+      {
+        "from": 0,
+        "to": 3,
+        "order": 1
+      },
+      {
+        "from": 0,
+        "to": 4,
+        "order": 1
+      }
+    ]
+  },
+  {
+    "name": "Amoníaco",
+    "name_en": "Ammonia",
+    "formula": "NH₃",
+    "icon": "💨",
+    "atoms": [
+      {
+        "element": "N",
+        "position": [
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "element": "H",
+        "position": [
+          63,
+          -85.2,
+          0
+        ]
+      },
+      {
+        "element": "H",
+        "position": [
+          -31.5,
+          -85.2,
+          54.6
+        ]
+      },
+      {
+        "element": "H",
+        "position": [
+          -31.5,
+          -85.2,
+          -54.6
+        ]
+      }
+    ],
+    "bonds": [
+      {
+        "from": 0,
+        "to": 1,
+        "order": 1
+      },
+      {
+        "from": 0,
+        "to": 2,
+        "order": 1
+      },
+      {
+        "from": 0,
+        "to": 3,
+        "order": 1
+      }
+    ]
+  },
+  {
+    "name": "Oxígeno Molecular",
+    "name_en": "Molecular Oxygen",
+    "formula": "O₂",
+    "icon": "🌬️",
+    "atoms": [
+      {
+        "element": "O",
+        "position": [
+          73,
+          0,
+          0
+        ]
+      },
+      {
+        "element": "O",
+        "position": [
+          -73,
+          0,
+          0
+        ]
+      }
+    ],
+    "bonds": [
+      {
+        "from": 0,
+        "to": 1,
+        "order": 2
+      }
+    ]
+  },
+  {
+    "name": "Hidrógeno Molecular",
+    "name_en": "Molecular Hydrogen",
+    "formula": "H₂",
+    "icon": "⚡",
+    "atoms": [
+      {
+        "element": "H",
+        "position": [
+          31,
+          0,
+          0
+        ]
+      },
+      {
+        "element": "H",
+        "position": [
+          -31,
+          0,
+          0
+        ]
+      }
+    ],
+    "bonds": [
+      {
+        "from": 0,
+        "to": 1,
+        "order": 1
+      }
+    ]
+  },
+  {
+    "name": "Sal de Mesa",
+    "name_en": "Table Salt",
+    "formula": "NaCl",
+    "icon": "🧂",
+    "atoms": [
+      {
+        "element": "Na",
+        "position": [
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "element": "Cl",
+        "position": [
+          236,
+          0,
+          0
+        ]
+      }
+    ],
+    "bonds": [
+      {
+        "from": 0,
+        "to": 1,
+        "order": 1
+      }
+    ]
+  },
+  {
+    "name": "Etanol",
+    "name_en": "Ethanol",
+    "formula": "C₂H₆O",
+    "icon": "🍺",
+    "atoms": [
+      {
+        "element": "C",
+        "position": [
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "element": "C",
+        "position": [
+          154,
+          0,
+          0
+        ]
+      },
+      {
+        "element": "O",
+        "position": [
+          244,
+          120,
+          0
+        ]
+      },
+      {
+        "element": "H",
+        "position": [
+          316.8,
+          192.8,
+          0
+        ]
+      },
+      {
+        "element": "H",
+        "position": [
+          -62.6,
+          62.6,
+          62.6
+        ]
+      },
+      {
+        "element": "H",
+        "position": [
+          -62.6,
+          62.6,
+          -62.6
+        ]
+      },
+      {
+        "element": "H",
+        "position": [
+          -62.6,
+          -88.6,
+          0
+        ]
+      },
+      {
+        "element": "H",
+        "position": [
+          216.6,
+          62.6,
+          62.6
+        ]
+      },
+      {
+        "element": "H",
+        "position": [
+          216.6,
+          62.6,
+          -62.6
+        ]
+      }
+    ],
+    "bonds": [
+      {
+        "from": 0,
+        "to": 1,
+        "order": 1
+      },
+      {
+        "from": 1,
+        "to": 2,
+        "order": 1
+      },
+      {
+        "from": 2,
+        "to": 3,
+        "order": 1
+      },
+      {
+        "from": 0,
+        "to": 4,
+        "order": 1
+      },
+      {
+        "from": 0,
+        "to": 5,
+        "order": 1
+      },
+      {
+        "from": 0,
+        "to": 6,
+        "order": 1
+      },
+      {
+        "from": 1,
+        "to": 7,
+        "order": 1
+      },
+      {
+        "from": 1,
+        "to": 8,
+        "order": 1
+      }
+    ]
+  },
+  {
+    "name": "Benceno",
+    "name_en": "Benzene",
+    "formula": "C₆H₆",
+    "icon": "⬡",
+    "atoms": [
+      {
+        "element": "C",
+        "position": [
+          140,
+          0,
+          0
+        ]
+      },
+      {
+        "element": "C",
+        "position": [
+          70,
+          121.2,
+          0
+        ]
+      },
+      {
+        "element": "C",
+        "position": [
+          -70,
+          121.2,
+          0
+        ]
+      },
+      {
+        "element": "C",
+        "position": [
+          -140,
+          0,
+          0
+        ]
+      },
+      {
+        "element": "C",
+        "position": [
+          -70,
+          -121.2,
+          0
+        ]
+      },
+      {
+        "element": "C",
+        "position": [
+          70,
+          -121.2,
+          0
+        ]
+      },
+      {
+        "element": "H",
+        "position": [
+          248,
+          0,
+          0
+        ]
+      },
+      {
+        "element": "H",
+        "position": [
+          124,
+          214.8,
+          0
+        ]
+      },
+      {
+        "element": "H",
+        "position": [
+          -124,
+          214.8,
+          0
+        ]
+      },
+      {
+        "element": "H",
+        "position": [
+          -248,
+          0,
+          0
+        ]
+      },
+      {
+        "element": "H",
+        "position": [
+          -124,
+          -214.8,
+          0
+        ]
+      },
+      {
+        "element": "H",
+        "position": [
+          124,
+          -214.8,
+          0
+        ]
+      }
+    ],
+    "bonds": [
+      {
+        "from": 0,
+        "to": 1,
+        "order": 2
+      },
+      {
+        "from": 1,
+        "to": 2,
+        "order": 1
+      },
+      {
+        "from": 2,
+        "to": 3,
+        "order": 2
+      },
+      {
+        "from": 3,
+        "to": 4,
+        "order": 1
+      },
+      {
+        "from": 4,
+        "to": 5,
+        "order": 2
+      },
+      {
+        "from": 5,
+        "to": 0,
+        "order": 1
+      },
+      {
+        "from": 0,
+        "to": 6,
+        "order": 1
+      },
+      {
+        "from": 1,
+        "to": 7,
+        "order": 1
+      },
+      {
+        "from": 2,
+        "to": 8,
+        "order": 1
+      },
+      {
+        "from": 3,
+        "to": 9,
+        "order": 1
+      },
+      {
+        "from": 4,
+        "to": 10,
+        "order": 1
+      },
+      {
+        "from": 5,
+        "to": 11,
+        "order": 1
+      }
+    ]
+  },
+  {
+    "name": "Ácido Acético",
+    "name_en": "Acetic Acid",
+    "formula": "CH₃COOH",
+    "icon": "🍋",
+    "atoms": [
+      {
+        "element": "C",
+        "position": [
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "element": "C",
+        "position": [
+          154,
+          0,
+          0
+        ]
+      },
+      {
+        "element": "O",
+        "position": [
+          217,
+          114,
+          0
+        ]
+      },
+      {
+        "element": "O",
+        "position": [
+          217,
+          -114,
+          0
+        ]
+      },
+      {
+        "element": "H",
+        "position": [
+          313,
+          -114,
+          0
+        ]
+      },
+      {
+        "element": "H",
+        "position": [
+          -36,
+          51,
+          88
+        ]
+      },
+      {
+        "element": "H",
+        "position": [
+          -36,
+          51,
+          -88
+        ]
+      },
+      {
+        "element": "H",
+        "position": [
+          -36,
+          -102,
+          0
+        ]
+      }
+    ],
+    "bonds": [
+      {
+        "from": 0,
+        "to": 1,
+        "order": 1
+      },
+      {
+        "from": 1,
+        "to": 2,
+        "order": 2
+      },
+      {
+        "from": 1,
+        "to": 3,
+        "order": 1
+      },
+      {
+        "from": 3,
+        "to": 4,
+        "order": 1
+      },
+      {
+        "from": 0,
+        "to": 5,
+        "order": 1
+      },
+      {
+        "from": 0,
+        "to": 6,
+        "order": 1
+      },
+      {
+        "from": 0,
+        "to": 7,
+        "order": 1
+      }
+    ]
+  },
+  {
+    "name": "Glucosa (Simplificada)",
+    "name_en": "Glucose (Simplified)",
+    "formula": "C₆H₁₂O₆",
+    "icon": "🍬",
+    "atoms": [
+      {
+        "element": "C",
+        "position": [
+          130,
+          0,
+          0
+        ]
+      },
+      {
+        "element": "C",
+        "position": [
+          65,
+          112.6,
+          0
+        ]
+      },
+      {
+        "element": "C",
+        "position": [
+          -65,
+          112.6,
+          0
+        ]
+      },
+      {
+        "element": "C",
+        "position": [
+          -130,
+          0,
+          0
+        ]
+      },
+      {
+        "element": "C",
+        "position": [
+          -65,
+          -112.6,
+          0
+        ]
+      },
+      {
+        "element": "O",
+        "position": [
+          65,
+          -112.6,
+          0
+        ]
+      },
+      {
+        "element": "O",
+        "position": [
+          273,
+          0,
+          0
+        ]
+      },
+      {
+        "element": "H",
+        "position": [
+          370,
+          0,
+          0
+        ]
+      },
+      {
+        "element": "H",
+        "position": [
+          130,
+          0,
+          108
+        ]
+      },
+      {
+        "element": "O",
+        "position": [
+          136.5,
+          236.4,
+          0
+        ]
+      },
+      {
+        "element": "H",
+        "position": [
+          185,
+          320.4,
+          0
+        ]
+      },
+      {
+        "element": "H",
+        "position": [
+          65,
+          112.6,
+          108
+        ]
+      },
+      {
+        "element": "O",
+        "position": [
+          -136.5,
+          236.4,
+          0
+        ]
+      },
+      {
+        "element": "H",
+        "position": [
+          -185,
+          320.4,
+          0
+        ]
+      },
+      {
+        "element": "H",
+        "position": [
+          -65,
+          112.6,
+          108
+        ]
+      },
+      {
+        "element": "O",
+        "position": [
+          -273,
+          0,
+          0
+        ]
+      },
+      {
+        "element": "H",
+        "position": [
+          -370,
+          0,
+          0
+        ]
+      },
+      {
+        "element": "H",
+        "position": [
+          -130,
+          0,
+          108
+        ]
+      },
+      {
+        "element": "O",
+        "position": [
+          -136.5,
+          -236.4,
+          0
+        ]
+      },
+      {
+        "element": "H",
+        "position": [
+          -185,
+          -320.4,
+          0
+        ]
+      },
+      {
+        "element": "H",
+        "position": [
+          -65,
+          -112.6,
+          108
+        ]
+      },
+      {
+        "element": "C",
+        "position": [
+          -65,
+          -112.6,
+          -143
+        ]
+      },
+      {
+        "element": "O",
+        "position": [
+          -115,
+          -112.6,
+          -243
+        ]
+      },
+      {
+        "element": "H",
+        "position": [
+          -211,
+          -112.6,
+          -243
+        ]
+      },
+      {
+        "element": "H",
+        "position": [
+          37.6,
+          -112.6,
+          -106.3
+        ]
+      },
+      {
+        "element": "H",
+        "position": [
+          37.6,
+          -112.6,
+          -179.7
+        ]
+      }
+    ],
+    "bonds": [
+      {
+        "from": 0,
+        "to": 1,
+        "order": 1
+      },
+      {
+        "from": 1,
+        "to": 2,
+        "order": 1
+      },
+      {
+        "from": 2,
+        "to": 3,
+        "order": 1
+      },
+      {
+        "from": 3,
+        "to": 4,
+        "order": 1
+      },
+      {
+        "from": 4,
+        "to": 5,
+        "order": 1
+      },
+      {
+        "from": 5,
+        "to": 0,
+        "order": 1
+      },
+      {
+        "from": 0,
+        "to": 6,
+        "order": 1
+      },
+      {
+        "from": 6,
+        "to": 7,
+        "order": 1
+      },
+      {
+        "from": 0,
+        "to": 8,
+        "order": 1
+      },
+      {
+        "from": 1,
+        "to": 9,
+        "order": 1
+      },
+      {
+        "from": 9,
+        "to": 10,
+        "order": 1
+      },
+      {
+        "from": 1,
+        "to": 11,
+        "order": 1
+      },
+      {
+        "from": 2,
+        "to": 12,
+        "order": 1
+      },
+      {
+        "from": 12,
+        "to": 13,
+        "order": 1
+      },
+      {
+        "from": 2,
+        "to": 14,
+        "order": 1
+      },
+      {
+        "from": 3,
+        "to": 15,
+        "order": 1
+      },
+      {
+        "from": 15,
+        "to": 16,
+        "order": 1
+      },
+      {
+        "from": 3,
+        "to": 17,
+        "order": 1
+      },
+      {
+        "from": 4,
+        "to": 18,
+        "order": 1
+      },
+      {
+        "from": 18,
+        "to": 19,
+        "order": 1
+      },
+      {
+        "from": 4,
+        "to": 20,
+        "order": 1
+      },
+      {
+        "from": 4,
+        "to": 21,
+        "order": 1
+      },
+      {
+        "from": 21,
+        "to": 22,
+        "order": 1
+      },
+      {
+        "from": 22,
+        "to": 23,
+        "order": 1
+      },
+      {
+        "from": 21,
+        "to": 24,
+        "order": 1
+      },
+      {
+        "from": 21,
+        "to": 25,
+        "order": 1
+      }
+    ]
+  },
+  {
+    "name": "Cafeína (Simplificada)",
+    "name_en": "Caffeine (Simplified)",
+    "formula": "C₈H₁₀N₄O₂",
+    "icon": "☕",
+    "atoms": [
+      {
+        "element": "N",
+        "position": [
+          239,
+          69,
+          0
+        ]
+      },
+      {
+        "element": "C",
+        "position": [
+          239,
+          -69,
+          0
+        ]
+      },
+      {
+        "element": "N",
+        "position": [
+          119.5,
+          -138,
+          0
+        ]
+      },
+      {
+        "element": "C",
+        "position": [
+          0,
+          -69,
+          0
+        ]
+      },
+      {
+        "element": "C",
+        "position": [
+          0,
+          69,
+          0
+        ]
+      },
+      {
+        "element": "C",
+        "position": [
+          119.5,
+          138,
+          0
+        ]
+      },
+      {
+        "element": "N",
+        "position": [
+          -131.2,
+          111.6,
+          0
+        ]
+      },
+      {
+        "element": "C",
+        "position": [
+          -212.4,
+          0,
+          0
+        ]
+      },
+      {
+        "element": "N",
+        "position": [
+          -131.2,
+          -111.6,
+          0
+        ]
+      },
+      {
+        "element": "O",
+        "position": [
+          344.7,
+          -130,
+          0
+        ]
+      },
+      {
+        "element": "O",
+        "position": [
+          119.5,
+          260,
+          0
+        ]
+      },
+      {
+        "element": "C",
+        "position": [
+          366.3,
+          142.5,
+          0
+        ]
+      },
+      {
+        "element": "C",
+        "position": [
+          119.5,
+          -285,
+          0
+        ]
+      },
+      {
+        "element": "C",
+        "position": [
+          -176.7,
+          251.4,
+          0
+        ]
+      },
+      {
+        "element": "H",
+        "position": [
+          -320.4,
+          0,
+          0
+        ]
+      },
+      {
+        "element": "H",
+        "position": [
+          284.2,
+          212.6,
+          0
+        ]
+      },
+      {
+        "element": "H",
+        "position": [
+          360.6,
+          80.4,
+          88.2
+        ]
+      },
+      {
+        "element": "H",
+        "position": [
+          360.6,
+          80.4,
+          -88.2
+        ]
+      },
+      {
+        "element": "H",
+        "position": [
+          221.3,
+          -249,
+          0
+        ]
+      },
+      {
+        "element": "H",
+        "position": [
+          68.6,
+          -249,
+          88.2
+        ]
+      },
+      {
+        "element": "H",
+        "position": [
+          68.6,
+          -249,
+          -88.2
+        ]
+      },
+      {
+        "element": "H",
+        "position": [
+          -262.4,
+          185.7,
+          0
+        ]
+      },
+      {
+        "element": "H",
+        "position": [
+          -117.1,
+          232.9,
+          88.2
+        ]
+      },
+      {
+        "element": "H",
+        "position": [
+          -117.1,
+          232.9,
+          -88.2
+        ]
+      }
+    ],
+    "bonds": [
+      {
+        "from": 0,
+        "to": 1,
+        "order": 2
+      },
+      {
+        "from": 1,
+        "to": 2,
+        "order": 1
+      },
+      {
+        "from": 2,
+        "to": 3,
+        "order": 2
+      },
+      {
+        "from": 3,
+        "to": 4,
+        "order": 1
+      },
+      {
+        "from": 4,
+        "to": 5,
+        "order": 2
+      },
+      {
+        "from": 5,
+        "to": 0,
+        "order": 1
+      },
+      {
+        "from": 3,
+        "to": 8,
+        "order": 2
+      },
+      {
+        "from": 8,
+        "to": 7,
+        "order": 1
+      },
+      {
+        "from": 7,
+        "to": 6,
+        "order": 2
+      },
+      {
+        "from": 6,
+        "to": 4,
+        "order": 1
+      },
+      {
+        "from": 1,
+        "to": 9,
+        "order": 2
+      },
+      {
+        "from": 5,
+        "to": 10,
+        "order": 2
+      },
+      {
+        "from": 0,
+        "to": 11,
+        "order": 1
+      },
+      {
+        "from": 2,
+        "to": 12,
+        "order": 1
+      },
+      {
+        "from": 6,
+        "to": 13,
+        "order": 1
+      },
+      {
+        "from": 7,
+        "to": 14,
+        "order": 1
+      },
+      {
+        "from": 11,
+        "to": 15,
+        "order": 1
+      },
+      {
+        "from": 11,
+        "to": 16,
+        "order": 1
+      },
+      {
+        "from": 11,
+        "to": 17,
+        "order": 1
+      },
+      {
+        "from": 12,
+        "to": 18,
+        "order": 1
+      },
+      {
+        "from": 12,
+        "to": 19,
+        "order": 1
+      },
+      {
+        "from": 12,
+        "to": 20,
+        "order": 1
+      },
+      {
+        "from": 13,
+        "to": 21,
+        "order": 1
+      },
+      {
+        "from": 13,
+        "to": 22,
+        "order": 1
+      },
+      {
+        "from": 13,
+        "to": 23,
+        "order": 1
+      }
+    ]
+  },
+  {
+    "name": "Ácido Sulfúrico",
+    "name_en": "Sulfuric Acid",
+    "formula": "H₂SO₄",
+    "icon": "⚗️",
+    "atoms": [
+      {
+        "element": "S",
+        "position": [
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "element": "O",
+        "position": [
+          143,
+          0,
+          0
+        ]
+      },
+      {
+        "element": "O",
+        "position": [
+          -143,
+          0,
+          0
+        ]
+      },
+      {
+        "element": "O",
+        "position": [
+          0,
+          143,
+          0
+        ]
+      },
+      {
+        "element": "O",
+        "position": [
+          0,
+          -143,
+          0
+        ]
+      },
+      {
+        "element": "H",
+        "position": [
+          0,
+          243,
+          0
+        ]
+      },
+      {
+        "element": "H",
+        "position": [
+          0,
+          -243,
+          0
+        ]
+      }
+    ],
+    "bonds": [
+      {
+        "from": 0,
+        "to": 1,
+        "order": 2
+      },
+      {
+        "from": 0,
+        "to": 2,
+        "order": 2
+      },
+      {
+        "from": 0,
+        "to": 3,
+        "order": 1
+      },
+      {
+        "from": 0,
+        "to": 4,
+        "order": 1
+      },
+      {
+        "from": 3,
+        "to": 5,
+        "order": 1
+      },
+      {
+        "from": 4,
+        "to": 6,
+        "order": 1
+      }
+    ]
+  },
+  {
+    "name": "Aspirina (Simplificada)",
+    "name_en": "Aspirin (Simplified)",
+    "formula": "C₉H₈O₄",
+    "icon": "💊",
+    "atoms": [
+      {
+        "element": "C",
+        "position": [
+          140,
+          0,
+          0
+        ]
+      },
+      {
+        "element": "C",
+        "position": [
+          70,
+          121.2,
+          0
+        ]
+      },
+      {
+        "element": "C",
+        "position": [
+          -70,
+          121.2,
+          0
+        ]
+      },
+      {
+        "element": "C",
+        "position": [
+          -140,
+          0,
+          0
+        ]
+      },
+      {
+        "element": "C",
+        "position": [
+          -70,
+          -121.2,
+          0
+        ]
+      },
+      {
+        "element": "C",
+        "position": [
+          70,
+          -121.2,
+          0
+        ]
+      },
+      {
+        "element": "O",
+        "position": [
+          276,
+          0,
+          0
+        ]
+      },
+      {
+        "element": "C",
+        "position": [
+          430,
+          0,
+          0
+        ]
+      },
+      {
+        "element": "O",
+        "position": [
+          430,
+          -122,
+          0
+        ]
+      },
+      {
+        "element": "C",
+        "position": [
+          584,
+          0,
+          0
+        ]
+      },
+      {
+        "element": "C",
+        "position": [
+          -294,
+          0,
+          0
+        ]
+      },
+      {
+        "element": "O",
+        "position": [
+          -416,
+          0,
+          0
+        ]
+      },
+      {
+        "element": "O",
+        "position": [
+          -294,
+          136,
+          0
+        ]
+      },
+      {
+        "element": "H",
+        "position": [
+          -294,
+          233,
+          0
+        ]
+      },
+      {
+        "element": "H",
+        "position": [
+          124,
+          214.8,
+          0
+        ]
+      },
+      {
+        "element": "H",
+        "position": [
+          -124,
+          214.8,
+          0
+        ]
+      },
+      {
+        "element": "H",
+        "position": [
+          -124,
+          -214.8,
+          0
+        ]
+      },
+      {
+        "element": "H",
+        "position": [
+          124,
+          -214.8,
+          0
+        ]
+      },
+      {
+        "element": "H",
+        "position": [
+          584,
+          48.7,
+          97.5
+        ]
+      },
+      {
+        "element": "H",
+        "position": [
+          584,
+          48.7,
+          -97.5
+        ]
+      },
+      {
+        "element": "H",
+        "position": [
+          584,
+          -109,
+          0
+        ]
+      }
+    ],
+    "bonds": [
+      {
+        "from": 0,
+        "to": 1,
+        "order": 2
+      },
+      {
+        "from": 1,
+        "to": 2,
+        "order": 1
+      },
+      {
+        "from": 2,
+        "to": 3,
+        "order": 2
+      },
+      {
+        "from": 3,
+        "to": 4,
+        "order": 1
+      },
+      {
+        "from": 4,
+        "to": 5,
+        "order": 2
+      },
+      {
+        "from": 5,
+        "to": 0,
+        "order": 1
+      },
+      {
+        "from": 0,
+        "to": 6,
+        "order": 2
+      },
+      {
+        "from": 6,
+        "to": 7,
+        "order": 2
+      },
+      {
+        "from": 7,
+        "to": 8,
+        "order": 2
+      },
+      {
+        "from": 7,
+        "to": 9,
+        "order": 1
+      },
+      {
+        "from": 3,
+        "to": 10,
+        "order": 1
+      },
+      {
+        "from": 10,
+        "to": 11,
+        "order": 2
+      },
+      {
+        "from": 10,
+        "to": 12,
+        "order": 1
+      },
+      {
+        "from": 12,
+        "to": 13,
+        "order": 1
+      },
+      {
+        "from": 1,
+        "to": 14,
+        "order": 1
+      },
+      {
+        "from": 2,
+        "to": 15,
+        "order": 1
+      },
+      {
+        "from": 4,
+        "to": 16,
+        "order": 1
+      },
+      {
+        "from": 5,
+        "to": 17,
+        "order": 1
+      },
+      {
+        "from": 9,
+        "to": 18,
+        "order": 1
+      },
+      {
+        "from": 9,
+        "to": 19,
+        "order": 1
+      },
+      {
+        "from": 9,
+        "to": 20,
+        "order": 1
+      }
+    ]
+  },
+  {
+    "name": "Dopamina",
+    "name_en": "Dopamine",
+    "formula": "C₈H₁₁NO₂",
+    "icon": "🧠",
+    "atoms": [
+      {
+        "element": "C",
+        "position": [
+          140,
+          0,
+          0
+        ]
+      },
+      {
+        "element": "C",
+        "position": [
+          70,
+          121.2,
+          0
+        ]
+      },
+      {
+        "element": "C",
+        "position": [
+          -70,
+          121.2,
+          0
+        ]
+      },
+      {
+        "element": "C",
+        "position": [
+          -140,
+          0,
+          0
+        ]
+      },
+      {
+        "element": "C",
+        "position": [
+          -70,
+          -121.2,
+          0
+        ]
+      },
+      {
+        "element": "C",
+        "position": [
+          70,
+          -121.2,
+          0
+        ]
+      },
+      {
+        "element": "C",
+        "position": [
+          294,
+          0,
+          0
+        ]
+      },
+      {
+        "element": "C",
+        "position": [
+          448,
+          0,
+          0
+        ]
+      },
+      {
+        "element": "N",
+        "position": [
+          595,
+          0,
+          0
+        ]
+      },
+      {
+        "element": "O",
+        "position": [
+          -276,
+          0,
+          0
+        ]
+      },
+      {
+        "element": "H",
+        "position": [
+          -373,
+          0,
+          0
+        ]
+      },
+      {
+        "element": "O",
+        "position": [
+          -138,
+          -239,
+          0
+        ]
+      },
+      {
+        "element": "H",
+        "position": [
+          -186.5,
+          -323,
+          0
+        ]
+      },
+      {
+        "element": "H",
+        "position": [
+          124,
+          214.8,
+          0
+        ]
+      },
+      {
+        "element": "H",
+        "position": [
+          -124,
+          214.8,
+          0
+        ]
+      },
+      {
+        "element": "H",
+        "position": [
+          124,
+          -214.8,
+          0
+        ]
+      },
+      {
+        "element": "H",
+        "position": [
+          294,
+          0,
+          109
+        ]
+      },
+      {
+        "element": "H",
+        "position": [
+          294,
+          0,
+          -109
+        ]
+      },
+      {
+        "element": "H",
+        "position": [
+          448,
+          0,
+          109
+        ]
+      },
+      {
+        "element": "H",
+        "position": [
+          448,
+          0,
+          -109
+        ]
+      },
+      {
+        "element": "H",
+        "position": [
+          595,
+          0,
+          101
+        ]
+      },
+      {
+        "element": "H",
+        "position": [
+          595,
+          0,
+          -101
+        ]
+      }
+    ],
+    "bonds": [
+      {
+        "from": 0,
+        "to": 1,
+        "order": 2
+      },
+      {
+        "from": 1,
+        "to": 2,
+        "order": 1
+      },
+      {
+        "from": 2,
+        "to": 3,
+        "order": 2
+      },
+      {
+        "from": 3,
+        "to": 4,
+        "order": 1
+      },
+      {
+        "from": 4,
+        "to": 5,
+        "order": 2
+      },
+      {
+        "from": 5,
+        "to": 0,
+        "order": 1
+      },
+      {
+        "from": 0,
+        "to": 6,
+        "order": 1
+      },
+      {
+        "from": 6,
+        "to": 7,
+        "order": 1
+      },
+      {
+        "from": 7,
+        "to": 8,
+        "order": 1
+      },
+      {
+        "from": 3,
+        "to": 9,
+        "order": 1
+      },
+      {
+        "from": 9,
+        "to": 10,
+        "order": 1
+      },
+      {
+        "from": 4,
+        "to": 11,
+        "order": 1
+      },
+      {
+        "from": 11,
+        "to": 12,
+        "order": 1
+      },
+      {
+        "from": 1,
+        "to": 13,
+        "order": 1
+      },
+      {
+        "from": 2,
+        "to": 14,
+        "order": 1
+      },
+      {
+        "from": 5,
+        "to": 15,
+        "order": 1
+      },
+      {
+        "from": 6,
+        "to": 16,
+        "order": 1
+      },
+      {
+        "from": 6,
+        "to": 17,
+        "order": 1
+      },
+      {
+        "from": 7,
+        "to": 18,
+        "order": 1
+      },
+      {
+        "from": 7,
+        "to": 19,
+        "order": 1
+      },
+      {
+        "from": 8,
+        "to": 20,
+        "order": 1
+      },
+      {
+        "from": 8,
+        "to": 21,
+        "order": 1
+      }
+    ]
+  },
+  {
+    "name": "Adenina",
+    "name_en": "Adenine",
+    "formula": "C₅H₅N₅",
+    "icon": "🧬",
+    "description": "Base nitrogenada púrica del ADN/ARN — componente fundamental del ATP",
+    "atoms": [
+      {
+        "element": "N",
+        "position": [
+          126,
+          0,
+          0
+        ]
+      },
+      {
+        "element": "C",
+        "position": [
+          63,
+          109,
+          0
+        ]
+      },
+      {
+        "element": "N",
+        "position": [
+          -63,
+          109,
+          0
+        ]
+      },
+      {
+        "element": "C",
+        "position": [
+          -126,
+          0,
+          0
+        ]
+      },
+      {
+        "element": "C",
+        "position": [
+          -63,
+          -109,
+          0
+        ]
+      },
+      {
+        "element": "C",
+        "position": [
+          63,
+          -109,
+          0
+        ]
+      },
+      {
+        "element": "N",
+        "position": [
+          -170,
+          -109,
+          0
+        ]
+      },
+      {
+        "element": "C",
+        "position": [
+          -240,
+          0,
+          0
+        ]
+      },
+      {
+        "element": "N",
+        "position": [
+          -170,
+          109,
+          0
+        ]
+      },
+      {
+        "element": "N",
+        "position": [
+          126,
+          -218,
+          0
+        ]
+      },
+      {
+        "element": "H",
+        "position": [
+          126,
+          190,
+          0
+        ]
+      },
+      {
+        "element": "H",
+        "position": [
+          -349,
+          0,
+          0
+        ]
+      },
+      {
+        "element": "H",
+        "position": [
+          230,
+          0,
+          0
+        ]
+      },
+      {
+        "element": "H",
+        "position": [
+          63,
+          -290,
+          0
+        ]
+      },
+      {
+        "element": "H",
+        "position": [
+          230,
+          -218,
+          0
+        ]
+      }
+    ],
+    "bonds": [
+      {
+        "from": 0,
+        "to": 1,
+        "order": 1
+      },
+      {
+        "from": 1,
+        "to": 2,
+        "order": 2
+      },
+      {
+        "from": 2,
+        "to": 3,
+        "order": 1
+      },
+      {
+        "from": 3,
+        "to": 4,
+        "order": 2
+      },
+      {
+        "from": 4,
+        "to": 5,
+        "order": 1
+      },
+      {
+        "from": 5,
+        "to": 0,
+        "order": 2
+      },
+      {
+        "from": 4,
+        "to": 6,
+        "order": 1
+      },
+      {
+        "from": 6,
+        "to": 7,
+        "order": 2
+      },
+      {
+        "from": 7,
+        "to": 8,
+        "order": 1
+      },
+      {
+        "from": 8,
+        "to": 3,
+        "order": 1
+      },
+      {
+        "from": 5,
+        "to": 9,
+        "order": 1
+      },
+      {
+        "from": 1,
+        "to": 10,
+        "order": 1
+      },
+      {
+        "from": 7,
+        "to": 11,
+        "order": 1
+      },
+      {
+        "from": 0,
+        "to": 12,
+        "order": 1
+      },
+      {
+        "from": 9,
+        "to": 13,
+        "order": 1
+      },
+      {
+        "from": 9,
+        "to": 14,
+        "order": 1
+      }
+    ]
+  }
+]

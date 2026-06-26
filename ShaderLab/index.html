@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>⚗ ShaderLab — QuantumSim</title>
+
+    <!-- PWA & Icons -->
+    <link rel="manifest" href="../site.webmanifest">
+    <link rel="icon" type="image/svg+xml" href="assets/icons/favicon.svg">
+    <link rel="icon" type="image/x-icon"  href="assets/icons/favicon.ico">
+    <link rel="apple-touch-icon" href="assets/icons/apple-touch-icon.png">
+    
+<link rel="stylesheet" href="css/shaderlab.css">
+</head>
+<body>
+<div class="app">
+
+  <!-- ── HEADER ─────────────────────────────────────────────── -->
+  <header>
+    <div class="logo">⚗ <span>QuantumSim /</span> ShaderLab
+    <button class="dev-tab" id="btnDevMode" title="Modo Dev">·</button>
+  </div>
+
+    <!-- Modo de edición -->
+    <div class="mode-tabs">
+      <button class="mode-tab active" data-mode="current">Current</button>
+      <button class="mode-tab"        data-mode="custom">Custom ✦</button>
+    </div>
+
+    <!-- Target: orbital vs esfera -->
+    <div class="target-toggle">
+      <button class="tgt-btn active" data-tgt="orbital">Orbital</button>
+      <button class="tgt-btn"        data-tgt="sphere">Esfera</button>
+    </div>
+
+    <div class="h-spacer"></div>
+    <div class="h-actions">
+      <button class="h-btn" id="btnLoad">📂 Cargar</button>
+      <button class="h-btn save" id="btnSave">💾 Guardar</button>
+      <button id="qv-fullscreen-btn" title="Pantalla completa">⛶</button>
+    </div>
+  </header>
+
+  <!-- ── BODY NORMAL ────────────────────────────────────────── -->
+  <div class="body" id="bodyNormal">
+
+    <!-- ── PIPELINE (izquierda) ───────────────────────────── -->
+    <div class="pipeline" id="pipelinePanel">
+
+      <div class="panel-head">
+        <span class="panel-title">Pipeline</span>
+        <div class="panel-actions" id="pipelineControls">
+          <button class="pact add" id="btnAdd">＋ Nodo</button>
+          <button class="pact"     id="btnReset">↺ Reset</button>
+        </div>
+      </div>
+
+      <!-- Selector de elemento — dropdown con los 118 -->
+      <div class="elem-bar">
+        <select class="elem-select" id="elemSelect"></select>
+      </div>
+
+      <!-- Selector de capa -->
+      <div class="layer-bar">
+        <button class="layer-btn active" data-layer="all">Todo</button>
+        <button class="layer-btn" data-layer="core">Core</button>
+        <button class="layer-btn" data-layer="semi">Semi</button>
+        <button class="layer-btn" data-layer="valence">Valencia</button>
+      </div>
+
+      <!-- Nodos del pipeline — solo en custom -->
+      <div class="nodes-list" id="nodesList"></div>
+
+      <!-- Galería de presets — solo en modo current -->
+      <div class="preset-gallery" id="presetGallery">
+        <div class="preset-gallery__head">
+          <span class="preset-gallery__title">Presets</span>
+          <span class="preset-gallery__hint">💾 = en caché · descarga para no perder</span>
+        </div>
+        <div class="preset-list" id="presetList"></div>
+      </div>
+    </div>
+
+    <!-- ── PREVIEW (centro) ───────────────────────────────── -->
+    <div class="preview" id="prevCont">
+      <canvas id="glCanvas"></canvas>
+      <div class="prev-ov">
+        <div class="prev-top">
+          <div class="prev-chip">
+            <b id="modeLabel">Current</b>
+            · <b id="targetLabel">orbital</b>
+            · <b id="elemLabel">cargando…</b>
+          </div>
+          <div class="prev-fps" id="fpsEl">— fps</div>
+        </div>
+        <div class="prev-bot">
+          <div class="cst ok" id="cst">✓ Shader listo</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ── PARAMS (derecha) ───────────────────────────────── -->
+    <div class="params" id="paramsPanel">
+      <div class="panel-head">
+        <span class="panel-title" id="paramsTitle">Parámetros</span>
+      </div>
+      <div class="params-body" id="paramsBody">
+        <div class="empty-msg">
+          <div class="empty-icon">⚙</div>
+          <div class="empty-txt">Selecciona un nodo para editar sus parámetros</div>
+        </div>
+      </div>
+    </div>
+
+  </div><!-- .body -->
+
+  <!-- ── BODY DEV ───────────────────────────────────────────── -->
+  <div class="body dev-body" id="bodyDev" style="display:none">
+
+    <!-- Sidebar: lista de materiales -->
+    <div class="pipeline" id="devSidebar">
+      <div class="panel-head">
+        <span class="panel-title">Materiales built-in</span>
+        <span class="dev-count" id="devCount"></span>
+      </div>
+      <!-- Selector de elemento -->
+      <div id="devElemBar"><select id="devElemSelect"></select></div>
+      <!-- Filtros por familia -->
+      <div class="dev-fam-filter" id="devFamFilter"></div>
+      <!-- Lista -->
+      <div class="nodes-list" id="devMatList"></div>
+    </div>
+
+    <!-- Centro: preview + editor del material activo -->
+    <div class="preview" id="devPrevCont">
+      <canvas id="devCanvas"></canvas>
+      <div class="prev-ov">
+        <div class="prev-top">
+          <div class="prev-chip">
+            <b id="devMatLabel">—</b>
+            · <b id="devFamLabel">—</b>
+          </div>
+          <div class="prev-fps" id="devFpsEl">— fps</div>
+        </div>
+        <div class="prev-bot">
+          <div class="cst ok" id="devCst">Selecciona un material</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Derecha: editor del pipeline + acciones -->
+    <div class="params" id="devEditor">
+      <div class="panel-head" style="justify-content:space-between">
+        <span class="panel-title" id="devEditorTitle">Editor</span>
+        <div style="display:flex;gap:6px;align-items:center">
+          <button class="pact" id="devBtnLoadJSON" title="Cargar .json personalizado">📂</button>
+          <button class="pact add" id="devBtnRecompile">▶ Compilar</button>
+        </div>
+      </div>
+      <div class="params-body" id="devEditorBody">
+        <div class="empty-msg">
+          <div class="empty-icon">⚗</div>
+          <div class="empty-txt">Selecciona un material de la lista</div>
+        </div>
+      </div>
+
+      <!-- Acciones globales -->
+      <div class="dev-actions">
+        <label class="dev-chk-all">
+          <input type="checkbox" id="devChkAll" checked> Todos
+        </label>
+        <button class="h-btn" id="devBtnPickDir" title="Guardar directamente en carpeta">📁 Carpeta</button>
+        <button class="h-btn save" id="devBtnExport">⬇ ZIP</button>
+      </div>
+    </div>
+
+  </div><!-- .body.dev-body -->
+
+</div><!-- .app -->
+
+<!-- ── MODAL — Añadir nodo ──────────────────────────────────── -->
+<div class="modal-overlay" id="modalOverlay">
+  <div class="modal">
+    <div class="modal-head">
+      <span class="modal-title">＋ Añadir nodo al pipeline</span>
+      <button class="modal-close" id="modalClose">✕</button>
+    </div>
+    <div class="modal-filters">
+      <button class="mf-btn active" data-f="all">Todos</button>
+      <button class="mf-btn"        data-f="vert">Vertex</button>
+      <button class="mf-btn"        data-f="frag">Fragment</button>
+    </div>
+    <div class="modal-grid" id="modalGrid"></div>
+  </div>
+</div>
+
+<!-- Toast + file inputs -->
+<div class="toast" id="toast"></div>
+<input type="file" id="fileInput"    accept=".json" style="display:none">
+<input type="file" id="devFileInput" accept=".json" style="display:none">
+
+<!-- ── Scripts ─────────────────────────────────────────────── -->
+<script type="importmap">
+{
+  "imports": {
+    "three":         "../lib/three/build/three.module.js",
+    "three/addons/": "../lib/three/examples/jsm/"
+  }
+}
+</script>
+<!-- JSZip para el export ZIP del modo Dev -->
+<script src="js/jszip.min.js"></script>
+<script type="module" src="js/app.js"></script>
+
+</body>
+</html>

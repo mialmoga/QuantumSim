@@ -1,0 +1,126 @@
+{
+  "symbol": "Ga",
+  "identity": {
+    "name_es": "Galio",
+    "name_eng": "Gallium",
+    "number": 31,
+    "category_es": "Metal post-transición",
+    "category_eng": "Post-transition metal",
+    "color": "0xC8C8D0",
+    "cpk_color": "0xC28F8F",
+    "discovery_year": "1875"
+  },
+  "physical_properties": {
+    "mass": 69.723,
+    "density_g_cm3": 5.91,
+    "standard_state_es": "Sólido",
+    "standard_state_eng": "Solid",
+    "melt_K": 302.91,
+    "boil_K": 2673,
+    "allotropes_es": null,
+    "allotropes_eng": null,
+    "lattice_structure": "orthorhombic"
+  },
+  "atomic_structure": {
+    "electronegativity": 1.81,
+    "valence": 3,
+    "ionization_energy_eV": 5.9993,
+    "electron_affinity_ev": 0.3,
+    "electron_affinity_kj_mol": 28.9,
+    "radius_atomic_pm": 135,
+    "radius_covalent_pm": 122,
+    "vanderwaals_radius_pm": 187,
+    "ionic_radius_pm": 62,
+    "effective_nuclear_charge": 5.06,
+    "electron_configuration_string": "[Ar] 3d10 4s2 4p1",
+    "shells": [
+      2,
+      8,
+      18,
+      3
+    ],
+    "quantum_numbers": {
+      "s": 2,
+      "p": 1,
+      "d": 0,
+      "f": 0
+    },
+    "work_function_ev": 4.2
+  },
+  "thermodynamics": {
+    "enthalpy_formation_kj_mol": 0,
+    "entropy_j_molk": 40.8,
+    "heat_capacity_j_molk": 25.86,
+    "specific_heat_j_gK": 0.373,
+    "latent_heat_fusion_kj_mol": 5.59,
+    "latent_heat_vaporization_kj_mol": 254,
+    "fusion_heat_kj_mol": 5.59,
+    "evaporation_heat_kj_mol": 256
+  },
+  "kinetics_and_phase": {
+    "vapor_pressure_constants": {
+      "A": 5,
+      "B": 13500,
+      "C": -10
+    },
+    "vapor_pressure_pa": null,
+    "viscosity_liquid_pas": 0.0016,
+    "viscosity_pa_s": null,
+    "critical_temp_K": null,
+    "critical_press_MPa": null,
+    "surface_tension_nm": 0.708
+  },
+  "electromagnetism_and_mechanics": {
+    "thermal_conductivity_wmk": 40.6,
+    "electrical_conductivity_sm": 7100000,
+    "magnetic_susceptibility": -2.16e-05,
+    "thermal_expansion_coefficient": 0.00012,
+    "polarizability_angstrom3": 8.1,
+    "refractive_index": null,
+    "youngs_modulus_gba": 9.8,
+    "poisson_ratio": 0.47,
+    "brinell_hardness_m_pa": 60
+  },
+  "reactivity": {
+    "max_bonds": 3,
+    "geometry_preference_es": "Tetraédrica / Trigonal",
+    "geometry_preference_eng": "Tetrahedral / Trigonal",
+    "ideal_bond_angle": null,
+    "bond_energy_ev": null,
+    "dissociation_energy_kj_mol": null,
+    "standard_potential_v": -0.529,
+    "oxidation_states": [
+      3
+    ],
+    "common_ions": [
+      "Ga3+"
+    ]
+  },
+  "nuclear_and_environmental": {
+    "isotopes": [
+      {
+        "mass": 68.925,
+        "abundance": 60.108,
+        "stable": true,
+        "name_es": "Galio-69",
+        "name_eng": "Gallium-69"
+      },
+      {
+        "mass": 70.924,
+        "abundance": 39.892,
+        "stable": true,
+        "name_es": "Galio-71",
+        "name_eng": "Gallium-71"
+      }
+    ],
+    "neutron_cross_section_barns": 2.9,
+    "nuclear_binding_energy_mev": 8.752,
+    "abundance_crust_mg_kg": 19,
+    "toxicity_level": 1
+  },
+  "cryogenic_data": {
+    "critical_solidification_pressure_mpa": null,
+    "lambda_point_k": null,
+    "superfluid_viscosity_pas": null
+  }
+}

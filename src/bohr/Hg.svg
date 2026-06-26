@@ -1,0 +1,141 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 320" width="320" height="320" style="background:#060d1a" data-symbol="Hg" data-shells="2,8,18,32,18,2">
+<defs>
+  <filter id="glow" x="-60%" y="-60%" width="220%" height="220%">
+    <feGaussianBlur stdDeviation="1.8" result="blur"/>
+    <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+  </filter>
+  <filter id="nglow" x="-100%" y="-100%" width="300%" height="300%">
+    <feGaussianBlur stdDeviation="4" result="blur"/>
+    <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+  </filter>
+</defs>
+<g id="shell-0" class="bohr-shell" data-shell="0" data-n="1" data-l="s" data-label="1s" data-count="2">
+  <circle cx="160" cy="160" r="25.6" fill="none" stroke="rgb(0,255,255)" stroke-width="0.6" opacity="0.25" class="orbit-ring"/>
+  <circle cx="160.00" cy="134.38" r="2.5" fill="rgb(0,255,255)" filter="url(#glow)" opacity="0.85" class="electron"/>
+  <circle cx="160.00" cy="185.62" r="2.5" fill="rgb(0,255,255)" filter="url(#glow)" opacity="0.85" class="electron"/>
+</g>
+<g id="shell-1" class="bohr-shell" data-shell="1" data-n="2" data-l="s" data-label="2s" data-count="2">
+  <circle cx="160" cy="160" r="37.2" fill="none" stroke="rgb(0,229,229)" stroke-width="0.6" opacity="0.25" class="orbit-ring"/>
+  <circle cx="160.00" cy="122.75" r="2.5" fill="rgb(0,229,229)" filter="url(#glow)" opacity="0.85" class="electron"/>
+  <circle cx="160.00" cy="197.25" r="2.5" fill="rgb(0,229,229)" filter="url(#glow)" opacity="0.85" class="electron"/>
+</g>
+<g id="shell-2" class="bohr-shell" data-shell="2" data-n="2" data-l="p" data-label="2p" data-count="6">
+  <circle cx="160" cy="160" r="41.1" fill="none" stroke="rgb(229,71,229)" stroke-width="0.6" opacity="0.25" class="orbit-ring"/>
+  <circle cx="160.00" cy="118.88" r="2.5" fill="rgb(229,71,229)" filter="url(#glow)" opacity="0.85" class="electron"/>
+  <circle cx="195.62" cy="139.44" r="2.5" fill="rgb(229,71,229)" filter="url(#glow)" opacity="0.85" class="electron"/>
+  <circle cx="195.62" cy="180.56" r="2.5" fill="rgb(229,71,229)" filter="url(#glow)" opacity="0.85" class="electron"/>
+  <circle cx="160.00" cy="201.12" r="2.5" fill="rgb(229,71,229)" filter="url(#glow)" opacity="0.85" class="electron"/>
+  <circle cx="124.38" cy="180.56" r="2.5" fill="rgb(229,71,229)" filter="url(#glow)" opacity="0.85" class="electron"/>
+  <circle cx="124.38" cy="139.44" r="2.5" fill="rgb(229,71,229)" filter="url(#glow)" opacity="0.85" class="electron"/>
+</g>
+<g id="shell-3" class="bohr-shell" data-shell="3" data-n="3" data-l="s" data-label="3s" data-count="2">
+  <circle cx="160" cy="160" r="52.8" fill="none" stroke="rgb(0,204,204)" stroke-width="0.6" opacity="0.25" class="orbit-ring"/>
+  <circle cx="160.00" cy="107.25" r="2.5" fill="rgb(0,204,204)" filter="url(#glow)" opacity="0.85" class="electron"/>
+  <circle cx="160.00" cy="212.75" r="2.5" fill="rgb(0,204,204)" filter="url(#glow)" opacity="0.85" class="electron"/>
+</g>
+<g id="shell-4" class="bohr-shell" data-shell="4" data-n="3" data-l="p" data-label="3p" data-count="6">
+  <circle cx="160" cy="160" r="56.6" fill="none" stroke="rgb(204,63,204)" stroke-width="0.6" opacity="0.25" class="orbit-ring"/>
+  <circle cx="160.00" cy="103.38" r="2.5" fill="rgb(204,63,204)" filter="url(#glow)" opacity="0.85" class="electron"/>
+  <circle cx="209.04" cy="131.69" r="2.5" fill="rgb(204,63,204)" filter="url(#glow)" opacity="0.85" class="electron"/>
+  <circle cx="209.04" cy="188.31" r="2.5" fill="rgb(204,63,204)" filter="url(#glow)" opacity="0.85" class="electron"/>
+  <circle cx="160.00" cy="216.62" r="2.5" fill="rgb(204,63,204)" filter="url(#glow)" opacity="0.85" class="electron"/>
+  <circle cx="110.96" cy="188.31" r="2.5" fill="rgb(204,63,204)" filter="url(#glow)" opacity="0.85" class="electron"/>
+  <circle cx="110.96" cy="131.69" r="2.5" fill="rgb(204,63,204)" filter="url(#glow)" opacity="0.85" class="electron"/>
+</g>
+<g id="shell-5" class="bohr-shell" data-shell="5" data-n="3" data-l="d" data-label="3d" data-count="10">
+  <circle cx="160" cy="160" r="60.5" fill="none" stroke="rgb(204,132,0)" stroke-width="0.6" opacity="0.25" class="orbit-ring"/>
+  <circle cx="160.00" cy="99.50" r="2.5" fill="rgb(204,132,0)" filter="url(#glow)" opacity="0.85" class="electron"/>
+  <circle cx="195.56" cy="111.05" r="2.5" fill="rgb(204,132,0)" filter="url(#glow)" opacity="0.85" class="electron"/>
+  <circle cx="217.54" cy="141.30" r="2.5" fill="rgb(204,132,0)" filter="url(#glow)" opacity="0.85" class="electron"/>
+  <circle cx="217.54" cy="178.70" r="2.5" fill="rgb(204,132,0)" filter="url(#glow)" opacity="0.85" class="electron"/>
+  <circle cx="195.56" cy="208.95" r="2.5" fill="rgb(204,132,0)" filter="url(#glow)" opacity="0.85" class="electron"/>
+  <circle cx="160.00" cy="220.50" r="2.5" fill="rgb(204,132,0)" filter="url(#glow)" opacity="0.85" class="electron"/>
+  <circle cx="124.44" cy="208.95" r="2.5" fill="rgb(204,132,0)" filter="url(#glow)" opacity="0.85" class="electron"/>
+  <circle cx="102.46" cy="178.70" r="2.5" fill="rgb(204,132,0)" filter="url(#glow)" opacity="0.85" class="electron"/>
+  <circle cx="102.46" cy="141.30" r="2.5" fill="rgb(204,132,0)" filter="url(#glow)" opacity="0.85" class="electron"/>
+  <circle cx="124.44" cy="111.05" r="2.5" fill="rgb(204,132,0)" filter="url(#glow)" opacity="0.85" class="electron"/>
+</g>
+<g id="shell-6" class="bohr-shell" data-shell="6" data-n="4" data-l="s" data-label="4s" data-count="2">
+  <circle cx="160" cy="160" r="72.1" fill="none" stroke="rgb(0,178,178)" stroke-width="0.6" opacity="0.25" class="orbit-ring"/>
+  <circle cx="160.00" cy="87.88" r="2.5" fill="rgb(0,178,178)" filter="url(#glow)" opacity="0.85" class="electron"/>
+  <circle cx="160.00" cy="232.12" r="2.5" fill="rgb(0,178,178)" filter="url(#glow)" opacity="0.85" class="electron"/>
+</g>
+<g id="shell-7" class="bohr-shell" data-shell="7" data-n="4" data-l="p" data-label="4p" data-count="6">
+  <circle cx="160" cy="160" r="76.0" fill="none" stroke="rgb(178,55,178)" stroke-width="0.6" opacity="0.25" class="orbit-ring"/>
+  <circle cx="160.00" cy="84.00" r="2.5" fill="rgb(178,55,178)" filter="url(#glow)" opacity="0.85" class="electron"/>
+  <circle cx="225.82" cy="122.00" r="2.5" fill="rgb(178,55,178)" filter="url(#glow)" opacity="0.85" class="electron"/>
+  <circle cx="225.82" cy="198.00" r="2.5" fill="rgb(178,55,178)" filter="url(#glow)" opacity="0.85" class="electron"/>
+  <circle cx="160.00" cy="236.00" r="2.5" fill="rgb(178,55,178)" filter="url(#glow)" opacity="0.85" class="electron"/>
+  <circle cx="94.18" cy="198.00" r="2.5" fill="rgb(178,55,178)" filter="url(#glow)" opacity="0.85" class="electron"/>
+  <circle cx="94.18" cy="122.00" r="2.5" fill="rgb(178,55,178)" filter="url(#glow)" opacity="0.85" class="electron"/>
+</g>
+<g id="shell-8" class="bohr-shell" data-shell="8" data-n="4" data-l="d" data-label="4d" data-count="10">
+  <circle cx="160" cy="160" r="79.9" fill="none" stroke="rgb(178,115,0)" stroke-width="0.6" opacity="0.25" class="orbit-ring"/>
+  <circle cx="160.00" cy="80.12" r="2.5" fill="rgb(178,115,0)" filter="url(#glow)" opacity="0.85" class="electron"/>
+  <circle cx="206.95" cy="95.38" r="2.5" fill="rgb(178,115,0)" filter="url(#glow)" opacity="0.85" class="electron"/>
+  <circle cx="235.97" cy="135.32" r="2.5" fill="rgb(178,115,0)" filter="url(#glow)" opacity="0.85" class="electron"/>
+  <circle cx="235.97" cy="184.68" r="2.5" fill="rgb(178,115,0)" filter="url(#glow)" opacity="0.85" class="electron"/>
+  <circle cx="206.95" cy="224.62" r="2.5" fill="rgb(178,115,0)" filter="url(#glow)" opacity="0.85" class="electron"/>
+  <circle cx="160.00" cy="239.88" r="2.5" fill="rgb(178,115,0)" filter="url(#glow)" opacity="0.85" class="electron"/>
+  <circle cx="113.05" cy="224.62" r="2.5" fill="rgb(178,115,0)" filter="url(#glow)" opacity="0.85" class="electron"/>
+  <circle cx="84.03" cy="184.68" r="2.5" fill="rgb(178,115,0)" filter="url(#glow)" opacity="0.85" class="electron"/>
+  <circle cx="84.03" cy="135.32" r="2.5" fill="rgb(178,115,0)" filter="url(#glow)" opacity="0.85" class="electron"/>
+  <circle cx="113.05" cy="95.38" r="2.5" fill="rgb(178,115,0)" filter="url(#glow)" opacity="0.85" class="electron"/>
+</g>
+<g id="shell-9" class="bohr-shell" data-shell="9" data-n="4" data-l="f" data-label="4f" data-count="14">
+  <circle cx="160" cy="160" r="83.8" fill="none" stroke="rgb(71,178,71)" stroke-width="0.6" opacity="0.25" class="orbit-ring"/>
+  <circle cx="160.00" cy="76.25" r="2.5" fill="rgb(71,178,71)" filter="url(#glow)" opacity="0.85" class="electron"/>
+  <circle cx="196.34" cy="84.54" r="2.5" fill="rgb(71,178,71)" filter="url(#glow)" opacity="0.85" class="electron"/>
+  <circle cx="225.48" cy="107.78" r="2.5" fill="rgb(71,178,71)" filter="url(#glow)" opacity="0.85" class="electron"/>
+  <circle cx="241.65" cy="141.36" r="2.5" fill="rgb(71,178,71)" filter="url(#glow)" opacity="0.85" class="electron"/>
+  <circle cx="241.65" cy="178.64" r="2.5" fill="rgb(71,178,71)" filter="url(#glow)" opacity="0.85" class="electron"/>
+  <circle cx="225.48" cy="212.22" r="2.5" fill="rgb(71,178,71)" filter="url(#glow)" opacity="0.85" class="electron"/>
+  <circle cx="196.34" cy="235.46" r="2.5" fill="rgb(71,178,71)" filter="url(#glow)" opacity="0.85" class="electron"/>
+  <circle cx="160.00" cy="243.75" r="2.5" fill="rgb(71,178,71)" filter="url(#glow)" opacity="0.85" class="electron"/>
+  <circle cx="123.66" cy="235.46" r="2.5" fill="rgb(71,178,71)" filter="url(#glow)" opacity="0.85" class="electron"/>
+  <circle cx="94.52" cy="212.22" r="2.5" fill="rgb(71,178,71)" filter="url(#glow)" opacity="0.85" class="electron"/>
+  <circle cx="78.35" cy="178.64" r="2.5" fill="rgb(71,178,71)" filter="url(#glow)" opacity="0.85" class="electron"/>
+  <circle cx="78.35" cy="141.36" r="2.5" fill="rgb(71,178,71)" filter="url(#glow)" opacity="0.85" class="electron"/>
+  <circle cx="94.52" cy="107.78" r="2.5" fill="rgb(71,178,71)" filter="url(#glow)" opacity="0.85" class="electron"/>
+  <circle cx="123.66" cy="84.54" r="2.5" fill="rgb(71,178,71)" filter="url(#glow)" opacity="0.85" class="electron"/>
+</g>
+<g id="shell-10" class="bohr-shell" data-shell="10" data-n="5" data-l="s" data-label="5s" data-count="2">
+  <circle cx="160" cy="160" r="95.4" fill="none" stroke="rgb(0,153,153)" stroke-width="0.6" opacity="0.25" class="orbit-ring"/>
+  <circle cx="160.00" cy="64.62" r="2.5" fill="rgb(0,153,153)" filter="url(#glow)" opacity="0.85" class="electron"/>
+  <circle cx="160.00" cy="255.38" r="2.5" fill="rgb(0,153,153)" filter="url(#glow)" opacity="0.85" class="electron"/>
+</g>
+<g id="shell-11" class="bohr-shell" data-shell="11" data-n="5" data-l="p" data-label="5p" data-count="6">
+  <circle cx="160" cy="160" r="99.2" fill="none" stroke="rgb(153,47,153)" stroke-width="0.6" opacity="0.25" class="orbit-ring"/>
+  <circle cx="160.00" cy="60.75" r="2.5" fill="rgb(153,47,153)" filter="url(#glow)" opacity="0.85" class="electron"/>
+  <circle cx="245.95" cy="110.38" r="2.5" fill="rgb(153,47,153)" filter="url(#glow)" opacity="0.85" class="electron"/>
+  <circle cx="245.95" cy="209.62" r="2.5" fill="rgb(153,47,153)" filter="url(#glow)" opacity="0.85" class="electron"/>
+  <circle cx="160.00" cy="259.25" r="2.5" fill="rgb(153,47,153)" filter="url(#glow)" opacity="0.85" class="electron"/>
+  <circle cx="74.05" cy="209.63" r="2.5" fill="rgb(153,47,153)" filter="url(#glow)" opacity="0.85" class="electron"/>
+  <circle cx="74.05" cy="110.37" r="2.5" fill="rgb(153,47,153)" filter="url(#glow)" opacity="0.85" class="electron"/>
+</g>
+<g id="shell-12" class="bohr-shell" data-shell="12" data-n="5" data-l="d" data-label="5d" data-count="10">
+  <circle cx="160" cy="160" r="103.1" fill="none" stroke="rgb(153,99,0)" stroke-width="0.6" opacity="0.25" class="orbit-ring"/>
+  <circle cx="160.00" cy="56.88" r="2.5" fill="rgb(153,99,0)" filter="url(#glow)" opacity="0.85" class="electron"/>
+  <circle cx="220.62" cy="76.57" r="2.5" fill="rgb(153,99,0)" filter="url(#glow)" opacity="0.85" class="electron"/>
+  <circle cx="258.08" cy="128.13" r="2.5" fill="rgb(153,99,0)" filter="url(#glow)" opacity="0.85" class="electron"/>
+  <circle cx="258.08" cy="191.87" r="2.5" fill="rgb(153,99,0)" filter="url(#glow)" opacity="0.85" class="electron"/>
+  <circle cx="220.62" cy="243.43" r="2.5" fill="rgb(153,99,0)" filter="url(#glow)" opacity="0.85" class="electron"/>
+  <circle cx="160.00" cy="263.12" r="2.5" fill="rgb(153,99,0)" filter="url(#glow)" opacity="0.85" class="electron"/>
+  <circle cx="99.38" cy="243.43" r="2.5" fill="rgb(153,99,0)" filter="url(#glow)" opacity="0.85" class="electron"/>
+  <circle cx="61.92" cy="191.87" r="2.5" fill="rgb(153,99,0)" filter="url(#glow)" opacity="0.85" class="electron"/>
+  <circle cx="61.92" cy="128.13" r="2.5" fill="rgb(153,99,0)" filter="url(#glow)" opacity="0.85" class="electron"/>
+  <circle cx="99.38" cy="76.57" r="2.5" fill="rgb(153,99,0)" filter="url(#glow)" opacity="0.85" class="electron"/>
+</g>
+<g id="shell-13" class="bohr-shell" data-shell="13" data-n="6" data-l="s" data-label="6s" data-count="2">
+  <circle cx="160" cy="160" r="114.8" fill="none" stroke="rgb(0,127,127)" stroke-width="0.6" opacity="0.25" class="orbit-ring"/>
+  <circle cx="160.00" cy="45.25" r="2.5" fill="rgb(0,127,127)" filter="url(#glow)" opacity="0.85" class="electron"/>
+  <circle cx="160.00" cy="274.75" r="2.5" fill="rgb(0,127,127)" filter="url(#glow)" opacity="0.85" class="electron"/>
+</g>
+<g id="nucleus" class="bohr-nucleus">
+  <circle cx="160" cy="160" r="14" fill="#b8b8d0" filter="url(#nglow)" opacity="0.9"/>
+  <circle cx="160" cy="160" r="7.0" fill="white" opacity="0.2"/>
+  <text x="160" y="164.6" text-anchor="middle" font-family="monospace" font-size="12" font-weight="bold" fill="#fff" opacity="0.95">Hg</text>
+</g>
+<text x="160" y="141.0" text-anchor="middle" font-family="monospace" font-size="8" fill="#334" opacity="0.6">80</text>
+<text x="160" y="314" text-anchor="middle" font-family="monospace" font-size="7" fill="#334" opacity="0.45">2 · 8 · 18 · 32 · 18 · 2</text>
+</svg>

@@ -1,0 +1,48 @@
+{
+  "symbol": "Te",
+  "generated_by": "generate_materials.py v1.2 (Stevens perceptual)",
+  "source_props": {
+    "mass": 127.6,
+    "melt_K": 722.66,
+    "density": 6.24,
+    "ionization_eV": 9.0096,
+    "electronegativity": 2.1,
+    "polarizability": 5.5,
+    "standard_state": "Solid"
+  },
+  "shader_params": {
+    "sphere_pulse": {
+      "freq": 0.885,
+      "amp": 0.35
+    },
+    "blink": {
+      "amp": 0.0,
+      "speed": 0.266
+    },
+    "brightness": {
+      "bright": 1.355,
+      "base": 0.3,
+      "vari": 0.0
+    },
+    "disc_shape": {
+      "soft": 0.279,
+      "radius": 0.22,
+      "ring": 0.0
+    },
+    "point_size": {
+      "sz": 0.323,
+      "bAmp": 0.0,
+      "persp": 65.4
+    },
+    "alpha_curve": {
+      "opacity": 0.901,
+      "curve": 1.05,
+      "floor": 0.0
+    },
+    "color": {
+      "r": 0.7529,
+      "g": 0.7216,
+      "b": 0.6275
+    }
+  }
+}

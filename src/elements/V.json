@@ -1,0 +1,132 @@
+{
+  "symbol": "V",
+  "identity": {
+    "name_es": "Vanadio",
+    "name_eng": "Vanadium",
+    "number": 23,
+    "category_es": "Metal de transición",
+    "category_eng": "Transition metal",
+    "color": "0xA8A8B0",
+    "cpk_color": "0xA6A6A6",
+    "discovery_year": "1801"
+  },
+  "physical_properties": {
+    "mass": 50.941,
+    "density_g_cm3": 6.11,
+    "standard_state_es": "Sólido",
+    "standard_state_eng": "Solid",
+    "melt_K": 2183,
+    "boil_K": 3680,
+    "allotropes_es": null,
+    "allotropes_eng": null,
+    "lattice_structure": "bcc"
+  },
+  "atomic_structure": {
+    "electronegativity": 1.63,
+    "valence": 5,
+    "ionization_energy_eV": 6.7462,
+    "electron_affinity_ev": 0.526,
+    "electron_affinity_kj_mol": 50.7,
+    "radius_atomic_pm": 134,
+    "radius_covalent_pm": 125,
+    "vanderwaals_radius_pm": 179,
+    "ionic_radius_pm": 54,
+    "effective_nuclear_charge": 5.011,
+    "electron_configuration_string": "[Ar] 3d3 4s2",
+    "shells": [
+      2,
+      8,
+      11,
+      2
+    ],
+    "quantum_numbers": {
+      "s": 2,
+      "p": 3,
+      "d": 3,
+      "f": 0
+    },
+    "work_function_ev": 4.3
+  },
+  "thermodynamics": {
+    "enthalpy_formation_kj_mol": 0,
+    "entropy_j_molk": 28.9,
+    "heat_capacity_j_molk": 24.89,
+    "specific_heat_j_gK": 0.489,
+    "latent_heat_fusion_kj_mol": 21.5,
+    "latent_heat_vaporization_kj_mol": 453,
+    "fusion_heat_kj_mol": 20.9,
+    "evaporation_heat_kj_mol": 452
+  },
+  "kinetics_and_phase": {
+    "vapor_pressure_constants": {
+      "A": 5.214,
+      "B": 24600,
+      "C": -10
+    },
+    "vapor_pressure_pa": null,
+    "viscosity_liquid_pas": 0.0051,
+    "viscosity_pa_s": null,
+    "critical_temp_K": null,
+    "critical_press_MPa": null,
+    "surface_tension_nm": 1.7
+  },
+  "electromagnetism_and_mechanics": {
+    "thermal_conductivity_wmk": 30.7,
+    "electrical_conductivity_sm": 4000000,
+    "magnetic_susceptibility": 0.000255,
+    "thermal_expansion_coefficient": 8.4e-06,
+    "polarizability_angstrom3": 12.4,
+    "refractive_index": null,
+    "youngs_modulus_gba": 128,
+    "poisson_ratio": 0.37,
+    "brinell_hardness_m_pa": 628
+  },
+  "reactivity": {
+    "max_bonds": 5,
+    "geometry_preference_es": "Red bcc / Octaédrica",
+    "geometry_preference_eng": "bcc Lattice / Octahedral",
+    "ideal_bond_angle": null,
+    "bond_energy_ev": 1.4,
+    "dissociation_energy_kj_mol": null,
+    "standard_potential_v": -1.13,
+    "oxidation_states": [
+      5,
+      4,
+      3,
+      2
+    ],
+    "common_ions": [
+      "VO4 3-",
+      "V4+",
+      "V3+"
+    ]
+  },
+  "nuclear_and_environmental": {
+    "isotopes": [
+      {
+        "mass": 49.947,
+        "abundance": 0.25,
+        "stable": false,
+        "half_life_s": 473040000000000000,
+        "name_es": "Vanadio-50",
+        "name_eng": "Vanadium-50"
+      },
+      {
+        "mass": 50.943,
+        "abundance": 99.75,
+        "stable": true,
+        "name_es": "Vanadio-51",
+        "name_eng": "Vanadium-51"
+      }
+    ],
+    "neutron_cross_section_barns": 5.08,
+    "nuclear_binding_energy_mev": 8.707,
+    "abundance_crust_mg_kg": 120,
+    "toxicity_level": 2
+  },
+  "cryogenic_data": {
+    "critical_solidification_pressure_mpa": null,
+    "lambda_point_k": null,
+    "superfluid_viscosity_pas": null
+  }
+}

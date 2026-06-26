@@ -1,0 +1,48 @@
+{
+  "symbol": "Gd",
+  "generated_by": "generate_materials.py v1.2 (Stevens perceptual)",
+  "source_props": {
+    "mass": 157.25,
+    "melt_K": 1585,
+    "density": 7.9,
+    "ionization_eV": 6.1498,
+    "electronegativity": 1.2,
+    "polarizability": 24.5,
+    "standard_state": "Solid"
+  },
+  "shader_params": {
+    "sphere_pulse": {
+      "freq": 0.797,
+      "amp": 0.312
+    },
+    "blink": {
+      "amp": 0.0,
+      "speed": 0.239
+    },
+    "brightness": {
+      "bright": 0.868,
+      "base": 0.3,
+      "vari": 0.0
+    },
+    "disc_shape": {
+      "soft": 0.389,
+      "radius": 0.22,
+      "ring": 0.0
+    },
+    "point_size": {
+      "sz": 0.403,
+      "bAmp": 0.0,
+      "persp": 78.7
+    },
+    "alpha_curve": {
+      "opacity": 0.919,
+      "curve": 1.04,
+      "floor": 0.0
+    },
+    "color": {
+      "r": 0.7529,
+      "g": 0.7529,
+      "b": 0.7529
+    }
+  }
+}

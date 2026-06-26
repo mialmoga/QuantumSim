@@ -1,0 +1,148 @@
+{
+  "symbol": "Ir",
+  "identity": {
+    "name_es": "Iridio",
+    "name_eng": "Iridium",
+    "number": 77,
+    "category_es": "Metal de transición",
+    "category_eng": "Transition metal",
+    "color": "0xC0C0C0",
+    "cpk_color": "0x175487",
+    "discovery_year": "1803"
+  },
+  "physical_properties": {
+    "mass": 192.217,
+    "density_g_cm3": 22.56,
+    "standard_state_es": "Sólido",
+    "standard_state_eng": "Solid",
+    "melt_K": 2719,
+    "boil_K": 4701,
+    "allotropes_es": null,
+    "allotropes_eng": null,
+    "lattice_structure": "fcc"
+  },
+  "atomic_structure": {
+    "electronegativity": 2.2,
+    "valence": 4,
+    "ionization_energy_eV": 8.967,
+    "electron_affinity_ev": 1.564,
+    "electron_affinity_kj_mol": 150.9,
+    "radius_atomic_pm": 136,
+    "radius_covalent_pm": 141,
+    "vanderwaals_radius_pm": 202,
+    "ionic_radius_pm": 62.5,
+    "effective_nuclear_charge": 6.3,
+    "electron_configuration_string": "[Xe] 4f14 5d7 6s2",
+    "shells": [
+      2,
+      8,
+      18,
+      32,
+      15,
+      2
+    ],
+    "quantum_numbers": {
+      "s": 2,
+      "p": 0,
+      "d": 7,
+      "f": 14
+    },
+    "work_function_ev": 5.6
+  },
+  "thermodynamics": {
+    "enthalpy_formation_kj_mol": 0,
+    "entropy_j_molk": 35.5,
+    "heat_capacity_j_molk": 25.1,
+    "specific_heat_j_gK": 0.131,
+    "latent_heat_fusion_kj_mol": 26.1,
+    "latent_heat_vaporization_kj_mol": 604,
+    "fusion_heat_kj_mol": 41.1,
+    "evaporation_heat_kj_mol": 563.6
+  },
+  "kinetics_and_phase": {
+    "vapor_pressure_constants": {
+      "A": 5.15,
+      "B": 31000,
+      "C": -10
+    },
+    "vapor_pressure_pa": null,
+    "viscosity_liquid_pas": null,
+    "viscosity_pa_s": null,
+    "critical_temp_K": null,
+    "critical_press_MPa": null,
+    "surface_tension_nm": 2.25
+  },
+  "electromagnetism_and_mechanics": {
+    "thermal_conductivity_wmk": 147,
+    "electrical_conductivity_sm": 19000000,
+    "magnetic_susceptibility": 1.3e-05,
+    "thermal_expansion_coefficient": 6.4e-06,
+    "polarizability_angstrom3": 7.6,
+    "refractive_index": null,
+    "youngs_modulus_gba": 528,
+    "poisson_ratio": 0.26,
+    "brinell_hardness_m_pa": 1670
+  },
+  "reactivity": {
+    "max_bonds": 6,
+    "geometry_preference_es": "Octaédrica",
+    "geometry_preference_eng": "Octahedral",
+    "ideal_bond_angle": 90,
+    "bond_energy_ev": null,
+    "dissociation_energy_kj_mol": null,
+    "standard_potential_v": 1.156,
+    "oxidation_states": [
+      9,
+      8,
+      7,
+      6,
+      5,
+      4,
+      3,
+      2,
+      1,
+      0,
+      -1,
+      -3
+    ],
+    "common_ions": [
+      "Ir4+",
+      "Ir3+"
+    ]
+  },
+  "nuclear_and_environmental": {
+    "isotopes": [
+      {
+        "mass": 190.961,
+        "abundance": 37.3,
+        "stable": true,
+        "name_es": "Iridio-191",
+        "name_eng": "Iridium-191"
+      },
+      {
+        "mass": 192.963,
+        "abundance": 62.7,
+        "stable": true,
+        "name_es": "Iridio-193",
+        "name_eng": "Iridium-193"
+      },
+      {
+        "mass": 191.962,
+        "abundance": null,
+        "stable": false,
+        "half_life_s": 6378000,
+        "name_es": "Iridio-192",
+        "name_eng": "Iridium-192"
+      }
+    ],
+    "neutron_cross_section_barns": 425,
+    "nuclear_binding_energy_mev": 7.923,
+    "abundance_crust_mg_kg": 0.001,
+    "toxicity_level": 1
+  },
+  "cryogenic_data": {
+    "critical_solidification_pressure_mpa": null,
+    "lambda_point_k": null,
+    "superfluid_viscosity_pas": null
+  }
+}

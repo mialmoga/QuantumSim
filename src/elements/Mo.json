@@ -1,0 +1,163 @@
+{
+  "symbol": "Mo",
+  "identity": {
+    "name_es": "Molibdeno",
+    "name_eng": "Molybdenum",
+    "number": 42,
+    "category_es": "Metal de transición",
+    "category_eng": "Transition metal",
+    "color": "0xB0B0B0",
+    "cpk_color": "0x54B5B5",
+    "discovery_year": "1778"
+  },
+  "physical_properties": {
+    "mass": 95.95,
+    "density_g_cm3": 10.28,
+    "standard_state_es": "Sólido",
+    "standard_state_eng": "Solid",
+    "melt_K": 2896,
+    "boil_K": 4912,
+    "allotropes_es": null,
+    "allotropes_eng": null,
+    "lattice_structure": "bcc"
+  },
+  "atomic_structure": {
+    "electronegativity": 2.16,
+    "valence": 6,
+    "ionization_energy_eV": 7.0924,
+    "electron_affinity_ev": 0.746,
+    "electron_affinity_kj_mol": 71.9,
+    "radius_atomic_pm": 139,
+    "radius_covalent_pm": 154,
+    "vanderwaals_radius_pm": 209,
+    "ionic_radius_pm": 65,
+    "effective_nuclear_charge": 5.43,
+    "electron_configuration_string": "[Kr] 4d5 5s1",
+    "shells": [
+      2,
+      8,
+      18,
+      13,
+      1
+    ],
+    "quantum_numbers": {
+      "s": 1,
+      "p": 0,
+      "d": 5,
+      "f": 0
+    },
+    "work_function_ev": 4.6
+  },
+  "thermodynamics": {
+    "enthalpy_formation_kj_mol": 0,
+    "entropy_j_molk": 28.66,
+    "heat_capacity_j_molk": 24.06,
+    "specific_heat_j_gK": 0.251,
+    "latent_heat_fusion_kj_mol": 37.48,
+    "latent_heat_vaporization_kj_mol": 594.1,
+    "fusion_heat_kj_mol": 32,
+    "evaporation_heat_kj_mol": 598
+  },
+  "kinetics_and_phase": {
+    "vapor_pressure_constants": {
+      "A": 5.15,
+      "B": 29800,
+      "C": -10
+    },
+    "vapor_pressure_pa": null,
+    "viscosity_liquid_pas": 0.005,
+    "viscosity_pa_s": null,
+    "critical_temp_K": null,
+    "critical_press_MPa": null,
+    "surface_tension_nm": 2.25
+  },
+  "electromagnetism_and_mechanics": {
+    "thermal_conductivity_wmk": 138,
+    "electrical_conductivity_sm": 18000000,
+    "magnetic_susceptibility": 8.9e-05,
+    "thermal_expansion_coefficient": 4.8e-06,
+    "polarizability_angstrom3": 12.8,
+    "refractive_index": null,
+    "youngs_modulus_gba": 329,
+    "poisson_ratio": 0.31,
+    "brinell_hardness_m_pa": 1500
+  },
+  "reactivity": {
+    "max_bonds": 6,
+    "geometry_preference_es": "Octaédrica",
+    "geometry_preference_eng": "Octahedral",
+    "ideal_bond_angle": null,
+    "bond_energy_ev": null,
+    "dissociation_energy_kj_mol": null,
+    "standard_potential_v": -0.2,
+    "oxidation_states": [
+      6,
+      4
+    ],
+    "common_ions": [
+      "MoO4 2-"
+    ]
+  },
+  "nuclear_and_environmental": {
+    "isotopes": [
+      {
+        "mass": 91.906,
+        "abundance": 14.84,
+        "stable": true,
+        "name_es": "Molibdeno-92",
+        "name_eng": "Molybdenum-92"
+      },
+      {
+        "mass": 93.905,
+        "abundance": 9.25,
+        "stable": true,
+        "name_es": "Molibdeno-94",
+        "name_eng": "Molybdenum-94"
+      },
+      {
+        "mass": 94.905,
+        "abundance": 15.92,
+        "stable": true,
+        "name_es": "Molibdeno-95",
+        "name_eng": "Molybdenum-95"
+      },
+      {
+        "mass": 95.904,
+        "abundance": 16.68,
+        "stable": true,
+        "name_es": "Molibdeno-96",
+        "name_eng": "Molybdenum-96"
+      },
+      {
+        "mass": 96.906,
+        "abundance": 9.55,
+        "stable": true,
+        "name_es": "Molibdeno-97",
+        "name_eng": "Molybdenum-97"
+      },
+      {
+        "mass": 97.905,
+        "abundance": 24.13,
+        "stable": true,
+        "name_es": "Molibdeno-98",
+        "name_eng": "Molybdenum-98"
+      },
+      {
+        "mass": 99.907,
+        "abundance": 9.63,
+        "stable": true,
+        "name_es": "Molibdeno-100",
+        "name_eng": "Molybdenum-100"
+      }
+    ],
+    "neutron_cross_section_barns": 2.48,
+    "nuclear_binding_energy_mev": 8.657,
+    "abundance_crust_mg_kg": 1.2,
+    "toxicity_level": 1
+  },
+  "cryogenic_data": {
+    "critical_solidification_pressure_mpa": null,
+    "lambda_point_k": 0.92,
+    "superfluid_viscosity_pas": null
+  }
+}

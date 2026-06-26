@@ -1,0 +1,48 @@
+{
+  "symbol": "Po",
+  "generated_by": "generate_materials.py v1.2 (Stevens perceptual)",
+  "source_props": {
+    "mass": 209,
+    "melt_K": 527,
+    "density": 9.32,
+    "ionization_eV": 8.417,
+    "electronegativity": 2,
+    "polarizability": 6.5,
+    "standard_state": "Solid"
+  },
+  "shader_params": {
+    "sphere_pulse": {
+      "freq": 0.692,
+      "amp": 0.367
+    },
+    "blink": {
+      "amp": 0.0,
+      "speed": 0.208
+    },
+    "brightness": {
+      "bright": 1.265,
+      "base": 0.3,
+      "vari": 0.0
+    },
+    "disc_shape": {
+      "soft": 0.291,
+      "radius": 0.22,
+      "ring": 0.0
+    },
+    "point_size": {
+      "sz": 0.327,
+      "bAmp": 0.0,
+      "persp": 65.9
+    },
+    "alpha_curve": {
+      "opacity": 0.932,
+      "curve": 1.034,
+      "floor": 0.0
+    },
+    "color": {
+      "r": 0.6588,
+      "g": 0.6588,
+      "b": 0.6275
+    }
+  }
+}

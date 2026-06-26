@@ -1,0 +1,48 @@
+{
+  "symbol": "Tc",
+  "generated_by": "generate_materials.py v1.2 (Stevens perceptual)",
+  "source_props": {
+    "mass": 98,
+    "melt_K": 2430,
+    "density": 11,
+    "ionization_eV": 7.28,
+    "electronegativity": 1.9,
+    "polarizability": 11.4,
+    "standard_state": "Solid"
+  },
+  "shader_params": {
+    "sphere_pulse": {
+      "freq": 1.01,
+      "amp": 0.295
+    },
+    "blink": {
+      "amp": 0.0,
+      "speed": 0.303
+    },
+    "brightness": {
+      "bright": 1.08,
+      "base": 0.3,
+      "vari": 0.0
+    },
+    "disc_shape": {
+      "soft": 0.304,
+      "radius": 0.22,
+      "ring": 0.0
+    },
+    "point_size": {
+      "sz": 0.348,
+      "bAmp": 0.0,
+      "persp": 69.8
+    },
+    "alpha_curve": {
+      "opacity": 0.945,
+      "curve": 1.028,
+      "floor": 0.0
+    },
+    "color": {
+      "r": 0.6902,
+      "g": 0.6902,
+      "b": 0.6902
+    }
+  }
+}

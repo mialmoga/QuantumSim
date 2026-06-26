@@ -1,0 +1,38 @@
+{
+  "id": "turbulence",
+  "name": "Turbulencia",
+  "stage": "vert",
+  "target": [
+    "orbital",
+    "sphere"
+  ],
+  "color": "#a78bfa",
+  "desc": "Desplazamiento sinusoidal de posici\u00f3n en tiempo real",
+  "sub": "wpos += sin(pos\u00b7f + t) \u00b7 amp",
+  "params": {
+    "freq": {
+      "label": "Frecuencia",
+      "min": 0.001,
+      "max": 0.03,
+      "step": 0.001,
+      "val": 0.005
+    },
+    "amp": {
+      "label": "Amp pm",
+      "min": 0.0,
+      "max": 10.0,
+      "step": 0.5,
+      "val": 0.5
+    },
+    "tMul": {
+      "label": "Time mult",
+      "min": 0.0,
+      "max": 2.0,
+      "step": 0.05,
+      "val": 0.2
+    }
+  },
+  "glsl": "{float _tb=sin(position.x*{{freq}}+uTime*{{tMul}})*sin(position.y*{{freq}}+uTime*{{tMul}}*0.7)*{{amp}};wpos+=vec3(_tb,_tb*0.6,_tb*0.4);mvP=modelViewMatrix*vec4(wpos,1.0);}",
+  "requires": [],
+  "provides": []
+}

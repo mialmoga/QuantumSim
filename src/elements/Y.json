@@ -1,0 +1,134 @@
+{
+  "symbol": "Y",
+  "identity": {
+    "name_es": "Itrio",
+    "name_eng": "Yttrium",
+    "number": 39,
+    "category_es": "Metal de transición",
+    "category_eng": "Transition metal",
+    "color": "0xC8C8C8",
+    "cpk_color": "0x94FFFF",
+    "discovery_year": "1794"
+  },
+  "physical_properties": {
+    "mass": 88.905,
+    "density_g_cm3": 4.472,
+    "standard_state_es": "Sólido",
+    "standard_state_eng": "Solid",
+    "melt_K": 1799,
+    "boil_K": 3609,
+    "allotropes_es": [
+      "Alfa (hcp)",
+      "Beta (bcc)"
+    ],
+    "allotropes_eng": [
+      "Alpha (hcp)",
+      "Beta (bcc)"
+    ],
+    "lattice_structure": "hcp"
+  },
+  "atomic_structure": {
+    "electronegativity": 1.22,
+    "valence": 3,
+    "ionization_energy_eV": 6.2171,
+    "electron_affinity_ev": 0.307,
+    "electron_affinity_kj_mol": 29.6,
+    "radius_atomic_pm": 180,
+    "radius_covalent_pm": 190,
+    "vanderwaals_radius_pm": 219,
+    "ionic_radius_pm": 90,
+    "effective_nuclear_charge": 5.4,
+    "electron_configuration_string": "[Kr] 4d1 5s2",
+    "shells": [
+      2,
+      8,
+      18,
+      9,
+      2
+    ],
+    "quantum_numbers": {
+      "s": 2,
+      "p": 0,
+      "d": 1,
+      "f": 0
+    },
+    "work_function_ev": 3.1
+  },
+  "thermodynamics": {
+    "enthalpy_formation_kj_mol": 0,
+    "entropy_j_molk": 44.43,
+    "heat_capacity_j_molk": 26.53,
+    "specific_heat_j_gK": 0.298,
+    "latent_heat_fusion_kj_mol": 11.4,
+    "latent_heat_vaporization_kj_mol": 363,
+    "fusion_heat_kj_mol": 11.4,
+    "evaporation_heat_kj_mol": 365
+  },
+  "kinetics_and_phase": {
+    "vapor_pressure_constants": {
+      "A": 5,
+      "B": 19000,
+      "C": -10
+    },
+    "vapor_pressure_pa": null,
+    "viscosity_liquid_pas": null,
+    "viscosity_pa_s": null,
+    "critical_temp_K": null,
+    "critical_press_MPa": null,
+    "surface_tension_nm": 0.724
+  },
+  "electromagnetism_and_mechanics": {
+    "thermal_conductivity_wmk": 17.2,
+    "electrical_conductivity_sm": 1800000,
+    "magnetic_susceptibility": 0.000191,
+    "thermal_expansion_coefficient": 1.06e-05,
+    "polarizability_angstrom3": 22.7,
+    "refractive_index": null,
+    "youngs_modulus_gba": 63.5,
+    "poisson_ratio": 0.24,
+    "brinell_hardness_m_pa": 589
+  },
+  "reactivity": {
+    "max_bonds": 3,
+    "geometry_preference_es": "Octaédrica",
+    "geometry_preference_eng": "Octahedral",
+    "ideal_bond_angle": null,
+    "bond_energy_ev": null,
+    "dissociation_energy_kj_mol": 160,
+    "standard_potential_v": -2.372,
+    "oxidation_states": [
+      3
+    ],
+    "common_ions": [
+      "Y3+"
+    ]
+  },
+  "nuclear_and_environmental": {
+    "isotopes": [
+      {
+        "mass": 88.905,
+        "abundance": 100,
+        "stable": true,
+        "name_es": "Itrio-89",
+        "name_eng": "Yttrium-89"
+      },
+      {
+        "mass": 89.907,
+        "abundance": null,
+        "stable": false,
+        "half_life_s": 230400,
+        "name_es": "Itrio-90",
+        "name_eng": "Yttrium-90"
+      }
+    ],
+    "neutron_cross_section_barns": 1.28,
+    "nuclear_binding_energy_mev": 8.71,
+    "abundance_crust_mg_kg": 33,
+    "toxicity_level": 1
+  },
+  "cryogenic_data": {
+    "critical_solidification_pressure_mpa": null,
+    "lambda_point_k": null,
+    "superfluid_viscosity_pas": null
+  }
+}

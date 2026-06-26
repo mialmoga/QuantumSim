@@ -1,0 +1,141 @@
+{
+  "symbol": "O",
+  "identity": {
+    "name_es": "Oxígeno",
+    "name_eng": "Oxygen",
+    "number": 8,
+    "category_es": "No metal reactivo",
+    "category_eng": "Reactive nonmetal",
+    "color": "0xC8D8E8",
+    "cpk_color": "0xFF0D0D",
+    "discovery_year": "1774"
+  },
+  "physical_properties": {
+    "mass": 15.999,
+    "density_g_cm3": 0.001429,
+    "standard_state_es": "Gas",
+    "standard_state_eng": "Gas",
+    "melt_K": 54.36,
+    "boil_K": 90.19,
+    "allotropes_es": [
+      "Dioxígeno (O2)",
+      "Ozono (O3)",
+      "Oxígeno sólido (fases alfa a delta)"
+    ],
+    "allotropes_eng": [
+      "Dioxygen (O2)",
+      "Ozone (O3)",
+      "Solid oxygen (alpha to delta phases)"
+    ],
+    "lattice_structure": "cubic"
+  },
+  "atomic_structure": {
+    "electronegativity": 3.44,
+    "valence": 2,
+    "ionization_energy_eV": 13.6181,
+    "electron_affinity_ev": 1.4611,
+    "electron_affinity_kj_mol": 141,
+    "radius_atomic_pm": 60,
+    "radius_covalent_pm": 73,
+    "vanderwaals_radius_pm": 152,
+    "ionic_radius_pm": 140,
+    "effective_nuclear_charge": 4.453,
+    "electron_configuration_string": "1s2 2s2 2p4",
+    "shells": [
+      2,
+      6
+    ],
+    "quantum_numbers": {
+      "s": 1,
+      "p": 1,
+      "d": 0,
+      "f": 0
+    },
+    "work_function_ev": null
+  },
+  "thermodynamics": {
+    "enthalpy_formation_kj_mol": 0,
+    "entropy_j_molk": 205.15,
+    "heat_capacity_j_molk": 29.378,
+    "specific_heat_j_gK": 0.918,
+    "latent_heat_fusion_kj_mol": 0.444,
+    "latent_heat_vaporization_kj_mol": 6.82,
+    "fusion_heat_kj_mol": 0.222,
+    "evaporation_heat_kj_mol": 3.41
+  },
+  "kinetics_and_phase": {
+    "vapor_pressure_constants": {
+      "A": 3.858,
+      "B": 319,
+      "C": -6.7
+    },
+    "vapor_pressure_pa": null,
+    "viscosity_liquid_pas": 0.000189,
+    "viscosity_pa_s": 2.04e-05,
+    "critical_temp_K": 154.58,
+    "critical_press_MPa": 5.04,
+    "surface_tension_nm": 0.0132
+  },
+  "electromagnetism_and_mechanics": {
+    "thermal_conductivity_wmk": 0.02658,
+    "electrical_conductivity_sm": null,
+    "magnetic_susceptibility": 3.44e-06,
+    "thermal_expansion_coefficient": null,
+    "polarizability_angstrom3": 0.802,
+    "refractive_index": 1.000271,
+    "youngs_modulus_gba": null,
+    "poisson_ratio": null,
+    "brinell_hardness_m_pa": null
+  },
+  "reactivity": {
+    "max_bonds": 2,
+    "geometry_preference_es": "Angular",
+    "geometry_preference_eng": "Bent",
+    "ideal_bond_angle": 104.5,
+    "bond_energy_ev": 5.15,
+    "dissociation_energy_kj_mol": 498,
+    "standard_potential_v": 1.229,
+    "oxidation_states": [
+      -2,
+      -1
+    ],
+    "common_ions": [
+      "O2-",
+      "OH-"
+    ]
+  },
+  "nuclear_and_environmental": {
+    "isotopes": [
+      {
+        "mass": 15.994,
+        "abundance": 99.762,
+        "stable": true,
+        "name_es": "Oxígeno-16",
+        "name_eng": "Oxygen-16"
+      },
+      {
+        "mass": 16.999,
+        "abundance": 0.038,
+        "stable": true,
+        "name_es": "Oxígeno-17",
+        "name_eng": "Oxygen-17"
+      },
+      {
+        "mass": 17.999,
+        "abundance": 0.2,
+        "stable": true,
+        "name_es": "Oxígeno-18",
+        "name_eng": "Oxygen-18"
+      }
+    ],
+    "neutron_cross_section_barns": 0.00027,
+    "nuclear_binding_energy_mev": 7.976,
+    "abundance_crust_mg_kg": 461000,
+    "toxicity_level": 0
+  },
+  "cryogenic_data": {
+    "critical_solidification_pressure_mpa": null,
+    "lambda_point_k": null,
+    "superfluid_viscosity_pas": null
+  }
+}

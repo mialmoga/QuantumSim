@@ -1,0 +1,169 @@
+{
+  "symbol": "Cd",
+  "identity": {
+    "name_es": "Cadmio",
+    "name_eng": "Cadmium",
+    "number": 48,
+    "category_es": "Metal de transición",
+    "category_eng": "Transition metal",
+    "color": "0xD0D0C8",
+    "cpk_color": "0xFFD98F",
+    "discovery_year": "1817"
+  },
+  "physical_properties": {
+    "mass": 112.414,
+    "density_g_cm3": 8.65,
+    "standard_state_es": "Sólido",
+    "standard_state_eng": "Solid",
+    "melt_K": 594.22,
+    "boil_K": 1040,
+    "allotropes_es": null,
+    "allotropes_eng": null,
+    "lattice_structure": "hcp"
+  },
+  "atomic_structure": {
+    "electronegativity": 1.69,
+    "valence": 2,
+    "ionization_energy_eV": 8.9938,
+    "electron_affinity_ev": 0,
+    "electron_affinity_kj_mol": 0,
+    "radius_atomic_pm": 151,
+    "radius_covalent_pm": 144,
+    "vanderwaals_radius_pm": 158,
+    "ionic_radius_pm": 95,
+    "effective_nuclear_charge": 5.89,
+    "electron_configuration_string": "[Kr] 4d10 5s2",
+    "shells": [
+      2,
+      8,
+      18,
+      18,
+      2
+    ],
+    "quantum_numbers": {
+      "s": 2,
+      "p": 0,
+      "d": 10,
+      "f": 0
+    },
+    "work_function_ev": 4.08
+  },
+  "thermodynamics": {
+    "enthalpy_formation_kj_mol": 0,
+    "entropy_j_molk": 51.8,
+    "heat_capacity_j_molk": 26.02,
+    "specific_heat_j_gK": 0.232,
+    "latent_heat_fusion_kj_mol": 6.21,
+    "latent_heat_vaporization_kj_mol": 99.87,
+    "fusion_heat_kj_mol": 6.19,
+    "evaporation_heat_kj_mol": 100
+  },
+  "kinetics_and_phase": {
+    "vapor_pressure_constants": {
+      "A": 5.1,
+      "B": 5700,
+      "C": -10
+    },
+    "vapor_pressure_pa": null,
+    "viscosity_liquid_pas": 0.00245,
+    "viscosity_pa_s": null,
+    "critical_temp_K": null,
+    "critical_press_MPa": null,
+    "surface_tension_nm": 0.63
+  },
+  "electromagnetism_and_mechanics": {
+    "thermal_conductivity_wmk": 96.6,
+    "electrical_conductivity_sm": 14300000,
+    "magnetic_susceptibility": -1.98e-05,
+    "thermal_expansion_coefficient": 3.08e-05,
+    "polarizability_angstrom3": 7.2,
+    "refractive_index": null,
+    "youngs_modulus_gba": 50,
+    "poisson_ratio": 0.3,
+    "brinell_hardness_m_pa": 203
+  },
+  "reactivity": {
+    "max_bonds": 2,
+    "geometry_preference_es": "Tetraédrica",
+    "geometry_preference_eng": "Tetrahedral",
+    "ideal_bond_angle": 109.5,
+    "bond_energy_ev": 0.08,
+    "dissociation_energy_kj_mol": 8,
+    "standard_potential_v": -0.403,
+    "oxidation_states": [
+      2
+    ],
+    "common_ions": [
+      "Cd2+"
+    ]
+  },
+  "nuclear_and_environmental": {
+    "isotopes": [
+      {
+        "mass": 105.906,
+        "abundance": 1.25,
+        "stable": true,
+        "name_es": "Cadmio-106",
+        "name_eng": "Cadmium-106"
+      },
+      {
+        "mass": 107.904,
+        "abundance": 0.89,
+        "stable": true,
+        "name_es": "Cadmio-108",
+        "name_eng": "Cadmium-108"
+      },
+      {
+        "mass": 109.903,
+        "abundance": 12.49,
+        "stable": true,
+        "name_es": "Cadmio-110",
+        "name_eng": "Cadmium-110"
+      },
+      {
+        "mass": 110.904,
+        "abundance": 12.8,
+        "stable": true,
+        "name_es": "Cadmio-111",
+        "name_eng": "Cadmium-111"
+      },
+      {
+        "mass": 111.903,
+        "abundance": 24.13,
+        "stable": true,
+        "name_es": "Cadmio-112",
+        "name_eng": "Cadmium-112"
+      },
+      {
+        "mass": 112.904,
+        "abundance": 12.22,
+        "stable": true,
+        "name_es": "Cadmio-113",
+        "name_eng": "Cadmium-113"
+      },
+      {
+        "mass": 113.903,
+        "abundance": 28.73,
+        "stable": true,
+        "name_es": "Cadmio-114",
+        "name_eng": "Cadmium-114"
+      },
+      {
+        "mass": 115.905,
+        "abundance": 7.49,
+        "stable": true,
+        "name_es": "Cadmio-116",
+        "name_eng": "Cadmium-116"
+      }
+    ],
+    "neutron_cross_section_barns": 2520,
+    "nuclear_binding_energy_mev": 8.528,
+    "abundance_crust_mg_kg": 0.15,
+    "toxicity_level": 4
+  },
+  "cryogenic_data": {
+    "critical_solidification_pressure_mpa": null,
+    "lambda_point_k": 0.517,
+    "superfluid_viscosity_pas": null
+  }
+}

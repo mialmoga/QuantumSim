@@ -1,0 +1,106 @@
+🗿 aquí van todos:
+
+# ══════════════════════════════════════════════════════════════
+#  ENTRENAMIENTO
+# ══════════════════════════════════════════════════════════════
+
+# Entrenar desde cero con todos los presets disponibles
+uv run --python 3.12 --with numpy generate_materials_ml.py --train-only
+
+# Entrenar con más épocas y learning rate ajustado
+uv run --python 3.12 --with numpy generate_materials_ml.py --train-only --epochs 10000 --lr 1e-4
+
+# Entrenar y guardar weights con nombre específico
+uv run --python 3.12 --with numpy generate_materials_ml.py --train-only --save mi_modelo.json
+
+# ══════════════════════════════════════════════════════════════
+#  GENERACIÓN — CUSTOM ML (default)
+#  → shaderLab/shader_{sym}.json  (element: "Fe")
+# ══════════════════════════════════════════════════════════════
+
+# Generar los 118 elementos con weights existentes
+uv run --python 3.12 --with numpy generate_materials_ml.py --load model_weights.json
+
+# Generar solo algunos elementos
+uv run --python 3.12 --with numpy generate_materials_ml.py --load model_weights.json --only Fe Cu Au Xe U
+
+# Ver qué generaría sin guardar nada
+uv run --python 3.12 --with numpy generate_materials_ml.py --load model_weights.json --dry-run
+
+# No sobreescribir los que ya existen
+uv run --python 3.12 --with numpy generate_materials_ml.py --load model_weights.json --skip-existing
+
+# Directorio de salida personalizado
+uv run --python 3.12 --with numpy generate_materials_ml.py --load model_weights.json --out mi_carpeta
+
+# ══════════════════════════════════════════════════════════════
+#  GENERACIÓN — BUILT-IN
+#  → src/materials/{sym}_ml.json  (element: null)
+# ══════════════════════════════════════════════════════════════
+
+# Generar built-ins para todos los elementos
+uv run --python 3.12 --with numpy generate_materials_ml.py --load model_weights.json --built-in
+
+# Built-ins solo para algunos
+uv run --python 3.12 --with numpy generate_materials_ml.py --load model_weights.json --built-in --only Fe Au
+
+# ══════════════════════════════════════════════════════════════
+#  GENERACIÓN — CREATIVE 🎲
+#  → shaderLab/shader_{sym}_creative.json
+# ══════════════════════════════════════════════════════════════
+
+# Creative con seed por símbolo (reproducible, diferente para cada elemento)
+uv run --python 3.12 --with numpy generate_materials_ml.py --load model_weights.json --custom-ml --creative
+
+# Creative con seed global fijo (todos los elementos usan el mismo seed)
+uv run --python 3.12 --with numpy generate_materials_ml.py --load model_weights.json --custom-ml --creative --seed 42
+
+# Explorar variaciones — mismo modelo, diferentes semillas
+uv run --python 3.12 --with numpy generate_materials_ml.py --load model_weights.json --custom-ml --creative --seed 1337
+uv run --python 3.12 --with numpy generate_materials_ml.py --load model_weights.json --custom-ml --creative --seed 666
+uv run --python 3.12 --with numpy generate_materials_ml.py --load model_weights.json --custom-ml --creative --seed 9999
+
+# Ver qué inventaría antes de guardar
+uv run --python 3.12 --with numpy generate_materials_ml.py --load model_weights.json --custom-ml --creative --seed 42 --dry-run
+
+# Solo para unos pocos antes de lanzar los 118
+uv run --python 3.12 --with numpy generate_materials_ml.py --load model_weights.json --custom-ml --creative --seed 42 --only Fe Au Xe U Og
+
+# ══════════════════════════════════════════════════════════════
+#  MÓDULO JS DE INFERENCIA
+#  → shaderLab/shader_ml.js  (para usar en el simulador)
+# ══════════════════════════════════════════════════════════════
+
+# Generar el JS (re-entrena también)
+uv run --python 3.12 --with numpy generate_materials_ml.py --js shaderLab/shader_ml.js
+
+# Generar el JS con weights existentes (sin reentrenar)
+uv run --python 3.12 --with numpy generate_materials_ml.py --load model_weights.json --train-only --js shaderLab/shader_ml.js
+
+# ══════════════════════════════════════════════════════════════
+#  TESTS
+# ══════════════════════════════════════════════════════════════
+
+# Verificar que todo el pipeline funciona correctamente
+uv run --python 3.12 --with numpy generate_materials_ml.py --test
+
+# ══════════════════════════════════════════════════════════════
+#  FLUJO COMPLETO RECOMENDADO
+# ══════════════════════════════════════════════════════════════
+
+# 1. Entrenar
+uv run --python 3.12 --with numpy generate_materials_ml.py --train-only
+
+# 2. Ver dry-run para validar
+uv run --python 3.12 --with numpy generate_materials_ml.py --load model_weights.json --dry-run --only H Fe Au Xe U Og
+
+# 3. Generar los 118
+uv run --python 3.12 --with numpy generate_materials_ml.py --load model_weights.json
+
+# 4. Generar JS para el simulador
+uv run --python 3.12 --with numpy generate_materials_ml.py --load model_weights.json --train-only --js shaderLab/shader_ml.js
+
+# 5. A ver qué se inventó 🎲
+uv run --python 3.12 --with numpy generate_materials_ml.py --load model_weights.json --custom-ml --creative --seed 42 --only H Fe Au Xe U Og --dry-run
+
+🗿

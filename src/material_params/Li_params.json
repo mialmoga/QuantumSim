@@ -1,0 +1,48 @@
+{
+  "symbol": "Li",
+  "generated_by": "generate_materials.py v1.2 (Stevens perceptual)",
+  "source_props": {
+    "mass": 6.94,
+    "melt_K": 453.65,
+    "density": 0.534,
+    "ionization_eV": 5.3917,
+    "electronegativity": 0.98,
+    "polarizability": 24.33,
+    "standard_state": "Solid"
+  },
+  "shader_params": {
+    "sphere_pulse": {
+      "freq": 3.796,
+      "amp": 0.376
+    },
+    "blink": {
+      "amp": 0.0,
+      "speed": 1.139
+    },
+    "brightness": {
+      "bright": 0.701,
+      "base": 0.3,
+      "vari": 0.0
+    },
+    "disc_shape": {
+      "soft": 0.416,
+      "radius": 0.22,
+      "ring": 0.0
+    },
+    "point_size": {
+      "sz": 0.403,
+      "bAmp": 0.0,
+      "persp": 62.8
+    },
+    "alpha_curve": {
+      "opacity": 0.712,
+      "curve": 1.144,
+      "floor": 0.0
+    },
+    "color": {
+      "r": 0.7843,
+      "g": 0.7843,
+      "b": 0.7843
+    }
+  }
+}

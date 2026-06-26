@@ -1,0 +1,126 @@
+{
+  "symbol": "Al",
+  "identity": {
+    "name_es": "Aluminio",
+    "name_eng": "Aluminium",
+    "number": 13,
+    "category_es": "Metal del bloque p",
+    "category_eng": "Post-transition metal",
+    "color": "0xC0C0C8",
+    "cpk_color": "0xBFA6A6",
+    "discovery_year": "1825"
+  },
+  "physical_properties": {
+    "mass": 26.982,
+    "density_g_cm3": 2.7,
+    "standard_state_es": "Sólido",
+    "standard_state_eng": "Solid",
+    "melt_K": 933.47,
+    "boil_K": 2792,
+    "allotropes_es": null,
+    "allotropes_eng": null,
+    "lattice_structure": "fcc"
+  },
+  "atomic_structure": {
+    "electronegativity": 1.61,
+    "valence": 3,
+    "ionization_energy_eV": 5.9858,
+    "electron_affinity_ev": 0.432,
+    "electron_affinity_kj_mol": 41.7,
+    "radius_atomic_pm": 143,
+    "radius_covalent_pm": 121,
+    "vanderwaals_radius_pm": 184,
+    "ionic_radius_pm": 54,
+    "effective_nuclear_charge": 4.066,
+    "electron_configuration_string": "1s2 2s2 2p6 3s2 3p1",
+    "shells": [
+      2,
+      8,
+      3
+    ],
+    "quantum_numbers": {
+      "s": 2,
+      "p": 2,
+      "d": 0,
+      "f": 0
+    },
+    "work_function_ev": 4.28
+  },
+  "thermodynamics": {
+    "enthalpy_formation_kj_mol": 0,
+    "entropy_j_molk": 28.3,
+    "heat_capacity_j_molk": 24.2,
+    "specific_heat_j_gK": 0.897,
+    "latent_heat_fusion_kj_mol": 10.7,
+    "latent_heat_vaporization_kj_mol": 284,
+    "fusion_heat_kj_mol": 10.71,
+    "evaporation_heat_kj_mol": 294
+  },
+  "kinetics_and_phase": {
+    "vapor_pressure_constants": {
+      "A": 5.176,
+      "B": 16450,
+      "C": -10
+    },
+    "vapor_pressure_pa": null,
+    "viscosity_liquid_pas": 0.00132,
+    "viscosity_pa_s": null,
+    "critical_temp_K": null,
+    "critical_press_MPa": null,
+    "surface_tension_nm": 0.865
+  },
+  "electromagnetism_and_mechanics": {
+    "thermal_conductivity_wmk": 235,
+    "electrical_conductivity_sm": 37700000,
+    "magnetic_susceptibility": 1.65e-05,
+    "thermal_expansion_coefficient": 2.31e-05,
+    "polarizability_angstrom3": 6.8,
+    "refractive_index": null,
+    "youngs_modulus_gba": 70,
+    "poisson_ratio": 0.35,
+    "brinell_hardness_m_pa": 245
+  },
+  "reactivity": {
+    "max_bonds": 3,
+    "geometry_preference_es": "Red fcc / Octaédrica",
+    "geometry_preference_eng": "fcc Lattice / Octahedral",
+    "ideal_bond_angle": null,
+    "bond_energy_ev": 1.5,
+    "dissociation_energy_kj_mol": 133,
+    "standard_potential_v": -1.662,
+    "oxidation_states": [
+      3
+    ],
+    "common_ions": [
+      "Al3+"
+    ]
+  },
+  "nuclear_and_environmental": {
+    "isotopes": [
+      {
+        "mass": 25.986,
+        "abundance": null,
+        "stable": false,
+        "half_life_s": 22600000000000,
+        "name_es": "Aluminio-26",
+        "name_eng": "Aluminium-26"
+      },
+      {
+        "mass": 26.981,
+        "abundance": 100,
+        "stable": true,
+        "name_es": "Aluminio-27",
+        "name_eng": "Aluminium-27"
+      }
+    ],
+    "neutron_cross_section_barns": 0.231,
+    "nuclear_binding_energy_mev": 8.33,
+    "abundance_crust_mg_kg": 82300,
+    "toxicity_level": 1
+  },
+  "cryogenic_data": {
+    "critical_solidification_pressure_mpa": null,
+    "lambda_point_k": null,
+    "superfluid_viscosity_pas": null
+  }
+}

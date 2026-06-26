@@ -1,0 +1,48 @@
+{
+  "symbol": "Mn",
+  "generated_by": "generate_materials.py v1.2 (Stevens perceptual)",
+  "source_props": {
+    "mass": 54.938,
+    "melt_K": 1519,
+    "density": 7.47,
+    "ionization_eV": 7.434,
+    "electronegativity": 1.55,
+    "polarizability": 9.4,
+    "standard_state": "Solid"
+  },
+  "shader_params": {
+    "sphere_pulse": {
+      "freq": 1.349,
+      "amp": 0.314
+    },
+    "blink": {
+      "amp": 0.0,
+      "speed": 0.405
+    },
+    "brightness": {
+      "bright": 1.106,
+      "base": 0.3,
+      "vari": 0.0
+    },
+    "disc_shape": {
+      "soft": 0.346,
+      "radius": 0.22,
+      "ring": 0.0
+    },
+    "point_size": {
+      "sz": 0.339,
+      "bAmp": 0.0,
+      "persp": 65.6
+    },
+    "alpha_curve": {
+      "opacity": 0.915,
+      "curve": 1.043,
+      "floor": 0.0
+    },
+    "color": {
+      "r": 0.6902,
+      "g": 0.6588,
+      "b": 0.6275
+    }
+  }
+}

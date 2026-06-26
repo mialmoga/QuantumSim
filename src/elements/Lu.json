@@ -1,0 +1,129 @@
+{
+  "symbol": "Lu",
+  "identity": {
+    "name_es": "Lutecio",
+    "name_eng": "Lutetium",
+    "number": 71,
+    "category_es": "Lantánido",
+    "category_eng": "Lanthanide",
+    "color": "0xC0C0C0",
+    "cpk_color": "0x00AA24",
+    "discovery_year": "1907"
+  },
+  "physical_properties": {
+    "mass": 174.967,
+    "density_g_cm3": 9.84,
+    "standard_state_es": "Sólido",
+    "standard_state_eng": "Solid",
+    "melt_K": 1925,
+    "boil_K": 3675,
+    "allotropes_es": null,
+    "allotropes_eng": null,
+    "lattice_structure": "hcp"
+  },
+  "atomic_structure": {
+    "electronegativity": 1.27,
+    "valence": 3,
+    "ionization_energy_eV": 5.4259,
+    "electron_affinity_ev": 0.346,
+    "electron_affinity_kj_mol": 33.4,
+    "radius_atomic_pm": 173,
+    "radius_covalent_pm": 187,
+    "vanderwaals_radius_pm": 221,
+    "ionic_radius_pm": 86.1,
+    "effective_nuclear_charge": 6.3,
+    "electron_configuration_string": "[Xe] 4f14 5d1 6s2",
+    "shells": [
+      2,
+      8,
+      18,
+      32,
+      9,
+      2
+    ],
+    "quantum_numbers": {
+      "s": 2,
+      "p": 0,
+      "d": 1,
+      "f": 14
+    },
+    "work_function_ev": 3.3
+  },
+  "thermodynamics": {
+    "enthalpy_formation_kj_mol": 0,
+    "entropy_j_molk": 50.96,
+    "heat_capacity_j_molk": 26.86,
+    "specific_heat_j_gK": 0.154,
+    "latent_heat_fusion_kj_mol": 22,
+    "latent_heat_vaporization_kj_mol": 414,
+    "fusion_heat_kj_mol": 22,
+    "evaporation_heat_kj_mol": 355.9
+  },
+  "kinetics_and_phase": {
+    "vapor_pressure_constants": {
+      "A": 5.1,
+      "B": 22000,
+      "C": -10
+    },
+    "vapor_pressure_pa": null,
+    "viscosity_liquid_pas": null,
+    "viscosity_pa_s": null,
+    "critical_temp_K": null,
+    "critical_press_MPa": null,
+    "surface_tension_nm": 0.732
+  },
+  "electromagnetism_and_mechanics": {
+    "thermal_conductivity_wmk": 16.4,
+    "electrical_conductivity_sm": 1800000,
+    "magnetic_susceptibility": 1e-05,
+    "thermal_expansion_coefficient": 9.9e-06,
+    "polarizability_angstrom3": 21.9,
+    "refractive_index": null,
+    "youngs_modulus_gba": 68.6,
+    "poisson_ratio": 0.261,
+    "brinell_hardness_m_pa": 1160
+  },
+  "reactivity": {
+    "max_bonds": 3,
+    "geometry_preference_es": "Octaédrica",
+    "geometry_preference_eng": "Octahedral",
+    "ideal_bond_angle": null,
+    "bond_energy_ev": null,
+    "dissociation_energy_kj_mol": null,
+    "standard_potential_v": -2.28,
+    "oxidation_states": [
+      3
+    ],
+    "common_ions": [
+      "Lu3+"
+    ]
+  },
+  "nuclear_and_environmental": {
+    "isotopes": [
+      {
+        "mass": 174.94,
+        "abundance": 97.41,
+        "stable": true,
+        "name_es": "Lutecio-175",
+        "name_eng": "Lutetium-175"
+      },
+      {
+        "mass": 175.942,
+        "abundance": 2.59,
+        "stable": false,
+        "half_life_s": 1200000000000000000,
+        "name_es": "Lutecio-176",
+        "name_eng": "Lutetium-176"
+      }
+    ],
+    "neutron_cross_section_barns": 84,
+    "nuclear_binding_energy_mev": 8.093,
+    "abundance_crust_mg_kg": 0.8,
+    "toxicity_level": 1
+  },
+  "cryogenic_data": {
+    "critical_solidification_pressure_mpa": null,
+    "lambda_point_k": null,
+    "superfluid_viscosity_pas": null
+  }
+}

@@ -1,0 +1,48 @@
+{
+  "symbol": "Ag",
+  "generated_by": "generate_materials.py v1.2 (Stevens perceptual)",
+  "source_props": {
+    "mass": 107.868,
+    "melt_K": 1234.93,
+    "density": 10.49,
+    "ionization_eV": 7.5762,
+    "electronegativity": 1.93,
+    "polarizability": 7.9,
+    "standard_state": "Solid"
+  },
+  "shader_params": {
+    "sphere_pulse": {
+      "freq": 0.963,
+      "amp": 0.323
+    },
+    "blink": {
+      "amp": 0.0,
+      "speed": 0.289
+    },
+    "brightness": {
+      "bright": 1.13,
+      "base": 0.3,
+      "vari": 0.0
+    },
+    "disc_shape": {
+      "soft": 0.3,
+      "radius": 0.22,
+      "ring": 0.0
+    },
+    "point_size": {
+      "sz": 0.333,
+      "bAmp": 0.0,
+      "persp": 69.0
+    },
+    "alpha_curve": {
+      "opacity": 0.941,
+      "curve": 1.03,
+      "floor": 0.0
+    },
+    "color": {
+      "r": 0.8157,
+      "g": 0.8157,
+      "b": 0.8471
+    }
+  }
+}

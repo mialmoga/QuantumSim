@@ -1,0 +1,144 @@
+{
+  "symbol": "Cr",
+  "identity": {
+    "name_es": "Cromo",
+    "name_eng": "Chromium",
+    "number": 24,
+    "category_es": "Metal de transición",
+    "category_eng": "Transition metal",
+    "color": "0xC0C8D0",
+    "cpk_color": "0x8A99A2",
+    "discovery_year": "1797"
+  },
+  "physical_properties": {
+    "mass": 51.996,
+    "density_g_cm3": 7.19,
+    "standard_state_es": "Sólido",
+    "standard_state_eng": "Solid",
+    "melt_K": 2180,
+    "boil_K": 2944,
+    "allotropes_es": null,
+    "allotropes_eng": null,
+    "lattice_structure": "bcc"
+  },
+  "atomic_structure": {
+    "electronegativity": 1.66,
+    "valence": 6,
+    "ionization_energy_eV": 6.7665,
+    "electron_affinity_ev": 0.666,
+    "electron_affinity_kj_mol": 64.3,
+    "radius_atomic_pm": 128,
+    "radius_covalent_pm": 122,
+    "vanderwaals_radius_pm": 189,
+    "ionic_radius_pm": 52,
+    "effective_nuclear_charge": 5.205,
+    "electron_configuration_string": "[Ar] 3d5 4s1",
+    "shells": [
+      2,
+      8,
+      13,
+      1
+    ],
+    "quantum_numbers": {
+      "s": 2,
+      "p": 3,
+      "d": 5,
+      "f": 0
+    },
+    "work_function_ev": 4.5
+  },
+  "thermodynamics": {
+    "enthalpy_formation_kj_mol": 0,
+    "entropy_j_molk": 23.6,
+    "heat_capacity_j_molk": 23.35,
+    "specific_heat_j_gK": 0.449,
+    "latent_heat_fusion_kj_mol": 21,
+    "latent_heat_vaporization_kj_mol": 339,
+    "fusion_heat_kj_mol": 16.9,
+    "evaporation_heat_kj_mol": 344.3
+  },
+  "kinetics_and_phase": {
+    "vapor_pressure_constants": {
+      "A": 5.11,
+      "B": 20450,
+      "C": -10
+    },
+    "vapor_pressure_pa": null,
+    "viscosity_liquid_pas": null,
+    "viscosity_pa_s": null,
+    "critical_temp_K": null,
+    "critical_press_MPa": null,
+    "surface_tension_nm": 1.59
+  },
+  "electromagnetism_and_mechanics": {
+    "thermal_conductivity_wmk": 93.9,
+    "electrical_conductivity_sm": 7900000,
+    "magnetic_susceptibility": 0.000167,
+    "thermal_expansion_coefficient": 4.9e-06,
+    "polarizability_angstrom3": 11.6,
+    "refractive_index": null,
+    "youngs_modulus_gba": 279,
+    "poisson_ratio": 0.21,
+    "brinell_hardness_m_pa": 1060
+  },
+  "reactivity": {
+    "max_bonds": 6,
+    "geometry_preference_es": "Octaédrica",
+    "geometry_preference_eng": "Octahedral",
+    "ideal_bond_angle": null,
+    "bond_energy_ev": 1.6,
+    "dissociation_energy_kj_mol": null,
+    "standard_potential_v": -0.744,
+    "oxidation_states": [
+      6,
+      3,
+      2
+    ],
+    "common_ions": [
+      "Cr3+",
+      "CrO4 2-",
+      "Cr2O7 2-"
+    ]
+  },
+  "nuclear_and_environmental": {
+    "isotopes": [
+      {
+        "mass": 49.946,
+        "abundance": 4.345,
+        "stable": true,
+        "name_es": "Cromo-50",
+        "name_eng": "Chromium-50"
+      },
+      {
+        "mass": 51.94,
+        "abundance": 83.789,
+        "stable": true,
+        "name_es": "Cromo-52",
+        "name_eng": "Chromium-52"
+      },
+      {
+        "mass": 52.94,
+        "abundance": 9.501,
+        "stable": true,
+        "name_es": "Cromo-53",
+        "name_eng": "Chromium-53"
+      },
+      {
+        "mass": 53.938,
+        "abundance": 2.365,
+        "stable": true,
+        "name_es": "Cromo-54",
+        "name_eng": "Chromium-54"
+      }
+    ],
+    "neutron_cross_section_barns": 3.1,
+    "nuclear_binding_energy_mev": 8.775,
+    "abundance_crust_mg_kg": 102,
+    "toxicity_level": 3
+  },
+  "cryogenic_data": {
+    "critical_solidification_pressure_mpa": null,
+    "lambda_point_k": null,
+    "superfluid_viscosity_pas": null
+  }
+}

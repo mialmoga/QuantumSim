@@ -1,0 +1,48 @@
+{
+  "symbol": "Lu",
+  "generated_by": "generate_materials.py v1.2 (Stevens perceptual)",
+  "source_props": {
+    "mass": 174.967,
+    "melt_K": 1925,
+    "density": 9.84,
+    "ionization_eV": 5.4259,
+    "electronegativity": 1.27,
+    "polarizability": 21.9,
+    "standard_state": "Solid"
+  },
+  "shader_params": {
+    "sphere_pulse": {
+      "freq": 0.756,
+      "amp": 0.304
+    },
+    "blink": {
+      "amp": 0.0,
+      "speed": 0.227
+    },
+    "brightness": {
+      "bright": 0.709,
+      "base": 0.3,
+      "vari": 0.0
+    },
+    "disc_shape": {
+      "soft": 0.38,
+      "radius": 0.22,
+      "ring": 0.0
+    },
+    "point_size": {
+      "sz": 0.392,
+      "bAmp": 0.0,
+      "persp": 76.8
+    },
+    "alpha_curve": {
+      "opacity": 0.936,
+      "curve": 1.032,
+      "floor": 0.0
+    },
+    "color": {
+      "r": 0.7529,
+      "g": 0.7529,
+      "b": 0.7529
+    }
+  }
+}

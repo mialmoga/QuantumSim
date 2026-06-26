@@ -1,0 +1,125 @@
+{
+  "symbol": "Sc",
+  "identity": {
+    "name_es": "Escandio",
+    "name_eng": "Scandium",
+    "number": 21,
+    "category_es": "Metal de transición",
+    "category_eng": "Transition metal",
+    "color": "0xC8C8C8",
+    "cpk_color": "0xE6E6E6",
+    "discovery_year": "1879"
+  },
+  "physical_properties": {
+    "mass": 44.955,
+    "density_g_cm3": 2.985,
+    "standard_state_es": "Sólido",
+    "standard_state_eng": "Solid",
+    "melt_K": 1814,
+    "boil_K": 3109,
+    "allotropes_es": [
+      "Alfa (hcp)",
+      "Beta (bcc)"
+    ],
+    "allotropes_eng": [
+      "Alpha (hcp)",
+      "Beta (bcc)"
+    ],
+    "lattice_structure": "hcp"
+  },
+  "atomic_structure": {
+    "electronegativity": 1.36,
+    "valence": 3,
+    "ionization_energy_eV": 6.5615,
+    "electron_affinity_ev": 0.188,
+    "electron_affinity_kj_mol": 18.1,
+    "radius_atomic_pm": 162,
+    "radius_covalent_pm": 144,
+    "vanderwaals_radius_pm": 211,
+    "ionic_radius_pm": 74.5,
+    "effective_nuclear_charge": 4.632,
+    "electron_configuration_string": "[Ar] 3d1 4s2",
+    "shells": [
+      2,
+      8,
+      9,
+      2
+    ],
+    "quantum_numbers": {
+      "s": 2,
+      "p": 3,
+      "d": 1,
+      "f": 0
+    },
+    "work_function_ev": 3.5
+  },
+  "thermodynamics": {
+    "enthalpy_formation_kj_mol": 0,
+    "entropy_j_molk": 34.64,
+    "heat_capacity_j_molk": 25.52,
+    "specific_heat_j_gK": 0.568,
+    "latent_heat_fusion_kj_mol": 14.1,
+    "latent_heat_vaporization_kj_mol": 332.7,
+    "fusion_heat_kj_mol": 14.1,
+    "evaporation_heat_kj_mol": 314.2
+  },
+  "kinetics_and_phase": {
+    "vapor_pressure_constants": {
+      "A": 5.421,
+      "B": 17840,
+      "C": -10
+    },
+    "vapor_pressure_pa": null,
+    "viscosity_liquid_pas": null,
+    "viscosity_pa_s": null,
+    "critical_temp_K": null,
+    "critical_press_MPa": null,
+    "surface_tension_nm": 0.941
+  },
+  "electromagnetism_and_mechanics": {
+    "thermal_conductivity_wmk": 15.8,
+    "electrical_conductivity_sm": 1800000,
+    "magnetic_susceptibility": 2.23e-05,
+    "thermal_expansion_coefficient": 1.02e-05,
+    "polarizability_angstrom3": 17.8,
+    "refractive_index": null,
+    "youngs_modulus_gba": 74,
+    "poisson_ratio": 0.279,
+    "brinell_hardness_m_pa": 750
+  },
+  "reactivity": {
+    "max_bonds": 3,
+    "geometry_preference_es": "Red hcp / Octaédrica",
+    "geometry_preference_eng": "hcp Lattice / Octahedral",
+    "ideal_bond_angle": null,
+    "bond_energy_ev": 1.6,
+    "dissociation_energy_kj_mol": 159,
+    "standard_potential_v": -2.077,
+    "oxidation_states": [
+      3
+    ],
+    "common_ions": [
+      "Sc3+"
+    ]
+  },
+  "nuclear_and_environmental": {
+    "isotopes": [
+      {
+        "mass": 44.955,
+        "abundance": 100,
+        "stable": true,
+        "name_es": "Escandio-45",
+        "name_eng": "Scandium-45"
+      }
+    ],
+    "neutron_cross_section_barns": 27.2,
+    "nuclear_binding_energy_mev": 8.618,
+    "abundance_crust_mg_kg": 22,
+    "toxicity_level": 1
+  },
+  "cryogenic_data": {
+    "critical_solidification_pressure_mpa": null,
+    "lambda_point_k": null,
+    "superfluid_viscosity_pas": null
+  }
+}

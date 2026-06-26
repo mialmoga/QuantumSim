@@ -1,0 +1,162 @@
+{
+  "symbol": "W",
+  "identity": {
+    "name_es": "Wolframio / Tungsteno",
+    "name_eng": "Tungsten",
+    "number": 74,
+    "category_es": "Metal de transición",
+    "category_eng": "Transition metal",
+    "color": "0xA8A8A8",
+    "cpk_color": "0x2194D6",
+    "discovery_year": "1781"
+  },
+  "physical_properties": {
+    "mass": 183.84,
+    "density_g_cm3": 19.3,
+    "standard_state_es": "Sólido",
+    "standard_state_eng": "Solid",
+    "melt_K": 3695,
+    "boil_K": 6203,
+    "allotropes_es": [
+      "Alfa (bcc)",
+      "Beta (A15)"
+    ],
+    "allotropes_eng": [
+      "Alpha (bcc)",
+      "Beta (A15)"
+    ],
+    "lattice_structure": "bcc"
+  },
+  "atomic_structure": {
+    "electronegativity": 2.36,
+    "valence": 6,
+    "ionization_energy_eV": 7.864,
+    "electron_affinity_ev": 0.815,
+    "electron_affinity_kj_mol": 78.6,
+    "radius_atomic_pm": 139,
+    "radius_covalent_pm": 162,
+    "vanderwaals_radius_pm": 210,
+    "ionic_radius_pm": 66,
+    "effective_nuclear_charge": 6.3,
+    "electron_configuration_string": "[Xe] 4f14 5d4 6s2",
+    "shells": [
+      2,
+      8,
+      18,
+      32,
+      12,
+      2
+    ],
+    "quantum_numbers": {
+      "s": 2,
+      "p": 0,
+      "d": 4,
+      "f": 14
+    },
+    "work_function_ev": 4.55
+  },
+  "thermodynamics": {
+    "enthalpy_formation_kj_mol": 0,
+    "entropy_j_molk": 32.64,
+    "heat_capacity_j_molk": 24.27,
+    "specific_heat_j_gK": 0.132,
+    "latent_heat_fusion_kj_mol": 52.3,
+    "latent_heat_vaporization_kj_mol": 800,
+    "fusion_heat_kj_mol": 35.4,
+    "evaporation_heat_kj_mol": 806.7
+  },
+  "kinetics_and_phase": {
+    "vapor_pressure_constants": {
+      "A": 5.15,
+      "B": 40000,
+      "C": -10
+    },
+    "vapor_pressure_pa": null,
+    "viscosity_liquid_pas": null,
+    "viscosity_pa_s": null,
+    "critical_temp_K": null,
+    "critical_press_MPa": null,
+    "surface_tension_nm": 2.5
+  },
+  "electromagnetism_and_mechanics": {
+    "thermal_conductivity_wmk": 173,
+    "electrical_conductivity_sm": 18000000,
+    "magnetic_susceptibility": 6.8e-05,
+    "thermal_expansion_coefficient": 4.5e-06,
+    "polarizability_angstrom3": 11.1,
+    "refractive_index": null,
+    "youngs_modulus_gba": 411,
+    "poisson_ratio": 0.28,
+    "brinell_hardness_m_pa": 2570
+  },
+  "reactivity": {
+    "max_bonds": 6,
+    "geometry_preference_es": "Octaédrica",
+    "geometry_preference_eng": "Octahedral",
+    "ideal_bond_angle": 90,
+    "bond_energy_ev": null,
+    "dissociation_energy_kj_mol": null,
+    "standard_potential_v": -0.11,
+    "oxidation_states": [
+      6,
+      5,
+      4,
+      3,
+      2,
+      0,
+      -2
+    ],
+    "common_ions": [
+      "W6+",
+      "W4+"
+    ]
+  },
+  "nuclear_and_environmental": {
+    "isotopes": [
+      {
+        "mass": 179.946,
+        "abundance": 0.12,
+        "stable": true,
+        "name_es": "Wolframio-180",
+        "name_eng": "Tungsten-180"
+      },
+      {
+        "mass": 181.948,
+        "abundance": 26.5,
+        "stable": true,
+        "name_es": "Wolframio-182",
+        "name_eng": "Tungsten-182"
+      },
+      {
+        "mass": 182.95,
+        "abundance": 14.31,
+        "stable": true,
+        "name_es": "Wolframio-183",
+        "name_eng": "Tungsten-183"
+      },
+      {
+        "mass": 183.95,
+        "abundance": 30.64,
+        "stable": true,
+        "name_es": "Wolframio-184",
+        "name_eng": "Tungsten-184"
+      },
+      {
+        "mass": 185.954,
+        "abundance": 28.43,
+        "stable": true,
+        "name_es": "Wolframio-186",
+        "name_eng": "Tungsten-186"
+      }
+    ],
+    "neutron_cross_section_barns": 18.3,
+    "nuclear_binding_energy_mev": 7.986,
+    "abundance_crust_mg_kg": 1.25,
+    "toxicity_level": 1
+  },
+  "cryogenic_data": {
+    "critical_solidification_pressure_mpa": null,
+    "lambda_point_k": null,
+    "superfluid_viscosity_pas": null
+  }
+}

@@ -1,0 +1,181 @@
+{
+  "symbol": "Te",
+  "identity": {
+    "name_es": "Telurio",
+    "name_eng": "Tellurium",
+    "number": 52,
+    "category_es": "Metaloide",
+    "category_eng": "Metalloid",
+    "color": "0xC0B8A0",
+    "cpk_color": "0xD47A00",
+    "discovery_year": "1782"
+  },
+  "physical_properties": {
+    "mass": 127.6,
+    "density_g_cm3": 6.24,
+    "standard_state_es": "Sólido",
+    "standard_state_eng": "Solid",
+    "melt_K": 722.66,
+    "boil_K": 1261,
+    "allotropes_es": [
+      "Hexagonal (cristalino)",
+      "Amorfo"
+    ],
+    "allotropes_eng": [
+      "Hexagonal (crystalline)",
+      "Amorphous"
+    ],
+    "lattice_structure": "hexagonal"
+  },
+  "atomic_structure": {
+    "electronegativity": 2.1,
+    "valence": 6,
+    "ionization_energy_eV": 9.0096,
+    "electron_affinity_ev": 1.971,
+    "electron_affinity_kj_mol": 190.2,
+    "radius_atomic_pm": 142,
+    "radius_covalent_pm": 138,
+    "vanderwaals_radius_pm": 206,
+    "ionic_radius_pm": 97,
+    "effective_nuclear_charge": 6.3,
+    "electron_configuration_string": "[Kr] 4d10 5s2 5p4",
+    "shells": [
+      2,
+      8,
+      18,
+      18,
+      6
+    ],
+    "quantum_numbers": {
+      "s": 2,
+      "p": 4,
+      "d": 0,
+      "f": 0
+    },
+    "work_function_ev": 4.95
+  },
+  "thermodynamics": {
+    "enthalpy_formation_kj_mol": 0,
+    "entropy_j_molk": 49.5,
+    "heat_capacity_j_molk": 25.73,
+    "specific_heat_j_gK": 0.201,
+    "latent_heat_fusion_kj_mol": 17.49,
+    "latent_heat_vaporization_kj_mol": 114.1,
+    "fusion_heat_kj_mol": 17.5,
+    "evaporation_heat_kj_mol": 50.6
+  },
+  "kinetics_and_phase": {
+    "vapor_pressure_constants": {
+      "A": 5.1,
+      "B": 7500,
+      "C": -10
+    },
+    "vapor_pressure_pa": null,
+    "viscosity_liquid_pas": 0.0019,
+    "viscosity_pa_s": null,
+    "critical_temp_K": null,
+    "critical_press_MPa": null,
+    "surface_tension_nm": 0.18
+  },
+  "electromagnetism_and_mechanics": {
+    "thermal_conductivity_wmk": 3,
+    "electrical_conductivity_sm": 100,
+    "magnetic_susceptibility": -3.9e-05,
+    "thermal_expansion_coefficient": 1.8e-05,
+    "polarizability_angstrom3": 5.5,
+    "refractive_index": null,
+    "youngs_modulus_gba": 43,
+    "poisson_ratio": null,
+    "brinell_hardness_m_pa": 180
+  },
+  "reactivity": {
+    "max_bonds": 6,
+    "geometry_preference_es": "Octaédrica",
+    "geometry_preference_eng": "Octahedral",
+    "ideal_bond_angle": null,
+    "bond_energy_ev": 2.3,
+    "dissociation_energy_kj_mol": 222,
+    "standard_potential_v": -1.143,
+    "oxidation_states": [
+      6,
+      4,
+      2,
+      -2
+    ],
+    "common_ions": [
+      "Te2-",
+      "Te4+"
+    ]
+  },
+  "nuclear_and_environmental": {
+    "isotopes": [
+      {
+        "mass": 119.904,
+        "abundance": 0.09,
+        "stable": true,
+        "name_es": "Telurio-120",
+        "name_eng": "Tellurium-120"
+      },
+      {
+        "mass": 121.903,
+        "abundance": 2.55,
+        "stable": true,
+        "name_es": "Telurio-122",
+        "name_eng": "Tellurium-122"
+      },
+      {
+        "mass": 122.904,
+        "abundance": 0.89,
+        "stable": true,
+        "name_es": "Telurio-123",
+        "name_eng": "Tellurium-123"
+      },
+      {
+        "mass": 123.903,
+        "abundance": 4.74,
+        "stable": true,
+        "name_es": "Telurio-124",
+        "name_eng": "Tellurium-124"
+      },
+      {
+        "mass": 124.904,
+        "abundance": 7.07,
+        "stable": true,
+        "name_es": "Telurio-125",
+        "name_eng": "Tellurium-125"
+      },
+      {
+        "mass": 125.903,
+        "abundance": 18.84,
+        "stable": true,
+        "name_es": "Telurio-126",
+        "name_eng": "Tellurium-126"
+      },
+      {
+        "mass": 127.904,
+        "abundance": 31.74,
+        "stable": false,
+        "half_life_s": 6.9e+26,
+        "name_es": "Telurio-128",
+        "name_eng": "Tellurium-128"
+      },
+      {
+        "mass": 129.906,
+        "abundance": 34.08,
+        "stable": false,
+        "half_life_s": 25000000000000000000,
+        "name_es": "Telurio-130",
+        "name_eng": "Tellurium-130"
+      }
+    ],
+    "neutron_cross_section_barns": 4.7,
+    "nuclear_binding_energy_mev": 8.487,
+    "abundance_crust_mg_kg": 0.001,
+    "toxicity_level": 2
+  },
+  "cryogenic_data": {
+    "critical_solidification_pressure_mpa": null,
+    "lambda_point_k": null,
+    "superfluid_viscosity_pas": null
+  }
+}

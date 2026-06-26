@@ -1,0 +1,48 @@
+{
+  "symbol": "Ho",
+  "generated_by": "generate_materials.py v1.2 (Stevens perceptual)",
+  "source_props": {
+    "mass": 164.93,
+    "melt_K": 1734,
+    "density": 8.79,
+    "ionization_eV": 6.0215,
+    "electronegativity": 1.23,
+    "polarizability": 23.6,
+    "standard_state": "Solid"
+  },
+  "shader_params": {
+    "sphere_pulse": {
+      "freq": 0.779,
+      "amp": 0.309
+    },
+    "blink": {
+      "amp": 0.0,
+      "speed": 0.234
+    },
+    "brightness": {
+      "bright": 0.842,
+      "base": 0.3,
+      "vari": 0.0
+    },
+    "disc_shape": {
+      "soft": 0.385,
+      "radius": 0.22,
+      "ring": 0.0
+    },
+    "point_size": {
+      "sz": 0.399,
+      "bAmp": 0.0,
+      "persp": 77.9
+    },
+    "alpha_curve": {
+      "opacity": 0.927,
+      "curve": 1.036,
+      "floor": 0.0
+    },
+    "color": {
+      "r": 0.7529,
+      "g": 0.7529,
+      "b": 0.7529
+    }
+  }
+}

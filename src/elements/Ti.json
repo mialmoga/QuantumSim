@@ -1,0 +1,156 @@
+{
+  "symbol": "Ti",
+  "identity": {
+    "name_es": "Titanio",
+    "name_eng": "Titanium",
+    "number": 22,
+    "category_es": "Metal de transición",
+    "category_eng": "Transition metal",
+    "color": "0xB0B0B8",
+    "cpk_color": "0xBFC2C7",
+    "discovery_year": "1791"
+  },
+  "physical_properties": {
+    "mass": 47.867,
+    "density_g_cm3": 4.506,
+    "standard_state_es": "Sólido",
+    "standard_state_eng": "Solid",
+    "melt_K": 1941,
+    "boil_K": 3560,
+    "allotropes_es": [
+      "Alfa (hcp)",
+      "Beta (bcc)"
+    ],
+    "allotropes_eng": [
+      "Alpha (hcp)",
+      "Beta (bcc)"
+    ],
+    "lattice_structure": "hcp"
+  },
+  "atomic_structure": {
+    "electronegativity": 1.54,
+    "valence": 4,
+    "ionization_energy_eV": 6.8281,
+    "electron_affinity_ev": 0.079,
+    "electron_affinity_kj_mol": 7.6,
+    "radius_atomic_pm": 147,
+    "radius_covalent_pm": 136,
+    "vanderwaals_radius_pm": 200,
+    "ionic_radius_pm": 60.5,
+    "effective_nuclear_charge": 4.817,
+    "electron_configuration_string": "[Ar] 3d2 4s2",
+    "shells": [
+      2,
+      8,
+      10,
+      2
+    ],
+    "quantum_numbers": {
+      "s": 2,
+      "p": 3,
+      "d": 2,
+      "f": 0
+    },
+    "work_function_ev": 4.33
+  },
+  "thermodynamics": {
+    "enthalpy_formation_kj_mol": 0,
+    "entropy_j_molk": 30.7,
+    "heat_capacity_j_molk": 25.06,
+    "specific_heat_j_gK": 0.523,
+    "latent_heat_fusion_kj_mol": 14.15,
+    "latent_heat_vaporization_kj_mol": 425,
+    "fusion_heat_kj_mol": 18.7,
+    "evaporation_heat_kj_mol": 422.6
+  },
+  "kinetics_and_phase": {
+    "vapor_pressure_constants": {
+      "A": 5.176,
+      "B": 24200,
+      "C": -10
+    },
+    "vapor_pressure_pa": null,
+    "viscosity_liquid_pas": 0.0052,
+    "viscosity_pa_s": null,
+    "critical_temp_K": null,
+    "critical_press_MPa": null,
+    "surface_tension_nm": 1.39
+  },
+  "electromagnetism_and_mechanics": {
+    "thermal_conductivity_wmk": 21.9,
+    "electrical_conductivity_sm": 2380000,
+    "magnetic_susceptibility": 0.000151,
+    "thermal_expansion_coefficient": 8.6e-06,
+    "polarizability_angstrom3": 14.6,
+    "refractive_index": null,
+    "youngs_modulus_gba": 116,
+    "poisson_ratio": 0.32,
+    "brinell_hardness_m_pa": 716
+  },
+  "reactivity": {
+    "max_bonds": 4,
+    "geometry_preference_es": "Red hcp / Octaédrica",
+    "geometry_preference_eng": "hcp Lattice / Octahedral",
+    "ideal_bond_angle": null,
+    "bond_energy_ev": 2.1,
+    "dissociation_energy_kj_mol": null,
+    "standard_potential_v": -1.63,
+    "oxidation_states": [
+      4,
+      3,
+      2
+    ],
+    "common_ions": [
+      "Ti4+",
+      "Ti3+"
+    ]
+  },
+  "nuclear_and_environmental": {
+    "isotopes": [
+      {
+        "mass": 45.952,
+        "abundance": 8.25,
+        "stable": true,
+        "name_es": "Titanio-46",
+        "name_eng": "Titanium-46"
+      },
+      {
+        "mass": 46.951,
+        "abundance": 7.44,
+        "stable": true,
+        "name_es": "Titanio-47",
+        "name_eng": "Titanium-47"
+      },
+      {
+        "mass": 47.947,
+        "abundance": 73.72,
+        "stable": true,
+        "name_es": "Titanio-48",
+        "name_eng": "Titanium-48"
+      },
+      {
+        "mass": 48.947,
+        "abundance": 5.41,
+        "stable": true,
+        "name_es": "Titanio-49",
+        "name_eng": "Titanium-49"
+      },
+      {
+        "mass": 49.944,
+        "abundance": 5.18,
+        "stable": true,
+        "name_es": "Titanio-50",
+        "name_eng": "Titanium-50"
+      }
+    ],
+    "neutron_cross_section_barns": 6.1,
+    "nuclear_binding_energy_mev": 8.66,
+    "abundance_crust_mg_kg": 5650,
+    "toxicity_level": 0
+  },
+  "cryogenic_data": {
+    "critical_solidification_pressure_mpa": null,
+    "lambda_point_k": null,
+    "superfluid_viscosity_pas": null
+  }
+}

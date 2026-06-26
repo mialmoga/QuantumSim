@@ -1,0 +1,163 @@
+{
+  "symbol": "Ba",
+  "identity": {
+    "name_es": "Bario",
+    "name_eng": "Barium",
+    "number": 56,
+    "category_es": "Metal alcalinotérreo",
+    "category_eng": "Alkaline earth metal",
+    "color": "0xC0C0A0",
+    "cpk_color": "0x00C900",
+    "discovery_year": "1772"
+  },
+  "physical_properties": {
+    "mass": 137.327,
+    "density_g_cm3": 3.62,
+    "standard_state_es": "Sólido",
+    "standard_state_eng": "Solid",
+    "melt_K": 1000,
+    "boil_K": 2118,
+    "allotropes_es": null,
+    "allotropes_eng": null,
+    "lattice_structure": "bcc"
+  },
+  "atomic_structure": {
+    "electronegativity": 0.89,
+    "valence": 2,
+    "ionization_energy_eV": 5.2117,
+    "electron_affinity_ev": 0.144,
+    "electron_affinity_kj_mol": 13.9,
+    "radius_atomic_pm": 222,
+    "radius_covalent_pm": 198,
+    "vanderwaals_radius_pm": 268,
+    "ionic_radius_pm": 135,
+    "effective_nuclear_charge": 6.3,
+    "electron_configuration_string": "[Xe] 6s2",
+    "shells": [
+      2,
+      8,
+      18,
+      18,
+      8,
+      2
+    ],
+    "quantum_numbers": {
+      "s": 2,
+      "p": 0,
+      "d": 0,
+      "f": 0
+    },
+    "work_function_ev": 2.7
+  },
+  "thermodynamics": {
+    "enthalpy_formation_kj_mol": 0,
+    "entropy_j_molk": 62.47,
+    "heat_capacity_j_molk": 28.07,
+    "specific_heat_j_gK": 0.204,
+    "latent_heat_fusion_kj_mol": 7.12,
+    "latent_heat_vaporization_kj_mol": 142,
+    "fusion_heat_kj_mol": 7.75,
+    "evaporation_heat_kj_mol": 140.3
+  },
+  "kinetics_and_phase": {
+    "vapor_pressure_constants": {
+      "A": 4.1,
+      "B": 8500,
+      "C": -10
+    },
+    "vapor_pressure_pa": null,
+    "viscosity_liquid_pas": null,
+    "viscosity_pa_s": null,
+    "critical_temp_K": null,
+    "critical_press_MPa": null,
+    "surface_tension_nm": 0.25
+  },
+  "electromagnetism_and_mechanics": {
+    "thermal_conductivity_wmk": 18.4,
+    "electrical_conductivity_sm": 3000000,
+    "magnetic_susceptibility": 2.1e-05,
+    "thermal_expansion_coefficient": 2.06e-05,
+    "polarizability_angstrom3": 39.7,
+    "refractive_index": null,
+    "youngs_modulus_gba": 13,
+    "poisson_ratio": 0.28,
+    "brinell_hardness_m_pa": 4.2
+  },
+  "reactivity": {
+    "max_bonds": 2,
+    "geometry_preference_es": "Lineal / Tetraédrica",
+    "geometry_preference_eng": "Linear / Tetrahedral",
+    "ideal_bond_angle": 180,
+    "bond_energy_ev": 2.3,
+    "dissociation_energy_kj_mol": 222,
+    "standard_potential_v": -2.912,
+    "oxidation_states": [
+      2
+    ],
+    "common_ions": [
+      "Ba2+"
+    ]
+  },
+  "nuclear_and_environmental": {
+    "isotopes": [
+      {
+        "mass": 129.906,
+        "abundance": 0.1,
+        "stable": true,
+        "name_es": "Bario-130",
+        "name_eng": "Barium-130"
+      },
+      {
+        "mass": 131.905,
+        "abundance": 0.1,
+        "stable": true,
+        "name_es": "Bario-132",
+        "name_eng": "Barium-132"
+      },
+      {
+        "mass": 133.904,
+        "abundance": 2.42,
+        "stable": true,
+        "name_es": "Bario-134",
+        "name_eng": "Barium-134"
+      },
+      {
+        "mass": 134.905,
+        "abundance": 6.59,
+        "stable": true,
+        "name_es": "Bario-135",
+        "name_eng": "Barium-135"
+      },
+      {
+        "mass": 135.904,
+        "abundance": 7.85,
+        "stable": true,
+        "name_es": "Bario-136",
+        "name_eng": "Barium-136"
+      },
+      {
+        "mass": 136.905,
+        "abundance": 11.23,
+        "stable": true,
+        "name_es": "Bario-137",
+        "name_eng": "Barium-137"
+      },
+      {
+        "mass": 137.905,
+        "abundance": 71.7,
+        "stable": true,
+        "name_es": "Bario-138",
+        "name_eng": "Barium-138"
+      }
+    ],
+    "neutron_cross_section_barns": 1.2,
+    "nuclear_binding_energy_mev": 8.375,
+    "abundance_crust_mg_kg": 425,
+    "toxicity_level": 3
+  },
+  "cryogenic_data": {
+    "critical_solidification_pressure_mpa": null,
+    "lambda_point_k": null,
+    "superfluid_viscosity_pas": null
+  }
+}

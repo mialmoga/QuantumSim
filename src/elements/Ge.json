@@ -1,0 +1,149 @@
+{
+  "symbol": "Ge",
+  "identity": {
+    "name_es": "Germanio",
+    "name_eng": "Germanium",
+    "number": 32,
+    "category_es": "Metaloide",
+    "category_eng": "Metalloid",
+    "color": "0x909098",
+    "cpk_color": "0x668F8F",
+    "discovery_year": "1886"
+  },
+  "physical_properties": {
+    "mass": 72.63,
+    "density_g_cm3": 5.323,
+    "standard_state_es": "Sólido",
+    "standard_state_eng": "Solid",
+    "melt_K": 1211.4,
+    "boil_K": 3106,
+    "allotropes_es": null,
+    "allotropes_eng": null,
+    "lattice_structure": "diamond"
+  },
+  "atomic_structure": {
+    "electronegativity": 2.01,
+    "valence": 4,
+    "ionization_energy_eV": 7.8994,
+    "electron_affinity_ev": 1.233,
+    "electron_affinity_kj_mol": 119,
+    "radius_atomic_pm": 122,
+    "radius_covalent_pm": 122,
+    "vanderwaals_radius_pm": 211,
+    "ionic_radius_pm": 53,
+    "effective_nuclear_charge": 5.47,
+    "electron_configuration_string": "[Ar] 3d10 4s2 4p2",
+    "shells": [
+      2,
+      8,
+      18,
+      4
+    ],
+    "quantum_numbers": {
+      "s": 2,
+      "p": 2,
+      "d": 0,
+      "f": 0
+    },
+    "work_function_ev": 5
+  },
+  "thermodynamics": {
+    "enthalpy_formation_kj_mol": 0,
+    "entropy_j_molk": 31.09,
+    "heat_capacity_j_molk": 23.22,
+    "specific_heat_j_gK": 0.32,
+    "latent_heat_fusion_kj_mol": 31.8,
+    "latent_heat_vaporization_kj_mol": 334,
+    "fusion_heat_kj_mol": 36.94,
+    "evaporation_heat_kj_mol": 334
+  },
+  "kinetics_and_phase": {
+    "vapor_pressure_constants": {
+      "A": 5.234,
+      "B": 16400,
+      "C": -10
+    },
+    "vapor_pressure_pa": null,
+    "viscosity_liquid_pas": 0.00072,
+    "viscosity_pa_s": null,
+    "critical_temp_K": null,
+    "critical_press_MPa": null,
+    "surface_tension_nm": 0.6
+  },
+  "electromagnetism_and_mechanics": {
+    "thermal_conductivity_wmk": 59.9,
+    "electrical_conductivity_sm": 2,
+    "magnetic_susceptibility": -1.05e-05,
+    "thermal_expansion_coefficient": 5.9e-06,
+    "polarizability_angstrom3": 4.3,
+    "refractive_index": 4,
+    "youngs_modulus_gba": 103,
+    "poisson_ratio": 0.26,
+    "brinell_hardness_m_pa": null
+  },
+  "reactivity": {
+    "max_bonds": 4,
+    "geometry_preference_es": "Tetraédrica",
+    "geometry_preference_eng": "Tetrahedral",
+    "ideal_bond_angle": 109.5,
+    "bond_energy_ev": 1.9,
+    "dissociation_energy_kj_mol": 188,
+    "standard_potential_v": null,
+    "oxidation_states": [
+      4,
+      2
+    ],
+    "common_ions": [
+      "Ge4+",
+      "Ge2+"
+    ]
+  },
+  "nuclear_and_environmental": {
+    "isotopes": [
+      {
+        "mass": 69.924,
+        "abundance": 20.38,
+        "stable": true,
+        "name_es": "Germanio-70",
+        "name_eng": "Germanium-70"
+      },
+      {
+        "mass": 71.922,
+        "abundance": 27.31,
+        "stable": true,
+        "name_es": "Germanio-72",
+        "name_eng": "Germanium-72"
+      },
+      {
+        "mass": 72.923,
+        "abundance": 7.76,
+        "stable": true,
+        "name_es": "Germanio-73",
+        "name_eng": "Germanium-73"
+      },
+      {
+        "mass": 73.921,
+        "abundance": 36.72,
+        "stable": true,
+        "name_es": "Germanio-74",
+        "name_eng": "Germanium-74"
+      },
+      {
+        "mass": 75.921,
+        "abundance": 7.83,
+        "stable": true,
+        "name_es": "Germanio-76",
+        "name_eng": "Germanium-76"
+      }
+    ],
+    "neutron_cross_section_barns": 2.2,
+    "nuclear_binding_energy_mev": 8.705,
+    "abundance_crust_mg_kg": 1.5,
+    "toxicity_level": 1
+  },
+  "cryogenic_data": {
+    "critical_solidification_pressure_mpa": null,
+    "lambda_point_k": null,
+    "superfluid_viscosity_pas": null
+  }
+}

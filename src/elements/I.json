@@ -1,0 +1,140 @@
+{
+  "symbol": "I",
+  "identity": {
+    "name_es": "Yodo",
+    "name_eng": "Iodine",
+    "number": 53,
+    "category_es": "Halógeno",
+    "category_eng": "Halogen",
+    "color": "0x584068",
+    "cpk_color": "0x940094",
+    "discovery_year": "1811"
+  },
+  "physical_properties": {
+    "mass": 126.904,
+    "density_g_cm3": 4.933,
+    "standard_state_es": "Sólido",
+    "standard_state_eng": "Solid",
+    "melt_K": 386.85,
+    "boil_K": 457.4,
+    "allotropes_es": null,
+    "allotropes_eng": null,
+    "lattice_structure": "orthorhombic"
+  },
+  "atomic_structure": {
+    "electronegativity": 2.66,
+    "valence": 7,
+    "ionization_energy_eV": 10.4513,
+    "electron_affinity_ev": 3.059,
+    "electron_affinity_kj_mol": 295.2,
+    "radius_atomic_pm": 133,
+    "radius_covalent_pm": 139,
+    "vanderwaals_radius_pm": 198,
+    "ionic_radius_pm": 220,
+    "effective_nuclear_charge": 7.6,
+    "electron_configuration_string": "[Kr] 4d10 5s2 5p5",
+    "shells": [
+      2,
+      8,
+      18,
+      18,
+      7
+    ],
+    "quantum_numbers": {
+      "s": 2,
+      "p": 5,
+      "d": 0,
+      "f": 0
+    },
+    "work_function_ev": 2.8
+  },
+  "thermodynamics": {
+    "enthalpy_formation_kj_mol": 0,
+    "entropy_j_molk": 116.14,
+    "heat_capacity_j_molk": 54.44,
+    "specific_heat_j_gK": 0.214,
+    "latent_heat_fusion_kj_mol": 15.52,
+    "latent_heat_vaporization_kj_mol": 41.57,
+    "fusion_heat_kj_mol": 15.5,
+    "evaporation_heat_kj_mol": 41.7
+  },
+  "kinetics_and_phase": {
+    "vapor_pressure_constants": {
+      "A": 14.1,
+      "B": 6000,
+      "C": -20
+    },
+    "vapor_pressure_pa": 40,
+    "viscosity_liquid_pas": 0.002,
+    "viscosity_pa_s": null,
+    "critical_temp_K": 819,
+    "critical_press_MPa": 11.7,
+    "surface_tension_nm": 0.037
+  },
+  "electromagnetism_and_mechanics": {
+    "thermal_conductivity_wmk": 0.449,
+    "electrical_conductivity_sm": 1e-07,
+    "magnetic_susceptibility": -8.8e-05,
+    "thermal_expansion_coefficient": null,
+    "polarizability_angstrom3": 10.3,
+    "refractive_index": null,
+    "youngs_modulus_gba": null,
+    "poisson_ratio": null,
+    "brinell_hardness_m_pa": null
+  },
+  "reactivity": {
+    "max_bonds": 7,
+    "geometry_preference_es": "Lineal (diatómico)",
+    "geometry_preference_eng": "Linear (diatomic)",
+    "ideal_bond_angle": 180,
+    "bond_energy_ev": 1.54,
+    "dissociation_energy_kj_mol": 151,
+    "standard_potential_v": 0.5355,
+    "oxidation_states": [
+      7,
+      5,
+      1,
+      -1
+    ],
+    "common_ions": [
+      "I-",
+      "IO3-"
+    ]
+  },
+  "nuclear_and_environmental": {
+    "isotopes": [
+      {
+        "mass": 126.904,
+        "abundance": 100,
+        "stable": true,
+        "name_es": "Yodo-127",
+        "name_eng": "Iodine-127"
+      },
+      {
+        "mass": 128.904,
+        "abundance": null,
+        "stable": false,
+        "half_life_s": 1324800,
+        "name_es": "Yodo-129",
+        "name_eng": "Iodine-129"
+      },
+      {
+        "mass": 130.906,
+        "abundance": null,
+        "stable": false,
+        "half_life_s": 691200,
+        "name_es": "Yodo-131",
+        "name_eng": "Iodine-131"
+      }
+    ],
+    "neutron_cross_section_barns": 6.2,
+    "nuclear_binding_energy_mev": 8.445,
+    "abundance_crust_mg_kg": 0.45,
+    "toxicity_level": 2
+  },
+  "cryogenic_data": {
+    "critical_solidification_pressure_mpa": null,
+    "lambda_point_k": null,
+    "superfluid_viscosity_pas": null
+  }
+}

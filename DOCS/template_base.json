@@ -1,0 +1,96 @@
+{
+  "symbol": "",
+  "identity": {
+    "name": "",
+    "number": 0,
+    "category": "",
+    "color": "",
+    "cpk_color": "",
+    "discovery_year": 0
+  },
+  "physical_properties": {
+    "mass": 0.0,
+    "density_g_cm3": 0.0,
+    "standard_state": "",
+    "melt_K": 0.0,
+    "boil_K": 0.0,
+    "allotropes": [],
+    "lattice_structure": ""
+  },
+  "atomic_structure": {
+    "electronegativity": 0.0,
+    "valence": 0,
+    "ionization_energy_eV": 0.0,
+    "electron_affinity_ev": 0.0,
+    "electron_affinity_kj_mol": 0.0,
+    "radius_atomic_pm": 0,
+    "radius_covalent_pm": 0,
+    "vanderwaals_radius_pm": 0,
+    "ionic_radius_pm": 0,
+    "effective_nuclear_charge": 0.0,
+    "electron_configuration_string": "",
+    "shells": [],
+    "quantum_numbers": { "s": 0, "p": 0, "d": 0, "f": 0 },
+    "work_function_ev": 0.0
+  },
+  "thermodynamics": {
+    "enthalpy_formation_kj_mol": 0.0,
+    "entropy_j_molk": 0.0,
+    "heat_capacity_j_molk": 0.0,
+    "specific_heat_j_gK": 0.0,
+    "latent_heat_fusion_kj_mol": 0.0,
+    "latent_heat_vaporization_kj_mol": 0.0,
+    "fusion_heat_kj_mol": 0.0,
+    "evaporation_heat_kj_mol": 0.0
+  },
+  "kinetics_and_phase": {
+    "vapor_pressure_constants": { "A": 0.0, "B": 0.0, "C": 0.0 },
+    "vapor_pressure_pa": 0.0,
+    "viscosity_liquid_pas": 0.0,
+    "viscosity_pa_s": 0.0,
+    "critical_temp_K": 0.0,
+    "critical_press_MPa": 0.0,
+    "surface_tension_nm": 0.0
+  },
+  "electromagnetism_and_mechanics": {
+    "thermal_conductivity_wmk": 0.0,
+    "electrical_conductivity_sm": 0.0,
+    "magnetic_susceptibility": 0.0,
+    "thermal_expansion_coefficient": 0.0,
+    "polarizability_angstrom3": 0.0,
+    "refractive_index": 0.0,
+    "youngs_modulus_gba": 0.0,
+    "poisson_ratio": 0.0,
+    "brinell_hardness_m_pa": 0.0
+  },
+  "reactivity": {
+    "max_bonds": 0,
+    "geometry_preference": "",
+    "ideal_bond_angle": 0.0,
+    "bond_energy_ev": 0.0,
+    "dissociation_energy_kj_mol": 0.0,
+    "standard_potential_v": 0.0,
+    "oxidation_states": [],
+    "common_ions": []
+  },
+  "nuclear_and_environmental": {
+    "isotopes": [
+      {
+        "mass": 0,
+        "abundance": 0.0,
+        "stable": false,
+        "half_life_s": 0.0, 
+        "name": "Nombre del Isótopo"
+      }
+    ],
+    "neutron_cross_section_barns": 0.0,
+    "nuclear_binding_energy_mev": 0.0,
+    "abundance_crust_mg_kg": 0.0,
+    "toxicity_level": 0
+  },
+  "cryogenic_data": {
+    "critical_solidification_pressure_mpa": null,
+    "lambda_point_k": null,
+    "superfluid_viscosity_pas": null
+  }
+}

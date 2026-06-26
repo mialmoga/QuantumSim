@@ -1,0 +1,732 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>⚛️ Element Index Builder — QuantumSim</title>
+<style>
+* { margin:0; padding:0; box-sizing:border-box; }
+
+:root {
+    --bg:       #070b18;
+    --surface:  #0d1225;
+    --surface2: #121930;
+    --surface3: #18203c;
+    --cyan:     #64c8ff;
+    --purple:   #a855f7;
+    --green:    #10b981;
+    --orange:   #f59e0b;
+    --red:      #ef4444;
+    --gold:     #fbbf24;
+    --border:   rgba(100,200,255,0.12);
+    --text:     #ffffff;
+    --text2:    rgba(255,255,255,0.5);
+    --mono:     'JetBrains Mono','Fira Code',monospace;
+    --r:        10px;
+}
+
+body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: system-ui, sans-serif;
+    height: 100vh;
+    display: grid;
+    grid-template-rows: 52px 1fr 48px;
+    grid-template-columns: 280px 1fr 300px;
+    grid-template-areas:
+        "hd hd hd"
+        "sb main ins"
+        "ft ft ft";
+    overflow: hidden;
+}
+
+/* ── HEADER ── */
+header {
+    grid-area: hd;
+    background: var(--surface);
+    border-bottom: 1px solid var(--border);
+    display: flex; align-items: center; gap: 16px;
+    padding: 0 20px;
+}
+header h1 { font-size: 14px; color: var(--cyan); letter-spacing:.05em; }
+header h1 span { color: var(--text2); font-weight:400; }
+
+.hd-prog { flex:1; display:flex; align-items:center; gap:10px; }
+.hd-bar  { flex:1; height:3px; background:var(--border); border-radius:2px; overflow:hidden; }
+.hd-fill { height:100%; background:linear-gradient(90deg,var(--cyan),var(--purple)); border-radius:2px; transition:width .4s; }
+.hd-lbl  { font-size:11px; color:var(--text2); font-family:var(--mono); white-space:nowrap; }
+
+.btn-load { background:var(--surface3); border:1px solid var(--border); color:var(--cyan); padding:6px 14px; border-radius:var(--r); font-size:12px; cursor:pointer; }
+.btn-load:hover { border-color:var(--cyan); }
+.btn-gen  { background:var(--purple); border:none; color:#fff; padding:6px 14px; border-radius:var(--r); font-size:12px; cursor:pointer; font-weight:700; }
+.btn-gen:hover { opacity:.85; }
+
+/* ── SIDEBAR ── */
+aside {
+    grid-area: sb;
+    background: var(--surface);
+    border-right: 1px solid var(--border);
+    display: flex; flex-direction:column; overflow:hidden;
+}
+.sb-search { padding:10px; border-bottom:1px solid var(--border); }
+.sb-search input {
+    width:100%; background:var(--surface2); border:1px solid var(--border);
+    border-radius:7px; color:var(--text); font-size:12px; padding:7px 10px; outline:none;
+}
+.sb-search input:focus { border-color:var(--cyan); }
+.sb-list { flex:1; overflow-y:auto; padding:6px; }
+
+.ei {
+    display:flex; align-items:center; gap:8px;
+    padding:6px 8px; border-radius:7px; cursor:pointer;
+    transition:background .12s; font-size:12px;
+}
+.ei:hover { background:var(--surface2); }
+.ei.active { background:rgba(100,200,255,.1); border:1px solid rgba(100,200,255,.25); }
+.ei.done .ei-s { color:var(--green); }
+.ei.no-file .ei-sym { color:var(--red); }
+
+.ei-n   { font-family:var(--mono); font-size:10px; color:var(--text2); width:22px; text-align:right; }
+.ei-sym { font-weight:700; color:var(--cyan); width:26px; }
+.ei-nm  { flex:1; color:var(--text2); font-size:11px; overflow:hidden; text-overflow:ellipsis; white-space:nowrap; }
+.ei-s   { font-size:12px; }
+
+.group-tag {
+    font-size:9px; padding:1px 5px; border-radius:4px;
+    font-family:var(--mono); white-space:nowrap;
+    background:rgba(255,255,255,.06); color:var(--text2);
+}
+
+/* ── MAIN ── */
+main {
+    grid-area: main;
+    display:flex; flex-direction:column; overflow:hidden;
+}
+
+.m-top {
+    background:var(--surface); border-bottom:1px solid var(--border);
+    padding:14px 20px; display:flex; align-items:center; gap:14px;
+}
+.m-badge {
+    width:50px; height:50px; border-radius:9px;
+    background:rgba(100,200,255,.08); border:1px solid var(--border);
+    display:flex; flex-direction:column; align-items:center; justify-content:center;
+    flex-shrink:0;
+}
+.m-badge-n  { font-size:9px; color:var(--text2); font-family:var(--mono); }
+.m-badge-s  { font-size:20px; font-weight:700; color:var(--cyan); line-height:1; }
+.m-info h2  { font-size:16px; }
+.m-info p   { font-size:11px; color:var(--text2); font-family:var(--mono); }
+.m-color    { width:18px; height:18px; border-radius:4px; flex-shrink:0; border:1px solid rgba(255,255,255,.15); }
+.m-acts     { margin-left:auto; display:flex; gap:8px; }
+.btn { border:none; border-radius:var(--r); padding:8px 16px; font-size:12px; cursor:pointer; }
+.btn:hover { opacity:.85; }
+.btn-s  { background:var(--green); color:#000; font-weight:700; }
+.btn-p  { background:var(--surface3); color:var(--text2); border:1px solid var(--border); }
+.btn-nx { background:var(--cyan); color:#000; font-weight:700; }
+
+.m-body { flex:1; overflow-y:auto; padding:18px 20px; display:flex; flex-direction:column; gap:14px; }
+
+.field-row { display:flex; flex-direction:column; gap:5px; }
+.field-row label { font-size:10px; color:var(--text2); text-transform:uppercase; letter-spacing:.08em; }
+
+.field-row input, .field-row select {
+    background:var(--surface2); border:1px solid var(--border);
+    border-radius:7px; color:var(--text); font-family:var(--mono); font-size:13px;
+    padding:9px 12px; outline:none; transition:border-color .2s;
+}
+.field-row input:focus, .field-row select:focus { border-color:var(--cyan); }
+.field-row select option { background:#1a1a2e; }
+
+.field-row textarea {
+    background:var(--surface2); border:1px solid var(--border);
+    border-radius:7px; color:var(--text); font-size:12px; line-height:1.6;
+    padding:10px 12px; outline:none; resize:vertical; min-height:130px;
+    transition:border-color .2s; font-family: system-ui, sans-serif;
+}
+.field-row textarea:focus { border-color:var(--purple); }
+
+.field-2col { display:grid; grid-template-columns:1fr 1fr; gap:10px; }
+.field-3col { display:grid; grid-template-columns:1fr 1fr 1fr; gap:10px; }
+
+.info-box {
+    background:var(--surface2); border-radius:var(--r);
+    padding:10px 14px; font-size:11px; color:var(--text2);
+    border-left:3px solid var(--cyan); font-family:var(--mono);
+    line-height:1.5;
+}
+
+/* Material chips */
+.material-chips { display:flex; flex-wrap:wrap; gap:6px; margin-top:4px; }
+.chip {
+    padding:4px 10px; border-radius:20px; font-size:11px;
+    cursor:pointer; border:1px solid var(--border); background:var(--surface3);
+    color:var(--text2); transition:all .15s; font-family:var(--mono);
+}
+.chip:hover { border-color:var(--cyan); color:var(--cyan); }
+.chip.sel   { background:rgba(100,200,255,.15); border-color:var(--cyan); color:var(--cyan); }
+
+/* ── INSPECTOR ── */
+.inspector {
+    grid-area: ins;
+    background:var(--surface);
+    border-left:1px solid var(--border);
+    display:flex; flex-direction:column; overflow:hidden;
+}
+.ins-head { padding:12px 14px; border-bottom:1px solid var(--border); font-size:11px; color:var(--text2); text-transform:uppercase; letter-spacing:.08em; }
+.ins-body { flex:1; overflow-y:auto; padding:12px; display:flex; flex-direction:column; gap:10px; }
+
+.ins-card { background:var(--surface2); border-radius:9px; padding:11px 13px; }
+.ins-card h3 { font-size:10px; color:var(--text2); text-transform:uppercase; letter-spacing:.08em; margin-bottom:7px; }
+.ins-row { display:flex; justify-content:space-between; font-size:12px; padding:2px 0; }
+.ins-row span:last-child { font-family:var(--mono); color:var(--cyan); }
+.ins-row.warn span:last-child { color:var(--orange); }
+.ins-row.miss span:last-child { color:var(--red); }
+
+.mat-preview {
+    height:60px; border-radius:8px; border:1px solid var(--border);
+    display:flex; align-items:center; justify-content:center;
+    font-size:12px; font-family:var(--mono); color:rgba(255,255,255,.6);
+}
+
+/* ── FOOTER ── */
+footer {
+    grid-area: ft;
+    background:var(--surface); border-top:1px solid var(--border);
+    display:flex; align-items:center; gap:14px; padding:0 20px; font-size:12px;
+}
+#msg { flex:1; font-family:var(--mono); color:var(--text2); }
+#msg.ok   { color:var(--green); }
+#msg.err  { color:var(--red); }
+#msg.warn { color:var(--orange); }
+
+/* scrollbar */
+::-webkit-scrollbar { width:4px; }
+::-webkit-scrollbar-thumb { background:var(--border); border-radius:2px; }
+</style>
+</head>
+<body>
+
+<header>
+    <h1>⚛️ QuantumSim <span>/ Element Index Builder</span></h1>
+    <div class="hd-prog">
+        <div class="hd-bar"><div class="hd-fill" id="pFill" style="width:0"></div></div>
+        <span class="hd-lbl" id="pLbl">0 / 118</span>
+    </div>
+    <button class="btn-load" onclick="loadFolder()">📂 Cargar carpeta /elements/</button>
+    <button class="btn-gen"  onclick="generateBoth()">📦 Generar JSONs</button>
+</header>
+
+<aside>
+    <div class="sb-search">
+        <input type="text" placeholder="Buscar elemento..." oninput="filterList(this.value)">
+    </div>
+    <div class="sb-list" id="sbList"></div>
+</aside>
+
+<main>
+    <div class="m-top">
+        <div class="m-badge">
+            <span class="m-badge-n" id="bNum">—</span>
+            <span class="m-badge-s" id="bSym">?</span>
+        </div>
+        <div style="display:flex;flex-direction:column;gap:2px">
+            <div style="display:flex;align-items:center;gap:8px">
+                <div class="m-color" id="mColor"></div>
+                <div class="m-color" id="mCpk"></div>
+                <div class="m-info">
+                    <h2 id="bName">Selecciona un elemento</h2>
+                    <p id="bGroup">—</p>
+                </div>
+            </div>
+        </div>
+        <div class="m-acts">
+            <button class="btn btn-p"  onclick="nav(-1)">← Prev</button>
+            <button class="btn btn-s"  onclick="saveCurrent()">✓ Guardar</button>
+            <button class="btn btn-nx" onclick="nav(1)">Next →</button>
+        </div>
+    </div>
+
+    <div class="m-body">
+        <!-- Info del JSON -->
+        <div class="info-box" id="infoBox">Carga la carpeta /elements/ para empezar.</div>
+
+        <!-- Material -->
+        <div class="field-row">
+            <label>Nombre de Material (para shader/renderer)</label>
+            <input type="text" id="fMaterial" placeholder="ej: metallic_gold, radioactive_glow, liquid_mercury...">
+            <div class="material-chips" id="matChips"></div>
+        </div>
+
+        <!-- Grupo override (si el JSON lo dice diferente) -->
+        <div class="field-2col">
+            <div class="field-row">
+                <label>Grupo (del JSON)</label>
+                <input type="text" id="fGroup" placeholder="—" readonly style="opacity:.6">
+            </div>
+            <div class="field-row">
+                <label>Grupo override (opcional)</label>
+                <select id="fGroupOvr">
+                    <option value="">— sin cambio —</option>
+                    <option value="nonmetal">Nonmetal</option>
+                    <option value="alkali_metal">Alkali Metal</option>
+                    <option value="alkaline_earth">Alkaline Earth</option>
+                    <option value="transition_metal">Transition Metal</option>
+                    <option value="post_transition_metal">Post-Transition Metal</option>
+                    <option value="metalloid">Metalloid</option>
+                    <option value="halogen">Halogen</option>
+                    <option value="noble_gas">Noble Gas</option>
+                    <option value="lanthanide">Lanthanide</option>
+                    <option value="actinide">Actinide</option>
+                    <option value="superheavy">Superheavy</option>
+                </select>
+            </div>
+        </div>
+
+        <!-- Notas editoriales -->
+        <div class="field-row">
+            <label>Notas editoriales / curiosidades (Markdown ok)</label>
+            <textarea id="fNotes" placeholder="Escribe algo fascinante sobre este elemento...&#10;&#10;El Fermio es el límite de la síntesis neutrónica...&#10;Descubierto en los restos de una bomba H..."></textarea>
+        </div>
+
+        <!-- Tags -->
+        <div class="field-row">
+            <label>Tags adicionales (separados por coma)</label>
+            <input type="text" id="fTags" placeholder="radioactive, magnetic, biological, toxic, fuel...">
+        </div>
+
+    </div>
+</main>
+
+<div class="inspector">
+    <div class="ins-head">Inspector de elemento</div>
+    <div class="ins-body" id="insBody">
+        <div class="ins-card"><p style="color:var(--text2);font-size:12px">Selecciona un elemento para ver sus datos.</p></div>
+    </div>
+</div>
+
+<footer>
+    <span id="msg">Carga la carpeta /elements/ para comenzar.</span>
+    <span style="color:var(--text2)">QuantumSim Index Builder v1.0</span>
+</footer>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js"></script>
+<script>
+
+// ── Sugerencias de materiales por categoría ────────────────────────────────
+const MAT_SUGGESTIONS = {
+    alkali_metal:        ['soft_metal','reactive_metal','alkali_glow'],
+    alkaline_earth:      ['matte_metal','earth_metal','chalky_metal'],
+    transition_metal:    ['metallic','polished_metal','dark_metal','magnetic_metal'],
+    post_transition_metal:['dull_metal','heavy_metal','pewter_metal'],
+    metalloid:           ['semiconductor','crystal_grey','semi_metallic'],
+    nonmetal:            ['translucent_gas','organic_solid','pale_crystal'],
+    halogen:             ['corrosive_gas','toxic_glow','halogen_crystal'],
+    noble_gas:           ['noble_glow','inert_gas','plasma_glow'],
+    lanthanide:          ['rare_earth_metal','lanthanide_sheen','magnetic_rare'],
+    actinide:            ['radioactive_glow','nuclear_metal','actinide_bloom'],
+    superheavy:          ['synthetic_glow','unstable_flash','quantum_flicker'],
+};
+
+// Materiales especiales por símbolo
+const MAT_SPECIAL = {
+    Au: 'metallic_gold',
+    Ag: 'metallic_silver',
+    Cu: 'metallic_copper',
+    Fe: 'magnetic_iron',
+    Hg: 'liquid_mercury',
+    H:  'hydrogen_gas',
+    O:  'oxygen_gas',
+    C:  'carbon_allotrope',
+    N:  'nitrogen_gas',
+    S:  'sulfur_crystal',
+    U:  'radioactive_uranium',
+    Pu: 'radioactive_plutonium',
+    Ra: 'radioactive_radium',
+    Na: 'reactive_sodium',
+    K:  'reactive_potassium',
+    Li: 'soft_lithium',
+    He: 'noble_helium',
+    Ne: 'neon_glow',
+    Ar: 'argon_plasma',
+    Xe: 'xenon_plasma',
+    Rn: 'radioactive_radon',
+    F:  'corrosive_fluorine',
+    Cl: 'toxic_chlorine',
+    Br: 'liquid_bromine',
+    I:  'iodine_crystal',
+    Pt: 'platinum_polish',
+    Ir: 'iridium_dense',
+    W:  'tungsten_hard',
+    Cr: 'chrome_sheen',
+    Ti: 'titanium_light',
+    Ni: 'nickel_magnetic',
+    Co: 'cobalt_blue',
+    Mn: 'manganese_oxide',
+    Zn: 'zinc_dull',
+    Pb: 'lead_heavy',
+    Bi: 'bismuth_crystal',
+    Si: 'silicon_wafer',
+    B:  'boron_ceramic',
+    Diamond: 'diamond_crystal',
+};
+
+// ── Estado ─────────────────────────────────────────────────────────────────
+const ELEMENTS_118 = [
+    [1,'H'],[2,'He'],[3,'Li'],[4,'Be'],[5,'B'],[6,'C'],[7,'N'],[8,'O'],
+    [9,'F'],[10,'Ne'],[11,'Na'],[12,'Mg'],[13,'Al'],[14,'Si'],[15,'P'],[16,'S'],
+    [17,'Cl'],[18,'Ar'],[19,'K'],[20,'Ca'],[21,'Sc'],[22,'Ti'],[23,'V'],[24,'Cr'],
+    [25,'Mn'],[26,'Fe'],[27,'Co'],[28,'Ni'],[29,'Cu'],[30,'Zn'],[31,'Ga'],[32,'Ge'],
+    [33,'As'],[34,'Se'],[35,'Br'],[36,'Kr'],[37,'Rb'],[38,'Sr'],[39,'Y'],[40,'Zr'],
+    [41,'Nb'],[42,'Mo'],[43,'Tc'],[44,'Ru'],[45,'Rh'],[46,'Pd'],[47,'Ag'],[48,'Cd'],
+    [49,'In'],[50,'Sn'],[51,'Sb'],[52,'Te'],[53,'I'],[54,'Xe'],[55,'Cs'],[56,'Ba'],
+    [57,'La'],[58,'Ce'],[59,'Pr'],[60,'Nd'],[61,'Pm'],[62,'Sm'],[63,'Eu'],[64,'Gd'],
+    [65,'Tb'],[66,'Dy'],[67,'Ho'],[68,'Er'],[69,'Tm'],[70,'Yb'],[71,'Lu'],[72,'Hf'],
+    [73,'Ta'],[74,'W'],[75,'Re'],[76,'Os'],[77,'Ir'],[78,'Pt'],[79,'Au'],[80,'Hg'],
+    [81,'Tl'],[82,'Pb'],[83,'Bi'],[84,'Po'],[85,'At'],[86,'Rn'],[87,'Fr'],[88,'Ra'],
+    [89,'Ac'],[90,'Th'],[91,'Pa'],[92,'U'],[93,'Np'],[94,'Pu'],[95,'Am'],[96,'Cm'],
+    [97,'Bk'],[98,'Cf'],[99,'Es'],[100,'Fm'],[101,'Md'],[102,'No'],[103,'Lr'],
+    [104,'Rf'],[105,'Db'],[106,'Sg'],[107,'Bh'],[108,'Hs'],[109,'Mt'],[110,'Ds'],
+    [111,'Rg'],[112,'Cn'],[113,'Nh'],[114,'Fl'],[115,'Mc'],[116,'Lv'],[117,'Ts'],[118,'Og']
+];
+
+let loadedFiles = {};   // sym → parsed JSON
+let edits = {};         // sym → { material, group_override, notes, tags }
+let currentIdx = 0;
+let filterStr = '';
+
+// ── Cargar carpeta ──────────────────────────────────────────────────────────
+async function loadFolder() {
+    try {
+        const input = document.createElement('input');
+        input.type = 'file';
+        input.multiple = true;
+        input.accept = '.json';
+        // Permitir selección de carpeta en Chrome
+        input.webkitdirectory = true;
+        input.onchange = async () => {
+            const files = Array.from(input.files);
+            let loaded = 0;
+            for (const f of files) {
+                if (!f.name.endsWith('.json')) continue;
+                try {
+                    const text = await f.text();
+                    const data = JSON.parse(text);
+                    const sym  = data.symbol || f.name.replace('.json','');
+                    loadedFiles[sym] = data;
+                    loaded++;
+                } catch(e) { console.warn('Error leyendo', f.name, e); }
+            }
+            setMsg(`✓ ${loaded} archivos cargados.`, 'ok');
+            buildSidebar();
+            goTo(0);
+        };
+        input.click();
+    } catch(e) {
+        setMsg('Error cargando carpeta: ' + e.message, 'err');
+    }
+}
+
+// ── Sidebar ─────────────────────────────────────────────────────────────────
+function buildSidebar() {
+    renderSidebar(ELEMENTS_118);
+}
+
+function filterList(q) {
+    filterStr = q.toLowerCase();
+    const filtered = ELEMENTS_118.filter(([n,s]) =>
+        s.toLowerCase().includes(filterStr) ||
+        n.toString().includes(filterStr) ||
+        (loadedFiles[s]?.identity?.name_es || '').toLowerCase().includes(filterStr) ||
+        (loadedFiles[s]?.identity?.name_eng || '').toLowerCase().includes(filterStr)
+    );
+    renderSidebar(filtered);
+}
+
+function renderSidebar(list) {
+    const el = document.getElementById('sbList');
+    el.innerHTML = '';
+    list.forEach(([num, sym]) => {
+        const data = loadedFiles[sym];
+        const edit = edits[sym];
+        const name = data?.identity?.name_es || data?.identity?.name_eng || sym;
+        const grp  = edit?.group_override || data?.identity?.category_eng || '?';
+        const hasFile = !!data;
+        const isDone  = !!(edit?.material);
+
+        const div = document.createElement('div');
+        div.className = `ei${isDone?' done':''}${!hasFile?' no-file':''}`;
+        div.id = `ei-${sym}`;
+        div.innerHTML = `
+            <span class="ei-n">${num}</span>
+            <span class="ei-sym">${sym}</span>
+            <span class="ei-nm">${name}</span>
+            <span class="group-tag">${grp.substring(0,6)}</span>
+            <span class="ei-s">${isDone ? '✓' : hasFile ? '○' : '✗'}</span>`;
+        div.onclick = () => {
+            const realIdx = ELEMENTS_118.findIndex(([,s]) => s === sym);
+            goTo(realIdx);
+        };
+        el.appendChild(div);
+    });
+}
+
+// ── Navegación ───────────────────────────────────────────────────────────────
+function goTo(idx) {
+    if (idx < 0 || idx >= ELEMENTS_118.length) return;
+    currentIdx = idx;
+    const [num, sym] = ELEMENTS_118[idx];
+    const data = loadedFiles[sym];
+    const edit = edits[sym] || {};
+
+    // Highlight sidebar
+    document.querySelectorAll('.ei.active').forEach(e => e.classList.remove('active'));
+    document.getElementById(`ei-${sym}`)?.classList.add('active');
+    document.getElementById(`ei-${sym}`)?.scrollIntoView({ block:'nearest' });
+
+    // Badge
+    document.getElementById('bNum').textContent  = num;
+    document.getElementById('bSym').textContent  = sym;
+
+    if (data) {
+        const nameEs  = data.identity?.name_es  || '';
+        const nameEn  = data.identity?.name_eng || '';
+        const grpRaw  = data.identity?.category_eng || data.identity?.category_es || '';
+        const color   = data.identity?.color   || '#555';
+        const cpk     = data.identity?.cpk_color || '#555';
+
+        document.getElementById('bName').textContent  = `${nameEs} / ${nameEn}`;
+        document.getElementById('bGroup').textContent = grpRaw;
+        document.getElementById('mColor').style.background = color.replace('0x','#');
+        document.getElementById('mCpk').style.background   = cpk.replace('0x','#');
+        document.getElementById('infoBox').textContent =
+            `Z=${num} · ${nameEn} · ${grpRaw} · masa: ${data.physical_properties?.mass ?? '?'} u`;
+
+        // Grupo en campo
+        document.getElementById('fGroup').value = grpRaw;
+
+        // Inspector
+        renderInspector(sym, data);
+    } else {
+        document.getElementById('bName').textContent  = sym;
+        document.getElementById('bGroup').textContent = 'Archivo no cargado';
+        document.getElementById('mColor').style.background = '#333';
+        document.getElementById('mCpk').style.background   = '#333';
+        document.getElementById('infoBox').textContent = `⚠ ${sym}.json no encontrado en la carpeta cargada.`;
+        document.getElementById('fGroup').value = '';
+        document.getElementById('insBody').innerHTML =
+            '<div class="ins-card"><p style="color:var(--red);font-size:12px">Archivo no encontrado</p></div>';
+    }
+
+    // Restaurar ediciones guardadas
+    document.getElementById('fMaterial').value  = edit.material   || MAT_SPECIAL[sym] || '';
+    document.getElementById('fGroupOvr').value  = edit.group_override || '';
+    document.getElementById('fNotes').value     = edit.notes      || '';
+    document.getElementById('fTags').value      = (edit.tags || []).join(', ');
+
+    // Chips de sugerencias
+    renderChips(sym, data);
+    updateProgress();
+}
+
+function nav(dir) {
+    goTo(currentIdx + dir);
+}
+
+// ── Material chips ────────────────────────────────────────────────────────────
+function renderChips(sym, data) {
+    const container = document.getElementById('matChips');
+    container.innerHTML = '';
+    const current = document.getElementById('fMaterial').value;
+    const grp = (data?.identity?.category_eng || '').toLowerCase().replace(/ /g,'_');
+
+    // Especial para este símbolo
+    const special = MAT_SPECIAL[sym];
+    const suggestions = [
+        ...(special ? [special] : []),
+        ...(MAT_SUGGESTIONS[grp] || MAT_SUGGESTIONS['transition_metal']),
+    ];
+
+    // Deduplica
+    [...new Set(suggestions)].forEach(mat => {
+        const chip = document.createElement('span');
+        chip.className = `chip${current === mat ? ' sel' : ''}`;
+        chip.textContent = mat;
+        chip.onclick = () => {
+            document.getElementById('fMaterial').value = mat;
+            renderChips(sym, data);
+        };
+        container.appendChild(chip);
+    });
+}
+
+// ── Inspector ─────────────────────────────────────────────────────────────────
+function renderInspector(sym, data) {
+    const body = document.getElementById('insBody');
+    const p = data.physical_properties || {};
+    const a = data.atomic_structure    || {};
+    const r = data.reactivity          || {};
+    const edit = edits[sym] || {};
+    const matName = edit.material || MAT_SPECIAL[sym] || '—';
+
+    body.innerHTML = `
+    <div class="ins-card">
+        <h3>Propiedades clave</h3>
+        <div class="ins-row"><span>Masa</span><span>${p.mass ?? '—'} u</span></div>
+        <div class="ins-row"><span>Estado</span><span>${p.standard_state_eng || p.standard_state_es || '—'}</span></div>
+        <div class="ins-row"><span>Fusión</span><span>${p.melt_K ?? '—'} K</span></div>
+        <div class="ins-row"><span>Ebullición</span><span>${p.boil_K ?? '—'} K</span></div>
+        <div class="ins-row"><span>Densidad</span><span>${p.density_g_cm3 ?? '—'} g/cm³</span></div>
+    </div>
+    <div class="ins-card">
+        <h3>Estructura atómica</h3>
+        <div class="ins-row"><span>Electr.</span><span>${a.electronegativity ?? '—'}</span></div>
+        <div class="ins-row"><span>Valencia</span><span>${a.valence ?? '—'}</span></div>
+        <div class="ins-row"><span>r_cov</span><span>${a.radius_covalent_pm ?? '—'} pm</span></div>
+        <div class="ins-row"><span>r_vdw</span><span>${a.vanderwaals_radius_pm ?? '—'} pm</span></div>
+        <div class="ins-row"><span>IE</span><span>${a.ionization_energy_eV ?? '—'} eV</span></div>
+        <div class="ins-row"><span>Capas</span><span>${(a.shells||[]).join('-') || '—'}</span></div>
+    </div>
+    <div class="ins-card">
+        <h3>Reactividad</h3>
+        <div class="ins-row"><span>max_bonds</span><span>${r.max_bonds ?? '—'}</span></div>
+        <div class="ins-row"><span>Geometría</span><span>${r.geometry_preference_eng || '—'}</span></div>
+        <div class="ins-row"><span>bond_E</span><span>${r.bond_energy_ev ?? '—'} eV</span></div>
+        <div class="ins-row"><span>Ox.states</span><span>${(r.oxidation_states||[]).join(', ') || '—'}</span></div>
+    </div>
+    <div class="ins-card">
+        <h3>Material asignado</h3>
+        <div class="mat-preview" id="matPrev" style="font-size:13px;color:var(--cyan)">${matName}</div>
+    </div>`;
+}
+
+// ── Guardar ────────────────────────────────────────────────────────────────────
+function saveCurrent() {
+    const [, sym] = ELEMENTS_118[currentIdx];
+    const mat  = document.getElementById('fMaterial').value.trim();
+    const grpO = document.getElementById('fGroupOvr').value;
+    const notes = document.getElementById('fNotes').value.trim();
+    const tagsRaw = document.getElementById('fTags').value;
+    const tags = tagsRaw.split(',').map(t=>t.trim()).filter(Boolean);
+
+    edits[sym] = { material: mat, group_override: grpO, notes, tags };
+
+    // Actualizar sidebar
+    buildSidebar();
+    document.getElementById(`ei-${sym}`)?.classList.add('active');
+
+    // Actualizar inspector con nuevo material
+    const data = loadedFiles[sym];
+    if (data) renderInspector(sym, data);
+
+    updateProgress();
+    setMsg(`✓ ${sym} guardado.`, 'ok');
+    setTimeout(() => nav(1), 400);
+}
+
+// ── Generar ambos JSONs ───────────────────────────────────────────────────────
+async function generateBoth() {
+    const done = Object.keys(edits).length;
+    if (done === 0) { setMsg('No hay elementos guardados aún.', 'warn'); return; }
+
+    setMsg('Generando archivos...', '');
+
+    // ── 1. elements-index.json ─────────────────────────────────────────────
+    const indexEntries = {};
+    ELEMENTS_118.forEach(([num, sym]) => {
+        const data = loadedFiles[sym];
+        const edit = edits[sym] || {};
+        if (!data && !edit.material) return;
+
+        const nameEs  = data?.identity?.name_es   || sym;
+        const nameEng = data?.identity?.name_eng  || sym;
+        const rawCat  = data?.identity?.category_eng || data?.identity?.category_es || '';
+        const group   = edit.group_override || normalizeGroup(rawCat);
+        const color   = data?.identity?.color    || null;
+        const cpk     = data?.identity?.cpk_color || null;
+        const mass    = data?.physical_properties?.mass || null;
+        const tags    = edit.tags || [];
+
+        indexEntries[sym] = {
+            number:    num,
+            symbol:    sym,
+            name_es:   nameEs,
+            name_eng:  nameEng,
+            group,
+            color,
+            cpk_color: cpk,
+            mass,
+            material:  edit.material || null,
+            tags,
+            file:      `elements/${sym}.json`,
+        };
+    });
+
+    // ── 2. elements-editorial.json ─────────────────────────────────────────
+    const editorial = {};
+    ELEMENTS_118.forEach(([num, sym]) => {
+        const edit = edits[sym];
+        if (!edit?.notes) return;
+        editorial[sym] = {
+            number: num,
+            symbol: sym,
+            notes:  edit.notes,
+        };
+    });
+
+    // ── ZIP ────────────────────────────────────────────────────────────────
+    const zip = new JSZip();
+    zip.file('elements-index.json',    JSON.stringify({ version:'1.0', elements: indexEntries }, null, 2));
+    zip.file('elements-editorial.json', JSON.stringify({ version:'1.0', editorial }, null, 2));
+
+    const blob = await zip.generateAsync({ type:'blob' });
+    const url  = URL.createObjectURL(blob);
+    const a    = document.createElement('a');
+    a.href = url; a.download = 'quantumsim-index.zip'; a.click();
+    URL.revokeObjectURL(url);
+    setMsg(`✓ quantumsim-index.zip generado (${Object.keys(indexEntries).length} elementos, ${Object.keys(editorial).length} con notas).`, 'ok');
+}
+
+// ── Helpers ────────────────────────────────────────────────────────────────────
+function normalizeGroup(cat) {
+    const c = (cat || '').toLowerCase();
+    if (c.includes('alkali') && c.includes('earth')) return 'alkaline_earth';
+    if (c.includes('alkali'))       return 'alkali_metal';
+    if (c.includes('transition'))   return 'transition_metal';
+    if (c.includes('post'))         return 'post_transition_metal';
+    if (c.includes('metalloid'))    return 'metalloid';
+    if (c.includes('halogen'))      return 'halogen';
+    if (c.includes('noble'))        return 'noble_gas';
+    if (c.includes('lanthan'))      return 'lanthanide';
+    if (c.includes('actinide') || c.includes('actín')) return 'actinide';
+    if (c.includes('nonmetal') || c.includes('no metal') || c.includes('reactive nonmetal')) return 'nonmetal';
+    return cat;
+}
+
+function updateProgress() {
+    const done = Object.keys(edits).filter(s => edits[s]?.material).length;
+    const pct  = done / 118 * 100;
+    document.getElementById('pFill').style.width = pct + '%';
+    document.getElementById('pLbl').textContent  = `${done} / 118`;
+}
+
+function setMsg(msg, type) {
+    const el = document.getElementById('msg');
+    el.textContent = msg;
+    el.className = type;
+}
+
+// ── Teclado ────────────────────────────────────────────────────────────────────
+document.addEventListener('keydown', e => {
+    if (e.target.tagName === 'TEXTAREA' || e.target.tagName === 'INPUT') return;
+    if (e.key === 'ArrowRight' || e.key === 'ArrowDown') nav(1);
+    if (e.key === 'ArrowLeft'  || e.key === 'ArrowUp')   nav(-1);
+    if (e.key === 'Enter') saveCurrent();
+});
+
+// ── Init ───────────────────────────────────────────────────────────────────────
+buildSidebar();
+goTo(0);
+</script>
+</body>
+</html>

@@ -1,0 +1,131 @@
+{
+  "symbol": "Br",
+  "identity": {
+    "name_es": "Bromo",
+    "name_eng": "Bromine",
+    "number": 35,
+    "category_es": "Halógeno",
+    "category_eng": "Halogen",
+    "color": "0xA04020",
+    "cpk_color": "0xA62929",
+    "discovery_year": "1826"
+  },
+  "physical_properties": {
+    "mass": 79.904,
+    "density_g_cm3": 3.1028,
+    "standard_state_es": "Líquido",
+    "standard_state_eng": "Liquid",
+    "melt_K": 265.8,
+    "boil_K": 332,
+    "allotropes_es": null,
+    "allotropes_eng": null,
+    "lattice_structure": "orthorhombic"
+  },
+  "atomic_structure": {
+    "electronegativity": 2.96,
+    "valence": 7,
+    "ionization_energy_eV": 11.8138,
+    "electron_affinity_ev": 3.3635,
+    "electron_affinity_kj_mol": 324.6,
+    "radius_atomic_pm": 114,
+    "radius_covalent_pm": 120,
+    "vanderwaals_radius_pm": 185,
+    "ionic_radius_pm": 196,
+    "effective_nuclear_charge": 7.6,
+    "electron_configuration_string": "[Ar] 3d10 4s2 4p5",
+    "shells": [
+      2,
+      8,
+      18,
+      7
+    ],
+    "quantum_numbers": {
+      "s": 2,
+      "p": 5,
+      "d": 0,
+      "f": 0
+    },
+    "work_function_ev": null
+  },
+  "thermodynamics": {
+    "enthalpy_formation_kj_mol": 0,
+    "entropy_j_molk": 152.23,
+    "heat_capacity_j_molk": 75.69,
+    "specific_heat_j_gK": 0.474,
+    "latent_heat_fusion_kj_mol": 5.29,
+    "latent_heat_vaporization_kj_mol": 14.73,
+    "fusion_heat_kj_mol": 10.57,
+    "evaporation_heat_kj_mol": 29.96
+  },
+  "kinetics_and_phase": {
+    "vapor_pressure_constants": {
+      "A": 5.1,
+      "B": 1300,
+      "C": -40
+    },
+    "vapor_pressure_pa": 28000,
+    "viscosity_liquid_pas": 0.00094,
+    "viscosity_pa_s": null,
+    "critical_temp_K": 588,
+    "critical_press_MPa": 10.3,
+    "surface_tension_nm": 0.0415
+  },
+  "electromagnetism_and_mechanics": {
+    "thermal_conductivity_wmk": 0.122,
+    "electrical_conductivity_sm": 1e-09,
+    "magnetic_susceptibility": -5.6e-05,
+    "thermal_expansion_coefficient": null,
+    "polarizability_angstrom3": 3.1,
+    "refractive_index": 1.66,
+    "youngs_modulus_gba": null,
+    "poisson_ratio": null,
+    "brinell_hardness_m_pa": null
+  },
+  "reactivity": {
+    "max_bonds": 7,
+    "geometry_preference_es": "Diatómica / Lineal",
+    "geometry_preference_eng": "Diatomic / Linear",
+    "ideal_bond_angle": 180,
+    "bond_energy_ev": 1.97,
+    "dissociation_energy_kj_mol": 193,
+    "standard_potential_v": 1.066,
+    "oxidation_states": [
+      7,
+      5,
+      3,
+      1,
+      -1
+    ],
+    "common_ions": [
+      "Br-",
+      "BrO3-"
+    ]
+  },
+  "nuclear_and_environmental": {
+    "isotopes": [
+      {
+        "mass": 78.918,
+        "abundance": 50.69,
+        "stable": true,
+        "name_es": "Bromo-79",
+        "name_eng": "Bromine-79"
+      },
+      {
+        "mass": 80.916,
+        "abundance": 49.31,
+        "stable": true,
+        "name_es": "Bromo-81",
+        "name_eng": "Bromine-81"
+      }
+    ],
+    "neutron_cross_section_barns": 6.8,
+    "nuclear_binding_energy_mev": 8.695,
+    "abundance_crust_mg_kg": 2.4,
+    "toxicity_level": 4
+  },
+  "cryogenic_data": {
+    "critical_solidification_pressure_mpa": null,
+    "lambda_point_k": null,
+    "superfluid_viscosity_pas": null
+  }
+}

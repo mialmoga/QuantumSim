@@ -1,0 +1,135 @@
+{
+  "symbol": "Mn",
+  "identity": {
+    "name_es": "Manganeso",
+    "name_eng": "Manganese",
+    "number": 25,
+    "category_es": "Metal de transición",
+    "category_eng": "Transition metal",
+    "color": "0xB0A8A0",
+    "cpk_color": "0x9C7AC7",
+    "discovery_year": "1774"
+  },
+  "physical_properties": {
+    "mass": 54.938,
+    "density_g_cm3": 7.47,
+    "standard_state_es": "Sólido",
+    "standard_state_eng": "Solid",
+    "melt_K": 1519,
+    "boil_K": 2334,
+    "allotropes_es": [
+      "Alfa (Cúbica compleja)",
+      "Beta",
+      "Gamma",
+      "Delta"
+    ],
+    "allotropes_eng": [
+      "Alpha (Complex cubic)",
+      "Beta",
+      "Gamma",
+      "Delta"
+    ],
+    "lattice_structure": "complex_cubic"
+  },
+  "atomic_structure": {
+    "electronegativity": 1.55,
+    "valence": 7,
+    "ionization_energy_eV": 7.434,
+    "electron_affinity_ev": 0,
+    "electron_affinity_kj_mol": 0,
+    "radius_atomic_pm": 127,
+    "radius_covalent_pm": 139,
+    "vanderwaals_radius_pm": 197,
+    "ionic_radius_pm": 67,
+    "effective_nuclear_charge": 5.233,
+    "electron_configuration_string": "[Ar] 3d5 4s2",
+    "shells": [
+      2,
+      8,
+      13,
+      2
+    ],
+    "quantum_numbers": {
+      "s": 2,
+      "p": 3,
+      "d": 5,
+      "f": 0
+    },
+    "work_function_ev": 4.1
+  },
+  "thermodynamics": {
+    "enthalpy_formation_kj_mol": 0,
+    "entropy_j_molk": 32,
+    "heat_capacity_j_molk": 26.32,
+    "specific_heat_j_gK": 0.479,
+    "latent_heat_fusion_kj_mol": 12.91,
+    "latent_heat_vaporization_kj_mol": 221,
+    "fusion_heat_kj_mol": 12.9,
+    "evaporation_heat_kj_mol": 221
+  },
+  "kinetics_and_phase": {
+    "vapor_pressure_constants": {
+      "A": 5.161,
+      "B": 14600,
+      "C": -10
+    },
+    "vapor_pressure_pa": null,
+    "viscosity_liquid_pas": null,
+    "viscosity_pa_s": null,
+    "critical_temp_K": null,
+    "critical_press_MPa": null,
+    "surface_tension_nm": 1.09
+  },
+  "electromagnetism_and_mechanics": {
+    "thermal_conductivity_wmk": 7.81,
+    "electrical_conductivity_sm": 620000,
+    "magnetic_susceptibility": 0.000121,
+    "thermal_expansion_coefficient": 2.17e-05,
+    "polarizability_angstrom3": 9.4,
+    "refractive_index": null,
+    "youngs_modulus_gba": 191,
+    "poisson_ratio": 0.24,
+    "brinell_hardness_m_pa": 196
+  },
+  "reactivity": {
+    "max_bonds": 7,
+    "geometry_preference_es": "Octaédrica / Tetraédrica",
+    "geometry_preference_eng": "Octahedral / Tetrahedral",
+    "ideal_bond_angle": null,
+    "bond_energy_ev": null,
+    "dissociation_energy_kj_mol": null,
+    "standard_potential_v": -1.185,
+    "oxidation_states": [
+      7,
+      6,
+      4,
+      3,
+      2
+    ],
+    "common_ions": [
+      "Mn2+",
+      "MnO4-",
+      "Mn4+"
+    ]
+  },
+  "nuclear_and_environmental": {
+    "isotopes": [
+      {
+        "mass": 54.938,
+        "abundance": 100,
+        "stable": true,
+        "name_es": "Manganeso-55",
+        "name_eng": "Manganese-55"
+      }
+    ],
+    "neutron_cross_section_barns": 13.3,
+    "nuclear_binding_energy_mev": 8.767,
+    "abundance_crust_mg_kg": 950,
+    "toxicity_level": 2
+  },
+  "cryogenic_data": {
+    "critical_solidification_pressure_mpa": null,
+    "lambda_point_k": null,
+    "superfluid_viscosity_pas": null
+  }
+}

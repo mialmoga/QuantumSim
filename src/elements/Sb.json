@@ -1,0 +1,138 @@
+{
+  "symbol": "Sb",
+  "identity": {
+    "name_es": "Antimonio",
+    "name_eng": "Antimony",
+    "number": 51,
+    "category_es": "Metaloide",
+    "category_eng": "Metalloid",
+    "color": "0xA0A0A8",
+    "cpk_color": "0x9E63B5",
+    "discovery_year": "Prehistoria"
+  },
+  "physical_properties": {
+    "mass": 121.76,
+    "density_g_cm3": 6.697,
+    "standard_state_es": "Sólido",
+    "standard_state_eng": "Solid",
+    "melt_K": 903.78,
+    "boil_K": 1860,
+    "allotropes_es": [
+      "Gris (metálico)",
+      "Negro (amorfo)",
+      "Amarillo"
+    ],
+    "allotropes_eng": [
+      "Grey (metallic)",
+      "Black (amorphous)",
+      "Yellow"
+    ],
+    "lattice_structure": "rhombohedral"
+  },
+  "atomic_structure": {
+    "electronegativity": 2.05,
+    "valence": 5,
+    "ionization_energy_eV": 8.6084,
+    "electron_affinity_ev": 1.047,
+    "electron_affinity_kj_mol": 101,
+    "radius_atomic_pm": 140,
+    "radius_covalent_pm": 139,
+    "vanderwaals_radius_pm": 206,
+    "ionic_radius_pm": 76,
+    "effective_nuclear_charge": 6.3,
+    "electron_configuration_string": "[Kr] 4d10 5s2 5p3",
+    "shells": [
+      2,
+      8,
+      18,
+      18,
+      5
+    ],
+    "quantum_numbers": {
+      "s": 2,
+      "p": 3,
+      "d": 0,
+      "f": 0
+    },
+    "work_function_ev": 4.55
+  },
+  "thermodynamics": {
+    "enthalpy_formation_kj_mol": 0,
+    "entropy_j_molk": 45.69,
+    "heat_capacity_j_molk": 25.23,
+    "specific_heat_j_gK": 0.207,
+    "latent_heat_fusion_kj_mol": 19.87,
+    "latent_heat_vaporization_kj_mol": 193.4,
+    "fusion_heat_kj_mol": 19.8,
+    "evaporation_heat_kj_mol": 68
+  },
+  "kinetics_and_phase": {
+    "vapor_pressure_constants": {
+      "A": 5.15,
+      "B": 10500,
+      "C": -10
+    },
+    "vapor_pressure_pa": null,
+    "viscosity_liquid_pas": 0.0013,
+    "viscosity_pa_s": null,
+    "critical_temp_K": null,
+    "critical_press_MPa": null,
+    "surface_tension_nm": 0.35
+  },
+  "electromagnetism_and_mechanics": {
+    "thermal_conductivity_wmk": 24.3,
+    "electrical_conductivity_sm": 2500000,
+    "magnetic_susceptibility": -9.9e-05,
+    "thermal_expansion_coefficient": 1.1e-05,
+    "polarizability_angstrom3": 6.6,
+    "refractive_index": null,
+    "youngs_modulus_gba": 55,
+    "poisson_ratio": null,
+    "brinell_hardness_m_pa": 294
+  },
+  "reactivity": {
+    "max_bonds": 5,
+    "geometry_preference_es": "Trigonal bipiramidal",
+    "geometry_preference_eng": "Trigonal bipyramidal",
+    "ideal_bond_angle": 120,
+    "bond_energy_ev": 3.1,
+    "dissociation_energy_kj_mol": 302,
+    "standard_potential_v": 0.15,
+    "oxidation_states": [
+      5,
+      3,
+      -3
+    ],
+    "common_ions": [
+      "Sb3+",
+      "Sb5+"
+    ]
+  },
+  "nuclear_and_environmental": {
+    "isotopes": [
+      {
+        "mass": 120.904,
+        "abundance": 57.21,
+        "stable": true,
+        "name_es": "Antimonio-121",
+        "name_eng": "Antimony-121"
+      },
+      {
+        "mass": 122.904,
+        "abundance": 42.79,
+        "stable": true,
+        "name_es": "Antimonio-123",
+        "name_eng": "Antimony-123"
+      }
+    ],
+    "neutron_cross_section_barns": 5.4,
+    "nuclear_binding_energy_mev": 8.502,
+    "abundance_crust_mg_kg": 0.2,
+    "toxicity_level": 3
+  },
+  "cryogenic_data": {
+    "critical_solidification_pressure_mpa": null,
+    "lambda_point_k": null,
+    "superfluid_viscosity_pas": null
+  }
+}

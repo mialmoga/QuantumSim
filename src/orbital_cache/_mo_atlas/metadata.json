@@ -1,0 +1,185 @@
+{
+  "format_version": "2.0",
+  "mode": "mo_atlas",
+  "description": "Generic molecular orbital atlas \u2014 scale+rotate in runtime",
+  "n_points": 20000,
+  "coordinate_system": {
+    "atomA": [
+      0,
+      0,
+      -0.5
+    ],
+    "atomB": [
+      0,
+      0,
+      0.5
+    ],
+    "separation": 1.0,
+    "usage": "Scale by actual bond_length_pm, rotate to bond axis A\u2192B"
+  },
+  "bin_format": {
+    "magic": "ORBL",
+    "layout": "float32_xyz_interleaved + float32_phase",
+    "endian": "little",
+    "units": "normalized (separation=1.0)",
+    "phase": "0.0=negative lobe (antibonding), 1.0=positive lobe (bonding)"
+  },
+  "MOs": [
+    {
+      "key": "sigma_1s-1s",
+      "file": "sigma_1s-1s.bin",
+      "label": "\u03c3(1s-1s)",
+      "aoA": "1s",
+      "aoB": "1s",
+      "mA": 0,
+      "mB": 0,
+      "coeffA": 0.7071,
+      "coeffB": 0.7071,
+      "antibonding": false,
+      "electrons": 2
+    },
+    {
+      "key": "sigma_s_1s-1s",
+      "file": "sigma_s_1s-1s.bin",
+      "label": "\u03c3*(1s-1s)",
+      "aoA": "1s",
+      "aoB": "1s",
+      "mA": 0,
+      "mB": 0,
+      "coeffA": 0.7071,
+      "coeffB": -0.7071,
+      "antibonding": true,
+      "electrons": 0
+    },
+    {
+      "key": "sigma_2s-2s",
+      "file": "sigma_2s-2s.bin",
+      "label": "\u03c3(2s-2s)",
+      "aoA": "2s",
+      "aoB": "2s",
+      "mA": 0,
+      "mB": 0,
+      "coeffA": 0.7071,
+      "coeffB": 0.7071,
+      "antibonding": false,
+      "electrons": 2
+    },
+    {
+      "key": "sigma_s_2s-2s",
+      "file": "sigma_s_2s-2s.bin",
+      "label": "\u03c3*(2s-2s)",
+      "aoA": "2s",
+      "aoB": "2s",
+      "mA": 0,
+      "mB": 0,
+      "coeffA": 0.7071,
+      "coeffB": -0.7071,
+      "antibonding": true,
+      "electrons": 0
+    },
+    {
+      "key": "sigma_2s-1s",
+      "file": "sigma_2s-1s.bin",
+      "label": "\u03c3(2s-1s)",
+      "aoA": "2s",
+      "aoB": "1s",
+      "mA": 0,
+      "mB": 0,
+      "coeffA": 0.848,
+      "coeffB": 0.53,
+      "antibonding": false,
+      "electrons": 2
+    },
+    {
+      "key": "sigma_s_2s-1s",
+      "file": "sigma_s_2s-1s.bin",
+      "label": "\u03c3*(2s-1s)",
+      "aoA": "2s",
+      "aoB": "1s",
+      "mA": 0,
+      "mB": 0,
+      "coeffA": 0.53,
+      "coeffB": -0.848,
+      "antibonding": true,
+      "electrons": 0
+    },
+    {
+      "key": "sigma_2p-2p",
+      "file": "sigma_2p-2p.bin",
+      "label": "\u03c3(2p-2p)",
+      "aoA": "2p",
+      "aoB": "2p",
+      "mA": 0,
+      "mB": 0,
+      "coeffA": 0.7071,
+      "coeffB": 0.7071,
+      "antibonding": false,
+      "electrons": 2
+    },
+    {
+      "key": "sigma_s_2p-2p",
+      "file": "sigma_s_2p-2p.bin",
+      "label": "\u03c3*(2p-2p)",
+      "aoA": "2p",
+      "aoB": "2p",
+      "mA": 0,
+      "mB": 0,
+      "coeffA": 0.7071,
+      "coeffB": -0.7071,
+      "antibonding": true,
+      "electrons": 0
+    },
+    {
+      "key": "pi_2p-2p",
+      "file": "pi_2p-2p.bin",
+      "label": "\u03c0(2p-2p)",
+      "aoA": "2p",
+      "aoB": "2p",
+      "mA": 1,
+      "mB": 1,
+      "coeffA": 0.7071,
+      "coeffB": 0.7071,
+      "antibonding": false,
+      "electrons": 2
+    },
+    {
+      "key": "pi_s_2p-2p",
+      "file": "pi_s_2p-2p.bin",
+      "label": "\u03c0*(2p-2p)",
+      "aoA": "2p",
+      "aoB": "2p",
+      "mA": 1,
+      "mB": 1,
+      "coeffA": 0.7071,
+      "coeffB": -0.7071,
+      "antibonding": true,
+      "electrons": 0
+    },
+    {
+      "key": "sigma_3d-2p",
+      "file": "sigma_3d-2p.bin",
+      "label": "\u03c3(3d-2p)",
+      "aoA": "3d",
+      "aoB": "2p",
+      "mA": 0,
+      "mB": 0,
+      "coeffA": 0.766,
+      "coeffB": 0.643,
+      "antibonding": false,
+      "electrons": 2
+    },
+    {
+      "key": "sigma_s_3d-2p",
+      "file": "sigma_s_3d-2p.bin",
+      "label": "\u03c3*(3d-2p)",
+      "aoA": "3d",
+      "aoB": "2p",
+      "mA": 0,
+      "mB": 0,
+      "coeffA": 0.643,
+      "coeffB": -0.766,
+      "antibonding": true,
+      "electrons": 0
+    }
+  ]
+}

@@ -1,0 +1,132 @@
+{
+  "symbol": "Mg",
+  "identity": {
+    "name_es": "Magnesio",
+    "name_eng": "Magnesium",
+    "number": 12,
+    "category_es": "Metal alcalinotérreo",
+    "category_eng": "Alkaline earth metal",
+    "color": "0xB0B0B0",
+    "cpk_color": "0x8AFF00",
+    "discovery_year": "1755"
+  },
+  "physical_properties": {
+    "mass": 24.305,
+    "density_g_cm3": 1.738,
+    "standard_state_es": "Sólido",
+    "standard_state_eng": "Solid",
+    "melt_K": 923,
+    "boil_K": 1363,
+    "allotropes_es": null,
+    "allotropes_eng": null,
+    "lattice_structure": "hcp"
+  },
+  "atomic_structure": {
+    "electronegativity": 1.31,
+    "valence": 2,
+    "ionization_energy_eV": 7.6462,
+    "electron_affinity_ev": 0,
+    "electron_affinity_kj_mol": 0,
+    "radius_atomic_pm": 160,
+    "radius_covalent_pm": 141,
+    "vanderwaals_radius_pm": 173,
+    "ionic_radius_pm": 72,
+    "effective_nuclear_charge": 3.308,
+    "electron_configuration_string": "1s2 2s2 2p6 3s2",
+    "shells": [
+      2,
+      8,
+      2
+    ],
+    "quantum_numbers": {
+      "s": 2,
+      "p": 1,
+      "d": 0,
+      "f": 0
+    },
+    "work_function_ev": 3.66
+  },
+  "thermodynamics": {
+    "enthalpy_formation_kj_mol": 0,
+    "entropy_j_molk": 32.7,
+    "heat_capacity_j_molk": 24.89,
+    "specific_heat_j_gK": 1.023,
+    "latent_heat_fusion_kj_mol": 8.48,
+    "latent_heat_vaporization_kj_mol": 128,
+    "fusion_heat_kj_mol": 8.48,
+    "evaporation_heat_kj_mol": 127.4
+  },
+  "kinetics_and_phase": {
+    "vapor_pressure_constants": {
+      "A": 4.902,
+      "B": 7370,
+      "C": -10
+    },
+    "vapor_pressure_pa": null,
+    "viscosity_liquid_pas": 0.00125,
+    "viscosity_pa_s": null,
+    "critical_temp_K": null,
+    "critical_press_MPa": null,
+    "surface_tension_nm": 0.559
+  },
+  "electromagnetism_and_mechanics": {
+    "thermal_conductivity_wmk": 156,
+    "electrical_conductivity_sm": 22600000,
+    "magnetic_susceptibility": 1.31e-05,
+    "thermal_expansion_coefficient": 2.48e-05,
+    "polarizability_angstrom3": 10.6,
+    "refractive_index": null,
+    "youngs_modulus_gba": 45,
+    "poisson_ratio": 0.29,
+    "brinell_hardness_m_pa": 260
+  },
+  "reactivity": {
+    "max_bonds": 2,
+    "geometry_preference_es": "Red hcp",
+    "geometry_preference_eng": "hcp Lattice",
+    "ideal_bond_angle": null,
+    "bond_energy_ev": 0.09,
+    "dissociation_energy_kj_mol": 8.6,
+    "standard_potential_v": -2.372,
+    "oxidation_states": [
+      2
+    ],
+    "common_ions": [
+      "Mg2+"
+    ]
+  },
+  "nuclear_and_environmental": {
+    "isotopes": [
+      {
+        "mass": 23.985,
+        "abundance": 78.99,
+        "stable": true,
+        "name_es": "Magnesio-24",
+        "name_eng": "Magnesium-24"
+      },
+      {
+        "mass": 24.985,
+        "abundance": 10,
+        "stable": true,
+        "name_es": "Magnesio-25",
+        "name_eng": "Magnesium-25"
+      },
+      {
+        "mass": 25.982,
+        "abundance": 11.01,
+        "stable": true,
+        "name_es": "Magnesio-26",
+        "name_eng": "Magnesium-26"
+      }
+    ],
+    "neutron_cross_section_barns": 0.063,
+    "nuclear_binding_energy_mev": 8.26,
+    "abundance_crust_mg_kg": 23300,
+    "toxicity_level": 0
+  },
+  "cryogenic_data": {
+    "critical_solidification_pressure_mpa": null,
+    "lambda_point_k": null,
+    "superfluid_viscosity_pas": null
+  }
+}

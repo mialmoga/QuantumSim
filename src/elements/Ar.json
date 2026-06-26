@@ -1,0 +1,130 @@
+{
+  "symbol": "Ar",
+  "identity": {
+    "name_es": "Argón",
+    "name_eng": "Argon",
+    "number": 18,
+    "category_es": "Gas noble",
+    "category_eng": "Noble gas",
+    "color": "0xC0A8E0",
+    "cpk_color": "0x1FF01F",
+    "discovery_year": "1894"
+  },
+  "physical_properties": {
+    "mass": 39.948,
+    "density_g_cm3": 0.0017837,
+    "standard_state_es": "Gas",
+    "standard_state_eng": "Gas",
+    "melt_K": 83.81,
+    "boil_K": 87.3,
+    "allotropes_es": null,
+    "allotropes_eng": null,
+    "lattice_structure": "fcc"
+  },
+  "atomic_structure": {
+    "electronegativity": null,
+    "valence": 0,
+    "ionization_energy_eV": 15.7596,
+    "electron_affinity_ev": 0,
+    "electron_affinity_kj_mol": 0,
+    "radius_atomic_pm": 71,
+    "radius_covalent_pm": 106,
+    "vanderwaals_radius_pm": 188,
+    "ionic_radius_pm": null,
+    "effective_nuclear_charge": 6.764,
+    "electron_configuration_string": "1s2 2s2 2p6 3s2 3p6",
+    "shells": [
+      2,
+      8,
+      8
+    ],
+    "quantum_numbers": {
+      "s": 2,
+      "p": 3,
+      "d": 0,
+      "f": 0
+    },
+    "work_function_ev": null
+  },
+  "thermodynamics": {
+    "enthalpy_formation_kj_mol": 0,
+    "entropy_j_molk": 154.84,
+    "heat_capacity_j_molk": 20.786,
+    "specific_heat_j_gK": 0.52,
+    "latent_heat_fusion_kj_mol": 1.18,
+    "latent_heat_vaporization_kj_mol": 6.43,
+    "fusion_heat_kj_mol": 1.181,
+    "evaporation_heat_kj_mol": 6.447
+  },
+  "kinetics_and_phase": {
+    "vapor_pressure_constants": {
+      "A": 3.961,
+      "B": 344.6,
+      "C": -5.2
+    },
+    "vapor_pressure_pa": null,
+    "viscosity_liquid_pas": 0.000252,
+    "viscosity_pa_s": 2.23e-05,
+    "critical_temp_K": 150.87,
+    "critical_press_MPa": 4.89,
+    "surface_tension_nm": 0.0115
+  },
+  "electromagnetism_and_mechanics": {
+    "thermal_conductivity_wmk": 0.01772,
+    "electrical_conductivity_sm": 0,
+    "magnetic_susceptibility": -1.96e-05,
+    "thermal_expansion_coefficient": null,
+    "polarizability_angstrom3": 1.641,
+    "refractive_index": 1.000281,
+    "youngs_modulus_gba": null,
+    "poisson_ratio": null,
+    "brinell_hardness_m_pa": null
+  },
+  "reactivity": {
+    "max_bonds": 0,
+    "geometry_preference_es": null,
+    "geometry_preference_eng": null,
+    "ideal_bond_angle": null,
+    "bond_energy_ev": 0,
+    "dissociation_energy_kj_mol": null,
+    "standard_potential_v": null,
+    "oxidation_states": [
+      0
+    ],
+    "common_ions": null
+  },
+  "nuclear_and_environmental": {
+    "isotopes": [
+      {
+        "mass": 35.967,
+        "abundance": 0.334,
+        "stable": true,
+        "name_es": "Argón-36",
+        "name_eng": "Argon-36"
+      },
+      {
+        "mass": 37.962,
+        "abundance": 0.063,
+        "stable": true,
+        "name_es": "Argón-38",
+        "name_eng": "Argon-38"
+      },
+      {
+        "mass": 39.962,
+        "abundance": 99.603,
+        "stable": true,
+        "name_es": "Argón-40",
+        "name_eng": "Argon-40"
+      }
+    ],
+    "neutron_cross_section_barns": 0.675,
+    "nuclear_binding_energy_mev": 8.595,
+    "abundance_crust_mg_kg": 3.5,
+    "toxicity_level": 1
+  },
+  "cryogenic_data": {
+    "critical_solidification_pressure_mpa": null,
+    "lambda_point_k": null,
+    "superfluid_viscosity_pas": null
+  }
+}

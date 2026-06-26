@@ -1,0 +1,48 @@
+{
+  "symbol": "Og",
+  "generated_by": "generate_materials.py v1.2 (Stevens perceptual)",
+  "source_props": {
+    "mass": 294.214,
+    "melt_K": 325,
+    "density": 5,
+    "ionization_eV": 8.9,
+    "electronegativity": 1.3,
+    "polarizability": 7.9,
+    "standard_state": "Solid"
+  },
+  "shader_params": {
+    "sphere_pulse": {
+      "freq": 0.583,
+      "amp": 0.398
+    },
+    "blink": {
+      "amp": 0.0,
+      "speed": 0.2
+    },
+    "brightness": {
+      "bright": 1.338,
+      "base": 0.3,
+      "vari": 0.0
+    },
+    "disc_shape": {
+      "soft": 0.377,
+      "radius": 0.22,
+      "ring": 0.0
+    },
+    "point_size": {
+      "sz": 0.333,
+      "bAmp": 0.0,
+      "persp": 70.0
+    },
+    "alpha_curve": {
+      "opacity": 0.884,
+      "curve": 1.058,
+      "floor": 0.0
+    },
+    "color": {
+      "r": 0.6275,
+      "g": 0.6275,
+      "b": 0.6275
+    }
+  }
+}

@@ -1,0 +1,130 @@
+{
+  "symbol": "B",
+  "identity": {
+    "name_es": "Boro",
+    "name_eng": "Boron",
+    "number": 5,
+    "category_es": "Metaloide",
+    "category_eng": "Metalloid",
+    "color": "0x6B4C3B",
+    "cpk_color": "0xFFB5B5",
+    "discovery_year": "1808"
+  },
+  "physical_properties": {
+    "mass": 10.81,
+    "density_g_cm3": 2.34,
+    "standard_state_es": "Sólido",
+    "standard_state_eng": "Solid",
+    "melt_K": 2349,
+    "boil_K": 4273,
+    "allotropes_es": [
+      "Boro rhomboédrico",
+      "Boro tetragonal"
+    ],
+    "allotropes_eng": [
+      "Rhombohedral boron",
+      "Tetragonal boron"
+    ],
+    "lattice_structure": "rhombohedral"
+  },
+  "atomic_structure": {
+    "electronegativity": 2.04,
+    "valence": 3,
+    "ionization_energy_eV": 8.298,
+    "electron_affinity_ev": 0.2797,
+    "electron_affinity_kj_mol": 26.7,
+    "radius_atomic_pm": 90,
+    "radius_covalent_pm": 84,
+    "vanderwaals_radius_pm": 192,
+    "ionic_radius_pm": 27,
+    "effective_nuclear_charge": 2.421,
+    "electron_configuration_string": "1s2 2s2 2p1",
+    "shells": [
+      2,
+      3
+    ],
+    "quantum_numbers": {
+      "s": 1,
+      "p": 1,
+      "d": 0,
+      "f": 0
+    },
+    "work_function_ev": 4.45
+  },
+  "thermodynamics": {
+    "enthalpy_formation_kj_mol": 0,
+    "entropy_j_molk": 5.86,
+    "heat_capacity_j_molk": 11.087,
+    "specific_heat_j_gK": 1.026,
+    "latent_heat_fusion_kj_mol": 50.2,
+    "latent_heat_vaporization_kj_mol": 480,
+    "fusion_heat_kj_mol": 22.18,
+    "evaporation_heat_kj_mol": 480
+  },
+  "kinetics_and_phase": {
+    "vapor_pressure_constants": {
+      "A": 6.11,
+      "B": 23310,
+      "C": -10
+    },
+    "vapor_pressure_pa": null,
+    "viscosity_liquid_pas": null,
+    "viscosity_pa_s": null,
+    "critical_temp_K": null,
+    "critical_press_MPa": null,
+    "surface_tension_nm": 1.06
+  },
+  "electromagnetism_and_mechanics": {
+    "thermal_conductivity_wmk": 27.4,
+    "electrical_conductivity_sm": 0.0001,
+    "magnetic_susceptibility": -6.7e-06,
+    "thermal_expansion_coefficient": 5e-06,
+    "polarizability_angstrom3": 3.03,
+    "refractive_index": null,
+    "youngs_modulus_gba": 400,
+    "poisson_ratio": 0.21,
+    "brinell_hardness_m_pa": null
+  },
+  "reactivity": {
+    "max_bonds": 3,
+    "geometry_preference_es": "Trigonal plana",
+    "geometry_preference_eng": "Trigonal planar",
+    "ideal_bond_angle": 120,
+    "bond_energy_ev": 4.6,
+    "dissociation_energy_kj_mol": 444,
+    "standard_potential_v": -0.87,
+    "oxidation_states": [
+      3
+    ],
+    "common_ions": [
+      "B3+"
+    ]
+  },
+  "nuclear_and_environmental": {
+    "isotopes": [
+      {
+        "mass": 10.0129,
+        "abundance": 19.9,
+        "stable": true,
+        "name_es": "Boro-10",
+        "name_eng": "Boron-10"
+      },
+      {
+        "mass": 11.0093,
+        "abundance": 80.1,
+        "stable": true,
+        "name_es": "Boro-11",
+        "name_eng": "Boron-11"
+      }
+    ],
+    "neutron_cross_section_barns": 767,
+    "nuclear_binding_energy_mev": 6.475,
+    "abundance_crust_mg_kg": 10,
+    "toxicity_level": 2
+  },
+  "cryogenic_data": {
+    "critical_solidification_pressure_mpa": null,
+    "lambda_point_k": null,
+    "superfluid_viscosity_pas": null
+  }
+}

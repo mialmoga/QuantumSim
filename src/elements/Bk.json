@@ -1,0 +1,139 @@
+{
+  "symbol": "Bk",
+  "identity": {
+    "name_es": "Berquelio",
+    "name_eng": "Berkelium",
+    "number": 97,
+    "category_es": "Actínido",
+    "category_eng": "Actinide",
+    "color": "0xA8A8A0",
+    "cpk_color": "0x8A4AE3",
+    "discovery_year": "1949"
+  },
+  "physical_properties": {
+    "mass": 247.07,
+    "density_g_cm3": 14.78,
+    "standard_state_es": "Sólido",
+    "standard_state_eng": "Solid",
+    "melt_K": 1259,
+    "boil_K": null,
+    "allotropes_es": [
+      "Alfa (dhcp)",
+      "Beta (fcc)"
+    ],
+    "allotropes_eng": [
+      "Alpha (dhcp)",
+      "Beta (fcc)"
+    ],
+    "lattice_structure": "dhcp"
+  },
+  "atomic_structure": {
+    "electronegativity": 1.3,
+    "valence": 3,
+    "ionization_energy_eV": 6.23,
+    "electron_affinity_ev": null,
+    "electron_affinity_kj_mol": null,
+    "radius_atomic_pm": 170,
+    "radius_covalent_pm": 182,
+    "vanderwaals_radius_pm": 244,
+    "ionic_radius_pm": 96,
+    "effective_nuclear_charge": 6.3,
+    "electron_configuration_string": "[Rn] 5f9 7s2",
+    "shells": [
+      2,
+      8,
+      18,
+      32,
+      27,
+      8,
+      2
+    ],
+    "quantum_numbers": {
+      "s": 2,
+      "p": 0,
+      "d": 0,
+      "f": 9
+    },
+    "work_function_ev": null
+  },
+  "thermodynamics": {
+    "enthalpy_formation_kj_mol": 0,
+    "entropy_j_molk": null,
+    "heat_capacity_j_molk": null,
+    "specific_heat_j_gK": null,
+    "latent_heat_fusion_kj_mol": 7.9,
+    "latent_heat_vaporization_kj_mol": null,
+    "fusion_heat_kj_mol": 7.9,
+    "evaporation_heat_kj_mol": null
+  },
+  "kinetics_and_phase": {
+    "vapor_pressure_constants": {
+      "A": null,
+      "B": null,
+      "C": null
+    },
+    "vapor_pressure_pa": null,
+    "viscosity_liquid_pas": null,
+    "viscosity_pa_s": null,
+    "critical_temp_K": null,
+    "critical_press_MPa": null,
+    "surface_tension_nm": null
+  },
+  "electromagnetism_and_mechanics": {
+    "thermal_conductivity_wmk": 10,
+    "electrical_conductivity_sm": null,
+    "magnetic_susceptibility": null,
+    "thermal_expansion_coefficient": null,
+    "polarizability_angstrom3": 22.7,
+    "refractive_index": null,
+    "youngs_modulus_gba": null,
+    "poisson_ratio": null,
+    "brinell_hardness_m_pa": null
+  },
+  "reactivity": {
+    "max_bonds": 4,
+    "geometry_preference_es": "Variable",
+    "geometry_preference_eng": "Variable",
+    "ideal_bond_angle": null,
+    "bond_energy_ev": null,
+    "dissociation_energy_kj_mol": null,
+    "standard_potential_v": -2,
+    "oxidation_states": [
+      3,
+      4
+    ],
+    "common_ions": [
+      "Bk3+",
+      "Bk4+"
+    ]
+  },
+  "nuclear_and_environmental": {
+    "isotopes": [
+      {
+        "mass": 247.07,
+        "abundance": null,
+        "stable": false,
+        "half_life_s": 43500000000,
+        "name_es": "Berquelio-247",
+        "name_eng": "Berkelium-247"
+      },
+      {
+        "mass": 249.075,
+        "abundance": null,
+        "stable": false,
+        "half_life_s": 27600000,
+        "name_es": "Berquelio-249",
+        "name_eng": "Berkelium-249"
+      }
+    ],
+    "neutron_cross_section_barns": 710,
+    "nuclear_binding_energy_mev": 7.48,
+    "abundance_crust_mg_kg": 0,
+    "toxicity_level": 5
+  },
+  "cryogenic_data": {
+    "critical_solidification_pressure_mpa": null,
+    "lambda_point_k": null,
+    "superfluid_viscosity_pas": null
+  }
+}

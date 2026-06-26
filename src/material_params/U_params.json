@@ -1,0 +1,48 @@
+{
+  "symbol": "U",
+  "generated_by": "generate_materials.py v1.2 (Stevens perceptual)",
+  "source_props": {
+    "mass": 238.028,
+    "melt_K": 1405.3,
+    "density": 19.1,
+    "ionization_eV": 6.1941,
+    "electronegativity": 1.38,
+    "polarizability": 25,
+    "standard_state": "Solid"
+  },
+  "shader_params": {
+    "sphere_pulse": {
+      "freq": 0.648,
+      "amp": 0.318
+    },
+    "blink": {
+      "amp": 0.0,
+      "speed": 0.2
+    },
+    "brightness": {
+      "bright": 0.877,
+      "base": 0.3,
+      "vari": 0.0
+    },
+    "disc_shape": {
+      "soft": 0.367,
+      "radius": 0.22,
+      "ring": 0.0
+    },
+    "point_size": {
+      "sz": 0.405,
+      "bAmp": 0.0,
+      "persp": 78.7
+    },
+    "alpha_curve": {
+      "opacity": 0.987,
+      "curve": 1.006,
+      "floor": 0.0
+    },
+    "color": {
+      "r": 0.6902,
+      "g": 0.6902,
+      "b": 0.6275
+    }
+  }
+}

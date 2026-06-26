@@ -1,0 +1,178 @@
+{
+  "symbol": "Xe",
+  "identity": {
+    "name_es": "Xenón",
+    "name_eng": "Xenon",
+    "number": 54,
+    "category_es": "Gas noble",
+    "category_eng": "Noble gas",
+    "color": "0x90B0E8",
+    "cpk_color": "0x429EAD",
+    "discovery_year": "1898"
+  },
+  "physical_properties": {
+    "mass": 131.293,
+    "density_g_L": 5.894,
+    "standard_state_es": "Gas",
+    "standard_state_eng": "Gas",
+    "melt_K": 161.4,
+    "boil_K": 165.05,
+    "allotropes_es": null,
+    "allotropes_eng": null,
+    "lattice_structure": "fcc"
+  },
+  "atomic_structure": {
+    "electronegativity": 2.6,
+    "valence": 0,
+    "ionization_energy_eV": 12.1298,
+    "electron_affinity_ev": 0,
+    "electron_affinity_kj_mol": 0,
+    "radius_atomic_pm": 108,
+    "radius_covalent_pm": 140,
+    "vanderwaals_radius_pm": 216,
+    "ionic_radius_pm": null,
+    "effective_nuclear_charge": 8.29,
+    "electron_configuration_string": "[Kr] 4d10 5s2 5p6",
+    "shells": [
+      2,
+      8,
+      18,
+      18,
+      8
+    ],
+    "quantum_numbers": {
+      "s": 2,
+      "p": 6,
+      "d": 0,
+      "f": 0
+    },
+    "work_function_ev": null
+  },
+  "thermodynamics": {
+    "enthalpy_formation_kj_mol": 0,
+    "entropy_j_molk": 169.68,
+    "heat_capacity_j_molk": 20.786,
+    "specific_heat_j_gK": 0.158,
+    "latent_heat_fusion_kj_mol": 2.27,
+    "latent_heat_vaporization_kj_mol": 12.64,
+    "fusion_heat_kj_mol": 2.3,
+    "evaporation_heat_kj_mol": 12.6
+  },
+  "kinetics_and_phase": {
+    "vapor_pressure_constants": {
+      "A": 3.9,
+      "B": 600,
+      "C": -20
+    },
+    "vapor_pressure_pa": null,
+    "viscosity_liquid_pas": 0.0005,
+    "viscosity_pa_s": 2.3e-05,
+    "critical_temp_K": 289.73,
+    "critical_press_MPa": 5.84,
+    "surface_tension_nm": 0.018
+  },
+  "electromagnetism_and_mechanics": {
+    "thermal_conductivity_wmk": 0.00565,
+    "electrical_conductivity_sm": null,
+    "magnetic_susceptibility": -4.39e-05,
+    "thermal_expansion_coefficient": null,
+    "polarizability_angstrom3": 4,
+    "refractive_index": 1.000702,
+    "youngs_modulus_gba": null,
+    "poisson_ratio": null,
+    "brinell_hardness_m_pa": null
+  },
+  "reactivity": {
+    "max_bonds": 8,
+    "geometry_preference_es": "Octaédrica (XeF6) / Cuadrada plana (XeF4)",
+    "geometry_preference_eng": "Octahedral (XeF6) / Square planar (XeF4)",
+    "ideal_bond_angle": 90,
+    "bond_energy_ev": 1.3,
+    "dissociation_energy_kj_mol": 126,
+    "standard_potential_v": 2.1,
+    "oxidation_states": [
+      0,
+      2,
+      4,
+      6,
+      8
+    ],
+    "common_ions": null
+  },
+  "nuclear_and_environmental": {
+    "isotopes": [
+      {
+        "mass": 123.905,
+        "abundance": 0.09,
+        "stable": true,
+        "name_es": "Xenón-124",
+        "name_eng": "Xenon-124"
+      },
+      {
+        "mass": 125.904,
+        "abundance": 0.09,
+        "stable": true,
+        "name_es": "Xenón-126",
+        "name_eng": "Xenon-126"
+      },
+      {
+        "mass": 127.903,
+        "abundance": 1.91,
+        "stable": true,
+        "name_es": "Xenón-128",
+        "name_eng": "Xenon-128"
+      },
+      {
+        "mass": 128.904,
+        "abundance": 26.4,
+        "stable": true,
+        "name_es": "Xenón-129",
+        "name_eng": "Xenon-129"
+      },
+      {
+        "mass": 129.903,
+        "abundance": 4.07,
+        "stable": true,
+        "name_es": "Xenón-130",
+        "name_eng": "Xenon-130"
+      },
+      {
+        "mass": 130.905,
+        "abundance": 21.23,
+        "stable": true,
+        "name_es": "Xenón-131",
+        "name_eng": "Xenon-131"
+      },
+      {
+        "mass": 131.904,
+        "abundance": 26.9,
+        "stable": true,
+        "name_es": "Xenón-132",
+        "name_eng": "Xenon-132"
+      },
+      {
+        "mass": 133.905,
+        "abundance": 10.4,
+        "stable": true,
+        "name_es": "Xenón-134",
+        "name_eng": "Xenon-134"
+      },
+      {
+        "mass": 135.907,
+        "abundance": 8.8,
+        "stable": true,
+        "name_es": "Xenón-136",
+        "name_eng": "Xenon-136"
+      }
+    ],
+    "neutron_cross_section_barns": 24.5,
+    "nuclear_binding_energy_mev": 8.41,
+    "abundance_crust_mg_kg": 3e-05,
+    "toxicity_level": 0
+  },
+  "cryogenic_data": {
+    "critical_solidification_pressure_mpa": null,
+    "lambda_point_k": null,
+    "superfluid_viscosity_pas": null
+  }
+}

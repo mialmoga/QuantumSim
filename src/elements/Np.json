@@ -1,0 +1,145 @@
+{
+  "symbol": "Np",
+  "identity": {
+    "name_es": "Neptunio",
+    "name_eng": "Neptunium",
+    "number": 93,
+    "category_es": "Actínido",
+    "category_eng": "Actinide",
+    "color": "0xA8A8A8",
+    "cpk_color": "0x0070FF",
+    "discovery_year": "1940"
+  },
+  "physical_properties": {
+    "mass": 237.048,
+    "density_g_cm3": 20.45,
+    "standard_state_es": "Sólido",
+    "standard_state_eng": "Solid",
+    "melt_K": 917,
+    "boil_K": 4273,
+    "allotropes_es": [
+      "Alfa (ortorrómbica)",
+      "Beta (tetragonal)",
+      "Gamma (bcc)"
+    ],
+    "allotropes_eng": [
+      "Alpha (orthorhombic)",
+      "Beta (tetragonal)",
+      "Gamma (bcc)"
+    ],
+    "lattice_structure": "orthorhombic"
+  },
+  "atomic_structure": {
+    "electronegativity": 1.36,
+    "valence": 5,
+    "ionization_energy_eV": 6.2657,
+    "electron_affinity_ev": null,
+    "electron_affinity_kj_mol": null,
+    "radius_atomic_pm": 130,
+    "radius_covalent_pm": 190,
+    "vanderwaals_radius_pm": 221,
+    "ionic_radius_pm": 110,
+    "effective_nuclear_charge": 6.3,
+    "electron_configuration_string": "[Rn] 5f4 6d1 7s2",
+    "shells": [
+      2,
+      8,
+      18,
+      32,
+      22,
+      9,
+      2
+    ],
+    "quantum_numbers": {
+      "s": 2,
+      "p": 0,
+      "d": 1,
+      "f": 4
+    },
+    "work_function_ev": null
+  },
+  "thermodynamics": {
+    "enthalpy_formation_kj_mol": 0,
+    "entropy_j_molk": 50.46,
+    "heat_capacity_j_molk": 29.62,
+    "specific_heat_j_gK": 0.12,
+    "latent_heat_fusion_kj_mol": 3.2,
+    "latent_heat_vaporization_kj_mol": 336,
+    "fusion_heat_kj_mol": 3.2,
+    "evaporation_heat_kj_mol": 336.6
+  },
+  "kinetics_and_phase": {
+    "vapor_pressure_constants": {
+      "A": null,
+      "B": null,
+      "C": null
+    },
+    "vapor_pressure_pa": null,
+    "viscosity_liquid_pas": null,
+    "viscosity_pa_s": null,
+    "critical_temp_K": null,
+    "critical_press_MPa": null,
+    "surface_tension_nm": null
+  },
+  "electromagnetism_and_mechanics": {
+    "thermal_conductivity_wmk": 6.3,
+    "electrical_conductivity_sm": 830000,
+    "magnetic_susceptibility": 0.0005,
+    "thermal_expansion_coefficient": 2.75e-05,
+    "polarizability_angstrom3": 24.8,
+    "refractive_index": null,
+    "youngs_modulus_gba": null,
+    "poisson_ratio": null,
+    "brinell_hardness_m_pa": null
+  },
+  "reactivity": {
+    "max_bonds": 7,
+    "geometry_preference_es": "Pentagonal bipiramidal",
+    "geometry_preference_eng": "Pentagonal bipyramidal",
+    "ideal_bond_angle": 72,
+    "bond_energy_ev": null,
+    "dissociation_energy_kj_mol": null,
+    "standard_potential_v": -1.856,
+    "oxidation_states": [
+      5,
+      4,
+      3,
+      6,
+      7
+    ],
+    "common_ions": [
+      "NpO2+",
+      "Np4+",
+      "Np3+"
+    ]
+  },
+  "nuclear_and_environmental": {
+    "isotopes": [
+      {
+        "mass": 237.048,
+        "abundance": null,
+        "stable": false,
+        "half_life_s": 67000000000000,
+        "name_es": "Neptunio-237",
+        "name_eng": "Neptunium-237"
+      },
+      {
+        "mass": 239.05,
+        "abundance": null,
+        "stable": false,
+        "half_life_s": 204000,
+        "name_es": "Neptunio-239",
+        "name_eng": "Neptunium-239"
+      }
+    ],
+    "neutron_cross_section_barns": 170,
+    "nuclear_binding_energy_mev": 7.55,
+    "abundance_crust_mg_kg": 0,
+    "toxicity_level": 5
+  },
+  "cryogenic_data": {
+    "critical_solidification_pressure_mpa": null,
+    "lambda_point_k": null,
+    "superfluid_viscosity_pas": null
+  }
+}

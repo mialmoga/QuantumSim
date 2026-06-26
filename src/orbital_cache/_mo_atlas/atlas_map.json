@@ -1,0 +1,19 @@
+{
+  "s1|s1|1": "sigma_1s-1s",
+  "s2|s1|1": "sigma_2s-1s",
+  "s1|s2|1": "sigma_2s-1s",
+  "p|s1|1": "sigma_2s-1s",
+  "s1|p|1": "sigma_2s-1s",
+  "s2|s2|1": "sigma_2s-2s",
+  "p|p|1": "sigma_2p-2p",
+  "p|p|2": "pi_2p-2p",
+  "p|p|3": "pi_2p-2p",
+  "d|p|1": "sigma_3d-2p",
+  "p|d|1": "sigma_3d-2p",
+  "d|s1|1": "sigma_3d-2p",
+  "s1|d|1": "sigma_3d-2p",
+  "f|p|1": "sigma_3d-2p",
+  "p|f|1": "sigma_3d-2p",
+  "f|s1|1": "sigma_3d-2p",
+  "s1|f|1": "sigma_3d-2p"
+}

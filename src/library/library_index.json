@@ -1,0 +1,207 @@
+{
+  "_meta": {
+    "version": "1.0",
+    "description": "Índice maestro de la librería QuantumSim",
+    "formats": {
+      "mqcs": "Molécula — átomos, bonds, metadatos",
+      "cqcs": "Cristal — red, parámetros, tamaño",
+      "eqcs": "Entorno — múltiples estructuras, condiciones iniciales"
+    }
+  },
+
+  "molecules": [
+    {
+      "id": "H2O",
+      "name": { "es": "Agua", "en": "Water" },
+      "formula": "H₂O",
+      "emoji": "💧",
+      "file": "molecules/H2O.mqcs",
+      "category": "inorganic",
+      "tags": ["polar", "bent", "hydrogen-bond"]
+    },
+    {
+      "id": "CO2",
+      "name": { "es": "Dióxido de Carbono", "en": "Carbon Dioxide" },
+      "formula": "CO₂",
+      "emoji": "🌫️",
+      "file": "molecules/CO2.mqcs",
+      "category": "inorganic",
+      "tags": ["linear", "nonpolar", "greenhouse"]
+    },
+    {
+      "id": "CH4",
+      "name": { "es": "Metano", "en": "Methane" },
+      "formula": "CH₄",
+      "emoji": "🔥",
+      "file": "molecules/CH4.mqcs",
+      "category": "organic",
+      "tags": ["tetrahedral", "nonpolar", "fuel"]
+    },
+    {
+      "id": "NH3",
+      "name": { "es": "Amoníaco", "en": "Ammonia" },
+      "formula": "NH₃",
+      "emoji": "🧪",
+      "file": "molecules/NH3.mqcs",
+      "category": "inorganic",
+      "tags": ["trigonal-pyramidal", "polar"]
+    },
+    {
+      "id": "O2",
+      "name": { "es": "Oxígeno molecular", "en": "Molecular Oxygen" },
+      "formula": "O₂",
+      "emoji": "✨",
+      "file": "molecules/O2.mqcs",
+      "category": "inorganic",
+      "tags": ["diatomic", "double-bond"]
+    },
+    {
+      "id": "H2",
+      "name": { "es": "Hidrógeno molecular", "en": "Molecular Hydrogen" },
+      "formula": "H₂",
+      "emoji": "⚡",
+      "file": "molecules/H2.mqcs",
+      "category": "inorganic",
+      "tags": ["diatomic", "fuel"]
+    },
+    {
+      "id": "NaCl",
+      "name": { "es": "Cloruro de sodio", "en": "Sodium Chloride" },
+      "formula": "NaCl",
+      "emoji": "🧂",
+      "file": "molecules/NaCl.mqcs",
+      "category": "ionic",
+      "tags": ["ionic", "salt"]
+    },
+    {
+      "id": "C2H6O",
+      "name": { "es": "Etanol", "en": "Ethanol" },
+      "formula": "C₂H₆O",
+      "emoji": "🍺",
+      "file": "molecules/C2H6O.mqcs",
+      "category": "organic",
+      "tags": ["alcohol", "polar"]
+    },
+    {
+      "id": "C6H6",
+      "name": { "es": "Benceno", "en": "Benzene" },
+      "formula": "C₆H₆",
+      "emoji": "⬡",
+      "file": "molecules/C6H6.mqcs",
+      "category": "organic",
+      "tags": ["aromatic", "ring", "resonance"]
+    },
+    {
+      "id": "CH3COOH",
+      "name": { "es": "Ácido acético", "en": "Acetic Acid" },
+      "formula": "CH₃COOH",
+      "emoji": "🍋",
+      "file": "molecules/CH3COOH.mqcs",
+      "category": "organic",
+      "tags": ["acid", "polar"]
+    },
+    {
+      "id": "C6H12O6",
+      "name": { "es": "Glucosa", "en": "Glucose" },
+      "formula": "C₆H₁₂O₆",
+      "emoji": "🍬",
+      "file": "molecules/C6H12O6.mqcs",
+      "category": "organic",
+      "tags": ["sugar", "biological"]
+    },
+    {
+      "id": "C8H10N4O2",
+      "name": { "es": "Cafeína", "en": "Caffeine" },
+      "formula": "C₈H₁₀N₄O₂",
+      "emoji": "☕",
+      "file": "molecules/C8H10N4O2.mqcs",
+      "category": "organic",
+      "tags": ["alkaloid", "biological", "stimulant"]
+    },
+    {
+      "id": "H2SO4",
+      "name": { "es": "Ácido sulfúrico", "en": "Sulfuric Acid" },
+      "formula": "H₂SO₄",
+      "emoji": "⚗️",
+      "file": "molecules/H2SO4.mqcs",
+      "category": "inorganic",
+      "tags": ["acid", "strong", "corrosive"]
+    },
+    {
+      "id": "C9H8O4",
+      "name": { "es": "Aspirina", "en": "Aspirin" },
+      "formula": "C₉H₈O₄",
+      "emoji": "💊",
+      "file": "molecules/C9H8O4.mqcs",
+      "category": "organic",
+      "tags": ["pharmaceutical", "ester"]
+    },
+    {
+      "id": "C8H11NO2",
+      "name": { "es": "Dopamina", "en": "Dopamine" },
+      "formula": "C₈H₁₁NO₂",
+      "emoji": "🧠",
+      "file": "molecules/C8H11NO2.mqcs",
+      "category": "organic",
+      "tags": ["neurotransmitter", "biological"]
+    }
+  ],
+
+  "crystals": [
+    {
+      "id": "NaCl_crystal",
+      "name": { "es": "Sal (NaCl)", "en": "Salt (NaCl)" },
+      "formula": "NaCl",
+      "emoji": "🧊",
+      "file": "crystals/NaCl.cqcs",
+      "lattice": "cubic",
+      "tags": ["ionic", "cubic", "salt"]
+    },
+    {
+      "id": "Fe_BCC",
+      "name": { "es": "Hierro (BCC)", "en": "Iron (BCC)" },
+      "formula": "Fe",
+      "emoji": "⚙️",
+      "file": "crystals/Fe_BCC.cqcs",
+      "lattice": "bcc",
+      "tags": ["metallic", "bcc", "magnetic"]
+    },
+    {
+      "id": "Diamond",
+      "name": { "es": "Diamante", "en": "Diamond" },
+      "formula": "C",
+      "emoji": "💎",
+      "file": "crystals/Diamond.cqcs",
+      "lattice": "diamond_cubic",
+      "tags": ["covalent", "tetrahedral", "hardest"]
+    },
+    {
+      "id": "Ice_Ih",
+      "name": { "es": "Hielo Ih", "en": "Ice Ih" },
+      "formula": "H₂O",
+      "emoji": "❄️",
+      "file": "crystals/Ice_Ih.cqcs",
+      "lattice": "hexagonal",
+      "tags": ["hydrogen-bond", "hexagonal", "ice"]
+    }
+  ],
+
+  "environments": [
+    {
+      "id": "vacuum",
+      "name": { "es": "Vacío", "en": "Vacuum" },
+      "emoji": "🌌",
+      "file": "environments/vacuum.eqcs",
+      "description": { "es": "Sin gravedad ni temperatura", "en": "No gravity or temperature" },
+      "tags": ["default", "empty"]
+    },
+    {
+      "id": "earth_surface",
+      "name": { "es": "Superficie terrestre", "en": "Earth Surface" },
+      "emoji": "🌍",
+      "file": "environments/earth_surface.eqcs",
+      "description": { "es": "Gravedad y temperatura ambiente", "en": "Gravity and ambient temperature" },
+      "tags": ["gravity", "atmosphere", "room-temp"]
+    }
+  ]
+}

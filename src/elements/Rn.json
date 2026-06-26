@@ -1,0 +1,140 @@
+{
+  "symbol": "Rn",
+  "identity": {
+    "name_es": "Radón",
+    "name_eng": "Radon",
+    "number": 86,
+    "category_es": "Gas noble",
+    "category_eng": "Noble gas",
+    "color": "0xA0A0A0",
+    "cpk_color": "0x1FF01F",
+    "discovery_year": "1900"
+  },
+  "physical_properties": {
+    "mass": 222.018,
+    "density_g_L": 9.73,
+    "standard_state_es": "Gas",
+    "standard_state_eng": "Gas",
+    "melt_K": 202,
+    "boil_K": 211.3,
+    "allotropes_es": null,
+    "allotropes_eng": null,
+    "lattice_structure": "fcc"
+  },
+  "atomic_structure": {
+    "electronegativity": 2.2,
+    "valence": 0,
+    "ionization_energy_eV": 10.7485,
+    "electron_affinity_ev": -0.7,
+    "electron_affinity_kj_mol": -68,
+    "radius_atomic_pm": 145,
+    "radius_covalent_pm": 150,
+    "vanderwaals_radius_pm": 220,
+    "ionic_radius_pm": null,
+    "effective_nuclear_charge": 6.3,
+    "electron_configuration_string": "[Xe] 4f14 5d10 6s2 6p6",
+    "shells": [
+      2,
+      8,
+      18,
+      32,
+      18,
+      8
+    ],
+    "quantum_numbers": {
+      "s": 2,
+      "p": 6,
+      "d": 10,
+      "f": 14
+    },
+    "work_function_ev": null
+  },
+  "thermodynamics": {
+    "enthalpy_formation_kj_mol": 0,
+    "entropy_j_molk": 176.2,
+    "heat_capacity_j_molk": 20.786,
+    "specific_heat_j_gK": 0.094,
+    "latent_heat_fusion_kj_mol": 3.24,
+    "latent_heat_vaporization_kj_mol": 16.4,
+    "fusion_heat_kj_mol": 3.2,
+    "evaporation_heat_kj_mol": 18.1
+  },
+  "kinetics_and_phase": {
+    "vapor_pressure_constants": {
+      "A": 4.1,
+      "B": 850,
+      "C": -10
+    },
+    "vapor_pressure_pa": null,
+    "viscosity_liquid_pas": null,
+    "viscosity_pa_s": 2.1e-05,
+    "critical_temp_K": 377.6,
+    "critical_press_MPa": 6.28,
+    "surface_tension_nm": 0.021
+  },
+  "electromagnetism_and_mechanics": {
+    "thermal_conductivity_wmk": 0.00361,
+    "electrical_conductivity_sm": null,
+    "magnetic_susceptibility": -4e-05,
+    "thermal_expansion_coefficient": null,
+    "polarizability_angstrom3": 5.3,
+    "refractive_index": 1.0009,
+    "youngs_modulus_gba": null,
+    "poisson_ratio": null,
+    "brinell_hardness_m_pa": null
+  },
+  "reactivity": {
+    "max_bonds": 2,
+    "geometry_preference_es": "Lineal (en fluoruros)",
+    "geometry_preference_eng": "Linear (in fluorides)",
+    "ideal_bond_angle": 180,
+    "bond_energy_ev": null,
+    "dissociation_energy_kj_mol": null,
+    "standard_potential_v": null,
+    "oxidation_states": [
+      0,
+      2,
+      6
+    ],
+    "common_ions": [
+      "Rn2+"
+    ]
+  },
+  "nuclear_and_environmental": {
+    "isotopes": [
+      {
+        "mass": 219.01,
+        "abundance": null,
+        "stable": false,
+        "half_life_s": 3.96,
+        "name_es": "Radón-219 (Actinón)",
+        "name_eng": "Radon-219"
+      },
+      {
+        "mass": 220.011,
+        "abundance": null,
+        "stable": false,
+        "half_life_s": 55.6,
+        "name_es": "Radón-220 (Torón)",
+        "name_eng": "Radon-220"
+      },
+      {
+        "mass": 222.018,
+        "abundance": null,
+        "stable": false,
+        "half_life_s": 330350,
+        "name_es": "Radón-222",
+        "name_eng": "Radon-222"
+      }
+    ],
+    "neutron_cross_section_barns": 0.72,
+    "nuclear_binding_energy_mev": 7.72,
+    "abundance_crust_mg_kg": 4e-13,
+    "toxicity_level": 5
+  },
+  "cryogenic_data": {
+    "critical_solidification_pressure_mpa": null,
+    "lambda_point_k": null,
+    "superfluid_viscosity_pas": null
+  }
+}

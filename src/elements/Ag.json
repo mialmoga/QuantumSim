@@ -1,0 +1,127 @@
+{
+  "symbol": "Ag",
+  "identity": {
+    "name_es": "Plata",
+    "name_eng": "Silver",
+    "number": 47,
+    "category_es": "Metal de transición",
+    "category_eng": "Transition metal",
+    "color": "0xD0D0D8",
+    "cpk_color": "0xC0C0C0",
+    "discovery_year": "Prehistoria"
+  },
+  "physical_properties": {
+    "mass": 107.868,
+    "density_g_cm3": 10.49,
+    "standard_state_es": "Sólido",
+    "standard_state_eng": "Solid",
+    "melt_K": 1234.93,
+    "boil_K": 2435,
+    "allotropes_es": null,
+    "allotropes_eng": null,
+    "lattice_structure": "fcc"
+  },
+  "atomic_structure": {
+    "electronegativity": 1.93,
+    "valence": 1,
+    "ionization_energy_eV": 7.5762,
+    "electron_affinity_ev": 1.304,
+    "electron_affinity_kj_mol": 125.6,
+    "radius_atomic_pm": 144,
+    "radius_covalent_pm": 153,
+    "vanderwaals_radius_pm": 172,
+    "ionic_radius_pm": 115,
+    "effective_nuclear_charge": 5.89,
+    "electron_configuration_string": "[Kr] 4d10 5s1",
+    "shells": [
+      2,
+      8,
+      18,
+      18,
+      1
+    ],
+    "quantum_numbers": {
+      "s": 1,
+      "p": 0,
+      "d": 10,
+      "f": 0
+    },
+    "work_function_ev": 4.26
+  },
+  "thermodynamics": {
+    "enthalpy_formation_kj_mol": 0,
+    "entropy_j_molk": 42.55,
+    "heat_capacity_j_molk": 25.35,
+    "specific_heat_j_gK": 0.235,
+    "latent_heat_fusion_kj_mol": 11.3,
+    "latent_heat_vaporization_kj_mol": 250.6,
+    "fusion_heat_kj_mol": 11.28,
+    "evaporation_heat_kj_mol": 254
+  },
+  "kinetics_and_phase": {
+    "vapor_pressure_constants": {
+      "A": 5.12,
+      "B": 13500,
+      "C": -10
+    },
+    "vapor_pressure_pa": null,
+    "viscosity_liquid_pas": 0.00388,
+    "viscosity_pa_s": null,
+    "critical_temp_K": null,
+    "critical_press_MPa": null,
+    "surface_tension_nm": 0.923
+  },
+  "electromagnetism_and_mechanics": {
+    "thermal_conductivity_wmk": 429,
+    "electrical_conductivity_sm": 63000000,
+    "magnetic_susceptibility": -1.95e-05,
+    "thermal_expansion_coefficient": 1.89e-05,
+    "polarizability_angstrom3": 7.9,
+    "refractive_index": 0.18,
+    "youngs_modulus_gba": 83,
+    "poisson_ratio": 0.37,
+    "brinell_hardness_m_pa": 24.5
+  },
+  "reactivity": {
+    "max_bonds": 1,
+    "geometry_preference_es": "Lineal",
+    "geometry_preference_eng": "Linear",
+    "ideal_bond_angle": 180,
+    "bond_energy_ev": 1.7,
+    "dissociation_energy_kj_mol": 163,
+    "standard_potential_v": 0.7996,
+    "oxidation_states": [
+      1
+    ],
+    "common_ions": [
+      "Ag+"
+    ]
+  },
+  "nuclear_and_environmental": {
+    "isotopes": [
+      {
+        "mass": 106.905,
+        "abundance": 51.84,
+        "stable": true,
+        "name_es": "Plata-107",
+        "name_eng": "Silver-107"
+      },
+      {
+        "mass": 108.905,
+        "abundance": 48.16,
+        "stable": true,
+        "name_es": "Plata-109",
+        "name_eng": "Silver-109"
+      }
+    ],
+    "neutron_cross_section_barns": 63.3,
+    "nuclear_binding_energy_mev": 8.549,
+    "abundance_crust_mg_kg": 0.075,
+    "toxicity_level": 1
+  },
+  "cryogenic_data": {
+    "critical_solidification_pressure_mpa": null,
+    "lambda_point_k": null,
+    "superfluid_viscosity_pas": null
+  }
+}

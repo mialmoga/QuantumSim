@@ -1,0 +1,711 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>⚛️ Element Data Entry — QuantumSim</title>
+<style>
+* { margin:0; padding:0; box-sizing:border-box; }
+
+:root {
+    --bg:        #080c1a;
+    --surface:   #0e1528;
+    --surface2:  #141d35;
+    --cyan:      #64c8ff;
+    --purple:    #a855f7;
+    --green:     #10b981;
+    --orange:    #f59e0b;
+    --red:       #ef4444;
+    --border:    rgba(100,200,255,0.15);
+    --text:      #ffffff;
+    --text2:     rgba(255,255,255,0.55);
+    --radius:    10px;
+    --font:      'MiSansVF', system-ui, sans-serif;
+    --mono:      'JetBrains Mono', 'Fira Code', monospace;
+}
+
+body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: var(--font);
+    min-height: 100vh;
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    grid-template-columns: 300px 1fr 320px;
+    grid-template-areas:
+        "header header header"
+        "sidebar main  inspector"
+        "footer footer footer";
+}
+
+/* ── HEADER ─────────────────────────────────────────────── */
+header {
+    grid-area: header;
+    background: var(--surface);
+    border-bottom: 1px solid var(--border);
+    padding: 14px 24px;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+header h1 { font-size: 16px; color: var(--cyan); letter-spacing: 0.05em; }
+header h1 span { color: var(--text2); font-weight: 400; }
+
+.progress-wrap {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+.progress-bar {
+    flex: 1;
+    height: 4px;
+    background: var(--border);
+    border-radius: 2px;
+    overflow: hidden;
+}
+.progress-bar__fill {
+    height: 100%;
+    background: linear-gradient(90deg, var(--cyan), var(--purple));
+    border-radius: 2px;
+    transition: width 0.4s ease;
+}
+.progress-label { font-size: 12px; color: var(--text2); white-space: nowrap; font-family: var(--mono); }
+
+.btn-zip {
+    background: var(--purple);
+    color: #fff;
+    border: none;
+    padding: 8px 16px;
+    border-radius: var(--radius);
+    font-size: 13px;
+    cursor: pointer;
+    transition: opacity 0.2s;
+}
+.btn-zip:hover { opacity: 0.85; }
+
+/* ── SIDEBAR ─────────────────────────────────────────────── */
+aside {
+    grid-area: sidebar;
+    background: var(--surface);
+    border-right: 1px solid var(--border);
+    overflow-y: auto;
+    padding: 8px;
+}
+aside h2 { font-size: 11px; color: var(--text2); letter-spacing: 0.1em; text-transform: uppercase; padding: 8px 8px 4px; }
+
+.elem-list { display: flex; flex-direction: column; gap: 2px; }
+.elem-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 7px 10px;
+    border-radius: 7px;
+    cursor: pointer;
+    transition: background 0.15s;
+    font-size: 13px;
+}
+.elem-item:hover { background: var(--surface2); }
+.elem-item.active { background: rgba(100,200,255,0.12); border: 1px solid rgba(100,200,255,0.3); }
+.elem-item.done   { opacity: 0.5; }
+.elem-item.done .elem-status { color: var(--green); }
+.elem-item.error  .elem-status { color: var(--red); }
+
+.elem-num    { font-family: var(--mono); font-size: 10px; color: var(--text2); width: 24px; text-align: right; }
+.elem-symbol { font-weight: 700; color: var(--cyan); width: 28px; }
+.elem-name   { flex: 1; color: var(--text2); font-size: 12px; }
+.elem-status { font-size: 14px; }
+
+/* ── MAIN ─────────────────────────────────────────────────── */
+main {
+    grid-area: main;
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    overflow: hidden;
+}
+
+.main-top {
+    padding: 20px 24px 12px;
+    border-bottom: 1px solid var(--border);
+    background: var(--surface);
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.elem-badge {
+    width: 56px; height: 56px;
+    background: rgba(100,200,255,0.1);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.elem-badge__num    { font-size: 10px; color: var(--text2); font-family: var(--mono); }
+.elem-badge__symbol { font-size: 22px; font-weight: 700; color: var(--cyan); line-height: 1; }
+
+.elem-info h2 { font-size: 20px; }
+.elem-info p  { font-size: 13px; color: var(--text2); font-family: var(--mono); }
+
+.main-actions { margin-left: auto; display: flex; gap: 8px; }
+.btn {
+    border: none; border-radius: var(--radius);
+    padding: 9px 18px; font-size: 13px; cursor: pointer; transition: opacity 0.2s;
+}
+.btn:hover { opacity: 0.85; }
+.btn--prev    { background: var(--surface2); color: var(--text2); border: 1px solid var(--border); }
+.btn--next    { background: var(--cyan);     color: #000; font-weight: 700; }
+.btn--save    { background: var(--green);    color: #000; font-weight: 700; }
+.btn--clear   { background: transparent;     color: var(--red); border: 1px solid rgba(239,68,68,0.3); }
+
+.paste-area {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    padding: 20px 24px;
+    gap: 12px;
+    overflow: hidden;
+}
+.paste-area label { font-size: 12px; color: var(--text2); letter-spacing: 0.08em; text-transform: uppercase; }
+
+.paste-area textarea {
+    flex: 1;
+    background: var(--surface2);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    color: var(--text);
+    font-family: var(--mono);
+    font-size: 12px;
+    line-height: 1.6;
+    padding: 14px;
+    resize: none;
+    outline: none;
+    transition: border-color 0.2s;
+}
+.paste-area textarea:focus { border-color: var(--cyan); }
+.paste-area textarea.ok    { border-color: var(--green); }
+.paste-area textarea.err   { border-color: var(--red); }
+
+.hint {
+    font-size: 12px;
+    color: var(--text2);
+    background: var(--surface2);
+    border-radius: var(--radius);
+    padding: 10px 14px;
+    border-left: 3px solid var(--cyan);
+    font-family: var(--mono);
+    white-space: pre-wrap;
+    user-select: text;
+}
+
+/* ── INSPECTOR ───────────────────────────────────────────── */
+.inspector {
+    grid-area: inspector;
+    background: var(--surface);
+    border-left: 1px solid var(--border);
+    overflow-y: auto;
+    padding: 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+.inspector h2 { font-size: 11px; color: var(--text2); letter-spacing: 0.1em; text-transform: uppercase; }
+
+.validation-list { display: flex; flex-direction: column; gap: 4px; }
+.v-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 8px;
+    font-size: 12px;
+    padding: 6px 8px;
+    border-radius: 6px;
+    background: var(--surface2);
+    font-family: var(--mono);
+}
+.v-item.ok   { color: var(--green); }
+.v-item.warn { color: var(--orange); }
+.v-item.err  { color: var(--red); }
+.v-icon { flex-shrink: 0; }
+
+.field-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4px;
+}
+.field-item {
+    font-size: 11px;
+    padding: 4px 7px;
+    border-radius: 5px;
+    font-family: var(--mono);
+    background: var(--surface2);
+}
+.field-item.filled { color: var(--green); }
+.field-item.empty  { color: rgba(255,255,255,0.25); }
+
+.summary-box {
+    background: var(--surface2);
+    border-radius: var(--radius);
+    padding: 12px;
+    font-size: 13px;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+.summary-row { display: flex; justify-content: space-between; }
+.summary-row span:last-child { font-family: var(--mono); }
+.summary-row.ok   span:last-child { color: var(--green); }
+.summary-row.warn span:last-child { color: var(--orange); }
+.summary-row.err  span:last-child { color: var(--red); }
+
+/* ── FOOTER ──────────────────────────────────────────────── */
+footer {
+    grid-area: footer;
+    background: var(--surface);
+    border-top: 1px solid var(--border);
+    padding: 8px 24px;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    font-size: 12px;
+    color: var(--text2);
+}
+#statusMsg { flex: 1; font-family: var(--mono); }
+#statusMsg.ok   { color: var(--green); }
+#statusMsg.err  { color: var(--red); }
+#statusMsg.warn { color: var(--orange); }
+
+/* ── SCROLLBAR ───────────────────────────────────────────── */
+::-webkit-scrollbar { width: 4px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb { background: var(--border); border-radius: 2px; }
+</style>
+</head>
+<body>
+
+<!-- HEADER -->
+<header>
+    <h1>⚛️ QuantumSim <span>/ Element Data Entry</span></h1>
+    <div class="progress-wrap">
+        <div class="progress-bar"><div class="progress-bar__fill" id="progressFill" style="width:0%"></div></div>
+        <span class="progress-label" id="progressLabel">0 / 118</span>
+    </div>
+    <button class="btn-zip" onclick="downloadZip()">📦 Descargar ZIP</button>
+</header>
+
+<!-- SIDEBAR -->
+<aside>
+    <h2>Elementos</h2>
+    <div class="elem-list" id="elemList"></div>
+</aside>
+
+<!-- MAIN -->
+<main>
+    <div class="main-top">
+        <div class="elem-badge">
+            <span class="elem-badge__num" id="badgeNum">1</span>
+            <span class="elem-badge__symbol" id="badgeSymbol">H</span>
+        </div>
+        <div class="elem-info">
+            <h2 id="elemName">Hydrogen</h2>
+            <p id="elemFile">H.json</p>
+        </div>
+        <div class="main-actions">
+            <button class="btn btn--clear" onclick="clearCurrent()">Limpiar</button>
+            <button class="btn btn--prev"  onclick="navigate(-1)">← Anterior</button>
+            <button class="btn btn--save"  onclick="saveCurrent()">✓ Guardar</button>
+            <button class="btn btn--next"  onclick="navigate(1)">Siguiente →</button>
+        </div>
+    </div>
+
+    <div class="paste-area">
+        <label>Pega aquí el JSON que te dio Éter para este elemento</label>
+        <textarea id="jsonInput" spellcheck="false"
+            placeholder='{\n  "symbol": "H",\n  "identity": { ... },\n  ...\n}'
+            oninput="onInput()"></textarea>
+        <div class="hint" id="promptHint">Copia este prompt para Éter 👇</div>
+    </div>
+</main>
+
+<!-- INSPECTOR -->
+<div class="inspector">
+    <h2>Validación</h2>
+    <div class="summary-box" id="summaryBox">
+        <div class="summary-row"><span>Estado</span><span>—</span></div>
+    </div>
+    <div class="validation-list" id="validationList"></div>
+    <h2 style="margin-top:8px">Campos</h2>
+    <div class="field-grid" id="fieldGrid"></div>
+</div>
+
+<!-- FOOTER -->
+<footer>
+    <span id="statusMsg">Selecciona un elemento para comenzar.</span>
+    <span>QuantumSim Element Tool v1.0</span>
+</footer>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js"></script>
+<script>
+
+// ── Datos de los 118 elementos ────────────────────────────────────────────
+const ELEMENTS = [
+    [1,'H','Hydrogen'],[2,'He','Helium'],[3,'Li','Lithium'],[4,'Be','Beryllium'],
+    [5,'B','Boron'],[6,'C','Carbon'],[7,'N','Nitrogen'],[8,'O','Oxygen'],
+    [9,'F','Fluorine'],[10,'Ne','Neon'],[11,'Na','Sodium'],[12,'Mg','Magnesium'],
+    [13,'Al','Aluminum'],[14,'Si','Silicon'],[15,'P','Phosphorus'],[16,'S','Sulfur'],
+    [17,'Cl','Chlorine'],[18,'Ar','Argon'],[19,'K','Potassium'],[20,'Ca','Calcium'],
+    [21,'Sc','Scandium'],[22,'Ti','Titanium'],[23,'V','Vanadium'],[24,'Cr','Chromium'],
+    [25,'Mn','Manganese'],[26,'Fe','Iron'],[27,'Co','Cobalt'],[28,'Ni','Nickel'],
+    [29,'Cu','Copper'],[30,'Zn','Zinc'],[31,'Ga','Gallium'],[32,'Ge','Germanium'],
+    [33,'As','Arsenic'],[34,'Se','Selenium'],[35,'Br','Bromine'],[36,'Kr','Krypton'],
+    [37,'Rb','Rubidium'],[38,'Sr','Strontium'],[39,'Y','Yttrium'],[40,'Zr','Zirconium'],
+    [41,'Nb','Niobium'],[42,'Mo','Molybdenum'],[43,'Tc','Technetium'],[44,'Ru','Ruthenium'],
+    [45,'Rh','Rhodium'],[46,'Pd','Palladium'],[47,'Ag','Silver'],[48,'Cd','Cadmium'],
+    [49,'In','Indium'],[50,'Sn','Tin'],[51,'Sb','Antimony'],[52,'Te','Tellurium'],
+    [53,'I','Iodine'],[54,'Xe','Xenon'],[55,'Cs','Cesium'],[56,'Ba','Barium'],
+    [57,'La','Lanthanum'],[58,'Ce','Cerium'],[59,'Pr','Praseodymium'],[60,'Nd','Neodymium'],
+    [61,'Pm','Promethium'],[62,'Sm','Samarium'],[63,'Eu','Europium'],[64,'Gd','Gadolinium'],
+    [65,'Tb','Terbium'],[66,'Dy','Dysprosium'],[67,'Ho','Holmium'],[68,'Er','Erbium'],
+    [69,'Tm','Thulium'],[70,'Yb','Ytterbium'],[71,'Lu','Lutetium'],[72,'Hf','Hafnium'],
+    [73,'Ta','Tantalum'],[74,'W','Tungsten'],[75,'Re','Rhenium'],[76,'Os','Osmium'],
+    [77,'Ir','Iridium'],[78,'Pt','Platinum'],[79,'Au','Gold'],[80,'Hg','Mercury'],
+    [81,'Tl','Thallium'],[82,'Pb','Lead'],[83,'Bi','Bismuth'],[84,'Po','Polonium'],
+    [85,'At','Astatine'],[86,'Rn','Radon'],[87,'Fr','Francium'],[88,'Ra','Radium'],
+    [89,'Ac','Actinium'],[90,'Th','Thorium'],[91,'Pa','Protactinium'],[92,'U','Uranium'],
+    [93,'Np','Neptunium'],[94,'Pu','Plutonium'],[95,'Am','Americium'],[96,'Cm','Curium'],
+    [97,'Bk','Berkelium'],[98,'Cf','Californium'],[99,'Es','Einsteinium'],[100,'Fm','Fermium'],
+    [101,'Md','Mendelevium'],[102,'No','Nobelium'],[103,'Lr','Lawrencium'],[104,'Rf','Rutherfordium'],
+    [105,'Db','Dubnium'],[106,'Sg','Seaborgium'],[107,'Bh','Bohrium'],[108,'Hs','Hassium'],
+    [109,'Mt','Meitnerium'],[110,'Ds','Darmstadtium'],[111,'Rg','Roentgenium'],[112,'Cn','Copernicium'],
+    [113,'Nh','Nihonium'],[114,'Fl','Flerovium'],[115,'Mc','Moscovium'],[116,'Lv','Livermorium'],
+    [117,'Ts','Tennessine'],[118,'Og','Oganesson']
+];
+
+// Campos a validar (ruta anidada → label)
+const FIELDS = [
+    // Campos bilingües: acepta campo plano, _es o _eng
+    ['identity.name',                           'name',         true],
+    ['identity.category',                       'category',     true],
+    ['identity.color',                          'color'],
+    ['identity.cpk_color',                      'cpk_color'],
+    ['physical_properties.mass',                'mass'],
+    ['physical_properties.density_g_cm3',       'density'],
+    ['physical_properties.standard_state',      'state',        true],
+    ['physical_properties.melt_K',              'melt_K'],
+    ['physical_properties.boil_K',              'boil_K'],
+    ['atomic_structure.electronegativity',      'EN'],
+    ['atomic_structure.valence',                'valence'],
+    ['atomic_structure.ionization_energy_eV',   'IE (eV)'],
+    ['atomic_structure.radius_atomic_pm',       'r_atomic'],
+    ['atomic_structure.radius_covalent_pm',     'r_covalent'],
+    ['atomic_structure.vanderwaals_radius_pm',  'r_vdw'],
+    ['atomic_structure.electron_configuration_string', 'e_config'],
+    ['atomic_structure.shells',                 'shells'],
+    ['thermodynamics.specific_heat_j_gK',       'Cp'],
+    ['thermodynamics.latent_heat_fusion_kj_mol','ΔH_fus'],
+    ['reactivity.max_bonds',                    'max_bonds'],
+    ['reactivity.geometry_preference',          'geometry',     true],
+    ['reactivity.bond_energy_ev',               'bond_E'],
+    ['reactivity.oxidation_states',             'ox_states'],
+];
+
+// ── Estado ────────────────────────────────────────────────────────────────
+let currentIdx = 0;
+const saved = {};   // symbol → parsed JSON object
+
+// ── Init ──────────────────────────────────────────────────────────────────
+function init() {
+    buildSidebar();
+    goTo(0);
+}
+
+function buildSidebar() {
+    const list = document.getElementById('elemList');
+    list.innerHTML = '';
+    ELEMENTS.forEach(([num, sym, name], i) => {
+        const div = document.createElement('div');
+        div.className = 'elem-item';
+        div.id = `ei-${sym}`;
+        div.innerHTML = `
+            <span class="elem-num">${num}</span>
+            <span class="elem-symbol">${sym}</span>
+            <span class="elem-name">${name}</span>
+            <span class="elem-status">○</span>`;
+        div.onclick = () => goTo(i);
+        list.appendChild(div);
+    });
+}
+
+function goTo(idx) {
+    if (idx < 0 || idx >= ELEMENTS.length) return;
+
+    // Actualizar clase activa en sidebar
+    const prev = document.querySelector('.elem-item.active');
+    if (prev) prev.classList.remove('active');
+
+    currentIdx = idx;
+    const [num, sym, name] = ELEMENTS[idx];
+
+    document.getElementById(`ei-${sym}`)?.classList.add('active');
+    document.getElementById(`ei-${sym}`)?.scrollIntoView({ block: 'nearest' });
+
+    document.getElementById('badgeNum').textContent    = num;
+    document.getElementById('badgeSymbol').textContent = sym;
+    document.getElementById('elemName').textContent    = name;
+    document.getElementById('elemFile').textContent    = `${sym}.json`;
+
+    // Restaurar JSON guardado o limpiar
+    const textarea = document.getElementById('jsonInput');
+    textarea.value = saved[sym] ? JSON.stringify(saved[sym], null, 2) : '';
+    textarea.className = '';
+
+    updatePromptHint(sym, num, name);
+    validate();
+    updateProgress();
+}
+
+function navigate(dir) {
+    goTo(currentIdx + dir);
+}
+
+// ── Prompt hint para Éter ─────────────────────────────────────────────────
+function updatePromptHint(sym, num, name) {
+    document.getElementById('promptHint').textContent =
+`Rellena el JSON del elemento ${sym} (Z=${num}, ${name}) con todos sus datos reales.
+Devuelve SOLO el JSON sin texto adicional ni bloques de código.
+Usa null para campos sin datos conocidos. No inventes valores.`;
+}
+
+// ── Input / Validación ────────────────────────────────────────────────────
+function onInput() {
+    validate();
+}
+
+function validate() {
+    const raw = document.getElementById('jsonInput').value.trim();
+    const textarea = document.getElementById('jsonInput');
+    const vList = document.getElementById('validationList');
+    const fGrid = document.getElementById('fieldGrid');
+    const summary = document.getElementById('summaryBox');
+
+    vList.innerHTML = '';
+    fGrid.innerHTML = '';
+
+    if (!raw) {
+        summary.innerHTML = '<div class="summary-row"><span>Estado</span><span>—</span></div>';
+        setStatus('Pega el JSON de Éter en el área central.', '');
+        return;
+    }
+
+    // 1. Parsear JSON
+    let data;
+    try {
+        data = JSON.parse(raw);
+        textarea.classList.remove('err');
+    } catch(e) {
+        textarea.className = 'err';
+        addVItem(vList, 'err', '✗', 'JSON inválido: ' + e.message);
+        summary.innerHTML = `<div class="summary-row err"><span>Estado</span><span>JSON inválido</span></div>`;
+        setStatus('JSON inválido — revisa la sintaxis.', 'err');
+        return;
+    }
+
+    const [num, sym, name] = ELEMENTS[currentIdx];
+    const issues = [];
+    const warnings = [];
+
+    // 2. Verificar símbolo correcto
+    if (data.symbol !== sym) {
+        issues.push(`symbol es "${data.symbol}", debería ser "${sym}"`);
+    } else {
+        addVItem(vList, 'ok', '✓', `symbol: ${sym}`);
+    }
+
+    // 3. Verificar número atómico
+    const z = data.identity?.number;
+    if (z !== num) {
+        issues.push(`number es ${z}, debería ser ${num}`);
+    } else {
+        addVItem(vList, 'ok', '✓', `number: ${num}`);
+    }
+
+    // 4. Revisar campos (bilingual=true para los que tienen _es/_eng)
+    let filled = 0, empty = 0;
+    FIELDS.forEach(([path, label, bilingual = false]) => {
+        const val = getPath(data, path, bilingual);
+        const isFilled = val !== null && val !== undefined && val !== '' &&
+                         !(Array.isArray(val) && val.length === 0);
+        const div = document.createElement('div');
+        div.className = `field-item ${isFilled ? 'filled' : 'empty'}`;
+        div.textContent = (isFilled ? '✓ ' : '○ ') + label;
+        fGrid.appendChild(div);
+        if (isFilled) filled++; else empty++;
+    });
+
+    // 5. Advertencias por campos críticos vacíos
+    const critical = [
+        ['physical_properties.mass',             'masa'],
+        ['atomic_structure.radius_covalent_pm',  'radio covalente'],
+        ['atomic_structure.electronegativity',   'electronegatividad'],
+        ['reactivity.max_bonds',                 'max_bonds'],
+    ];
+    critical.forEach(([path, label]) => {
+        const val = getPath(data, path);
+        if (val === null || val === undefined) {
+            warnings.push(`Campo crítico vacío: ${label}`);
+        }
+    });
+
+    // 6. Mostrar issues y warnings
+    issues.forEach(msg => addVItem(vList, 'err', '✗', msg));
+    warnings.forEach(msg => addVItem(vList, 'warn', '⚠', msg));
+
+    const pct = Math.round(filled / FIELDS.length * 100);
+    const state = issues.length > 0 ? 'err' : warnings.length > 0 ? 'warn' : 'ok';
+
+    summary.innerHTML = `
+        <div class="summary-row ${state}">
+            <span>Estado</span>
+            <span>${issues.length > 0 ? '✗ Errores' : warnings.length > 0 ? '⚠ Advertencias' : '✓ Válido'}</span>
+        </div>
+        <div class="summary-row">
+            <span>Campos llenos</span>
+            <span>${filled} / ${FIELDS.length} (${pct}%)</span>
+        </div>
+        <div class="summary-row">
+            <span>Errores</span>
+            <span>${issues.length}</span>
+        </div>
+        <div class="summary-row">
+            <span>Advertencias</span>
+            <span>${warnings.length}</span>
+        </div>`;
+
+    if (state === 'ok') {
+        textarea.className = 'ok';
+        setStatus(`✓ ${sym}.json válido — listo para guardar.`, 'ok');
+    } else if (state === 'warn') {
+        textarea.className = '';
+        setStatus(`⚠ ${sym}.json tiene advertencias — puedes guardar igual.`, 'warn');
+    } else {
+        textarea.className = 'err';
+        setStatus(`✗ Hay errores en el JSON — corrígelos antes de guardar.`, 'err');
+    }
+}
+
+// ── Guardar ───────────────────────────────────────────────────────────────
+function saveCurrent() {
+    const raw = document.getElementById('jsonInput').value.trim();
+    if (!raw) { setStatus('Nada que guardar.', 'warn'); return; }
+
+    let data;
+    try { data = JSON.parse(raw); }
+    catch(e) { setStatus('JSON inválido — no se guardó.', 'err'); return; }
+
+    const [,sym] = ELEMENTS[currentIdx];
+
+    // Verificar símbolo mínimo
+    if (data.symbol !== sym) {
+        if (!confirm(`El symbol es "${data.symbol}" pero estás en ${sym}. ¿Guardar de todos modos?`)) return;
+    }
+
+    saved[sym] = data;
+
+    // Marcar en sidebar
+    const item = document.getElementById(`ei-${sym}`);
+    if (item) {
+        item.classList.add('done');
+        item.querySelector('.elem-status').textContent = '✓';
+    }
+
+    updateProgress();
+    setStatus(`✓ ${sym}.json guardado (${Object.keys(saved).length} en total).`, 'ok');
+
+    // Avanzar al siguiente automáticamente
+    setTimeout(() => navigate(1), 600);
+}
+
+function clearCurrent() {
+    document.getElementById('jsonInput').value = '';
+    document.getElementById('jsonInput').className = '';
+    validate();
+}
+
+// ── ZIP ───────────────────────────────────────────────────────────────────
+async function downloadZip() {
+    const count = Object.keys(saved).length;
+    if (count === 0) { setStatus('No hay elementos guardados aún.', 'warn'); return; }
+
+    setStatus(`Generando ZIP con ${count} elementos...`, '');
+    const zip = new JSZip();
+    const folder = zip.folder('elements');
+
+    Object.entries(saved).forEach(([sym, data]) => {
+        folder.file(`${sym}.json`, JSON.stringify(data, null, 2));
+    });
+
+    const blob = await zip.generateAsync({ type: 'blob' });
+    const url  = URL.createObjectURL(blob);
+    const a    = document.createElement('a');
+    a.href = url; a.download = 'elements.zip'; a.click();
+    URL.revokeObjectURL(url);
+    setStatus(`✓ elements.zip descargado (${count} elementos).`, 'ok');
+}
+
+// ── Helpers ───────────────────────────────────────────────────────────────
+
+// Obtiene valor de ruta anidada. Si bilingual=true acepta _es/_eng o {es,en}
+function getPath(obj, path, bilingual = false) {
+    const parts   = path.split('.');
+    const lastKey = parts[parts.length - 1];
+    const parent  = parts.slice(0, -1).reduce((o, k) => (o && o[k] !== undefined ? o[k] : null), obj);
+    if (!parent) return null;
+
+    // Campo plano directo
+    const direct = parent[lastKey];
+    if (direct !== undefined && direct !== null && direct !== '') return direct;
+
+    // Variantes bilingues de Éter: campo_es / campo_eng
+    if (bilingual) {
+        if (parent[lastKey + '_es']  != null) return parent[lastKey + '_es'];
+        if (parent[lastKey + '_eng'] != null) return parent[lastKey + '_eng'];
+        // Objeto anidado {es, en}
+        if (direct && typeof direct === 'object' && (direct.es || direct.en)) return direct.es || direct.en;
+    }
+    return null;
+}
+
+function addVItem(container, type, icon, msg) {
+    const div = document.createElement('div');
+    div.className = `v-item ${type}`;
+    div.innerHTML = `<span class="v-icon">${icon}</span><span>${msg}</span>`;
+    container.appendChild(div);
+}
+
+function setStatus(msg, type) {
+    const el = document.getElementById('statusMsg');
+    el.textContent = msg;
+    el.className = type;
+}
+
+function updateProgress() {
+    const done = Object.keys(saved).length;
+    const pct  = done / 118 * 100;
+    document.getElementById('progressFill').style.width = pct + '%';
+    document.getElementById('progressLabel').textContent = `${done} / 118`;
+}
+
+// ── Teclado ───────────────────────────────────────────────────────────────
+document.addEventListener('keydown', e => {
+    if (e.target.tagName === 'TEXTAREA') return;
+    if (e.key === 'ArrowRight' || e.key === 'ArrowDown') navigate(1);
+    if (e.key === 'ArrowLeft'  || e.key === 'ArrowUp')   navigate(-1);
+    if (e.key === 'Enter') saveCurrent();
+});
+
+init();
+</script>
+</body>
+</html>

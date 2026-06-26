@@ -1,0 +1,149 @@
+{
+  "symbol": "Ni",
+  "identity": {
+    "name_es": "Níquel",
+    "name_eng": "Nickel",
+    "number": 28,
+    "category_es": "Metal de transición",
+    "category_eng": "Transition metal",
+    "color": "0xB0B0A8",
+    "cpk_color": "0x50D050",
+    "discovery_year": "1751"
+  },
+  "physical_properties": {
+    "mass": 58.693,
+    "density_g_cm3": 8.908,
+    "standard_state_es": "Sólido",
+    "standard_state_eng": "Solid",
+    "melt_K": 1728,
+    "boil_K": 3003,
+    "allotropes_es": null,
+    "allotropes_eng": null,
+    "lattice_structure": "fcc"
+  },
+  "atomic_structure": {
+    "electronegativity": 1.91,
+    "valence": 2,
+    "ionization_energy_eV": 7.6398,
+    "electron_affinity_ev": 1.156,
+    "electron_affinity_kj_mol": 111.5,
+    "radius_atomic_pm": 124,
+    "radius_covalent_pm": 121,
+    "vanderwaals_radius_pm": 163,
+    "ionic_radius_pm": 69,
+    "effective_nuclear_charge": 5.839,
+    "electron_configuration_string": "[Ar] 3d8 4s2",
+    "shells": [
+      2,
+      8,
+      16,
+      2
+    ],
+    "quantum_numbers": {
+      "s": 2,
+      "p": 3,
+      "d": 8,
+      "f": 0
+    },
+    "work_function_ev": 5.15
+  },
+  "thermodynamics": {
+    "enthalpy_formation_kj_mol": 0,
+    "entropy_j_molk": 29.87,
+    "heat_capacity_j_molk": 26.07,
+    "specific_heat_j_gK": 0.444,
+    "latent_heat_fusion_kj_mol": 17.48,
+    "latent_heat_vaporization_kj_mol": 377.5,
+    "fusion_heat_kj_mol": 17.2,
+    "evaporation_heat_kj_mol": 370.4
+  },
+  "kinetics_and_phase": {
+    "vapor_pressure_constants": {
+      "A": 5.091,
+      "B": 19600,
+      "C": -10
+    },
+    "vapor_pressure_pa": null,
+    "viscosity_liquid_pas": 0.0045,
+    "viscosity_pa_s": null,
+    "critical_temp_K": null,
+    "critical_press_MPa": null,
+    "surface_tension_nm": 1.78
+  },
+  "electromagnetism_and_mechanics": {
+    "thermal_conductivity_wmk": 90.9,
+    "electrical_conductivity_sm": 14300000,
+    "magnetic_susceptibility": null,
+    "thermal_expansion_coefficient": 1.33e-05,
+    "polarizability_angstrom3": 6.8,
+    "refractive_index": null,
+    "youngs_modulus_gba": 200,
+    "poisson_ratio": 0.31,
+    "brinell_hardness_m_pa": 700
+  },
+  "reactivity": {
+    "max_bonds": 6,
+    "geometry_preference_es": "Octaédrica / Cuadrada plana",
+    "geometry_preference_eng": "Octahedral / Square planar",
+    "ideal_bond_angle": null,
+    "bond_energy_ev": null,
+    "dissociation_energy_kj_mol": null,
+    "standard_potential_v": -0.257,
+    "oxidation_states": [
+      3,
+      2
+    ],
+    "common_ions": [
+      "Ni2+",
+      "Ni3+"
+    ]
+  },
+  "nuclear_and_environmental": {
+    "isotopes": [
+      {
+        "mass": 57.935,
+        "abundance": 68.077,
+        "stable": true,
+        "name_es": "Níquel-58",
+        "name_eng": "Nickel-58"
+      },
+      {
+        "mass": 59.931,
+        "abundance": 26.223,
+        "stable": true,
+        "name_es": "Níquel-60",
+        "name_eng": "Nickel-60"
+      },
+      {
+        "mass": 60.931,
+        "abundance": 1.14,
+        "stable": true,
+        "name_es": "Níquel-61",
+        "name_eng": "Nickel-61"
+      },
+      {
+        "mass": 61.928,
+        "abundance": 3.634,
+        "stable": true,
+        "name_es": "Níquel-62",
+        "name_eng": "Nickel-62"
+      },
+      {
+        "mass": 63.928,
+        "abundance": 0.926,
+        "stable": true,
+        "name_es": "Níquel-64",
+        "name_eng": "Nickel-64"
+      }
+    ],
+    "neutron_cross_section_barns": 4.5,
+    "nuclear_binding_energy_mev": 8.78,
+    "abundance_crust_mg_kg": 84,
+    "toxicity_level": 2
+  },
+  "cryogenic_data": {
+    "critical_solidification_pressure_mpa": null,
+    "lambda_point_k": null,
+    "superfluid_viscosity_pas": null
+  }
+}

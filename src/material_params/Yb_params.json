@@ -1,0 +1,48 @@
+{
+  "symbol": "Yb",
+  "generated_by": "generate_materials.py v1.2 (Stevens perceptual)",
+  "source_props": {
+    "mass": 173.045,
+    "melt_K": 1097,
+    "density": 6.9,
+    "ionization_eV": 6.2542,
+    "electronegativity": 1.1,
+    "polarizability": 21,
+    "standard_state": "Solid"
+  },
+  "shader_params": {
+    "sphere_pulse": {
+      "freq": 0.76,
+      "amp": 0.329
+    },
+    "blink": {
+      "amp": 0.0,
+      "speed": 0.228
+    },
+    "brightness": {
+      "bright": 0.889,
+      "base": 0.3,
+      "vari": 0.0
+    },
+    "disc_shape": {
+      "soft": 0.401,
+      "radius": 0.22,
+      "ring": 0.0
+    },
+    "point_size": {
+      "sz": 0.388,
+      "bAmp": 0.0,
+      "persp": 76.8
+    },
+    "alpha_curve": {
+      "opacity": 0.909,
+      "curve": 1.046,
+      "floor": 0.0
+    },
+    "color": {
+      "r": 0.7529,
+      "g": 0.7529,
+      "b": 0.7529
+    }
+  }
+}

@@ -1,0 +1,48 @@
+{
+  "symbol": "Nb",
+  "generated_by": "generate_materials.py v1.2 (Stevens perceptual)",
+  "source_props": {
+    "mass": 92.906,
+    "melt_K": 2750,
+    "density": 8.57,
+    "ionization_eV": 6.7589,
+    "electronegativity": 1.6,
+    "polarizability": 15.7,
+    "standard_state": "Solid"
+  },
+  "shader_params": {
+    "sphere_pulse": {
+      "freq": 1.037,
+      "amp": 0.291
+    },
+    "blink": {
+      "amp": 0.0,
+      "speed": 0.311
+    },
+    "brightness": {
+      "bright": 0.986,
+      "base": 0.3,
+      "vari": 0.0
+    },
+    "disc_shape": {
+      "soft": 0.34,
+      "radius": 0.22,
+      "ring": 0.0
+    },
+    "point_size": {
+      "sz": 0.366,
+      "bAmp": 0.0,
+      "persp": 71.6
+    },
+    "alpha_curve": {
+      "opacity": 0.925,
+      "curve": 1.037,
+      "floor": 0.0
+    },
+    "color": {
+      "r": 0.6588,
+      "g": 0.6588,
+      "b": 0.6902
+    }
+  }
+}

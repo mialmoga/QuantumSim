@@ -1,0 +1,154 @@
+{
+  "symbol": "Ce",
+  "identity": {
+    "name_es": "Cerio",
+    "name_eng": "Cerium",
+    "number": 58,
+    "category_es": "Lantánido",
+    "category_eng": "Lanthanide",
+    "color": "0xC8C8B0",
+    "cpk_color": "0xFFFFC7",
+    "discovery_year": "1803"
+  },
+  "physical_properties": {
+    "mass": 140.116,
+    "density_g_cm3": 6.77,
+    "standard_state_es": "Sólido",
+    "standard_state_eng": "Solid",
+    "melt_K": 1068,
+    "boil_K": 3716,
+    "allotropes_es": [
+      "Alfa (fcc, alta presión)",
+      "Beta (dhcp)",
+      "Gamma (fcc, estándar)",
+      "Delta (bcc)"
+    ],
+    "allotropes_eng": [
+      "Alpha (fcc, high pressure)",
+      "Beta (dhcp)",
+      "Gamma (fcc, standard)",
+      "Delta (bcc)"
+    ],
+    "lattice_structure": "fcc"
+  },
+  "atomic_structure": {
+    "electronegativity": 1.12,
+    "valence": 4,
+    "ionization_energy_eV": 5.5387,
+    "electron_affinity_ev": 0.5,
+    "electron_affinity_kj_mol": 50,
+    "radius_atomic_pm": 181,
+    "radius_covalent_pm": 165,
+    "vanderwaals_radius_pm": 235,
+    "ionic_radius_pm": 101,
+    "effective_nuclear_charge": 6.3,
+    "electron_configuration_string": "[Xe] 4f1 5d1 6s2",
+    "shells": [
+      2,
+      8,
+      18,
+      19,
+      9,
+      2
+    ],
+    "quantum_numbers": {
+      "s": 2,
+      "p": 0,
+      "d": 1,
+      "f": 1
+    },
+    "work_function_ev": 2.9
+  },
+  "thermodynamics": {
+    "enthalpy_formation_kj_mol": 0,
+    "entropy_j_molk": 72,
+    "heat_capacity_j_molk": 26.94,
+    "specific_heat_j_gK": 0.192,
+    "latent_heat_fusion_kj_mol": 5.46,
+    "latent_heat_vaporization_kj_mol": 398,
+    "fusion_heat_kj_mol": 5.5,
+    "evaporation_heat_kj_mol": 350
+  },
+  "kinetics_and_phase": {
+    "vapor_pressure_constants": {
+      "A": 5.15,
+      "B": 21500,
+      "C": -10
+    },
+    "vapor_pressure_pa": null,
+    "viscosity_liquid_pas": null,
+    "viscosity_pa_s": null,
+    "critical_temp_K": null,
+    "critical_press_MPa": null,
+    "surface_tension_nm": 0.706
+  },
+  "electromagnetism_and_mechanics": {
+    "thermal_conductivity_wmk": 11.3,
+    "electrical_conductivity_sm": 1300000,
+    "magnetic_susceptibility": 2.5e-05,
+    "thermal_expansion_coefficient": 6.3e-06,
+    "polarizability_angstrom3": 29.6,
+    "refractive_index": null,
+    "youngs_modulus_gba": 33.6,
+    "poisson_ratio": 0.24,
+    "brinell_hardness_m_pa": 186
+  },
+  "reactivity": {
+    "max_bonds": 4,
+    "geometry_preference_es": "Octaédrica",
+    "geometry_preference_eng": "Octahedral",
+    "ideal_bond_angle": null,
+    "bond_energy_ev": null,
+    "dissociation_energy_kj_mol": null,
+    "standard_potential_v": -2.336,
+    "oxidation_states": [
+      3,
+      4
+    ],
+    "common_ions": [
+      "Ce3+",
+      "Ce4+"
+    ]
+  },
+  "nuclear_and_environmental": {
+    "isotopes": [
+      {
+        "mass": 135.907,
+        "abundance": 0.185,
+        "stable": true,
+        "name_es": "Cerio-136",
+        "name_eng": "Cerium-136"
+      },
+      {
+        "mass": 137.906,
+        "abundance": 0.251,
+        "stable": true,
+        "name_es": "Cerio-138",
+        "name_eng": "Cerium-138"
+      },
+      {
+        "mass": 139.905,
+        "abundance": 88.45,
+        "stable": true,
+        "name_es": "Cerio-140",
+        "name_eng": "Cerium-140"
+      },
+      {
+        "mass": 141.909,
+        "abundance": 11.11,
+        "stable": true,
+        "name_es": "Cerio-142",
+        "name_eng": "Cerium-142"
+      }
+    ],
+    "neutron_cross_section_barns": 0.6,
+    "nuclear_binding_energy_mev": 8.337,
+    "abundance_crust_mg_kg": 66.5,
+    "toxicity_level": 1
+  },
+  "cryogenic_data": {
+    "critical_solidification_pressure_mpa": null,
+    "lambda_point_k": null,
+    "superfluid_viscosity_pas": null
+  }
+}

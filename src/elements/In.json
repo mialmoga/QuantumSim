@@ -1,0 +1,130 @@
+{
+  "symbol": "In",
+  "identity": {
+    "name_es": "Indio",
+    "name_eng": "Indium",
+    "number": 49,
+    "category_es": "Metal de post-transición",
+    "category_eng": "Post-transition metal",
+    "color": "0xC8C8C8",
+    "cpk_color": "0xA67573",
+    "discovery_year": "1863"
+  },
+  "physical_properties": {
+    "mass": 114.818,
+    "density_g_cm3": 7.31,
+    "standard_state_es": "Sólido",
+    "standard_state_eng": "Solid",
+    "melt_K": 429.75,
+    "boil_K": 2345,
+    "allotropes_es": null,
+    "allotropes_eng": null,
+    "lattice_structure": "tetragonal"
+  },
+  "atomic_structure": {
+    "electronegativity": 1.78,
+    "valence": 3,
+    "ionization_energy_eV": 5.7864,
+    "electron_affinity_ev": 0.3,
+    "electron_affinity_kj_mol": 28.9,
+    "radius_atomic_pm": 167,
+    "radius_covalent_pm": 142,
+    "vanderwaals_radius_pm": 193,
+    "ionic_radius_pm": 80,
+    "effective_nuclear_charge": 6.27,
+    "electron_configuration_string": "[Kr] 4d10 5s2 5p1",
+    "shells": [
+      2,
+      8,
+      18,
+      18,
+      3
+    ],
+    "quantum_numbers": {
+      "s": 2,
+      "p": 1,
+      "d": 0,
+      "f": 0
+    },
+    "work_function_ev": 4.12
+  },
+  "thermodynamics": {
+    "enthalpy_formation_kj_mol": 0,
+    "entropy_j_molk": 57.82,
+    "heat_capacity_j_molk": 26.74,
+    "specific_heat_j_gK": 0.233,
+    "latent_heat_fusion_kj_mol": 3.28,
+    "latent_heat_vaporization_kj_mol": 231.8,
+    "fusion_heat_kj_mol": 3.26,
+    "evaporation_heat_kj_mol": 231.5
+  },
+  "kinetics_and_phase": {
+    "vapor_pressure_constants": {
+      "A": 5.12,
+      "B": 12500,
+      "C": -10
+    },
+    "vapor_pressure_pa": null,
+    "viscosity_liquid_pas": 0.00189,
+    "viscosity_pa_s": null,
+    "critical_temp_K": null,
+    "critical_press_MPa": null,
+    "surface_tension_nm": 0.559
+  },
+  "electromagnetism_and_mechanics": {
+    "thermal_conductivity_wmk": 81.8,
+    "electrical_conductivity_sm": 12000000,
+    "magnetic_susceptibility": -5.6e-05,
+    "thermal_expansion_coefficient": 3.21e-05,
+    "polarizability_angstrom3": 10.1,
+    "refractive_index": null,
+    "youngs_modulus_gba": 11,
+    "poisson_ratio": 0.45,
+    "brinell_hardness_m_pa": 8.8
+  },
+  "reactivity": {
+    "max_bonds": 3,
+    "geometry_preference_es": "Tetraédrica (en compuestos)",
+    "geometry_preference_eng": "Tetrahedral (in compounds)",
+    "ideal_bond_angle": 109.5,
+    "bond_energy_ev": 1.05,
+    "dissociation_energy_kj_mol": 101,
+    "standard_potential_v": -0.3382,
+    "oxidation_states": [
+      3,
+      1
+    ],
+    "common_ions": [
+      "In3+",
+      "In+"
+    ]
+  },
+  "nuclear_and_environmental": {
+    "isotopes": [
+      {
+        "mass": 112.904,
+        "abundance": 4.29,
+        "stable": true,
+        "name_es": "Indio-113",
+        "name_eng": "Indium-113"
+      },
+      {
+        "mass": 114.903,
+        "abundance": 95.71,
+        "stable": false,
+        "half_life_s": 1390000000000000,
+        "name_es": "Indio-115",
+        "name_eng": "Indium-115"
+      }
+    ],
+    "neutron_cross_section_barns": 194,
+    "nuclear_binding_energy_mev": 8.523,
+    "abundance_crust_mg_kg": 0.25,
+    "toxicity_level": 1
+  },
+  "cryogenic_data": {
+    "critical_solidification_pressure_mpa": null,
+    "lambda_point_k": 3.41,
+    "superfluid_viscosity_pas": null
+  }
+}

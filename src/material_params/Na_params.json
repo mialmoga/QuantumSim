@@ -1,0 +1,48 @@
+{
+  "symbol": "Na",
+  "generated_by": "generate_materials.py v1.2 (Stevens perceptual)",
+  "source_props": {
+    "mass": 22.989,
+    "melt_K": 370.87,
+    "density": 0.968,
+    "ionization_eV": 5.1391,
+    "electronegativity": 0.93,
+    "polarizability": 24.11,
+    "standard_state": "Solid"
+  },
+  "shader_params": {
+    "sphere_pulse": {
+      "freq": 2.086,
+      "amp": 0.389
+    },
+    "blink": {
+      "amp": 0.0,
+      "speed": 0.626
+    },
+    "brightness": {
+      "bright": 0.638,
+      "base": 0.3,
+      "vari": 0.0
+    },
+    "disc_shape": {
+      "soft": 0.422,
+      "radius": 0.22,
+      "ring": 0.0
+    },
+    "point_size": {
+      "sz": 0.402,
+      "bAmp": 0.0,
+      "persp": 72.1
+    },
+    "alpha_curve": {
+      "opacity": 0.758,
+      "curve": 1.121,
+      "floor": 0.0
+    },
+    "color": {
+      "r": 0.7843,
+      "g": 0.7843,
+      "b": 0.8157
+    }
+  }
+}

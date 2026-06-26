@@ -1,0 +1,156 @@
+{
+  "symbol": "Pd",
+  "identity": {
+    "name_es": "Paladio",
+    "name_eng": "Palladium",
+    "number": 46,
+    "category_es": "Metal de transición",
+    "category_eng": "Transition metal",
+    "color": "0xC8C8C0",
+    "cpk_color": "0x006985",
+    "discovery_year": "1803"
+  },
+  "physical_properties": {
+    "mass": 106.42,
+    "density_g_cm3": 12.023,
+    "standard_state_es": "Sólido",
+    "standard_state_eng": "Solid",
+    "melt_K": 1828.05,
+    "boil_K": 3236,
+    "allotropes_es": null,
+    "allotropes_eng": null,
+    "lattice_structure": "fcc"
+  },
+  "atomic_structure": {
+    "electronegativity": 2.2,
+    "valence": 0,
+    "ionization_energy_eV": 8.3369,
+    "electron_affinity_ev": 0.562,
+    "electron_affinity_kj_mol": 54.2,
+    "radius_atomic_pm": 137,
+    "radius_covalent_pm": 139,
+    "vanderwaals_radius_pm": 163,
+    "ionic_radius_pm": 64,
+    "effective_nuclear_charge": 5.89,
+    "electron_configuration_string": "[Kr] 4d10",
+    "shells": [
+      2,
+      8,
+      18,
+      18
+    ],
+    "quantum_numbers": {
+      "s": 0,
+      "p": 0,
+      "d": 10,
+      "f": 0
+    },
+    "work_function_ev": 5.12
+  },
+  "thermodynamics": {
+    "enthalpy_formation_kj_mol": 0,
+    "entropy_j_molk": 37.57,
+    "heat_capacity_j_molk": 25.98,
+    "specific_heat_j_gK": 0.244,
+    "latent_heat_fusion_kj_mol": 16.74,
+    "latent_heat_vaporization_kj_mol": 362,
+    "fusion_heat_kj_mol": 16.74,
+    "evaporation_heat_kj_mol": 358
+  },
+  "kinetics_and_phase": {
+    "vapor_pressure_constants": {
+      "A": 5.11,
+      "B": 17500,
+      "C": -10
+    },
+    "vapor_pressure_pa": null,
+    "viscosity_liquid_pas": 0.0045,
+    "viscosity_pa_s": null,
+    "critical_temp_K": null,
+    "critical_press_MPa": null,
+    "surface_tension_nm": 1.5
+  },
+  "electromagnetism_and_mechanics": {
+    "thermal_conductivity_wmk": 71.8,
+    "electrical_conductivity_sm": 9500000,
+    "magnetic_susceptibility": 0.00054,
+    "thermal_expansion_coefficient": 1.18e-05,
+    "polarizability_angstrom3": 4.8,
+    "refractive_index": null,
+    "youngs_modulus_gba": 121,
+    "poisson_ratio": 0.39,
+    "brinell_hardness_m_pa": 37.3
+  },
+  "reactivity": {
+    "max_bonds": 4,
+    "geometry_preference_es": "Plano cuadrada",
+    "geometry_preference_eng": "Square planar",
+    "ideal_bond_angle": 90,
+    "bond_energy_ev": null,
+    "dissociation_energy_kj_mol": null,
+    "standard_potential_v": 0.951,
+    "oxidation_states": [
+      2,
+      4
+    ],
+    "common_ions": [
+      "Pd2+",
+      "Pd4+"
+    ]
+  },
+  "nuclear_and_environmental": {
+    "isotopes": [
+      {
+        "mass": 101.905,
+        "abundance": 1.02,
+        "stable": true,
+        "name_es": "Paladio-102",
+        "name_eng": "Palladium-102"
+      },
+      {
+        "mass": 103.904,
+        "abundance": 11.14,
+        "stable": true,
+        "name_es": "Paladio-104",
+        "name_eng": "Palladium-104"
+      },
+      {
+        "mass": 104.905,
+        "abundance": 22.33,
+        "stable": true,
+        "name_es": "Paladio-105",
+        "name_eng": "Palladium-105"
+      },
+      {
+        "mass": 105.903,
+        "abundance": 27.33,
+        "stable": true,
+        "name_es": "Paladio-106",
+        "name_eng": "Palladium-106"
+      },
+      {
+        "mass": 107.903,
+        "abundance": 26.46,
+        "stable": true,
+        "name_es": "Paladio-108",
+        "name_eng": "Palladium-108"
+      },
+      {
+        "mass": 109.905,
+        "abundance": 11.72,
+        "stable": true,
+        "name_es": "Paladio-110",
+        "name_eng": "Palladium-110"
+      }
+    ],
+    "neutron_cross_section_barns": 6.9,
+    "nuclear_binding_energy_mev": 8.608,
+    "abundance_crust_mg_kg": 0.015,
+    "toxicity_level": 1
+  },
+  "cryogenic_data": {
+    "critical_solidification_pressure_mpa": null,
+    "lambda_point_k": null,
+    "superfluid_viscosity_pas": null
+  }
+}

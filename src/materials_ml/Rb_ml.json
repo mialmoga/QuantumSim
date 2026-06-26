@@ -1,0 +1,142 @@
+{
+  "version": "3.0",
+  "created": "2026-03-28T18:25:27.080554Z",
+  "generated_by": "generate_materials_ml.py v3 [built_in]",
+  "name": "Rb ML",
+  "description": "Material ml para Rb (alkali_metal)",
+  "family": "metal",
+  "mode": "custom",
+  "target": "sphere",
+  "layer": "all",
+  "pipeline": [
+    {
+      "key": "blink",
+      "enabled": true,
+      "params": {
+        "speed": 0.4,
+        "amp": 0.14,
+        "fMul": 1.49
+      },
+      "custom": false
+    },
+    {
+      "key": "point_size",
+      "enabled": true,
+      "params": {
+        "sz": 0.49,
+        "bAmp": 0.24,
+        "persp": 81.6
+      },
+      "custom": false
+    },
+    {
+      "key": "turbulence",
+      "enabled": false,
+      "params": {
+        "freq": 0.005,
+        "amp": 0.4,
+        "tMul": 0.19
+      },
+      "custom": false
+    },
+    {
+      "key": "sphere_pulse",
+      "enabled": true,
+      "params": {
+        "freq": 1.2,
+        "amp": 0.394,
+        "pSize": 0.5
+      },
+      "custom": false
+    },
+    {
+      "key": "disc_shape",
+      "enabled": true,
+      "params": {
+        "radius": 0.464,
+        "soft": 0.398,
+        "ring": 0.0
+      },
+      "custom": false
+    },
+    {
+      "key": "brightness",
+      "enabled": true,
+      "params": {
+        "bright": 0.4,
+        "base": 0.302,
+        "vari": 0.032
+      },
+      "custom": false
+    },
+    {
+      "key": "color_grade",
+      "enabled": true,
+      "params": {
+        "r": 0.73,
+        "g": 0.73,
+        "b": 0.69,
+        "gamma": 1.04
+      },
+      "custom": false
+    },
+    {
+      "key": "phase_color",
+      "enabled": false,
+      "params": {
+        "inner": 1.19,
+        "outer": 0.39,
+        "pow": 0.99
+      },
+      "custom": false
+    },
+    {
+      "key": "glow",
+      "enabled": false,
+      "params": {
+        "intensity": 0.19,
+        "falloff": 5.9,
+        "mix": 0.14
+      },
+      "custom": false
+    },
+    {
+      "key": "fresnel_fake",
+      "enabled": true,
+      "params": {
+        "rim": 0.98,
+        "core": 0.27,
+        "pow": 2.17,
+        "r": 0.75,
+        "g": 0.73,
+        "b": 0.66
+      },
+      "custom": false
+    },
+    {
+      "key": "specular_metal",
+      "enabled": false,
+      "params": {
+        "shininess": 64.0,
+        "intensity": 2.5,
+        "reflectivity": 0.8
+      },
+      "custom": false
+    },
+    {
+      "key": "alpha_curve",
+      "enabled": true,
+      "params": {
+        "curve": 1.1,
+        "opacity": 0.76,
+        "floor": 0.001
+      },
+      "custom": false
+    }
+  ],
+  "compiled": {
+    "vert": "// ShaderLab Custom \u2014 Sphere\nuniform float uTime,uScale,uLevel,uPmScale,uSpeed,uAmp,uSize;\nuniform float uLodFade;\nattribute float aPhase;\nvarying float vBlink;\nvarying float vPhase;\nvoid main(){\n  vBlink=0.0;\n  vPhase=aPhase;\n  vec3 wpos=position*uPmScale;\n  vec4 mvP=modelViewMatrix*vec4(wpos,1.0);\n  gl_PointSize=0.0;\n  vBlink = sin(uTime*(1.49+uLevel)*0.4+aPhase*6.2832)*0.14;\n  gl_PointSize=uScale*0.49*(1.1+vBlink*0.24)*81.6/-mvP.z;\n  {float _v=sin(uTime*1.2+vPhase*6.2832)*0.394;float _base=gl_PointSize>0.0?gl_PointSize:0.5*uScale*350.0/-mvP.z;gl_PointSize=_base*(1.0+_v);}\n  if(gl_PointSize<=0.0)\n    gl_PointSize=uScale*uSize*(1.0+vBlink*uAmp*3.0)/-mvP.z;\n  gl_PointSize*=uLodFade;\n  gl_Position=projectionMatrix*mvP;\n}",
+    "frag": "// ShaderLab Custom \u2014 Sphere\nuniform vec3  uColor;\nuniform float uBright,uEdge;\nuniform float uLodFade;\nvarying float vBlink;\nvarying float vPhase;\nvoid main(){\n  vec3  col=uColor*uBright;\n  float alpha=1.0;\n  float d=0.0;\n  {vec2 _uv=gl_PointCoord-0.5;d=dot(_uv,_uv);if(d>0.25)discard;alpha=1.0-smoothstep(uEdge,0.25,d);}\n  {vec2 _uv=gl_PointCoord-0.5;d=dot(_uv,_uv);if(d>0.464)discard;if(0.0>0.005&&d<0.0)discard;alpha=1.0-smoothstep(0.398,0.464,d);}\n  col=uColor*(0.4*(0.302+vBlink*0.032));\n  col=pow(max(col*vec3(0.73,0.73,0.69),vec3(0.0)),vec3(1.0/1.04));\n  {float _f=pow(clamp(1.0-abs(vPhase-0.5)*2.0,0.0,1.0),2.17);col+=_f*0.98*vec3(0.75,0.73,0.66);col+=clamp(1.0-_f,0.0,1.0)*col*0.27;}\n  alpha=pow(max(alpha,0.0),1.1)*0.76+0.001;\n  if(alpha<=0.0)discard;\n  gl_FragColor=vec4(col,clamp(alpha,0.0,1.0)*uLodFade);\n}"
+  },
+  "element": null
+}

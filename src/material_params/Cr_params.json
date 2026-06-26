@@ -1,0 +1,48 @@
+{
+  "symbol": "Cr",
+  "generated_by": "generate_materials.py v1.2 (Stevens perceptual)",
+  "source_props": {
+    "mass": 51.996,
+    "melt_K": 2180,
+    "density": 7.19,
+    "ionization_eV": 6.7665,
+    "electronegativity": 1.66,
+    "polarizability": 11.6,
+    "standard_state": "Solid"
+  },
+  "shader_params": {
+    "sphere_pulse": {
+      "freq": 1.387,
+      "amp": 0.3
+    },
+    "blink": {
+      "amp": 0.0,
+      "speed": 0.416
+    },
+    "brightness": {
+      "bright": 0.988,
+      "base": 0.3,
+      "vari": 0.0
+    },
+    "disc_shape": {
+      "soft": 0.333,
+      "radius": 0.22,
+      "ring": 0.0
+    },
+    "point_size": {
+      "sz": 0.348,
+      "bAmp": 0.0,
+      "persp": 61.2
+    },
+    "alpha_curve": {
+      "opacity": 0.912,
+      "curve": 1.044,
+      "floor": 0.0
+    },
+    "color": {
+      "r": 0.7529,
+      "g": 0.7843,
+      "b": 0.8157
+    }
+  }
+}

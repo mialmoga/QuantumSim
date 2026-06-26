@@ -1,0 +1,48 @@
+{
+  "symbol": "Nd",
+  "generated_by": "generate_materials.py v1.2 (Stevens perceptual)",
+  "source_props": {
+    "mass": 144.242,
+    "melt_K": 1297,
+    "density": 7.01,
+    "ionization_eV": 5.525,
+    "electronegativity": 1.14,
+    "polarizability": 31.4,
+    "standard_state": "Solid"
+  },
+  "shader_params": {
+    "sphere_pulse": {
+      "freq": 0.833,
+      "amp": 0.321
+    },
+    "blink": {
+      "amp": 0.0,
+      "speed": 0.25
+    },
+    "brightness": {
+      "bright": 0.732,
+      "base": 0.3,
+      "vari": 0.0
+    },
+    "disc_shape": {
+      "soft": 0.396,
+      "radius": 0.22,
+      "ring": 0.0
+    },
+    "point_size": {
+      "sz": 0.433,
+      "bAmp": 0.0,
+      "persp": 79.8
+    },
+    "alpha_curve": {
+      "opacity": 0.91,
+      "curve": 1.045,
+      "floor": 0.0
+    },
+    "color": {
+      "r": 0.7529,
+      "g": 0.7529,
+      "b": 0.6902
+    }
+  }
+}

@@ -1,0 +1,132 @@
+{
+  "symbol": "Mt",
+  "identity": {
+    "name_es": "Meitnerio",
+    "name_eng": "Meitnerium",
+    "number": 109,
+    "category_es": "Metal de transición",
+    "category_eng": "Transition metal",
+    "color": "0xA0A0A0",
+    "cpk_color": "0xEB0026",
+    "discovery_year": "1982"
+  },
+  "physical_properties": {
+    "mass": 278.156,
+    "density_g_cm3": 37.4,
+    "standard_state_es": "Sólido (predicho)",
+    "standard_state_eng": "Solid (predicted)",
+    "melt_K": 2600,
+    "boil_K": null,
+    "allotropes_es": null,
+    "allotropes_eng": null,
+    "lattice_structure": "fcc (predicho)"
+  },
+  "atomic_structure": {
+    "electronegativity": 1.3,
+    "valence": 3,
+    "ionization_energy_eV": 7.41,
+    "electron_affinity_ev": null,
+    "electron_affinity_kj_mol": null,
+    "radius_atomic_pm": 122,
+    "radius_covalent_pm": 129,
+    "vanderwaals_radius_pm": 225,
+    "ionic_radius_pm": 52,
+    "effective_nuclear_charge": 8,
+    "electron_configuration_string": "[Rn] 5f14 6d7 7s2",
+    "shells": [
+      2,
+      8,
+      18,
+      32,
+      32,
+      15,
+      2
+    ],
+    "quantum_numbers": {
+      "s": 2,
+      "p": 0,
+      "d": 7,
+      "f": 14
+    },
+    "work_function_ev": null
+  },
+  "thermodynamics": {
+    "enthalpy_formation_kj_mol": 0,
+    "entropy_j_molk": null,
+    "heat_capacity_j_molk": 25,
+    "specific_heat_j_gK": 0.09,
+    "latent_heat_fusion_kj_mol": 33,
+    "latent_heat_vaporization_kj_mol": 640,
+    "fusion_heat_kj_mol": 33,
+    "evaporation_heat_kj_mol": 640
+  },
+  "kinetics_and_phase": {
+    "vapor_pressure_constants": {
+      "A": null,
+      "B": null,
+      "C": null
+    },
+    "vapor_pressure_pa": null,
+    "viscosity_liquid_pas": null,
+    "viscosity_pa_s": null,
+    "critical_temp_K": null,
+    "critical_press_MPa": null,
+    "surface_tension_nm": null
+  },
+  "electromagnetism_and_mechanics": {
+    "thermal_conductivity_wmk": 12,
+    "electrical_conductivity_sm": null,
+    "magnetic_susceptibility": null,
+    "thermal_expansion_coefficient": null,
+    "polarizability_angstrom3": 11.2,
+    "refractive_index": null,
+    "youngs_modulus_gba": null,
+    "poisson_ratio": null,
+    "brinell_hardness_m_pa": null
+  },
+  "reactivity": {
+    "max_bonds": 6,
+    "geometry_preference_es": "Octaédrica (predicho)",
+    "geometry_preference_eng": "Octahedral (predicted)",
+    "ideal_bond_angle": 90,
+    "bond_energy_ev": 2.6,
+    "dissociation_energy_kj_mol": null,
+    "standard_potential_v": -0.5,
+    "oxidation_states": [
+      9,
+      8,
+      6,
+      4,
+      3,
+      1
+    ],
+    "common_ions": [
+      "Mt3+",
+      "Mt1+"
+    ]
+  },
+  "nuclear_and_environmental": {
+    "isotopes": [
+      {
+        "mass": 276.15,
+        "abundance": null,
+        "stable": false,
+        "half_life_s": 0.45,
+        "name_es": "Meitnerio-276",
+        "name_eng": "Meitnerium-276"
+      },
+      {
+        "mass": 278.156,
+        "abundance": null,
+        "stable": false,
+        "half_life_s": 4.5,
+        "name_es": "Meitnerio-278",
+        "name_eng": "Meitnerium-278"
+      }
+    ],
+    "neutron_cross_section_barns": null,
+    "nuclear_binding_energy_mev": 7.08,
+    "abundance_crust_mg_kg": 0,
+    "toxicity_level": 5
+  }
+}

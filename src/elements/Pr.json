@@ -1,0 +1,129 @@
+{
+  "symbol": "Pr",
+  "identity": {
+    "name_es": "Praseodimio",
+    "name_eng": "Praseodymium",
+    "number": 59,
+    "category_es": "Lantánido",
+    "category_eng": "Lanthanide",
+    "color": "0xC8D0B0",
+    "cpk_color": "0xD9FFC7",
+    "discovery_year": "1885"
+  },
+  "physical_properties": {
+    "mass": 140.907,
+    "density_g_cm3": 6.77,
+    "standard_state_es": "Sólido",
+    "standard_state_eng": "Solid",
+    "melt_K": 1208,
+    "boil_K": 3403,
+    "allotropes_es": [
+      "Alfa (dhcp)",
+      "Beta (bcc)"
+    ],
+    "allotropes_eng": [
+      "Alpha (dhcp)",
+      "Beta (bcc)"
+    ],
+    "lattice_structure": "dhcp"
+  },
+  "atomic_structure": {
+    "electronegativity": 1.13,
+    "valence": 3,
+    "ionization_energy_eV": 5.473,
+    "electron_affinity_ev": 0.1,
+    "electron_affinity_kj_mol": 10,
+    "radius_atomic_pm": 182,
+    "radius_covalent_pm": 185,
+    "vanderwaals_radius_pm": 239,
+    "ionic_radius_pm": 99,
+    "effective_nuclear_charge": 6.3,
+    "electron_configuration_string": "[Xe] 4f3 6s2",
+    "shells": [
+      2,
+      8,
+      18,
+      21,
+      8,
+      2
+    ],
+    "quantum_numbers": {
+      "s": 2,
+      "p": 0,
+      "d": 0,
+      "f": 3
+    },
+    "work_function_ev": 2.7
+  },
+  "thermodynamics": {
+    "enthalpy_formation_kj_mol": 0,
+    "entropy_j_molk": 73.22,
+    "heat_capacity_j_molk": 27.2,
+    "specific_heat_j_gK": 0.193,
+    "latent_heat_fusion_kj_mol": 6.89,
+    "latent_heat_vaporization_kj_mol": 331,
+    "fusion_heat_kj_mol": 6.9,
+    "evaporation_heat_kj_mol": 297
+  },
+  "kinetics_and_phase": {
+    "vapor_pressure_constants": {
+      "A": 5.15,
+      "B": 20000,
+      "C": -10
+    },
+    "vapor_pressure_pa": null,
+    "viscosity_liquid_pas": null,
+    "viscosity_pa_s": null,
+    "critical_temp_K": null,
+    "critical_press_MPa": null,
+    "surface_tension_nm": 0.707
+  },
+  "electromagnetism_and_mechanics": {
+    "thermal_conductivity_wmk": 12.5,
+    "electrical_conductivity_sm": 1400000,
+    "magnetic_susceptibility": 4.5e-05,
+    "thermal_expansion_coefficient": 6.7e-06,
+    "polarizability_angstrom3": 28.2,
+    "refractive_index": null,
+    "youngs_modulus_gba": 37.3,
+    "poisson_ratio": 0.28,
+    "brinell_hardness_m_pa": 250
+  },
+  "reactivity": {
+    "max_bonds": 4,
+    "geometry_preference_es": "Octaédrica",
+    "geometry_preference_eng": "Octahedral",
+    "ideal_bond_angle": null,
+    "bond_energy_ev": null,
+    "dissociation_energy_kj_mol": null,
+    "standard_potential_v": -2.35,
+    "oxidation_states": [
+      3,
+      4
+    ],
+    "common_ions": [
+      "Pr3+",
+      "Pr4+"
+    ]
+  },
+  "nuclear_and_environmental": {
+    "isotopes": [
+      {
+        "mass": 140.907,
+        "abundance": 100,
+        "stable": true,
+        "name_es": "Praseodimio-141",
+        "name_eng": "Praseodymium-141"
+      }
+    ],
+    "neutron_cross_section_barns": 11.5,
+    "nuclear_binding_energy_mev": 8.318,
+    "abundance_crust_mg_kg": 9.2,
+    "toxicity_level": 1
+  },
+  "cryogenic_data": {
+    "critical_solidification_pressure_mpa": null,
+    "lambda_point_k": null,
+    "superfluid_viscosity_pas": null
+  }
+}

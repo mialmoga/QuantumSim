@@ -1,0 +1,153 @@
+{
+  "symbol": "Kr",
+  "identity": {
+    "name_es": "Kriptón",
+    "name_eng": "Krypton",
+    "number": 36,
+    "category_es": "Gas noble",
+    "category_eng": "Noble gas",
+    "color": "0xE0E8F0",
+    "cpk_color": "0x5CB8D1",
+    "discovery_year": "1898"
+  },
+  "physical_properties": {
+    "mass": 83.798,
+    "density_g_l": 3.749,
+    "standard_state_es": "Gas",
+    "standard_state_eng": "Gas",
+    "melt_K": 115.79,
+    "boil_K": 119.93,
+    "allotropes_es": null,
+    "allotropes_eng": null,
+    "lattice_structure": "fcc"
+  },
+  "atomic_structure": {
+    "electronegativity": 3,
+    "valence": 0,
+    "ionization_energy_eV": 13.9996,
+    "electron_affinity_ev": 0,
+    "electron_affinity_kj_mol": 0,
+    "radius_atomic_pm": 116,
+    "radius_covalent_pm": 110,
+    "vanderwaals_radius_pm": 202,
+    "ionic_radius_pm": null,
+    "effective_nuclear_charge": 8.267,
+    "electron_configuration_string": "[Ar] 3d10 4s2 4p6",
+    "shells": [
+      2,
+      8,
+      18,
+      8
+    ],
+    "quantum_numbers": {
+      "s": 2,
+      "p": 6,
+      "d": 0,
+      "f": 0
+    },
+    "work_function_ev": null
+  },
+  "thermodynamics": {
+    "enthalpy_formation_kj_mol": 0,
+    "entropy_j_molk": 164.08,
+    "heat_capacity_j_molk": 20.786,
+    "specific_heat_j_gK": 0.248,
+    "latent_heat_fusion_kj_mol": 1.64,
+    "latent_heat_vaporization_kj_mol": 9.08,
+    "fusion_heat_kj_mol": 1.64,
+    "evaporation_heat_kj_mol": 9.08
+  },
+  "kinetics_and_phase": {
+    "vapor_pressure_constants": {
+      "A": 3.94,
+      "B": 435,
+      "C": -10
+    },
+    "vapor_pressure_pa": null,
+    "viscosity_liquid_pas": null,
+    "viscosity_pa_s": 2.33e-05,
+    "critical_temp_K": 209.41,
+    "critical_press_MPa": 5.5,
+    "surface_tension_nm": 0.0158
+  },
+  "electromagnetism_and_mechanics": {
+    "thermal_conductivity_wmk": 0.00943,
+    "electrical_conductivity_sm": null,
+    "magnetic_susceptibility": -2.88e-05,
+    "thermal_expansion_coefficient": null,
+    "polarizability_angstrom3": 2.48,
+    "refractive_index": 1.000427,
+    "youngs_modulus_gba": null,
+    "poisson_ratio": null,
+    "brinell_hardness_m_pa": null
+  },
+  "reactivity": {
+    "max_bonds": 2,
+    "geometry_preference_es": "Lineal (en compuestos raros)",
+    "geometry_preference_eng": "Linear (in rare compounds)",
+    "ideal_bond_angle": 180,
+    "bond_energy_ev": null,
+    "dissociation_energy_kj_mol": null,
+    "standard_potential_v": null,
+    "oxidation_states": [
+      2,
+      0
+    ],
+    "common_ions": null
+  },
+  "nuclear_and_environmental": {
+    "isotopes": [
+      {
+        "mass": 77.92,
+        "abundance": 0.35,
+        "stable": true,
+        "name_es": "Kriptón-78",
+        "name_eng": "Krypton-78"
+      },
+      {
+        "mass": 79.916,
+        "abundance": 2.28,
+        "stable": true,
+        "name_es": "Kriptón-80",
+        "name_eng": "Krypton-80"
+      },
+      {
+        "mass": 81.913,
+        "abundance": 11.58,
+        "stable": true,
+        "name_es": "Kriptón-82",
+        "name_eng": "Krypton-82"
+      },
+      {
+        "mass": 82.914,
+        "abundance": 11.49,
+        "stable": true,
+        "name_es": "Kriptón-83",
+        "name_eng": "Krypton-83"
+      },
+      {
+        "mass": 83.911,
+        "abundance": 57,
+        "stable": true,
+        "name_es": "Kriptón-84",
+        "name_eng": "Krypton-84"
+      },
+      {
+        "mass": 85.91,
+        "abundance": 17.3,
+        "stable": true,
+        "name_es": "Kriptón-86",
+        "name_eng": "Krypton-86"
+      }
+    ],
+    "neutron_cross_section_barns": 25,
+    "nuclear_binding_energy_mev": 8.712,
+    "abundance_crust_mg_kg": 0.0001,
+    "toxicity_level": 0
+  },
+  "cryogenic_data": {
+    "critical_solidification_pressure_mpa": null,
+    "lambda_point_k": null,
+    "superfluid_viscosity_pas": null
+  }
+}

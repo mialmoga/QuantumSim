@@ -1,0 +1,42 @@
+{
+  "_format": "cqcs",
+  "_version": "1.0",
+  "_description": "Cristal QuantumSim — NaCl (Sal de roca)",
+
+  "metadata": {
+    "id": "NaCl_crystal",
+    "name": { "es": "Sal (NaCl)", "en": "Salt (NaCl)" },
+    "formula": "NaCl",
+    "emoji": "🧊",
+    "category": "ionic",
+    "lattice": "cubic",
+    "tags": ["ionic", "cubic", "salt"],
+    "author": "QuantumSim",
+    "source": "NIST crystal data",
+    "notes": {
+      "es": "Red cúbica simple iónica. Parámetro de red real: 564 pm.",
+      "en": "Simple ionic cubic lattice. Real lattice parameter: 564 pm."
+    }
+  },
+
+  "lattice": {
+    "type": "cubic",
+    "parameter_wu": 5.64,
+    "basis": [
+      { "symbol": "Na", "fractional": { "x": 0.0, "y": 0.0, "z": 0.0 } },
+      { "symbol": "Cl", "fractional": { "x": 0.5, "y": 0.5, "z": 0.5 } }
+    ]
+  },
+
+  "generation": {
+    "size_default": { "nx": 3, "ny": 3, "nz": 3 },
+    "size_min":     { "nx": 2, "ny": 2, "nz": 2 },
+    "size_max":     { "nx": 6, "ny": 6, "nz": 6 },
+    "freeze_on_spawn": false
+  },
+
+  "spawn": {
+    "offset": { "x": 0, "y": 0, "z": 0 },
+    "orientation": "identity"
+  }
+}

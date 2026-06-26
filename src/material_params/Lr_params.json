@@ -1,0 +1,48 @@
+{
+  "symbol": "Lr",
+  "generated_by": "generate_materials.py v1.2 (Stevens perceptual)",
+  "source_props": {
+    "mass": 266.12,
+    "melt_K": 1900,
+    "density": 15.6,
+    "ionization_eV": 4.94,
+    "electronegativity": 1.3,
+    "polarizability": 18.2,
+    "standard_state": "Solid"
+  },
+  "shader_params": {
+    "sphere_pulse": {
+      "freq": 0.613,
+      "amp": 0.305
+    },
+    "blink": {
+      "amp": 0.006,
+      "speed": 0.2
+    },
+    "brightness": {
+      "bright": 0.585,
+      "base": 0.3,
+      "vari": 0.002
+    },
+    "disc_shape": {
+      "soft": 0.377,
+      "radius": 0.22,
+      "ring": 0.0
+    },
+    "point_size": {
+      "sz": 0.377,
+      "bAmp": 0.018,
+      "persp": 74.8
+    },
+    "alpha_curve": {
+      "opacity": 0.971,
+      "curve": 1.014,
+      "floor": 0.0
+    },
+    "color": {
+      "r": 0.6275,
+      "g": 0.6275,
+      "b": 0.6275
+    }
+  }
+}

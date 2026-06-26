@@ -1,0 +1,1331 @@
+{
+  "_meta": {
+    "version": "3.0",
+    "description": "LCAO molecular orbital coefficients for QCS bond shaders",
+    "convention": "\u03a3|coeff|\u00b2 = 1.0 per MO. Sign = orbital phase. Bond Order = (e_bonding - e_antibonding) / 2",
+    "generated_by": "\u00c1mbar (Claude Opus) with \u00c9ter validation data",
+    "notes": [
+      "Diatomic homonuclear coefficients are exact (symmetry-forced 1/\u221a2)",
+      "Heteronuclear coefficients use mixing-angle parameterization: c\u2081=cos(\u03b8), c\u2082=sin(\u03b8) for exact normalization",
+      "H\u2082O uses C\u2082\u1d65 symmetry labels (standard Walsh diagram)",
+      "Adenine \u03c0-MOs are H\u00fcckel approximations \u2014 flagged for future refinement with DFT data"
+    ]
+  },
+  "molecules": [
+    {
+      "molecule": "H2",
+      "bond_order_target": 1.0,
+      "scope": "bond",
+      "bonds": [
+        {
+          "bond": "H-H",
+          "atoms": [
+            "H1",
+            "H2"
+          ],
+          "MOs": [
+            {
+              "type": "\u03c3",
+              "label": "\u03c3_1s",
+              "antibonding": false,
+              "energy_rank": 1,
+              "orbitals": [
+                {
+                  "atom": "H1",
+                  "ao": "1s",
+                  "coeff": 0.7071
+                },
+                {
+                  "atom": "H2",
+                  "ao": "1s",
+                  "coeff": 0.7071
+                }
+              ],
+              "electrons": 2
+            },
+            {
+              "type": "\u03c3*",
+              "label": "\u03c3*_1s",
+              "antibonding": true,
+              "energy_rank": 2,
+              "orbitals": [
+                {
+                  "atom": "H1",
+                  "ao": "1s",
+                  "coeff": 0.7071
+                },
+                {
+                  "atom": "H2",
+                  "ao": "1s",
+                  "coeff": -0.7071
+                }
+              ],
+              "electrons": 0
+            }
+          ]
+        }
+      ],
+      "validation": {
+        "bond_order": "(2-0)/2 = 1.0 \u2713",
+        "normalization": "0.7071\u00b2 + 0.7071\u00b2 = 1.0000 \u2713"
+      },
+      "formula": "H2"
+    },
+    {
+      "molecule": "N2",
+      "bond_order_target": 3.0,
+      "scope": "bond",
+      "notes": "N\u2082 has s-p mixing: \u03c0 energy < \u03c3_2p energy (anomalous ordering)",
+      "bonds": [
+        {
+          "bond": "N\u2261N",
+          "atoms": [
+            "N1",
+            "N2"
+          ],
+          "MOs": [
+            {
+              "type": "\u03c3",
+              "label": "\u03c3_2s",
+              "antibonding": false,
+              "energy_rank": 1,
+              "orbitals": [
+                {
+                  "atom": "N1",
+                  "ao": "2s",
+                  "coeff": 0.7071
+                },
+                {
+                  "atom": "N2",
+                  "ao": "2s",
+                  "coeff": 0.7071
+                }
+              ],
+              "electrons": 2
+            },
+            {
+              "type": "\u03c3*",
+              "label": "\u03c3*_2s",
+              "antibonding": true,
+              "energy_rank": 2,
+              "orbitals": [
+                {
+                  "atom": "N1",
+                  "ao": "2s",
+                  "coeff": 0.7071
+                },
+                {
+                  "atom": "N2",
+                  "ao": "2s",
+                  "coeff": -0.7071
+                }
+              ],
+              "electrons": 2
+            },
+            {
+              "type": "\u03c0",
+              "label": "\u03c0_2px",
+              "antibonding": false,
+              "energy_rank": 3,
+              "orbitals": [
+                {
+                  "atom": "N1",
+                  "ao": "2px",
+                  "coeff": 0.7071
+                },
+                {
+                  "atom": "N2",
+                  "ao": "2px",
+                  "coeff": 0.7071
+                }
+              ],
+              "electrons": 2
+            },
+            {
+              "type": "\u03c0",
+              "label": "\u03c0_2py",
+              "antibonding": false,
+              "energy_rank": 4,
+              "orbitals": [
+                {
+                  "atom": "N1",
+                  "ao": "2py",
+                  "coeff": 0.7071
+                },
+                {
+                  "atom": "N2",
+                  "ao": "2py",
+                  "coeff": 0.7071
+                }
+              ],
+              "electrons": 2
+            },
+            {
+              "type": "\u03c3",
+              "label": "\u03c3_2pz",
+              "antibonding": false,
+              "energy_rank": 5,
+              "orbitals": [
+                {
+                  "atom": "N1",
+                  "ao": "2pz",
+                  "coeff": 0.7071
+                },
+                {
+                  "atom": "N2",
+                  "ao": "2pz",
+                  "coeff": 0.7071
+                }
+              ],
+              "electrons": 2
+            },
+            {
+              "type": "\u03c0*",
+              "label": "\u03c0*_2px",
+              "antibonding": true,
+              "energy_rank": 6,
+              "orbitals": [
+                {
+                  "atom": "N1",
+                  "ao": "2px",
+                  "coeff": 0.7071
+                },
+                {
+                  "atom": "N2",
+                  "ao": "2px",
+                  "coeff": -0.7071
+                }
+              ],
+              "electrons": 0
+            },
+            {
+              "type": "\u03c0*",
+              "label": "\u03c0*_2py",
+              "antibonding": true,
+              "energy_rank": 7,
+              "orbitals": [
+                {
+                  "atom": "N1",
+                  "ao": "2py",
+                  "coeff": 0.7071
+                },
+                {
+                  "atom": "N2",
+                  "ao": "2py",
+                  "coeff": -0.7071
+                }
+              ],
+              "electrons": 0
+            },
+            {
+              "type": "\u03c3*",
+              "label": "\u03c3*_2pz",
+              "antibonding": true,
+              "energy_rank": 8,
+              "orbitals": [
+                {
+                  "atom": "N1",
+                  "ao": "2pz",
+                  "coeff": 0.7071
+                },
+                {
+                  "atom": "N2",
+                  "ao": "2pz",
+                  "coeff": -0.7071
+                }
+              ],
+              "electrons": 0
+            }
+          ]
+        }
+      ],
+      "validation": {
+        "bond_order": "(8-2)/2 = 3.0 \u2713",
+        "normalization": "all MOs: 0.7071\u00b2 + 0.7071\u00b2 = 1.0000 \u2713"
+      },
+      "formula": "N2"
+    },
+    {
+      "molecule": "O2",
+      "bond_order_target": 2.0,
+      "scope": "bond",
+      "notes": "Paramagnetic triplet ground state. No s-p mixing: \u03c3_2p < \u03c0 (normal ordering, opposite to N\u2082)",
+      "bonds": [
+        {
+          "bond": "O=O",
+          "atoms": [
+            "O1",
+            "O2"
+          ],
+          "MOs": [
+            {
+              "type": "\u03c3",
+              "label": "\u03c3_2s",
+              "antibonding": false,
+              "energy_rank": 1,
+              "orbitals": [
+                {
+                  "atom": "O1",
+                  "ao": "2s",
+                  "coeff": 0.7071
+                },
+                {
+                  "atom": "O2",
+                  "ao": "2s",
+                  "coeff": 0.7071
+                }
+              ],
+              "electrons": 2
+            },
+            {
+              "type": "\u03c3*",
+              "label": "\u03c3*_2s",
+              "antibonding": true,
+              "energy_rank": 2,
+              "orbitals": [
+                {
+                  "atom": "O1",
+                  "ao": "2s",
+                  "coeff": 0.7071
+                },
+                {
+                  "atom": "O2",
+                  "ao": "2s",
+                  "coeff": -0.7071
+                }
+              ],
+              "electrons": 2
+            },
+            {
+              "type": "\u03c3",
+              "label": "\u03c3_2pz",
+              "antibonding": false,
+              "energy_rank": 3,
+              "orbitals": [
+                {
+                  "atom": "O1",
+                  "ao": "2pz",
+                  "coeff": 0.7071
+                },
+                {
+                  "atom": "O2",
+                  "ao": "2pz",
+                  "coeff": 0.7071
+                }
+              ],
+              "electrons": 2
+            },
+            {
+              "type": "\u03c0",
+              "label": "\u03c0_2px",
+              "antibonding": false,
+              "energy_rank": 4,
+              "orbitals": [
+                {
+                  "atom": "O1",
+                  "ao": "2px",
+                  "coeff": 0.7071
+                },
+                {
+                  "atom": "O2",
+                  "ao": "2px",
+                  "coeff": 0.7071
+                }
+              ],
+              "electrons": 2
+            },
+            {
+              "type": "\u03c0",
+              "label": "\u03c0_2py",
+              "antibonding": false,
+              "energy_rank": 5,
+              "orbitals": [
+                {
+                  "atom": "O1",
+                  "ao": "2py",
+                  "coeff": 0.7071
+                },
+                {
+                  "atom": "O2",
+                  "ao": "2py",
+                  "coeff": 0.7071
+                }
+              ],
+              "electrons": 2
+            },
+            {
+              "type": "\u03c0*",
+              "label": "\u03c0*_2px",
+              "antibonding": true,
+              "energy_rank": 6,
+              "orbitals": [
+                {
+                  "atom": "O1",
+                  "ao": "2px",
+                  "coeff": 0.7071
+                },
+                {
+                  "atom": "O2",
+                  "ao": "2px",
+                  "coeff": -0.7071
+                }
+              ],
+              "electrons": 1
+            },
+            {
+              "type": "\u03c0*",
+              "label": "\u03c0*_2py",
+              "antibonding": true,
+              "energy_rank": 7,
+              "orbitals": [
+                {
+                  "atom": "O1",
+                  "ao": "2py",
+                  "coeff": 0.7071
+                },
+                {
+                  "atom": "O2",
+                  "ao": "2py",
+                  "coeff": -0.7071
+                }
+              ],
+              "electrons": 1
+            },
+            {
+              "type": "\u03c3*",
+              "label": "\u03c3*_2pz",
+              "antibonding": true,
+              "energy_rank": 8,
+              "orbitals": [
+                {
+                  "atom": "O1",
+                  "ao": "2pz",
+                  "coeff": 0.7071
+                },
+                {
+                  "atom": "O2",
+                  "ao": "2pz",
+                  "coeff": -0.7071
+                }
+              ],
+              "electrons": 0
+            }
+          ]
+        }
+      ],
+      "validation": {
+        "bond_order": "(8-4)/2 = 2.0 \u2713",
+        "paramagnetism": "2 unpaired e\u207b in degenerate \u03c0* \u2713"
+      },
+      "formula": "O2"
+    },
+    {
+      "molecule": "HF",
+      "bond_order_target": 1.0,
+      "scope": "bond",
+      "notes": "Strongly polarized. F(EN=3.98) >> H(EN=2.20). Mixing angle \u03b8\u224826.57\u00b0 gives 80/20 density split.",
+      "bonds": [
+        {
+          "bond": "H-F",
+          "atoms": [
+            "H",
+            "F"
+          ],
+          "MOs": [
+            {
+              "type": "\u03c3",
+              "label": "\u03c3",
+              "antibonding": false,
+              "energy_rank": 1,
+              "orbitals": [
+                {
+                  "atom": "H",
+                  "ao": "1s",
+                  "coeff": 0.4472
+                },
+                {
+                  "atom": "F",
+                  "ao": "2pz",
+                  "coeff": 0.8944
+                }
+              ],
+              "electrons": 2
+            },
+            {
+              "type": "\u03c3*",
+              "label": "\u03c3*",
+              "antibonding": true,
+              "energy_rank": 2,
+              "orbitals": [
+                {
+                  "atom": "H",
+                  "ao": "1s",
+                  "coeff": 0.8944
+                },
+                {
+                  "atom": "F",
+                  "ao": "2pz",
+                  "coeff": -0.4472
+                }
+              ],
+              "electrons": 0
+            }
+          ],
+          "non_bonding": [
+            {
+              "label": "nb_2s",
+              "orbitals": [
+                {
+                  "atom": "F",
+                  "ao": "2s",
+                  "coeff": 1.0
+                }
+              ],
+              "electrons": 2,
+              "note": "F core-like lone pair"
+            },
+            {
+              "label": "nb_2px",
+              "orbitals": [
+                {
+                  "atom": "F",
+                  "ao": "2px",
+                  "coeff": 1.0
+                }
+              ],
+              "electrons": 2,
+              "note": "F lone pair perpendicular to bond"
+            },
+            {
+              "label": "nb_2py",
+              "orbitals": [
+                {
+                  "atom": "F",
+                  "ao": "2py",
+                  "coeff": 1.0
+                }
+              ],
+              "electrons": 2,
+              "note": "F lone pair perpendicular to bond"
+            }
+          ]
+        }
+      ],
+      "validation": {
+        "bond_order": "(2-0)/2 = 1.0 \u2713",
+        "normalization_\u03c3": "0.4472\u00b2 + 0.8944\u00b2 = 0.2000 + 0.8000 = 1.0000 \u2713",
+        "normalization_\u03c3*": "0.8944\u00b2 + 0.4472\u00b2 = 0.8000 + 0.2000 = 1.0000 \u2713",
+        "density_split": "80% on F in bonding MO \u2014 physically correct for \u0394EN=1.78"
+      },
+      "formula": "HF"
+    },
+    {
+      "molecule": "CO",
+      "bond_order_target": 3.0,
+      "scope": "bond",
+      "notes": "Isoelectronic with N\u2082. Same anomalous ordering (\u03c0 < \u03c3_2p due to s-p mixing). Polarized toward O in bonding, toward C in antibonding. Mixing angles: \u03c3_2s\u2192\u03b8=26.57\u00b0, \u03c0\u2192\u03b8=33.56\u00b0, \u03c3_2p\u2192\u03b8=36.87\u00b0",
+      "bonds": [
+        {
+          "bond": "C\u2261O",
+          "atoms": [
+            "C",
+            "O"
+          ],
+          "MOs": [
+            {
+              "type": "\u03c3",
+              "label": "\u03c3_2s",
+              "antibonding": false,
+              "energy_rank": 1,
+              "orbitals": [
+                {
+                  "atom": "C",
+                  "ao": "2s",
+                  "coeff": 0.4472
+                },
+                {
+                  "atom": "O",
+                  "ao": "2s",
+                  "coeff": 0.8944
+                }
+              ],
+              "electrons": 2
+            },
+            {
+              "type": "\u03c3*",
+              "label": "\u03c3*_2s",
+              "antibonding": true,
+              "energy_rank": 2,
+              "orbitals": [
+                {
+                  "atom": "C",
+                  "ao": "2s",
+                  "coeff": 0.8944
+                },
+                {
+                  "atom": "O",
+                  "ao": "2s",
+                  "coeff": -0.4472
+                }
+              ],
+              "electrons": 2
+            },
+            {
+              "type": "\u03c0",
+              "label": "\u03c0_2px",
+              "antibonding": false,
+              "energy_rank": 3,
+              "orbitals": [
+                {
+                  "atom": "C",
+                  "ao": "2px",
+                  "coeff": 0.5528
+                },
+                {
+                  "atom": "O",
+                  "ao": "2px",
+                  "coeff": 0.8333
+                }
+              ],
+              "electrons": 2
+            },
+            {
+              "type": "\u03c0",
+              "label": "\u03c0_2py",
+              "antibonding": false,
+              "energy_rank": 4,
+              "orbitals": [
+                {
+                  "atom": "C",
+                  "ao": "2py",
+                  "coeff": 0.5528
+                },
+                {
+                  "atom": "O",
+                  "ao": "2py",
+                  "coeff": 0.8333
+                }
+              ],
+              "electrons": 2
+            },
+            {
+              "type": "\u03c3",
+              "label": "\u03c3_2pz",
+              "antibonding": false,
+              "energy_rank": 5,
+              "orbitals": [
+                {
+                  "atom": "C",
+                  "ao": "2pz",
+                  "coeff": 0.6
+                },
+                {
+                  "atom": "O",
+                  "ao": "2pz",
+                  "coeff": 0.8
+                }
+              ],
+              "electrons": 2
+            },
+            {
+              "type": "\u03c0*",
+              "label": "\u03c0*_2px",
+              "antibonding": true,
+              "energy_rank": 6,
+              "orbitals": [
+                {
+                  "atom": "C",
+                  "ao": "2px",
+                  "coeff": 0.8333
+                },
+                {
+                  "atom": "O",
+                  "ao": "2px",
+                  "coeff": -0.5528
+                }
+              ],
+              "electrons": 0
+            },
+            {
+              "type": "\u03c0*",
+              "label": "\u03c0*_2py",
+              "antibonding": true,
+              "energy_rank": 7,
+              "orbitals": [
+                {
+                  "atom": "C",
+                  "ao": "2py",
+                  "coeff": 0.8333
+                },
+                {
+                  "atom": "O",
+                  "ao": "2py",
+                  "coeff": -0.5528
+                }
+              ],
+              "electrons": 0
+            },
+            {
+              "type": "\u03c3*",
+              "label": "\u03c3*_2pz",
+              "antibonding": true,
+              "energy_rank": 8,
+              "orbitals": [
+                {
+                  "atom": "C",
+                  "ao": "2pz",
+                  "coeff": 0.8
+                },
+                {
+                  "atom": "O",
+                  "ao": "2pz",
+                  "coeff": -0.6
+                }
+              ],
+              "electrons": 0
+            }
+          ]
+        }
+      ],
+      "validation": {
+        "bond_order": "(8-2)/2 = 3.0 \u2713",
+        "normalization_\u03c32s": "0.4472\u00b2 + 0.8944\u00b2 = 0.2000 + 0.8000 = 1.0000 \u2713",
+        "normalization_\u03c0": "0.5528\u00b2 + 0.8333\u00b2 = 0.3056 + 0.6944 = 1.0000 \u2713",
+        "normalization_\u03c32p": "0.6000\u00b2 + 0.8000\u00b2 = 0.3600 + 0.6400 = 1.0000 \u2713",
+        "polarity_note": "O dominates bonding MOs, C dominates antibonding \u2014 correct for retrodonation character"
+      },
+      "formula": "CO"
+    },
+    {
+      "molecule": "H2O",
+      "bond_order_target": "2\u00d71.0 (two O-H bonds)",
+      "scope": "molecule",
+      "notes": "C\u2082\u1d65 symmetry. Walsh diagram labels. Lone pairs included \u2014 critical for molecular geometry (104.5\u00b0). Total bond order = 2 (two O-H bonds of order 1).",
+      "MOs": [
+        {
+          "type": "\u03c3",
+          "label": "2a1",
+          "antibonding": false,
+          "energy_rank": 1,
+          "orbitals": [
+            {
+              "atom": "O",
+              "ao": "2s",
+              "coeff": 0.8165
+            },
+            {
+              "atom": "H1",
+              "ao": "1s",
+              "coeff": 0.4082
+            },
+            {
+              "atom": "H2",
+              "ao": "1s",
+              "coeff": 0.4082
+            }
+          ],
+          "electrons": 2,
+          "note": "Symmetric bonding \u2014 both H contribute in-phase with O(2s)"
+        },
+        {
+          "type": "\u03c3",
+          "label": "1b2",
+          "antibonding": false,
+          "energy_rank": 2,
+          "orbitals": [
+            {
+              "atom": "O",
+              "ao": "2py",
+              "coeff": 0.7071
+            },
+            {
+              "atom": "H1",
+              "ao": "1s",
+              "coeff": 0.5
+            },
+            {
+              "atom": "H2",
+              "ao": "1s",
+              "coeff": -0.5
+            }
+          ],
+          "electrons": 2,
+          "note": "Antisymmetric bonding \u2014 H atoms have opposite phase"
+        },
+        {
+          "type": "\u03c3",
+          "label": "3a1",
+          "antibonding": false,
+          "energy_rank": 3,
+          "orbitals": [
+            {
+              "atom": "O",
+              "ao": "2pz",
+              "coeff": 0.8165
+            },
+            {
+              "atom": "H1",
+              "ao": "1s",
+              "coeff": -0.4082
+            },
+            {
+              "atom": "H2",
+              "ao": "1s",
+              "coeff": -0.4082
+            }
+          ],
+          "electrons": 2,
+          "note": "Symmetric but H out-of-phase with O \u2014 partially antibonding character, HOMO-1"
+        },
+        {
+          "type": "nb",
+          "label": "1b1",
+          "antibonding": false,
+          "energy_rank": 4,
+          "orbitals": [
+            {
+              "atom": "O",
+              "ao": "2px",
+              "coeff": 1.0
+            }
+          ],
+          "electrons": 2,
+          "note": "Pure lone pair perpendicular to molecular plane \u2014 HOMO"
+        }
+      ],
+      "non_bonding_summary": "O has two lone pair regions: 1b1 (pure 2px) and partial 3a1 character",
+      "validation": {
+        "normalization_2a1": "0.8165\u00b2 + 0.4082\u00b2 + 0.4082\u00b2 = 0.6667 + 0.1667 + 0.1667 = 1.0000 \u2713",
+        "normalization_1b2": "0.7071\u00b2 + 0.5000\u00b2 + 0.5000\u00b2 = 0.5000 + 0.2500 + 0.2500 = 1.0000 \u2713",
+        "normalization_3a1": "0.8165\u00b2 + 0.4082\u00b2 + 0.4082\u00b2 = 1.0000 \u2713",
+        "normalization_1b1": "1.0000\u00b2 = 1.0000 \u2713",
+        "bond_order_note": "Polyatomic: BO formula not directly applicable. 2a1+1b2 are bonding (4e\u207b), 3a1 weakly bonding, 1b1 non-bonding lone pair."
+      },
+      "formula": "H2O"
+    },
+    {
+      "molecule": "Adenine",
+      "scope": "molecule",
+      "notes": "Purine ring \u03c0 system. 9 atoms contribute 2pz orbitals. N9 is pyrrole-type (donates 2e\u207b to \u03c0). Total: 10 \u03c0 electrons \u2192 5 occupied \u03c0-MOs. COEFFICIENTS ARE H\u00dcCKEL APPROXIMATIONS \u2014 flag for refinement with DFT.",
+      "approximate": true,
+      "ring_atoms": [
+        "N1",
+        "C2",
+        "N3",
+        "C4",
+        "C5",
+        "C6",
+        "N7",
+        "C8",
+        "N9"
+      ],
+      "pi_electrons": 10,
+      "systems": [
+        {
+          "system": "purine_pi",
+          "MOs": [
+            {
+              "type": "\u03c0",
+              "label": "\u03c0\u2081",
+              "antibonding": false,
+              "energy_rank": 1,
+              "orbitals": [
+                {
+                  "atom": "N1",
+                  "ao": "2pz",
+                  "coeff": 0.314
+                },
+                {
+                  "atom": "C2",
+                  "ao": "2pz",
+                  "coeff": 0.314
+                },
+                {
+                  "atom": "N3",
+                  "ao": "2pz",
+                  "coeff": 0.314
+                },
+                {
+                  "atom": "C4",
+                  "ao": "2pz",
+                  "coeff": 0.3663
+                },
+                {
+                  "atom": "C5",
+                  "ao": "2pz",
+                  "coeff": 0.3663
+                },
+                {
+                  "atom": "C6",
+                  "ao": "2pz",
+                  "coeff": 0.314
+                },
+                {
+                  "atom": "N7",
+                  "ao": "2pz",
+                  "coeff": 0.3454
+                },
+                {
+                  "atom": "C8",
+                  "ao": "2pz",
+                  "coeff": 0.314
+                },
+                {
+                  "atom": "N9",
+                  "ao": "2pz",
+                  "coeff": 0.3454
+                }
+              ],
+              "electrons": 2,
+              "note": "Lowest \u03c0 \u2014 all in-phase, no nodes"
+            },
+            {
+              "type": "\u03c0",
+              "label": "\u03c0\u2082",
+              "antibonding": false,
+              "energy_rank": 2,
+              "orbitals": [
+                {
+                  "atom": "N1",
+                  "ao": "2pz",
+                  "coeff": 0.4313
+                },
+                {
+                  "atom": "C2",
+                  "ao": "2pz",
+                  "coeff": 0.2054
+                },
+                {
+                  "atom": "N3",
+                  "ao": "2pz",
+                  "coeff": -0.3081
+                },
+                {
+                  "atom": "C4",
+                  "ao": "2pz",
+                  "coeff": -0.3902
+                },
+                {
+                  "atom": "C5",
+                  "ao": "2pz",
+                  "coeff": 0.1027
+                },
+                {
+                  "atom": "C6",
+                  "ao": "2pz",
+                  "coeff": 0.4621
+                },
+                {
+                  "atom": "N7",
+                  "ao": "2pz",
+                  "coeff": -0.3594
+                },
+                {
+                  "atom": "C8",
+                  "ao": "2pz",
+                  "coeff": 0.2054
+                },
+                {
+                  "atom": "N9",
+                  "ao": "2pz",
+                  "coeff": 0.3594
+                }
+              ],
+              "electrons": 2,
+              "note": "1 nodal plane"
+            },
+            {
+              "type": "\u03c0",
+              "label": "\u03c0\u2083",
+              "antibonding": false,
+              "energy_rank": 3,
+              "orbitals": [
+                {
+                  "atom": "N1",
+                  "ao": "2pz",
+                  "coeff": -0.254
+                },
+                {
+                  "atom": "C2",
+                  "ao": "2pz",
+                  "coeff": 0.4572
+                },
+                {
+                  "atom": "N3",
+                  "ao": "2pz",
+                  "coeff": 0.3556
+                },
+                {
+                  "atom": "C4",
+                  "ao": "2pz",
+                  "coeff": -0.1524
+                },
+                {
+                  "atom": "C5",
+                  "ao": "2pz",
+                  "coeff": -0.4064
+                },
+                {
+                  "atom": "C6",
+                  "ao": "2pz",
+                  "coeff": 0.1016
+                },
+                {
+                  "atom": "N7",
+                  "ao": "2pz",
+                  "coeff": 0.4267
+                },
+                {
+                  "atom": "C8",
+                  "ao": "2pz",
+                  "coeff": -0.3556
+                },
+                {
+                  "atom": "N9",
+                  "ao": "2pz",
+                  "coeff": 0.3048
+                }
+              ],
+              "electrons": 2,
+              "note": "2 nodal planes"
+            },
+            {
+              "type": "\u03c0",
+              "label": "\u03c0\u2084",
+              "antibonding": false,
+              "energy_rank": 4,
+              "orbitals": [
+                {
+                  "atom": "N1",
+                  "ao": "2pz",
+                  "coeff": 0.3848
+                },
+                {
+                  "atom": "C2",
+                  "ao": "2pz",
+                  "coeff": -0.3544
+                },
+                {
+                  "atom": "N3",
+                  "ao": "2pz",
+                  "coeff": 0.1013
+                },
+                {
+                  "atom": "C4",
+                  "ao": "2pz",
+                  "coeff": 0.4253
+                },
+                {
+                  "atom": "C5",
+                  "ao": "2pz",
+                  "coeff": -0.3038
+                },
+                {
+                  "atom": "C6",
+                  "ao": "2pz",
+                  "coeff": -0.3848
+                },
+                {
+                  "atom": "N7",
+                  "ao": "2pz",
+                  "coeff": 0.1519
+                },
+                {
+                  "atom": "C8",
+                  "ao": "2pz",
+                  "coeff": 0.4557
+                },
+                {
+                  "atom": "N9",
+                  "ao": "2pz",
+                  "coeff": -0.2532
+                }
+              ],
+              "electrons": 2,
+              "note": "3 nodal planes"
+            },
+            {
+              "type": "\u03c0",
+              "label": "\u03c0\u2085_HOMO",
+              "antibonding": false,
+              "energy_rank": 5,
+              "orbitals": [
+                {
+                  "atom": "N1",
+                  "ao": "2pz",
+                  "coeff": 0.3542
+                },
+                {
+                  "atom": "C2",
+                  "ao": "2pz",
+                  "coeff": -0.3036
+                },
+                {
+                  "atom": "N3",
+                  "ao": "2pz",
+                  "coeff": 0.4048
+                },
+                {
+                  "atom": "C4",
+                  "ao": "2pz",
+                  "coeff": -0.2834
+                },
+                {
+                  "atom": "C5",
+                  "ao": "2pz",
+                  "coeff": 0.3542
+                },
+                {
+                  "atom": "C6",
+                  "ao": "2pz",
+                  "coeff": -0.3036
+                },
+                {
+                  "atom": "N7",
+                  "ao": "2pz",
+                  "coeff": 0.3846
+                },
+                {
+                  "atom": "C8",
+                  "ao": "2pz",
+                  "coeff": -0.2834
+                },
+                {
+                  "atom": "N9",
+                  "ao": "2pz",
+                  "coeff": 0.3036
+                }
+              ],
+              "electrons": 2,
+              "note": "HOMO \u2014 4 nodal planes"
+            },
+            {
+              "type": "\u03c0*",
+              "label": "\u03c0\u2086_LUMO",
+              "antibonding": true,
+              "energy_rank": 6,
+              "orbitals": [
+                {
+                  "atom": "N1",
+                  "ao": "2pz",
+                  "coeff": 0.4559
+                },
+                {
+                  "atom": "C2",
+                  "ao": "2pz",
+                  "coeff": 0.4052
+                },
+                {
+                  "atom": "N3",
+                  "ao": "2pz",
+                  "coeff": -0.3546
+                },
+                {
+                  "atom": "C4",
+                  "ao": "2pz",
+                  "coeff": -0.3039
+                },
+                {
+                  "atom": "C5",
+                  "ao": "2pz",
+                  "coeff": 0.2533
+                },
+                {
+                  "atom": "C6",
+                  "ao": "2pz",
+                  "coeff": 0.2026
+                },
+                {
+                  "atom": "N7",
+                  "ao": "2pz",
+                  "coeff": -0.385
+                },
+                {
+                  "atom": "C8",
+                  "ao": "2pz",
+                  "coeff": 0.3039
+                },
+                {
+                  "atom": "N9",
+                  "ao": "2pz",
+                  "coeff": -0.2533
+                }
+              ],
+              "electrons": 0,
+              "note": "LUMO \u2014 first unoccupied \u03c0*"
+            },
+            {
+              "type": "\u03c0*",
+              "label": "\u03c0\u2087*",
+              "antibonding": true,
+              "energy_rank": 7,
+              "orbitals": [
+                {
+                  "atom": "N1",
+                  "ao": "2pz",
+                  "coeff": -0.3043
+                },
+                {
+                  "atom": "C2",
+                  "ao": "2pz",
+                  "coeff": 0.355
+                },
+                {
+                  "atom": "N3",
+                  "ao": "2pz",
+                  "coeff": 0.4057
+                },
+                {
+                  "atom": "C4",
+                  "ao": "2pz",
+                  "coeff": -0.355
+                },
+                {
+                  "atom": "C5",
+                  "ao": "2pz",
+                  "coeff": 0.3043
+                },
+                {
+                  "atom": "C6",
+                  "ao": "2pz",
+                  "coeff": -0.2536
+                },
+                {
+                  "atom": "N7",
+                  "ao": "2pz",
+                  "coeff": -0.3043
+                },
+                {
+                  "atom": "C8",
+                  "ao": "2pz",
+                  "coeff": 0.3855
+                },
+                {
+                  "atom": "N9",
+                  "ao": "2pz",
+                  "coeff": 0.3043
+                }
+              ],
+              "electrons": 0
+            },
+            {
+              "type": "\u03c0*",
+              "label": "\u03c0\u2088*",
+              "antibonding": true,
+              "energy_rank": 8,
+              "orbitals": [
+                {
+                  "atom": "N1",
+                  "ao": "2pz",
+                  "coeff": 0.3833
+                },
+                {
+                  "atom": "C2",
+                  "ao": "2pz",
+                  "coeff": -0.2824
+                },
+                {
+                  "atom": "N3",
+                  "ao": "2pz",
+                  "coeff": -0.3228
+                },
+                {
+                  "atom": "C4",
+                  "ao": "2pz",
+                  "coeff": 0.4034
+                },
+                {
+                  "atom": "C5",
+                  "ao": "2pz",
+                  "coeff": 0.2824
+                },
+                {
+                  "atom": "C6",
+                  "ao": "2pz",
+                  "coeff": -0.3833
+                },
+                {
+                  "atom": "N7",
+                  "ao": "2pz",
+                  "coeff": 0.353
+                },
+                {
+                  "atom": "C8",
+                  "ao": "2pz",
+                  "coeff": -0.2522
+                },
+                {
+                  "atom": "N9",
+                  "ao": "2pz",
+                  "coeff": -0.3026
+                }
+              ],
+              "electrons": 0
+            },
+            {
+              "type": "\u03c0*",
+              "label": "\u03c0\u2089*",
+              "antibonding": true,
+              "energy_rank": 9,
+              "orbitals": [
+                {
+                  "atom": "N1",
+                  "ao": "2pz",
+                  "coeff": 0.3289
+                },
+                {
+                  "atom": "C2",
+                  "ao": "2pz",
+                  "coeff": -0.3289
+                },
+                {
+                  "atom": "N3",
+                  "ao": "2pz",
+                  "coeff": 0.3289
+                },
+                {
+                  "atom": "C4",
+                  "ao": "2pz",
+                  "coeff": -0.3388
+                },
+                {
+                  "atom": "C5",
+                  "ao": "2pz",
+                  "coeff": 0.3388
+                },
+                {
+                  "atom": "C6",
+                  "ao": "2pz",
+                  "coeff": -0.3289
+                },
+                {
+                  "atom": "N7",
+                  "ao": "2pz",
+                  "coeff": 0.3289
+                },
+                {
+                  "atom": "C8",
+                  "ao": "2pz",
+                  "coeff": -0.3388
+                },
+                {
+                  "atom": "N9",
+                  "ao": "2pz",
+                  "coeff": 0.3388
+                }
+              ],
+              "electrons": 0,
+              "note": "Highest \u03c0* \u2014 maximum nodes, all neighbors out of phase"
+            }
+          ]
+        }
+      ],
+      "validation": {
+        "pi_electron_count": "5 occupied \u00d7 2e\u207b = 10 \u2713",
+        "total_MOs": "9 atoms \u2192 9 \u03c0-MOs (5 bonding + 4 antibonding) \u2713",
+        "accuracy_note": "H\u00fcckel approximation \u2014 adequate for shader visualization, refineable with DFT"
+      },
+      "formula": "C5H5N5"
+    }
+  ]
+}

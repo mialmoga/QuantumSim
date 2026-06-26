@@ -1,0 +1,130 @@
+{
+  "symbol": "Rg",
+  "identity": {
+    "name_es": "Roentgenio",
+    "name_eng": "Roentgenium",
+    "number": 111,
+    "category_es": "Metal de transición",
+    "category_eng": "Transition metal",
+    "color": "0xA0A0A0",
+    "cpk_color": "0xFF001C",
+    "discovery_year": "1994"
+  },
+  "physical_properties": {
+    "mass": 282.169,
+    "density_g_cm3": 28.7,
+    "standard_state_es": "Sólido (predicho)",
+    "standard_state_eng": "Solid (predicted)",
+    "melt_K": 1500,
+    "boil_K": null,
+    "allotropes_es": null,
+    "allotropes_eng": null,
+    "lattice_structure": "bcc (predicho)"
+  },
+  "atomic_structure": {
+    "electronegativity": 1.3,
+    "valence": 3,
+    "ionization_energy_eV": 7.3,
+    "electron_affinity_ev": 1.6,
+    "electron_affinity_kj_mol": 154.4,
+    "radius_atomic_pm": 121,
+    "radius_covalent_pm": 121,
+    "vanderwaals_radius_pm": 224,
+    "ionic_radius_pm": 54,
+    "effective_nuclear_charge": 8.5,
+    "electron_configuration_string": "[Rn] 5f14 6d9 7s2",
+    "shells": [
+      2,
+      8,
+      18,
+      32,
+      32,
+      17,
+      2
+    ],
+    "quantum_numbers": {
+      "s": 2,
+      "p": 0,
+      "d": 9,
+      "f": 14
+    },
+    "work_function_ev": null
+  },
+  "thermodynamics": {
+    "enthalpy_formation_kj_mol": 0,
+    "entropy_j_molk": null,
+    "heat_capacity_j_molk": 25,
+    "specific_heat_j_gK": 0.09,
+    "latent_heat_fusion_kj_mol": 35,
+    "latent_heat_vaporization_kj_mol": 660,
+    "fusion_heat_kj_mol": 35,
+    "evaporation_heat_kj_mol": 660
+  },
+  "kinetics_and_phase": {
+    "vapor_pressure_constants": {
+      "A": null,
+      "B": null,
+      "C": null
+    },
+    "vapor_pressure_pa": null,
+    "viscosity_liquid_pas": null,
+    "viscosity_pa_s": null,
+    "critical_temp_K": null,
+    "critical_press_MPa": null,
+    "surface_tension_nm": null
+  },
+  "electromagnetism_and_mechanics": {
+    "thermal_conductivity_wmk": 12,
+    "electrical_conductivity_sm": null,
+    "magnetic_susceptibility": null,
+    "thermal_expansion_coefficient": null,
+    "polarizability_angstrom3": 9.8,
+    "refractive_index": null,
+    "youngs_modulus_gba": null,
+    "poisson_ratio": null,
+    "brinell_hardness_m_pa": null
+  },
+  "reactivity": {
+    "max_bonds": 3,
+    "geometry_preference_es": "Variable",
+    "geometry_preference_eng": "Variable",
+    "ideal_bond_angle": null,
+    "bond_energy_ev": 2.8,
+    "dissociation_energy_kj_mol": null,
+    "standard_potential_v": -0.3,
+    "oxidation_states": [
+      5,
+      3,
+      1,
+      -1
+    ],
+    "common_ions": [
+      "Rg3+",
+      "Rg1+"
+    ]
+  },
+  "nuclear_and_environmental": {
+    "isotopes": [
+      {
+        "mass": 282.169,
+        "abundance": null,
+        "stable": false,
+        "half_life_s": 100,
+        "name_es": "Roentgenio-282",
+        "name_eng": "Roentgenium-282"
+      },
+      {
+        "mass": 272.13,
+        "abundance": null,
+        "stable": false,
+        "half_life_s": 0.0038,
+        "name_es": "Roentgenio-272",
+        "name_eng": "Roentgenium-272"
+      }
+    ],
+    "neutron_cross_section_barns": null,
+    "nuclear_binding_energy_mev": 7.02,
+    "abundance_crust_mg_kg": 0,
+    "toxicity_level": 5
+  }
+}

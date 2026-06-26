@@ -1,0 +1,52 @@
+{
+  "_format": "eqcs",
+  "_version": "1.0",
+  "_description": "Entorno QuantumSim — Superficie terrestre",
+
+  "metadata": {
+    "id": "earth_surface",
+    "name": { "es": "Superficie terrestre", "en": "Earth Surface" },
+    "emoji": "🌍",
+    "tags": ["gravity", "atmosphere", "room-temp"],
+    "author": "QuantumSim",
+    "notes": {
+      "es": "Condiciones estándar: gravedad terrestre, temperatura ambiente, suelo activo.",
+      "en": "Standard conditions: Earth gravity, room temperature, active floor."
+    }
+  },
+
+  "physics": {
+    "gravity": {
+      "enabled": true,
+      "multiplier": 1.0
+    },
+    "floor": {
+      "enabled": true,
+      "visible": true,
+      "bounce": 0.3
+    },
+    "temperature": {
+      "enabled": true,
+      "ambient_K": 298.15,
+      "floor_K": 298.15,
+      "ceiling_K": 298.15
+    },
+    "lennard_jones": {
+      "enabled": false,
+      "strength": 0.02
+    },
+    "friction": 0.82,
+    "pauli": {
+      "strength": 0.5,
+      "factor": 1.6
+    }
+  },
+
+  "visual": {
+    "background": "default",
+    "floor_opacity": 0.6,
+    "ambient_light": 1.0
+  },
+
+  "structures": []
+}

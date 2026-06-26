@@ -1,0 +1,48 @@
+{
+  "symbol": "Ca",
+  "generated_by": "generate_materials.py v1.2 (Stevens perceptual)",
+  "source_props": {
+    "mass": 40.078,
+    "melt_K": 1115,
+    "density": 1.54,
+    "ionization_eV": 6.1132,
+    "electronegativity": 1,
+    "polarizability": 22.8,
+    "standard_state": "Solid"
+  },
+  "shader_params": {
+    "sphere_pulse": {
+      "freq": 1.58,
+      "amp": 0.328
+    },
+    "blink": {
+      "amp": 0.0,
+      "speed": 0.474
+    },
+    "brightness": {
+      "bright": 0.861,
+      "base": 0.3,
+      "vari": 0.0
+    },
+    "disc_shape": {
+      "soft": 0.413,
+      "radius": 0.22,
+      "ring": 0.0
+    },
+    "point_size": {
+      "sz": 0.396,
+      "bAmp": 0.0,
+      "persp": 73.9
+    },
+    "alpha_curve": {
+      "opacity": 0.793,
+      "curve": 1.103,
+      "floor": 0.0
+    },
+    "color": {
+      "r": 0.8157,
+      "g": 0.8157,
+      "b": 0.7843
+    }
+  }
+}

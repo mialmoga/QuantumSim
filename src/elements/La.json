@@ -1,0 +1,137 @@
+{
+  "symbol": "La",
+  "identity": {
+    "name_es": "Lantano",
+    "name_eng": "Lanthanum",
+    "number": 57,
+    "category_es": "Lantánido",
+    "category_eng": "Lanthanide",
+    "color": "0xC8C8C8",
+    "cpk_color": "0x70D4FF",
+    "discovery_year": "1839"
+  },
+  "physical_properties": {
+    "mass": 138.905,
+    "density_g_cm3": 6.162,
+    "standard_state_es": "Sólido",
+    "standard_state_eng": "Solid",
+    "melt_K": 1193,
+    "boil_K": 3737,
+    "allotropes_es": [
+      "Alfa (dhcp)",
+      "Beta (fcc)",
+      "Gamma (bcc)"
+    ],
+    "allotropes_eng": [
+      "Alpha (dhcp)",
+      "Beta (fcc)",
+      "Gamma (bcc)"
+    ],
+    "lattice_structure": "dhcp"
+  },
+  "atomic_structure": {
+    "electronegativity": 1.1,
+    "valence": 3,
+    "ionization_energy_eV": 5.5769,
+    "electron_affinity_ev": 0.5,
+    "electron_affinity_kj_mol": 48,
+    "radius_atomic_pm": 187,
+    "radius_covalent_pm": 169,
+    "vanderwaals_radius_pm": 240,
+    "ionic_radius_pm": 103.2,
+    "effective_nuclear_charge": 6.3,
+    "electron_configuration_string": "[Xe] 5d1 6s2",
+    "shells": [
+      2,
+      8,
+      18,
+      18,
+      9,
+      2
+    ],
+    "quantum_numbers": {
+      "s": 2,
+      "p": 0,
+      "d": 1,
+      "f": 0
+    },
+    "work_function_ev": 3.5
+  },
+  "thermodynamics": {
+    "enthalpy_formation_kj_mol": 0,
+    "entropy_j_molk": 56.9,
+    "heat_capacity_j_molk": 27.11,
+    "specific_heat_j_gK": 0.195,
+    "latent_heat_fusion_kj_mol": 6.2,
+    "latent_heat_vaporization_kj_mol": 402.1,
+    "fusion_heat_kj_mol": 6.2,
+    "evaporation_heat_kj_mol": 400
+  },
+  "kinetics_and_phase": {
+    "vapor_pressure_constants": {
+      "A": 5.12,
+      "B": 21000,
+      "C": -10
+    },
+    "vapor_pressure_pa": null,
+    "viscosity_liquid_pas": null,
+    "viscosity_pa_s": null,
+    "critical_temp_K": null,
+    "critical_press_MPa": null,
+    "surface_tension_nm": 0.72
+  },
+  "electromagnetism_and_mechanics": {
+    "thermal_conductivity_wmk": 13.4,
+    "electrical_conductivity_sm": 1600000,
+    "magnetic_susceptibility": 7.8e-05,
+    "thermal_expansion_coefficient": 1.21e-05,
+    "polarizability_angstrom3": 31.1,
+    "refractive_index": 1.8,
+    "youngs_modulus_gba": 37,
+    "poisson_ratio": 0.28,
+    "brinell_hardness_m_pa": 363
+  },
+  "reactivity": {
+    "max_bonds": 3,
+    "geometry_preference_es": "Octaédrica / Prismática",
+    "geometry_preference_eng": "Octahedral / Prismatic",
+    "ideal_bond_angle": null,
+    "bond_energy_ev": null,
+    "dissociation_energy_kj_mol": null,
+    "standard_potential_v": -2.37,
+    "oxidation_states": [
+      3
+    ],
+    "common_ions": [
+      "La3+"
+    ]
+  },
+  "nuclear_and_environmental": {
+    "isotopes": [
+      {
+        "mass": 137.907,
+        "abundance": 0.089,
+        "stable": false,
+        "half_life_s": 3200000000000000000,
+        "name_es": "Lantano-138",
+        "name_eng": "Lanthanum-138"
+      },
+      {
+        "mass": 138.906,
+        "abundance": 99.911,
+        "stable": true,
+        "name_es": "Lantano-139",
+        "name_eng": "Lanthanum-139"
+      }
+    ],
+    "neutron_cross_section_barns": 9,
+    "nuclear_binding_energy_mev": 8.356,
+    "abundance_crust_mg_kg": 39,
+    "toxicity_level": 1
+  },
+  "cryogenic_data": {
+    "critical_solidification_pressure_mpa": null,
+    "lambda_point_k": 4.88,
+    "superfluid_viscosity_pas": null
+  }
+}

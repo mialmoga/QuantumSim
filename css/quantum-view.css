@@ -1,0 +1,1128 @@
+/* =====================================================
+   quantum-view.css
+   Estilos de la vista de orbitales (QuantumView.html)
+   Depende de: variables.css, base.css
+   ===================================================== */
+
+/* ── Canvas ──────────────────────────────────────────── */
+#qv-canvas {
+    position: fixed;
+    inset: 0;
+    z-index: 0;
+    touch-action: none;
+}
+
+/* Canvas real de Three.js — OrbitControls necesita touch-action aquí */
+#qv-canvas canvas {
+    position: fixed;
+    inset: 0;
+    width: 100% !important;
+    height: 100% !important;
+    touch-action: none;
+}
+
+/* ── Overlay (cierra tune panel en móvil) ────────────── */
+#qv-overlay {
+    position: fixed;
+    inset: 0;
+    z-index: 150;
+    background: rgba(0, 0, 0, 0.5);
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity var(--transition-normal);
+}
+#qv-overlay.visible {
+    opacity: 1;
+    pointer-events: all;
+}
+
+/* ── Header ──────────────────────────────────────────── */
+#qv-header {
+    position: fixed;
+    top: 0; left: 0; right: 0;
+    height: 44px;
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-sm);
+    padding: 0 var(--spacing-md);
+    background: var(--glass-background);
+    border-bottom: 1px solid var(--border-color);
+    -webkit-backdrop-filter: var(--blur-amount);
+    backdrop-filter: var(--blur-amount);
+    z-index: 200;
+}
+
+#qv-back {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    min-height: 34px;
+    padding: 0 var(--spacing-sm);
+    background: none;
+    border: 1px solid var(--border-color);
+    color: var(--text-secondary);
+    font-family: inherit;
+    font-size: 11px;
+    letter-spacing: 0.08em;
+    text-decoration: none;
+    cursor: pointer;
+    transition: border-color var(--transition-fast), background var(--transition-fast);
+}
+#qv-back:hover {
+    border-color: var(--border-color-hover);
+    background: rgba(100, 200, 255, 0.06);
+}
+
+#qv-title {
+    flex: 1;
+    font-size: 9px;
+    letter-spacing: 0.22em;
+    color: rgba(100, 200, 255, 0.35);
+    text-transform: uppercase;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+#qv-tune-btn {
+    width: 34px;
+    height: 34px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: none;
+    border: 1px solid var(--border-color);
+    color: var(--text-secondary);
+    font-size: 15px;
+    cursor: pointer;
+    transition: all var(--transition-fast);
+}
+#qv-tune-btn:active {
+    background: rgba(100, 200, 255, 0.10);
+}
+@media (min-width: 768px) {
+    #qv-tune-btn { display: none; }
+}
+
+/* ── Info del elemento ───────────────────────────────── */
+#qv-info {
+    position: fixed;
+    top: 54px;
+    left: var(--spacing-md);
+    z-index: 90;
+    pointer-events: none;
+}
+#el-name {
+    font-size: clamp(24px, 7vw, 48px);
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    line-height: 1;
+    color: var(--text-primary);
+    text-shadow: 0 0 28px currentColor;
+}
+#el-symbol {
+    margin-top: 4px;
+    font-size: 10px;
+    color: rgba(200, 220, 255, 0.38);
+    letter-spacing: 0.05em;
+    max-width: 60vw;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+/* ── Tune panel ──────────────────────────────────────── */
+#tune-panel {
+    display: none;
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    width: min(260px, 100vw);
+    max-height: calc(100dvh - 44px);
+    z-index: 160;
+    background: var(--glass-background);
+    border-left: 1px solid var(--border-color);
+    border-top: 1px solid var(--border-color);
+    -webkit-backdrop-filter: var(--blur-amount);
+    backdrop-filter: var(--blur-amount);
+    overflow-y: auto;
+    overflow-x: hidden;
+    scrollbar-width: thin;
+    scrollbar-color: var(--border-color) transparent;
+    transform: translateX(100%);
+    transition: transform var(--transition-normal) cubic-bezier(0.4, 0, 0.2, 1);
+}
+#tune-panel.open {
+    transform: translateX(0);
+}
+
+#tune-header {
+    position: sticky;
+    top: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: var(--spacing-xs) var(--spacing-sm);
+    background: var(--glass-background);
+    border-bottom: 1px solid var(--border-color);
+    font-size: 9px;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--text-secondary);
+    z-index: 1;
+}
+#tune-close {
+    background: none;
+    border: none;
+    color: var(--text-secondary);
+    font-size: 16px;
+    cursor: pointer;
+    padding: 2px 4px;
+    opacity: 0.6;
+    transition: opacity var(--transition-fast);
+}
+#tune-close:hover { opacity: 1; }
+
+#tune-body {
+    padding: var(--spacing-xs) var(--spacing-sm) var(--spacing-lg);
+}
+
+.tsec {
+    margin: var(--spacing-sm) 0 var(--spacing-xs);
+    padding-bottom: 4px;
+    border-bottom: 1px solid var(--border-color);
+    font-size: 8px;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: rgba(100, 200, 255, 0.35);
+}
+.tsec:first-child { margin-top: 0; }
+
+.lyr {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-xs);
+    min-height: 36px;
+    padding: 4px 2px;
+    font-size: 11px;
+    color: rgba(200, 220, 255, 0.55);
+    cursor: pointer;
+}
+.lyr input[type=checkbox] {
+    width: 16px;
+    height: 16px;
+    accent-color: var(--primary-color);
+    cursor: pointer;
+    flex-shrink: 0;
+}
+.dot { font-size: 10px; }
+.tsub { font-size: 9px; opacity: 0.38; margin-left: 2px; }
+
+.trow {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-xs);
+    min-height: 36px;
+    margin-bottom: 4px;
+}
+.tlabel {
+    width: 64px;
+    font-size: 10px;
+    color: rgba(200, 220, 255, 0.40);
+    flex-shrink: 0;
+}
+.trow input[type=range] {
+    flex: 1;
+    -webkit-appearance: none;
+    appearance: none;
+    height: 2px;
+    background: var(--border-color);
+    outline: none;
+    cursor: pointer;
+    border-radius: 1px;
+}
+.trow input[type=range]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    background: var(--primary-color);
+    cursor: pointer;
+    box-shadow: 0 0 6px var(--glow-color);
+}
+.trow input[type=range]::-moz-range-thumb {
+    width: 18px; height: 18px;
+    border-radius: 50%;
+    background: var(--primary-color);
+    border: none; cursor: pointer;
+}
+.tval {
+    width: 34px;
+    text-align: right;
+    font-size: 9px;
+    color: rgba(200, 220, 255, 0.38);
+    flex-shrink: 0;
+    font-variant-numeric: tabular-nums;
+}
+
+#btn-copy {
+    width: 100%;
+    margin-top: var(--spacing-sm);
+    padding: var(--spacing-xs);
+    background: rgba(100, 200, 255, 0.05);
+    border: 1px solid var(--border-color);
+    color: var(--text-secondary);
+    font-family: inherit;
+    font-size: 10px;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    cursor: pointer;
+    min-height: 38px;
+    transition: background var(--transition-fast);
+}
+#btn-copy:hover { background: rgba(100, 200, 255, 0.10); }
+
+@media (min-width: 768px) {
+    /* ── L invertida: panel lateral derecho fijo ──────────────
+       - Nunca se mueve, nunca se sale de pantalla
+       - Ocupa toda la altura disponible entre header y selector
+       - tune-body hace el scroll, el panel nunca lo bloquea    */
+    #tune-panel {
+        /* Posición fija pegada al lado derecho */
+        position: fixed;
+        top: 44px;           /* debajo del header */
+        right: 0;
+        bottom: 0;           /* hasta el fondo — el selector lo empuja */
+        width: 240px;
+        max-height: none;    /* la altura la controla top+bottom */
+        height: auto;
+        transform: none !important;  /* nunca transformar en desktop */
+
+        border: none;
+        border-left: 1px solid var(--border-color);
+
+        /* Flex column: header fijo arriba, body scrolleable abajo */
+        display: flex;
+        flex-direction: column;
+        overflow: hidden;    /* el panel en sí no scrollea */
+
+        /* Animación de colapso — solo el ancho */
+        transition: width 0.3s cubic-bezier(0.4,0,0.2,1);
+    }
+
+    /* Colapsado: se esconde hacia la derecha dejando solo una pestaña */
+    #tune-panel.collapsed {
+        width: 28px;
+        overflow: hidden;
+    }
+    /* Pestaña visible cuando está colapsado */
+    #tune-panel.collapsed #tune-header {
+        writing-mode: vertical-rl;
+        text-orientation: mixed;
+        padding: 12px 6px;
+        justify-content: flex-start;
+        gap: 6px;
+        border-bottom: none;
+        border-left: none;
+        width: 28px;
+    }
+    #tune-panel.collapsed #tune-body { display: none; }
+
+    /* Siempre visible en desktop — no necesita .open */
+    #tune-panel { display: flex !important; }
+    #tune-panel.open { transform: none; }
+
+    /* Body: el único que scrollea, ocupa todo el espacio restante */
+    #tune-body {
+        flex: 1;
+        min-height: 0;       /* crítico para que flex+scroll funcione */
+        overflow-y: auto;
+        overflow-x: hidden;
+        overscroll-behavior: contain;
+        scrollbar-width: thin;
+        scrollbar-color: var(--border-color) transparent;
+    }
+    #tune-body::-webkit-scrollbar       { width: 4px; }
+    #tune-body::-webkit-scrollbar-thumb { background: var(--border-color); border-radius: 2px; }
+
+    /* Header: sticky dentro del panel, no scrollea */
+    #tune-header {
+        flex-shrink: 0;
+        cursor: pointer;
+        user-select: none;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        border-bottom: 1px solid var(--border-color);
+        white-space: nowrap;
+        overflow: hidden;
+    }
+    /* Flecha que indica colapsado/expandido */
+    #tune-header::after {
+        content: '›';
+        font-size: 16px;
+        opacity: 0.45;
+        transition: transform 0.25s;
+        display: inline-block;
+        flex-shrink: 0;
+    }
+    #tune-panel.collapsed #tune-header::after {
+        transform: rotate(180deg);
+    }
+
+    /* Botón X no tiene sentido en panel lateral permanente */
+    #tune-close { display: none; }
+    /* Botón ⚛ no necesario — el panel siempre está visible */
+    #qv-tune-btn { display: none !important; }
+    #qv-overlay  { display: none !important; }
+
+    /* El selector de abajo empuja el panel — padding-right al canvas */
+    #qv-canvas { padding-right: 240px; }
+}
+
+/* ── Selector de elementos (bottom sheet) ────────────── */
+#qv-selector {
+    --sheet-h: 220px;
+    position: fixed;
+    left: 0; right: 0; bottom: 0;
+    z-index: 140;
+    background: var(--glass-background);
+    border-top: 1px solid var(--border-color);
+    -webkit-backdrop-filter: var(--blur-amount);
+    backdrop-filter: var(--blur-amount);
+    transform: translateY(calc(var(--sheet-h) - 28px));
+    transition: transform var(--transition-normal) cubic-bezier(0.4, 0, 0.2, 1);
+}
+#qv-selector.open { transform: translateY(0); }
+
+#qv-sel-handle {
+    height: 28px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    touch-action: none;
+}
+#qv-sel-handle::before {
+    content: '';
+    width: 36px;
+    height: 3px;
+    border-radius: 2px;
+    background: var(--border-color);
+    transition: background var(--transition-fast);
+}
+#qv-sel-handle:hover::before { background: var(--border-color-hover); }
+
+#qv-sel-content {
+    padding: 4px var(--spacing-sm) var(--spacing-sm);
+}
+
+#qv-search {
+    width: 100%;
+    margin-bottom: var(--spacing-xs);
+    padding: 7px var(--spacing-sm);
+    background: rgba(100, 200, 255, 0.04);
+    border: 1px solid var(--border-color);
+    color: var(--text-primary);
+    font-family: inherit;
+    font-size: max(16px, 13px);
+    outline: none;
+    -webkit-appearance: none;
+    transition: border-color var(--transition-fast);
+}
+#qv-search::placeholder { color: rgba(200, 220, 255, 0.22); }
+#qv-search:focus { border-color: var(--primary-color); }
+
+#qv-group-filter {
+    display: flex;
+    gap: 4px;
+    overflow-x: auto;
+    scrollbar-width: none;
+    margin-bottom: var(--spacing-xs);
+    -webkit-overflow-scrolling: touch;
+}
+#qv-group-filter::-webkit-scrollbar { display: none; }
+
+.grp-btn {
+    flex-shrink: 0;
+    background: none;
+    border: 1px solid rgba(255, 255, 255, 0.07);
+    color: rgba(200, 220, 255, 0.38);
+    font-family: inherit;
+    font-size: 9px;
+    padding: 5px var(--spacing-xs);
+    min-height: 28px;
+    cursor: pointer;
+    white-space: nowrap;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    transition: all var(--transition-fast);
+}
+.grp-btn.active {
+    background: rgba(100, 200, 255, 0.09);
+    border-color: var(--border-color);
+    color: var(--primary-color);
+}
+
+#qv-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(60px, 1fr));
+    gap: 3px;
+    max-height: 96px;
+    overflow-y: auto;
+    scrollbar-width: thin;
+    scrollbar-color: var(--border-color) transparent;
+    -webkit-overflow-scrolling: touch;
+}
+
+.el-btn {
+    aspect-ratio: unset;
+    min-height: 64px;
+    padding: 4px 2px;
+    background: rgba(255, 255, 255, 0.025);
+    border: 1px solid rgba(255, 255, 255, 0.06);
+    font-family: inherit;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1px;
+    cursor: pointer;
+    position: relative;
+    transition: background var(--transition-fast), border-color var(--transition-fast);
+    touch-action: manipulation;
+    overflow: hidden;
+}
+.el-btn:active  { background: rgba(100, 200, 255, 0.12); }
+.el-btn:hover   { background: rgba(100, 200, 255, 0.07); border-color: rgba(255,255,255,0.12); }
+.el-btn.active  {
+    background: rgba(100, 200, 255, 0.13);
+    border-color: var(--primary-color);
+}
+.el-num       { font-size: 8px; opacity: 0.45; line-height: 1; }
+.el-sym       { font-size: 15px; font-weight: 700; line-height: 1.1; }
+.el-name-small { font-size: 7px; opacity: 0.50; line-height: 1; text-align: center;
+                 max-width: 100%; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; padding: 0 2px; }
+
+/* ── Loading overlay ─────────────────────────────────── */
+#qv-loading {
+    position: fixed;
+    inset: 0;
+    z-index: 300;
+    background: rgba(0, 0, 0, 0.70);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: var(--spacing-md);
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity var(--transition-normal);
+    -webkit-backdrop-filter: blur(4px);
+    backdrop-filter: blur(4px);
+}
+#qv-loading.visible { opacity: 1; pointer-events: all; }
+#qv-load-sym {
+    font-size: 72px;
+    font-weight: 700;
+    color: rgba(100, 200, 255, 0.22);
+    line-height: 1;
+}
+#qv-load-msg {
+    font-size: 11px;
+    color: rgba(200, 220, 255, 0.30);
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+}
+.qv-dots span { animation: qv-blink 1.2s infinite; color: var(--primary-color); opacity: 0.5; }
+.qv-dots span:nth-child(2) { animation-delay: 0.2s; }
+.qv-dots span:nth-child(3) { animation-delay: 0.4s; }
+@keyframes qv-blink { 0%,80%,100%{opacity:0.1} 40%{opacity:0.8} }
+
+/* ── Desktop ─────────────────────────────────────────── */
+@media (min-width: 768px) {
+    #qv-selector {
+        transform: none !important;
+        top: auto;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        width: 100%;
+        max-width: 50vw;
+        margin: 0 auto;
+        /* Altura dinámica: expandido o colapsado */
+        max-height: min(38vh, 320px);
+        border-top: 1px solid var(--border-color);
+        border-right: none;
+        border-bottom: none;
+        border-radius: 0;
+        display: flex;
+        flex-direction: column;
+        overflow: hidden;
+        transition: max-height 0.3s cubic-bezier(0.4,0,0.2,1);
+    }
+    /* Colapsado: solo el buscador visible */
+    #qv-selector.collapsed {
+        max-height: 44px;
+        overflow: hidden;
+    }
+    /* Sin barrita — el toggle va dentro del buscador */
+    #qv-sel-handle { display: none !important; }
+    #qv-sel-content {
+        flex: 1;
+        min-height: 0;
+        overflow-y: auto;
+        display: flex;
+        flex-direction: column;
+        padding: 6px 12px 10px;
+        scrollbar-width: thin;
+        scrollbar-color: var(--border-color) transparent;
+    }
+    /* Fila buscador + flecha toggle */
+    .qv-search-row {
+        display: flex;
+        align-items: center;
+        gap: 6px;
+        margin-bottom: 6px;
+        flex-shrink: 0;
+    }
+    #qv-search { margin-bottom: 0; flex: 1; }
+    #qv-collapse-btn {
+        flex-shrink: 0;
+        width: 30px;
+        height: 30px;
+        background: none;
+        border: 1px solid var(--border-color);
+        color: var(--text-secondary);
+        font-size: 13px;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: all 0.15s;
+        line-height: 1;
+    }
+    #qv-collapse-btn:hover { border-color: var(--primary-color); color: var(--primary-color); }
+    #qv-collapse-btn .arrow {
+        display: inline-block;
+        transition: transform 0.25s;
+    }
+    #qv-selector.collapsed #qv-collapse-btn .arrow {
+        transform: rotate(180deg);
+    }
+    #qv-grid {
+        flex: 1;
+        min-height: 0;
+        grid-template-columns: repeat(auto-fill, minmax(64px, 1fr));
+        max-height: none;
+        gap: 4px;
+        overflow-y: auto;
+    }
+    /* Grupos: scroll horizontal compacto, no wrap */
+    #qv-group-filter {
+        flex-wrap: nowrap;
+        overflow-x: auto;
+        gap: 4px;
+        margin-bottom: 6px;
+        scrollbar-width: none;
+        -webkit-overflow-scrolling: touch;
+        flex-shrink: 0;
+    }
+    #qv-group-filter::-webkit-scrollbar { display: none; }
+    .grp-btn {
+        font-size: 10px;
+        padding: 5px 10px;
+        min-height: 28px;
+        letter-spacing: 0.06em;
+        flex-shrink: 0;
+    }
+    .el-btn        { min-height: 64px; }
+    .el-sym        { font-size: 16px; }
+    .el-num        { font-size: 9px; }
+    .el-name-small { font-size: 7px; }
+    #qv-info { left: 16px; }
+}
+
+/* ── Landscape móvil ─────────────────────────────────── */
+@media (max-width: 767px) and (orientation: landscape) {
+    #qv-selector { --sheet-h: 170px; }
+    #qv-grid { max-height: 60px; }
+    #el-name { font-size: clamp(18px, 5vh, 28px); }
+}
+
+/* ── Panel de capas jerárquico ───────────────────────── */
+
+/* Fila raíz (Todo / fila simple) */
+.lyr-all, .lyr-single {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-xs);
+    min-height: 32px;
+    padding: 3px 2px;
+    font-size: 11px;
+    color: rgba(200, 220, 255, 0.55);
+    cursor: pointer;
+}
+.lyr-all label { display: flex; align-items: center; gap: var(--spacing-xs); cursor: pointer; }
+.lyr-all input, .lyr-single input { width: 14px; height: 14px; accent-color: var(--primary-color); cursor: pointer; flex-shrink: 0; }
+
+/* Grupo (layer) */
+.lyr-group {
+    margin-bottom: 2px;
+}
+.lyr-group-header {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    min-height: 30px;
+    padding: 3px 2px;
+    font-size: 9px;
+    letter-spacing: 0.10em;
+    text-transform: uppercase;
+    color: rgba(200, 220, 255, 0.35);
+    cursor: default;
+    border-top: 1px solid rgba(255,255,255,0.05);
+}
+.lyr-group-header input { width: 14px; height: 14px; accent-color: var(--primary-color); cursor: pointer; flex-shrink: 0; }
+.lyr-group-label { flex: 1; }
+.lyr-group-count {
+    font-size: 8px;
+    color: rgba(200,220,255,0.2);
+    min-width: 14px;
+    text-align: right;
+}
+.lyr-group-toggle {
+    font-size: 9px;
+    color: rgba(200,220,255,0.25);
+    cursor: pointer;
+    padding: 2px 3px;
+    transition: transform 0.15s;
+    user-select: none;
+}
+.lyr-group.collapsed .lyr-group-toggle { transform: rotate(-90deg); }
+.lyr-group.collapsed .lyr-group-body  { display: none; }
+.lyr-group-body { padding-left: 8px; }
+
+/* Sub-header de subcapa */
+.lyr-subshell { margin-bottom: 1px; }
+.lyr-sub-header {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    min-height: 28px;
+    padding: 2px 2px;
+    cursor: default;
+}
+.lyr-sub-header input  { width: 13px; height: 13px; accent-color: var(--primary-color); cursor: pointer; flex-shrink: 0; }
+.lyr-sub-label {
+    flex: 1;
+    font-size: 11px;
+    color: rgba(200,220,255,0.60);
+    font-weight: 600;
+    letter-spacing: 0.05em;
+}
+.sub-toggle { font-size: 8px; cursor: pointer; color: rgba(200,220,255,0.2); user-select: none; transition: transform 0.15s; }
+.lyr-subshell.collapsed .sub-toggle   { transform: rotate(-90deg); }
+.lyr-subshell.collapsed .lyr-sub-body { display: none; }
+.lyr-sub-body { padding-left: 10px; }
+
+/* Fila de orbital individual */
+.lyr-orbital { margin-bottom: 1px; }
+.orb-main {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    min-height: 26px;
+    padding: 2px 0;
+}
+.orb-main input { width: 13px; height: 13px; accent-color: var(--primary-color); cursor: pointer; flex-shrink: 0; }
+.orb-label {
+    font-size: 11px;
+    color: rgba(200,220,255,0.55);
+    flex: 1;
+}
+.orb-m {
+    font-size: 9px;
+    color: rgba(200,220,255,0.28);
+    font-family: monospace;
+    padding: 1px 4px;
+    background: rgba(255,255,255,0.04);
+    border-radius: 2px;
+}
+.orb-expand-btn {
+    background: none;
+    border: none;
+    color: rgba(200,220,255,0.20);
+    font-size: 13px;
+    cursor: pointer;
+    padding: 0 2px;
+    line-height: 1;
+    transition: color 0.12s;
+    flex-shrink: 0;
+}
+.orb-expand-btn:hover { color: rgba(200,220,255,0.55); }
+.lyr-orbital.orb-expanded .orb-expand-btn { color: var(--primary-color); opacity: 0.7; }
+
+/* Mini tune por orbital */
+.orb-tune {
+    padding: 4px 0 4px 18px;
+    border-left: 1px solid rgba(100,200,255,0.08);
+    margin: 0 0 4px 6px;
+}
+.orb-trow {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    min-height: 26px;
+}
+.orb-tlabel {
+    width: 42px;
+    font-size: 9px;
+    color: rgba(200,220,255,0.28);
+    flex-shrink: 0;
+}
+.orb-trow input[type=range] {
+    flex: 1;
+    -webkit-appearance: none;
+    appearance: none;
+    height: 2px;
+    background: rgba(100,200,255,0.12);
+    outline: none;
+    cursor: pointer;
+    border-radius: 1px;
+}
+.orb-trow input[type=range]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    width: 12px; height: 12px;
+    border-radius: 50%;
+    background: rgba(100,200,255,0.6);
+    cursor: pointer;
+}
+.orb-tval {
+    width: 26px;
+    text-align: right;
+    font-size: 9px;
+    color: rgba(200,220,255,0.28);
+    flex-shrink: 0;
+    font-variant-numeric: tabular-nums;
+}
+
+/* Overlay — NO tapa el canvas al tuning */
+#qv-overlay {
+    pointer-events: none !important;
+    display: none !important;
+}
+
+/* ══════════════════════════════════════════════════════════════
+   FIXES — scroll tune desktop, grupos mouse, botón collapse,
+           texto elementos, fullscreen
+   ══════════════════════════════════════════════════════════════ */
+
+/* 1. TUNE PANEL — scroll con rueda del mouse en desktop
+      El panel tiene overflow:hidden para la animación de colapso,
+      pero tune-body necesita capturar el wheel sin que el panel
+      lo bloquee. Solución: tune-body ocupa toda la altura
+      disponible y es el único que hace scroll. */
+@media (min-width: 768px) {
+}
+
+/* 2. GRUPOS — scroll horizontal con mouse (wheel horizontal o shift+wheel) */
+#qv-group-filter {
+    /* Permite scroll horizontal con shift+rueda en todos los dispositivos */
+    overflow-x: auto;
+    overscroll-behavior-x: contain;
+    /* Cursor que indica scroll horizontal */
+    cursor: grab;
+}
+#qv-group-filter:active { cursor: grabbing; }
+
+/* 3. BOTÓN COLAPSO — solo visible en desktop, nunca en móvil */
+#qv-collapse-btn {
+    display: none;
+}
+@media (min-width: 768px) {
+    #qv-collapse-btn {
+        display: flex;
+    }
+}
+
+/* 4. TEXTO ELEMENTOS — más visible
+      el-num (número atómico) y el-name-small eran casi invisibles
+      con opacity 0.45/0.50 sobre fondo oscuro */
+.el-num {
+    opacity: 0.70 !important;
+    color: var(--text-secondary, rgba(180,220,255,0.8));
+}
+.el-name-small {
+    opacity: 0.75 !important;
+    color: var(--text-secondary, rgba(180,220,255,0.8));
+}
+
+/* 5. FULLSCREEN BUTTON */
+#qv-fullscreen-btn {
+    background: none;
+    border: 1px solid transparent;
+    color: var(--text-secondary);
+    font-size: 14px;
+    cursor: pointer;
+    width: 34px;
+    height: 34px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all var(--transition-fast);
+    opacity: 0.6;
+    border-radius: 2px;
+}
+#qv-fullscreen-btn:hover {
+    opacity: 1;
+    border-color: var(--border-color);
+    background: rgba(100,200,255,0.05);
+}
+/* Fullscreen siempre visible — en iOS abre en modo PWA */
+/* @media (max-width: 767px) {
+    #qv-fullscreen-btn { display: none; }
+} */
+
+/* ── Modal de materiales ─────────────────────────────────────── */
+
+.mat-overlay {
+    display: none;
+    position: fixed;
+    inset: 0;
+    z-index: 300;
+    background: rgba(0,0,0,0.7);
+    backdrop-filter: blur(4px);
+    align-items: center;
+    justify-content: center;
+}
+.mat-overlay.open {
+    display: flex;
+}
+
+.mat-modal {
+    width: min(480px, 94vw);
+    max-height: 85dvh;
+    background: var(--glass-background);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-lg);
+    backdrop-filter: var(--blur-amount);
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+.mat-modal-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: var(--spacing-sm) var(--spacing-md);
+    border-bottom: 1px solid var(--border-color);
+    font-size: 9px;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--text-secondary);
+    flex-shrink: 0;
+}
+.mat-modal-header button {
+    background: none;
+    border: none;
+    color: var(--text-secondary);
+    font-size: 16px;
+    cursor: pointer;
+    opacity: 0.6;
+    transition: opacity var(--transition-fast);
+    padding: 2px 4px;
+}
+.mat-modal-header button:hover { opacity: 1; }
+
+.mat-modal-body {
+    padding: var(--spacing-sm);
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-sm);
+    scrollbar-width: thin;
+    scrollbar-color: var(--border-color) transparent;
+}
+
+.mat-section {
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-md);
+    overflow: hidden;
+}
+
+.mat-section-title {
+    padding: 7px var(--spacing-sm);
+    background: rgba(100,200,255,0.05);
+    border-bottom: 1px solid var(--border-color);
+    font-size: 9px;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--text-secondary);
+}
+
+.mat-section-body {
+    padding: var(--spacing-sm);
+    display: grid;
+    grid-template-columns: 1fr auto;
+    grid-template-rows: auto auto;
+    gap: 6px;
+    align-items: center;
+}
+
+.mat-select {
+    background: rgba(0,0,0,0.6);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-sm);
+    color: var(--text-primary);
+    font-family: inherit;
+    font-size: 11px;
+    padding: 6px 8px;
+    cursor: pointer;
+    appearance: none;
+    -webkit-appearance: none;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='6'%3E%3Cpath d='M0 0l5 6 5-6z' fill='%2364c8ff'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 8px center;
+    padding-right: 24px;
+}
+.mat-select:focus {
+    outline: none;
+    border-color: var(--text-secondary);
+}
+
+.mat-load-btn {
+    background: rgba(100,200,255,0.08);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-sm);
+    color: var(--text-secondary);
+    font-size: 14px;
+    padding: 6px 10px;
+    cursor: pointer;
+    transition: background var(--transition-fast);
+    white-space: nowrap;
+}
+.mat-load-btn:hover {
+    background: rgba(100,200,255,0.18);
+}
+
+.mat-file-input { display: none; }
+
+.mat-active-label {
+    grid-column: 1 / -1;
+    font-size: 10px;
+    color: rgba(100,200,255,0.45);
+    padding: 0 2px;
+    font-style: italic;
+    min-height: 14px;
+}
+
+/* Botones del tune panel */
+#btn-materials,
+#btn-save-profile {
+    width: 100%;
+    margin-top: 6px;
+    padding: var(--spacing-xs);
+    background: rgba(100, 200, 255, 0.05);
+    border: 1px solid var(--border-color);
+    color: var(--text-secondary);
+    font-family: inherit;
+    font-size: 10px;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    cursor: pointer;
+    min-height: 38px;
+    transition: background var(--transition-fast);
+}
+#btn-materials:hover,
+#btn-save-profile:hover { background: rgba(100, 200, 255, 0.10); }
+#btn-materials { border-color: rgba(100,200,255,0.5); color: var(--text-secondary); }
+
+/* ══════════════════════════════════════════════════════════════
+   FIXES — tune panel móvil altura, fullscreen, drawer collapse
+   ══════════════════════════════════════════════════════════════ */
+
+/* 1. TUNE SLOT en móvil — max 45% de pantalla para ver el átomo
+      El tune-body se mueve aquí en móvil via applyTuneLayout()    */
+#qv-tune-slot {
+    max-height: 45dvh;
+    overflow: hidden;
+    transition: max-height 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+#qv-tune-slot.open {
+    max-height: 45dvh;
+    overflow-y: auto;
+    scrollbar-width: thin;
+    scrollbar-color: var(--border-color) transparent;
+}
+#qv-tune-slot:not(.open) {
+    max-height: 0;
+}
+
+/* 2. TUNE HANDLE — barrita drag del tune-slot, encima del selector */
+#qv-tune-handle {
+    height: 28px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    flex-shrink: 0;
+    border-top: 1px solid var(--border-color);
+}
+#qv-tune-handle::before {
+    content: '';
+    width: 36px;
+    height: 3px;
+    border-radius: 2px;
+    background: var(--border-color);
+    transition: background var(--transition-fast);
+}
+#qv-tune-handle:hover::before { background: var(--border-color-hover); }
+
+/* En desktop el tune-handle no se usa — el panel va fijo a la derecha */
+@media (min-width: 768px) {
+    #qv-tune-handle { display: none; }
+    #qv-tune-slot   { max-height: none !important; overflow: visible; }
+}
+
+/* 3. FULLSCREEN — ya estaba, aseguramos que no se oculte en desktop */
+@media (min-width: 768px) {
+    #qv-fullscreen-btn { display: flex !important; }
+}
+
+/* ── Fila esfera en panel de capas ───────────────────── */
+.lyr-sphere {
+    margin-bottom: 4px;
+    border-bottom: 1px solid rgba(100,200,255,0.12);
+    padding-bottom: 4px;
+}
+.lyr-sphere .orb-main {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    padding: 3px 0;
+}
+.lyr-sphere .orb-label {
+    flex: 1;
+    font-size: 11px;
+    color: var(--text-secondary);
+    letter-spacing: 0.05em;
+}
+
+/* ── Botón color esfera ────────────────────────────────────────────────────── */
+.btn-sphere-color {
+    background: none;
+    border: 1px solid rgba(100,200,255,0.25);
+    border-radius: 4px;
+    color: rgba(200,220,255,0.6);
+    font-size: 11px;
+    padding: 1px 5px;
+    cursor: pointer;
+    transition: color 0.15s, border-color 0.15s;
+    line-height: 1;
+}
+.btn-sphere-color:hover {
+    color: var(--primary-color);
+    border-color: var(--primary-color);
+}

@@ -1,0 +1,140 @@
+{
+  "symbol": "Po",
+  "identity": {
+    "name_es": "Polonio",
+    "name_eng": "Polonium",
+    "number": 84,
+    "category_es": "Metaloide",
+    "category_eng": "Metalloid",
+    "color": "0xA8A8A0",
+    "cpk_color": "0xAB5C00",
+    "discovery_year": "1898"
+  },
+  "physical_properties": {
+    "mass": 209,
+    "density_g_cm3": 9.32,
+    "standard_state_es": "Sólido",
+    "standard_state_eng": "Solid",
+    "melt_K": 527,
+    "boil_K": 1235,
+    "allotropes_es": [
+      "Alfa (cúbica simple)",
+      "Beta (romboédrica)"
+    ],
+    "allotropes_eng": [
+      "Alpha (simple cubic)",
+      "Beta (rhombohedral)"
+    ],
+    "lattice_structure": "sc"
+  },
+  "atomic_structure": {
+    "electronegativity": 2,
+    "valence": 4,
+    "ionization_energy_eV": 8.417,
+    "electron_affinity_ev": 1.9,
+    "electron_affinity_kj_mol": 183.3,
+    "radius_atomic_pm": 168,
+    "radius_covalent_pm": 140,
+    "vanderwaals_radius_pm": 197,
+    "ionic_radius_pm": 94,
+    "effective_nuclear_charge": 6.3,
+    "electron_configuration_string": "[Xe] 4f14 5d10 6s2 6p4",
+    "shells": [
+      2,
+      8,
+      18,
+      32,
+      18,
+      6
+    ],
+    "quantum_numbers": {
+      "s": 2,
+      "p": 4,
+      "d": 10,
+      "f": 14
+    },
+    "work_function_ev": 4.6
+  },
+  "thermodynamics": {
+    "enthalpy_formation_kj_mol": 0,
+    "entropy_j_molk": 63,
+    "heat_capacity_j_molk": 26.4,
+    "specific_heat_j_gK": 0.125,
+    "latent_heat_fusion_kj_mol": 13,
+    "latent_heat_vaporization_kj_mol": 102.9,
+    "fusion_heat_kj_mol": 13,
+    "evaporation_heat_kj_mol": 100.8
+  },
+  "kinetics_and_phase": {
+    "vapor_pressure_constants": {
+      "A": 5,
+      "B": 6000,
+      "C": -0.5
+    },
+    "vapor_pressure_pa": null,
+    "viscosity_liquid_pas": null,
+    "viscosity_pa_s": null,
+    "critical_temp_K": null,
+    "critical_press_MPa": null,
+    "surface_tension_nm": null
+  },
+  "electromagnetism_and_mechanics": {
+    "thermal_conductivity_wmk": 20,
+    "electrical_conductivity_sm": 2190000,
+    "magnetic_susceptibility": 2.1e-05,
+    "thermal_expansion_coefficient": 2.35e-05,
+    "polarizability_angstrom3": 6.5,
+    "refractive_index": null,
+    "youngs_modulus_gba": 40,
+    "poisson_ratio": null,
+    "brinell_hardness_m_pa": null
+  },
+  "reactivity": {
+    "max_bonds": 4,
+    "geometry_preference_es": "Piramidal / Angular",
+    "geometry_preference_eng": "Pyramidal / Bent",
+    "ideal_bond_angle": 104.5,
+    "bond_energy_ev": null,
+    "dissociation_energy_kj_mol": null,
+    "standard_potential_v": 0.76,
+    "oxidation_states": [
+      4,
+      2,
+      6,
+      -2
+    ],
+    "common_ions": [
+      "Po4+",
+      "Po2+"
+    ]
+  },
+  "nuclear_and_environmental": {
+    "isotopes": [
+      {
+        "mass": 208.98,
+        "abundance": null,
+        "stable": false,
+        "half_life_s": 910000000,
+        "name_es": "Polonio-209",
+        "name_eng": "Polonium-209"
+      },
+      {
+        "mass": 209.98,
+        "abundance": null,
+        "stable": false,
+        "half_life_s": 12000000,
+        "name_es": "Polonio-210",
+        "name_eng": "Polonium-210"
+      }
+    ],
+    "neutron_cross_section_barns": 0.5,
+    "nuclear_binding_energy_mev": 7.82,
+    "abundance_crust_mg_kg": 2e-10,
+    "toxicity_level": 5
+  },
+  "cryogenic_data": {
+    "critical_solidification_pressure_mpa": null,
+    "lambda_point_k": null,
+    "superfluid_viscosity_pas": null
+  }
+}

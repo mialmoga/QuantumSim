@@ -1,0 +1,48 @@
+{
+  "symbol": "Fr",
+  "generated_by": "generate_materials.py v1.2 (Stevens perceptual)",
+  "source_props": {
+    "mass": 223.02,
+    "melt_K": 300,
+    "density": 1.87,
+    "ionization_eV": 4.0727,
+    "electronegativity": 0.7,
+    "polarizability": 48,
+    "standard_state": "Solid"
+  },
+  "shader_params": {
+    "sphere_pulse": {
+      "freq": 0.67,
+      "amp": 0.4
+    },
+    "blink": {
+      "amp": 0.093,
+      "speed": 0.201
+    },
+    "brightness": {
+      "bright": 0.27,
+      "base": 0.3,
+      "vari": 0.037
+    },
+    "disc_shape": {
+      "soft": 0.45,
+      "radius": 0.22,
+      "ring": 0.0
+    },
+    "point_size": {
+      "sz": 0.503,
+      "bAmp": 0.278,
+      "persp": 88.0
+    },
+    "alpha_curve": {
+      "opacity": 0.808,
+      "curve": 1.096,
+      "floor": 0.0
+    },
+    "color": {
+      "r": 0.6902,
+      "g": 0.6902,
+      "b": 0.6902
+    }
+  }
+}

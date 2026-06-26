@@ -1,0 +1,173 @@
+{
+  "symbol": "Yb",
+  "identity": {
+    "name_es": "Iterbio",
+    "name_eng": "Ytterbium",
+    "number": 70,
+    "category_es": "Lantánido",
+    "category_eng": "Lanthanide",
+    "color": "0xC0C0C0",
+    "cpk_color": "0x00BF38",
+    "discovery_year": "1878"
+  },
+  "physical_properties": {
+    "mass": 173.045,
+    "density_g_cm3": 6.9,
+    "standard_state_es": "Sólido",
+    "standard_state_eng": "Solid",
+    "melt_K": 1097,
+    "boil_K": 1469,
+    "allotropes_es": [
+      "Alfa (hcp)",
+      "Beta (fcc)",
+      "Gamma (bcc)"
+    ],
+    "allotropes_eng": [
+      "Alpha (hcp)",
+      "Beta (fcc)",
+      "Gamma (bcc)"
+    ],
+    "lattice_structure": "fcc"
+  },
+  "atomic_structure": {
+    "electronegativity": 1.1,
+    "valence": 3,
+    "ionization_energy_eV": 6.2542,
+    "electron_affinity_ev": -0.02,
+    "electron_affinity_kj_mol": -1.9,
+    "radius_atomic_pm": 174,
+    "radius_covalent_pm": 187,
+    "vanderwaals_radius_pm": 242,
+    "ionic_radius_pm": 86.8,
+    "effective_nuclear_charge": 6.3,
+    "electron_configuration_string": "[Xe] 4f14 6s2",
+    "shells": [
+      2,
+      8,
+      18,
+      32,
+      8,
+      2
+    ],
+    "quantum_numbers": {
+      "s": 2,
+      "p": 0,
+      "d": 0,
+      "f": 14
+    },
+    "work_function_ev": 2.6
+  },
+  "thermodynamics": {
+    "enthalpy_formation_kj_mol": 0,
+    "entropy_j_molk": 75.44,
+    "heat_capacity_j_molk": 26.74,
+    "specific_heat_j_gK": 0.155,
+    "latent_heat_fusion_kj_mol": 7.66,
+    "latent_heat_vaporization_kj_mol": 129,
+    "fusion_heat_kj_mol": 7.7,
+    "evaporation_heat_kj_mol": 159
+  },
+  "kinetics_and_phase": {
+    "vapor_pressure_constants": {
+      "A": 5,
+      "B": 8000,
+      "C": -10
+    },
+    "vapor_pressure_pa": null,
+    "viscosity_liquid_pas": null,
+    "viscosity_pa_s": null,
+    "critical_temp_K": null,
+    "critical_press_MPa": null,
+    "surface_tension_nm": 0.32
+  },
+  "electromagnetism_and_mechanics": {
+    "thermal_conductivity_wmk": 12.7,
+    "electrical_conductivity_sm": 3500000,
+    "magnetic_susceptibility": 5e-06,
+    "thermal_expansion_coefficient": 2.63e-05,
+    "polarizability_angstrom3": 21,
+    "refractive_index": null,
+    "youngs_modulus_gba": 23.9,
+    "poisson_ratio": 0.207,
+    "brinell_hardness_m_pa": 343
+  },
+  "reactivity": {
+    "max_bonds": 3,
+    "geometry_preference_es": "Octaédrica",
+    "geometry_preference_eng": "Octahedral",
+    "ideal_bond_angle": null,
+    "bond_energy_ev": null,
+    "dissociation_energy_kj_mol": null,
+    "standard_potential_v": -2.19,
+    "oxidation_states": [
+      3,
+      2
+    ],
+    "common_ions": [
+      "Yb3+",
+      "Yb2+"
+    ]
+  },
+  "nuclear_and_environmental": {
+    "isotopes": [
+      {
+        "mass": 167.933,
+        "abundance": 0.13,
+        "stable": true,
+        "name_es": "Iterbio-168",
+        "name_eng": "Ytterbium-168"
+      },
+      {
+        "mass": 169.934,
+        "abundance": 3.04,
+        "stable": true,
+        "name_es": "Iterbio-170",
+        "name_eng": "Ytterbium-170"
+      },
+      {
+        "mass": 170.936,
+        "abundance": 14.28,
+        "stable": true,
+        "name_es": "Iterbio-171",
+        "name_eng": "Ytterbium-171"
+      },
+      {
+        "mass": 171.936,
+        "abundance": 21.83,
+        "stable": true,
+        "name_es": "Iterbio-172",
+        "name_eng": "Ytterbium-172"
+      },
+      {
+        "mass": 172.938,
+        "abundance": 16.13,
+        "stable": true,
+        "name_es": "Iterbio-173",
+        "name_eng": "Ytterbium-173"
+      },
+      {
+        "mass": 173.938,
+        "abundance": 31.83,
+        "stable": true,
+        "name_es": "Iterbio-174",
+        "name_eng": "Ytterbium-174"
+      },
+      {
+        "mass": 175.942,
+        "abundance": 12.76,
+        "stable": true,
+        "name_es": "Iterbio-176",
+        "name_eng": "Ytterbium-176"
+      }
+    ],
+    "neutron_cross_section_barns": 37,
+    "nuclear_binding_energy_mev": 8.11,
+    "abundance_crust_mg_kg": 3,
+    "toxicity_level": 1
+  },
+  "cryogenic_data": {
+    "critical_solidification_pressure_mpa": null,
+    "lambda_point_k": null,
+    "superfluid_viscosity_pas": null
+  }
+}

@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <title>Quantum View</title>
+
+    <!-- PWA & Icons -->
+    <link rel="manifest" href="site.webmanifest">
+    <link rel="icon" type="image/svg+xml" href="assets/icons/favicon.svg">
+    <link rel="icon" type="image/x-icon"  href="assets/icons/favicon.ico">
+    <link rel="apple-touch-icon"          href="assets/icons/apple-touch-icon.png">
+
+    <script type="importmap">
+    {
+      "imports": {
+        "three":         "/lib/three/build/three.module.js",
+        "three/addons/": "/lib/three/examples/jsm/",
+        "three/webgpu":  "/lib/three/build/three.webgpu.js",
+        "three/tsl":     "/lib/three/build/three.tsl.js"
+      }
+    }
+    </script>
+
+    <link rel="stylesheet" href="css/variables.css">
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/quantum-view.css">
+</head>
+<body>
+
+<div id="qv-canvas"></div>
+<div id="qv-overlay"></div>
+
+<header id="qv-header">
+    <a id="qv-back" href="index.html" data-i18n-title="tooltips.back" data-i18n="quantum.back_short">← SIM</a>
+    <span id="qv-title">Quantum View</span>
+    <button id="qv-fullscreen-btn" title="Pantalla completa" data-i18n-title="tooltips.fullscreen">⛶</button>
+</header>
+
+<div id="qv-info">
+    <div id="el-name">—</div>
+    <div id="el-symbol"></div>
+</div>
+
+<!-- Panel de capas/tuning -->
+<div id="tune-panel">
+    <div id="tune-header">
+        <span data-i18n="quantum.tune_title">⚛ Orbitales</span>
+        <button id="tune-close">✕</button>
+    </div>
+    <div id="tune-body">
+
+        <!-- ── Capas individuales (árbol jerárquico) ── -->
+        <div class="tsec" data-i18n="quantum.layers">Capas</div>
+        <div id="layers-list">
+            <!-- Construido dinámicamente por buildLayerPanel() -->
+        </div>
+
+        <!-- ── Global: Bloom ── -->
+        <div class="tsec" data-i18n="quantum.bloom_section">Bloom</div>
+        <div class="trow">
+            <span class="tlabel" data-i18n="quantum.bloom_strength">Fuerza</span>
+            <input type="range" id="sl-bloom"  min="0.0" max="2.0"  step="0.05" value="0.066">
+            <span class="tval"  id="vl-bloom">0.07</span>
+        </div>
+        <div class="trow">
+            <span class="tlabel" data-i18n="quantum.bloom_thresh">Umbral</span>
+            <input type="range" id="sl-thresh" min="0.0" max="1.0"  step="0.01" value="0.40">
+            <span class="tval"  id="vl-thresh">0.40</span>
+        </div>
+
+        <!-- ── Global: Material ── -->
+        <div class="tsec" data-i18n="quantum.material_section">Material · todos</div>
+        <div class="trow">
+            <span class="tlabel" data-i18n="quantum.brightness">Brillo</span>
+            <input type="range" id="sl-bright" min="0.0" max="15.0" step="0.1"  value="5.0">
+            <span class="tval"  id="vl-bright">5.0</span>
+        </div>
+        <div class="trow">
+            <span class="tlabel" data-i18n="quantum.pt_size">Tamaño</span>
+            <input type="range" id="sl-size"   min="0.1" max="4.0"  step="0.05" value="1.0">
+            <span class="tval"  id="vl-size">1.00</span>
+        </div>
+        <div class="trow">
+            <span class="tlabel" data-i18n="quantum.blink_speed">Vel. parpadeo</span>
+            <input type="range" id="sl-speed"  min="0.0" max="4.0"  step="0.05" value="1.0">
+            <span class="tval"  id="vl-speed">1.00</span>
+        </div>
+        <div class="trow">
+            <span class="tlabel" data-i18n="quantum.blink_amplitude">Amp. parpadeo</span>
+            <input type="range" id="sl-amp"    min="0.0" max="1.0"  step="0.01" value="0.25">
+            <span class="tval"  id="vl-amp">0.25</span>
+        </div>
+        <div class="trow">
+            <span class="tlabel" data-i18n="quantum.edge">Borde</span>
+            <input type="range" id="sl-edge"   min="0.0" max="0.245" step="0.005" value="0.150">
+            <span class="tval"  id="vl-edge">0.150</span>
+        </div>
+
+        <button id="btn-materials">⚗ <span data-i18n="quantum.materials_btn">Materiales</span></button>
+        <button id="btn-save-profile">💾 <span data-i18n="quantum.save_profile">Guardar perfil</span></button>
+    </div>
+</div>
+
+<!-- Selector de elementos (bottom sheet) -->
+<div id="qv-selector">
+    <div id="qv-tune-handle"></div>
+    <div id="qv-tune-slot"></div>
+    <div id="qv-sel-handle"></div>
+    <div id="qv-sel-content">
+        <div class="qv-search-row">
+            <input type="text" id="qv-search"
+                   data-i18n-placeholder="elements.search"
+                   autocomplete="off" autocorrect="off"
+                   autocapitalize="off" spellcheck="false">
+            <button id="qv-collapse-btn" title="Colapsar panel" data-i18n-title="tooltips.collapse_panel"><span class="arrow">▼</span></button>
+        </div>
+        <div id="qv-group-filter">
+            <button class="grp-btn active" data-group="all"                  data-i18n="quantum.all_groups">Todos</button>
+            <button class="grp-btn" data-group="nonmetal"                    data-i18n="groups.nonmetal">No metales</button>
+            <button class="grp-btn" data-group="noble_gas"                   data-i18n="groups.noble_gas">Gas noble</button>
+            <button class="grp-btn" data-group="alkali_metal"                data-i18n="groups.alkali_metal">Alcalino</button>
+            <button class="grp-btn" data-group="alkaline_earth_metal"        data-i18n="groups.alkaline_earth_metal">Alcalinot.</button>
+            <button class="grp-btn" data-group="transition_metal"            data-i18n="groups.transition_metal">Transición</button>
+            <button class="grp-btn" data-group="metalloid"                   data-i18n="groups.metalloid">Metaloide</button>
+            <button class="grp-btn" data-group="halogen"                     data-i18n="groups.halogen">Halógeno</button>
+            <button class="grp-btn" data-group="lanthanide"                  data-i18n="groups.lanthanide">Lantánido</button>
+            <button class="grp-btn" data-group="actinide"                    data-i18n="groups.actinide">Actínido</button>
+        </div>
+        <div id="qv-grid"></div>
+    </div>
+</div>
+
+<!-- Loading overlay -->
+<div id="qv-loading">
+    <div id="qv-load-sym"></div>
+    <div id="qv-load-msg" data-i18n="quantum.loading">Cargando<span class="qv-dots"><span>.</span><span>.</span><span>.</span></span></div>
+</div>
+
+<!-- Modal de materiales -->
+<div id="mat-modal-overlay" class="mat-overlay">
+    <div id="mat-modal" class="mat-modal">
+        <div class="mat-modal-header">
+            <span>⚗ <span data-i18n="quantum.materials_btn">Materiales</span></span>
+            <button id="mat-modal-close">✕</button>
+        </div>
+        <div class="mat-modal-body">
+
+            <!-- Esfera -->
+            <div class="mat-section">
+                <div class="mat-section-title" data-i18n="quantum.mat_sphere_section">Átomo · Esfera LOD</div>
+                <div class="mat-section-body">
+                    <select class="mat-select" id="mat-sel-sphere" data-layer="sphere">
+                        <option value="" data-i18n="quantum.no_material">— Sin material —</option>
+                    </select>
+                    <button class="mat-load-btn" data-layer="sphere">📂</button>
+                    <input type="file" class="mat-file-input" data-layer="sphere" accept=".json">
+                    <div class="mat-active-label" id="mat-active-sphere">—</div>
+                </div>
+            </div>
+
+            <!-- Core -->
+            <div class="mat-section">
+                <div class="mat-section-title" data-i18n="quantum.mat_core_section">Core · Orbitales internos</div>
+                <div class="mat-section-body">
+                    <select class="mat-select" id="mat-sel-core" data-layer="core">
+                        <option value="" data-i18n="quantum.no_material">— Sin material —</option>
+                    </select>
+                    <button class="mat-load-btn" data-layer="core">📂</button>
+                    <input type="file" class="mat-file-input" data-layer="core" accept=".json">
+                    <div class="mat-active-label" id="mat-active-core">—</div>
+                </div>
+            </div>
+
+            <!-- Semi -->
+            <div class="mat-section">
+                <div class="mat-section-title" data-i18n="quantum.mat_semi_section">Semi · Orbitales medios</div>
+                <div class="mat-section-body">
+                    <select class="mat-select" id="mat-sel-semi" data-layer="semi">
+                        <option value="" data-i18n="quantum.no_material">— Sin material —</option>
+                    </select>
+                    <button class="mat-load-btn" data-layer="semi">📂</button>
+                    <input type="file" class="mat-file-input" data-layer="semi" accept=".json">
+                    <div class="mat-active-label" id="mat-active-semi">—</div>
+                </div>
+            </div>
+
+            <!-- Valencia -->
+            <div class="mat-section">
+                <div class="mat-section-title" data-i18n="quantum.mat_valence_section">Valencia · Orbitales externos</div>
+                <div class="mat-section-body">
+                    <select class="mat-select" id="mat-sel-valence" data-layer="valence">
+                        <option value="" data-i18n="quantum.no_material">— Sin material —</option>
+                    </select>
+                    <button class="mat-load-btn" data-layer="valence">📂</button>
+                    <input type="file" class="mat-file-input" data-layer="valence" accept=".json">
+                    <div class="mat-active-label" id="mat-active-valence">—</div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+<script type="module" src="js/quantum-view.js"></script>
+
+</body>
+</html>

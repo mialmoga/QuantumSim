@@ -1,0 +1,48 @@
+{
+  "symbol": "Xe",
+  "generated_by": "generate_materials.py v1.2 (Stevens perceptual)",
+  "source_props": {
+    "mass": 131.293,
+    "melt_K": 161.4,
+    "density": null,
+    "ionization_eV": 12.1298,
+    "electronegativity": 2.6,
+    "polarizability": 4,
+    "standard_state": "Solid"
+  },
+  "shader_params": {
+    "sphere_pulse": {
+      "freq": 0.873,
+      "amp": 0.4
+    },
+    "blink": {
+      "amp": 0.0,
+      "speed": 0.262
+    },
+    "brightness": {
+      "bright": 1.769,
+      "base": 0.3,
+      "vari": 0.0
+    },
+    "disc_shape": {
+      "soft": 0.218,
+      "radius": 0.22,
+      "ring": 0.0
+    },
+    "point_size": {
+      "sz": 0.316,
+      "bAmp": 0.0,
+      "persp": 65.9
+    },
+    "alpha_curve": {
+      "opacity": 0.15,
+      "curve": 1.425,
+      "floor": 0.0
+    },
+    "color": {
+      "r": 0.5647,
+      "g": 0.6902,
+      "b": 0.9098
+    }
+  }
+}

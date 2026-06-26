@@ -1,0 +1,68 @@
+# Un elemento
+uv run --python 3.12 --with numpy --with scipy bake_orbitals_v6.py --elements Fe
+
+# Varios
+uv run --python 3.12 --with numpy --with scipy bake_orbitals_v6.py --elements Fe Cu Au Ag
+
+# 4s procedural (no bakear valencia)
+uv run --python 3.12 --with numpy --with scipy bake_orbitals_v6.py --elements Fe --valence-pts 0
+
+# Todos
+uv run --python 3.12 --with numpy --with scipy bake_orbitals_v6.py --elements all --core-pts 0 --semi-pts 30000 --valence-pts 0 
+
+uv run --python 3.12 --with numpy --with scipy bake_orbitals_v6.py --elements U --core-pts 2000 --semi-pts 5000 --valence-pts 3000
+
+uv run --python 3.12 --with numpy --with scipy bake_orbitals_v6.py --elements Fe --valence-pts 5000
+
+# Solo limpieza de ruido (Éter)
+uv run --python 3.12 --with numpy --with scipy bake_orbitals_v6.py --elements Fe --points 10000 -t 0.02
+
+# Solo concentración (lo nuevo)
+uv run --python 3.12 --with numpy --with scipy bake_orbitals_v6.py --elements Fe --points 10000 -c 0.6
+
+# Combinado — colas podadas + núcleo saturado
+uv run --python 3.12 --with numpy --with scipy bake_orbitals_v6.py --elements Fe --points 10000 -t 0.02 -c 0.6 --boost 0.3
+
+# Agresivo — para orbitales d/f que quieres ver muy definidos
+uv run --python 3.12 --with numpy --with scipy bake_orbitals_v6.py --elements Fe --points 15000 -t 0.03 -c 0.7 --boost 0.4
+
+# Solo el orbital 3 con parámetros nuevos
+uv run --python 3.12 --with numpy --with scipy bake_orbitals_v6.py --elements Fe --spec --pick 3 --points 15000 -t 0.02 -c 0.6
+
+# Rango
+uv run --python 3.12 --with numpy --with scipy bake_orbitals_v6.py --elements Fe --spec --pick 2-6 -t 0.02
+
+# Lista mixta
+uv run --python 3.12 --with numpy --with scipy bake_orbitals_v6.py --elements Fe --spec --pick 1,3,7 --points 10000
+
+# Todos (equivalente al bakeo completo pero usando la ruta de afinación)
+uv run --python 3.12 --with numpy --with scipy bake_orbitals_v6.py --elements Fe --spec --pick all -t 0.02 -c 0.6 
+
+uv run --python 3.12 --with numpy --with scipy bake_orbitals_v6.py --elements Fe --spec --out src/orbital_cache
+
+uv run --python 3.12 --with numpy --with scipy bake_orbitals_v6.py --elements Fe --spec --pick 12 --points 15000 -t 0.03 -c 0.65 --boost 0.4 --out src/orbital_cache
+
+uv run --python 3.12 --with numpy --with scipy bake_orbitals_v6.py --elements Fe --spec --pick 12 --points 15000 -t 0.03 -c 0.65 --boost 0.4
+
+uv run --python 3.12 --with numpy --with scipy bake_orbitals_v6.py --elements Fe --spec --pick 1 --points 15000 -t 0.03 -c 0.65 --boost 0.4
+
+uv run --python 3.12 --with numpy --with scipy bake_orbitals_v6.py --elements Fe --points 8000 -t 0.01 -c 0.4 --boost 0.2
+
+uv run --python 3.12 --with numpy --with scipy bake_orbitals_v6.py --elements all --points 15000 -t 0.03 -c 0.7 --boost 0.4 --out src/orbital_cache
+
+uv run --python 3.12 --with numpy --with scipy bake_orbitals_v7.py --elements H --points 20000 --boost 0.0 --out src/orbital_cache
+
+QSim.world.addAtom('Fe', {x:0,y:5,z:0})
+
+Eso es porque updateLOD es async pero desde consola no estás haciendo await. Prueba:
+jsawait _qr.updateLOD(250, 0.016)
+O si quieres ver la transición en tiempo real, mejor cambiar los fades directamente:
+js// Ver solo la esfera (LOD far)
+_qr._lodFade = 1.0
+_qr._orbitFade = 0.0
+_qr._applyFades()
+
+// Ver solo orbitales (LOD near)
+_qr._lodFade = 0.0
+_qr._orbitFade = 1.0
+_qr._applyFades()

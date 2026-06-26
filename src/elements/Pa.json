@@ -1,0 +1,133 @@
+{
+  "symbol": "Pa",
+  "identity": {
+    "name_es": "Protactinio",
+    "name_eng": "Protactinium",
+    "number": 91,
+    "category_es": "Actínido",
+    "category_eng": "Actinide",
+    "color": "0xB0B0B0",
+    "cpk_color": "0x00A1FF",
+    "discovery_year": "1913"
+  },
+  "physical_properties": {
+    "mass": 231.035,
+    "density_g_cm3": 15.37,
+    "standard_state_es": "Sólido",
+    "standard_state_eng": "Solid",
+    "melt_K": 1841,
+    "boil_K": 4300,
+    "allotropes_es": null,
+    "allotropes_eng": null,
+    "lattice_structure": "Orthorhombic"
+  },
+  "atomic_structure": {
+    "electronegativity": 1.5,
+    "valence": 5,
+    "ionization_energy_eV": 5.89,
+    "electron_affinity_ev": null,
+    "electron_affinity_kj_mol": null,
+    "radius_atomic_pm": 161,
+    "radius_covalent_pm": 200,
+    "vanderwaals_radius_pm": 240,
+    "ionic_radius_pm": 78,
+    "effective_nuclear_charge": 6.3,
+    "electron_configuration_string": "[Rn] 5f2 6d1 7s2",
+    "shells": [
+      2,
+      8,
+      18,
+      32,
+      20,
+      9,
+      2
+    ],
+    "quantum_numbers": {
+      "s": 2,
+      "p": 0,
+      "d": 1,
+      "f": 2
+    },
+    "work_function_ev": null
+  },
+  "thermodynamics": {
+    "enthalpy_formation_kj_mol": 0,
+    "entropy_j_molk": 51.9,
+    "heat_capacity_j_molk": 28,
+    "specific_heat_j_gK": 0.12,
+    "latent_heat_fusion_kj_mol": 12.3,
+    "latent_heat_vaporization_kj_mol": 481,
+    "fusion_heat_kj_mol": 15,
+    "evaporation_heat_kj_mol": 481
+  },
+  "kinetics_and_phase": {
+    "vapor_pressure_constants": {
+      "A": null,
+      "B": null,
+      "C": null
+    },
+    "vapor_pressure_pa": null,
+    "viscosity_liquid_pas": null,
+    "viscosity_pa_s": null,
+    "critical_temp_K": null,
+    "critical_press_MPa": null,
+    "surface_tension_nm": null
+  },
+  "electromagnetism_and_mechanics": {
+    "thermal_conductivity_wmk": 47,
+    "electrical_conductivity_sm": 5600000,
+    "magnetic_susceptibility": 1.2e-05,
+    "thermal_expansion_coefficient": 9.9e-06,
+    "polarizability_angstrom3": 25,
+    "refractive_index": null,
+    "youngs_modulus_gba": null,
+    "poisson_ratio": null,
+    "brinell_hardness_m_pa": null
+  },
+  "reactivity": {
+    "max_bonds": 5,
+    "geometry_preference_es": "Pentagonal",
+    "geometry_preference_eng": "Pentagonal",
+    "ideal_bond_angle": 72,
+    "bond_energy_ev": null,
+    "dissociation_energy_kj_mol": null,
+    "standard_potential_v": -1.1,
+    "oxidation_states": [
+      5,
+      4
+    ],
+    "common_ions": [
+      "Pa5+",
+      "Pa4+"
+    ]
+  },
+  "nuclear_and_environmental": {
+    "isotopes": [
+      {
+        "mass": 231.035,
+        "abundance": 100,
+        "stable": false,
+        "half_life_s": 1000000000000,
+        "name_es": "Protactinio-231",
+        "name_eng": "Protactinium-231"
+      },
+      {
+        "mass": 234.043,
+        "abundance": null,
+        "stable": false,
+        "half_life_s": 24120,
+        "name_es": "Protactinio-234",
+        "name_eng": "Protactinium-234"
+      }
+    ],
+    "neutron_cross_section_barns": 200,
+    "nuclear_binding_energy_mev": 7.6,
+    "abundance_crust_mg_kg": 1.4e-06,
+    "toxicity_level": 5
+  },
+  "cryogenic_data": {
+    "critical_solidification_pressure_mpa": null,
+    "lambda_point_k": 1.4,
+    "superfluid_viscosity_pas": null
+  }
+}

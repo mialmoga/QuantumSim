@@ -1,0 +1,123 @@
+{
+  "symbol": "Bi",
+  "identity": {
+    "name_es": "Bismuto",
+    "name_eng": "Bismuth",
+    "number": 83,
+    "category_es": "Metal del bloque p",
+    "category_eng": "Post-transition metal",
+    "color": "0xD0C0C8",
+    "cpk_color": "0x9E4FB5",
+    "discovery_year": "1753"
+  },
+  "physical_properties": {
+    "mass": 208.98,
+    "density_g_cm3": 9.78,
+    "standard_state_es": "Sólido",
+    "standard_state_eng": "Solid",
+    "melt_K": 544.7,
+    "boil_K": 1837,
+    "allotropes_es": null,
+    "allotropes_eng": null,
+    "lattice_structure": "Rhombohedral"
+  },
+  "atomic_structure": {
+    "electronegativity": 2.02,
+    "valence": 3,
+    "ionization_energy_eV": 7.2856,
+    "electron_affinity_ev": 0.946,
+    "electron_affinity_kj_mol": 91.2,
+    "radius_atomic_pm": 156,
+    "radius_covalent_pm": 148,
+    "vanderwaals_radius_pm": 207,
+    "ionic_radius_pm": 103,
+    "effective_nuclear_charge": 6.3,
+    "electron_configuration_string": "[Xe] 4f14 5d10 6s2 6p3",
+    "shells": [
+      2,
+      8,
+      18,
+      32,
+      18,
+      5
+    ],
+    "quantum_numbers": {
+      "s": 2,
+      "p": 3,
+      "d": 10,
+      "f": 14
+    },
+    "work_function_ev": 4.22
+  },
+  "thermodynamics": {
+    "enthalpy_formation_kj_mol": 0,
+    "entropy_j_molk": 56.74,
+    "heat_capacity_j_molk": 25.52,
+    "specific_heat_j_gK": 0.122,
+    "latent_heat_fusion_kj_mol": 11.3,
+    "latent_heat_vaporization_kj_mol": 151,
+    "fusion_heat_kj_mol": 10.9,
+    "evaporation_heat_kj_mol": 179
+  },
+  "kinetics_and_phase": {
+    "vapor_pressure_constants": {
+      "A": 5.1,
+      "B": 9000,
+      "C": -0.5
+    },
+    "vapor_pressure_pa": null,
+    "viscosity_liquid_pas": 0.0016,
+    "viscosity_pa_s": null,
+    "critical_temp_K": null,
+    "critical_press_MPa": null,
+    "surface_tension_nm": 0.378
+  },
+  "electromagnetism_and_mechanics": {
+    "thermal_conductivity_wmk": 7.9,
+    "electrical_conductivity_sm": 900000,
+    "magnetic_susceptibility": -0.00028,
+    "thermal_expansion_coefficient": 1.34e-05,
+    "polarizability_angstrom3": 7.4,
+    "refractive_index": null,
+    "youngs_modulus_gba": 32,
+    "poisson_ratio": 0.33,
+    "brinell_hardness_m_pa": 94.2
+  },
+  "reactivity": {
+    "max_bonds": 5,
+    "geometry_preference_es": "Piramidal trigonal",
+    "geometry_preference_eng": "Trigonal pyramidal",
+    "ideal_bond_angle": 107,
+    "bond_energy_ev": null,
+    "dissociation_energy_kj_mol": null,
+    "standard_potential_v": 0.308,
+    "oxidation_states": [
+      3,
+      5
+    ],
+    "common_ions": [
+      "Bi3+"
+    ]
+  },
+  "nuclear_and_environmental": {
+    "isotopes": [
+      {
+        "mass": 208.98,
+        "abundance": 100,
+        "stable": false,
+        "half_life_s": 6e+26,
+        "name_es": "Bismuto-209",
+        "name_eng": "Bismuth-209"
+      }
+    ],
+    "neutron_cross_section_barns": 0.033,
+    "nuclear_binding_energy_mev": 7.848,
+    "abundance_crust_mg_kg": 0.0085,
+    "toxicity_level": 1
+  },
+  "cryogenic_data": {
+    "critical_solidification_pressure_mpa": null,
+    "lambda_point_k": null,
+    "superfluid_viscosity_pas": null
+  }
+}

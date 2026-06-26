@@ -1,0 +1,61 @@
+{
+  "id": "fresnel_fake",
+  "name": "Fresnel",
+  "desc": "Reflejo de borde falso \u2014 simula curvatura sin cubemap. Usa vPhase como proxy del \u00e1ngulo de incidencia.",
+  "stage": "frag",
+  "target": [
+    "orbital",
+    "sphere"
+  ],
+  "color": "#7dd3fc",
+  "sub": "col += fresnel(vPhase) * rim * tint",
+  "requires": [
+    "brightness"
+  ],
+  "provides": [],
+  "params": {
+    "rim": {
+      "label": "Borde",
+      "min": 0.0,
+      "max": 4.0,
+      "step": 0.05,
+      "val": 1.2
+    },
+    "core": {
+      "label": "Centro",
+      "min": 0.0,
+      "max": 2.0,
+      "step": 0.05,
+      "val": 0.3
+    },
+    "pow": {
+      "label": "Potencia",
+      "min": 0.5,
+      "max": 6.0,
+      "step": 0.1,
+      "val": 2.0
+    },
+    "r": {
+      "label": "Tinte R",
+      "min": 0.0,
+      "max": 2.0,
+      "step": 0.05,
+      "val": 1.0
+    },
+    "g": {
+      "label": "Tinte G",
+      "min": 0.0,
+      "max": 2.0,
+      "step": 0.05,
+      "val": 1.0
+    },
+    "b": {
+      "label": "Tinte B",
+      "min": 0.0,
+      "max": 2.0,
+      "step": 0.05,
+      "val": 1.0
+    }
+  },
+  "glsl": "{float _f=pow(clamp(1.0-abs(vPhase-0.5)*2.0,0.0,1.0),{{pow}});col+=_f*{{rim}}*vec3({{r}},{{g}},{{b}});col+=clamp(1.0-_f,0.0,1.0)*col*{{core}};}"
+}

@@ -1,0 +1,165 @@
+{
+  "symbol": "Hg",
+  "identity": {
+    "name_es": "Mercurio",
+    "name_eng": "Mercury",
+    "number": 80,
+    "category_es": "Metal de transición",
+    "category_eng": "Transition metal",
+    "color": "0xD0D0D8",
+    "cpk_color": "0xB8B8D0",
+    "discovery_year": "Prehistoria"
+  },
+  "physical_properties": {
+    "mass": 200.592,
+    "density_g_cm3": 13.534,
+    "standard_state_es": "Líquido",
+    "standard_state_eng": "Liquid",
+    "melt_K": 234.32,
+    "boil_K": 629.88,
+    "allotropes_es": null,
+    "allotropes_eng": null,
+    "lattice_structure": "Rhombohedral"
+  },
+  "atomic_structure": {
+    "electronegativity": 2,
+    "valence": 2,
+    "ionization_energy_eV": 10.4375,
+    "electron_affinity_ev": -0.5,
+    "electron_affinity_kj_mol": -48,
+    "radius_atomic_pm": 151,
+    "radius_covalent_pm": 132,
+    "vanderwaals_radius_pm": 155,
+    "ionic_radius_pm": 102,
+    "effective_nuclear_charge": 6.3,
+    "electron_configuration_string": "[Xe] 4f14 5d10 6s2",
+    "shells": [
+      2,
+      8,
+      18,
+      32,
+      18,
+      2
+    ],
+    "quantum_numbers": {
+      "s": 2,
+      "p": 0,
+      "d": 10,
+      "f": 14
+    },
+    "work_function_ev": 4.475
+  },
+  "thermodynamics": {
+    "enthalpy_formation_kj_mol": 0,
+    "entropy_j_molk": 75.9,
+    "heat_capacity_j_molk": 27.98,
+    "specific_heat_j_gK": 0.14,
+    "latent_heat_fusion_kj_mol": 2.29,
+    "latent_heat_vaporization_kj_mol": 59.11,
+    "fusion_heat_kj_mol": 2.3,
+    "evaporation_heat_kj_mol": 58.2
+  },
+  "kinetics_and_phase": {
+    "vapor_pressure_constants": {
+      "A": 5.1,
+      "B": 3100,
+      "C": -0.8
+    },
+    "vapor_pressure_pa": 0.2,
+    "viscosity_liquid_pas": 0.0015,
+    "viscosity_pa_s": 0.00155,
+    "critical_temp_K": 1750,
+    "critical_press_MPa": 172,
+    "surface_tension_nm": 0.485
+  },
+  "electromagnetism_and_mechanics": {
+    "thermal_conductivity_wmk": 8.3,
+    "electrical_conductivity_sm": 1000000,
+    "magnetic_susceptibility": -3.2e-05,
+    "thermal_expansion_coefficient": 0.000181,
+    "polarizability_angstrom3": 5,
+    "refractive_index": null,
+    "youngs_modulus_gba": null,
+    "poisson_ratio": null,
+    "brinell_hardness_m_pa": null
+  },
+  "reactivity": {
+    "max_bonds": 2,
+    "geometry_preference_es": "Lineal",
+    "geometry_preference_eng": "Linear",
+    "ideal_bond_angle": 180,
+    "bond_energy_ev": null,
+    "dissociation_energy_kj_mol": null,
+    "standard_potential_v": 0.85,
+    "oxidation_states": [
+      2,
+      1
+    ],
+    "common_ions": [
+      "Hg2+",
+      "Hg2^2+"
+    ]
+  },
+  "nuclear_and_environmental": {
+    "isotopes": [
+      {
+        "mass": 195.965,
+        "abundance": 0.15,
+        "stable": true,
+        "name_es": "Mercurio-196",
+        "name_eng": "Mercury-196"
+      },
+      {
+        "mass": 197.966,
+        "abundance": 9.97,
+        "stable": true,
+        "name_es": "Mercurio-198",
+        "name_eng": "Mercury-198"
+      },
+      {
+        "mass": 198.968,
+        "abundance": 16.87,
+        "stable": true,
+        "name_es": "Mercurio-199",
+        "name_eng": "Mercury-199"
+      },
+      {
+        "mass": 199.968,
+        "abundance": 23.1,
+        "stable": true,
+        "name_es": "Mercurio-200",
+        "name_eng": "Mercury-200"
+      },
+      {
+        "mass": 200.97,
+        "abundance": 13.18,
+        "stable": true,
+        "name_es": "Mercurio-201",
+        "name_eng": "Mercury-201"
+      },
+      {
+        "mass": 201.97,
+        "abundance": 29.86,
+        "stable": true,
+        "name_es": "Mercurio-202",
+        "name_eng": "Mercury-202"
+      },
+      {
+        "mass": 203.973,
+        "abundance": 6.87,
+        "stable": true,
+        "name_es": "Mercurio-204",
+        "name_eng": "Mercury-204"
+      }
+    ],
+    "neutron_cross_section_barns": 372,
+    "nuclear_binding_energy_mev": 7.876,
+    "abundance_crust_mg_kg": 0.085,
+    "toxicity_level": 4
+  },
+  "cryogenic_data": {
+    "critical_solidification_pressure_mpa": null,
+    "lambda_point_k": 4.15,
+    "superfluid_viscosity_pas": null
+  }
+}

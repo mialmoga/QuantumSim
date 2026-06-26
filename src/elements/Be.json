@@ -1,0 +1,133 @@
+{
+  "symbol": "Be",
+  "identity": {
+    "name_es": "Berilio",
+    "name_eng": "Beryllium",
+    "number": 4,
+    "category_es": "Metal alcalinotérreo",
+    "category_eng": "Alkaline earth metal",
+    "color": "0xA8A8A0",
+    "cpk_color": "0xFF1493",
+    "discovery_year": "1798"
+  },
+  "physical_properties": {
+    "mass": 9.0122,
+    "density_g_cm3": 1.85,
+    "standard_state_es": "Sólido",
+    "standard_state_eng": "Solid",
+    "melt_K": 1560,
+    "boil_K": 2742,
+    "allotropes_es": null,
+    "allotropes_eng": null,
+    "lattice_structure": "hcp"
+  },
+  "atomic_structure": {
+    "electronegativity": 1.57,
+    "valence": 2,
+    "ionization_energy_eV": 9.3227,
+    "electron_affinity_ev": 0,
+    "electron_affinity_kj_mol": 0,
+    "radius_atomic_pm": 112,
+    "radius_covalent_pm": 96,
+    "vanderwaals_radius_pm": 153,
+    "ionic_radius_pm": 45,
+    "effective_nuclear_charge": 1.912,
+    "electron_configuration_string": "1s2 2s2",
+    "shells": [
+      2,
+      2
+    ],
+    "quantum_numbers": {
+      "s": 1,
+      "p": 0,
+      "d": 0,
+      "f": 0
+    },
+    "work_function_ev": 4.98
+  },
+  "thermodynamics": {
+    "enthalpy_formation_kj_mol": 0,
+    "entropy_j_molk": 9.5,
+    "heat_capacity_j_molk": 16.44,
+    "specific_heat_j_gK": 1.82,
+    "latent_heat_fusion_kj_mol": 12.2,
+    "latent_heat_vaporization_kj_mol": 292,
+    "fusion_heat_kj_mol": 7.895,
+    "evaporation_heat_kj_mol": 297
+  },
+  "kinetics_and_phase": {
+    "vapor_pressure_constants": {
+      "A": 5.483,
+      "B": 15920,
+      "C": -10
+    },
+    "vapor_pressure_pa": null,
+    "viscosity_liquid_pas": 0.0008,
+    "viscosity_pa_s": null,
+    "critical_temp_K": 5110,
+    "critical_press_MPa": null,
+    "surface_tension_nm": 1.1
+  },
+  "electromagnetism_and_mechanics": {
+    "thermal_conductivity_wmk": 190,
+    "electrical_conductivity_sm": 25000000,
+    "magnetic_susceptibility": -9e-06,
+    "thermal_expansion_coefficient": 1.13e-05,
+    "polarizability_angstrom3": 5.6,
+    "refractive_index": null,
+    "youngs_modulus_gba": 287,
+    "poisson_ratio": 0.032,
+    "brinell_hardness_m_pa": 600
+  },
+  "reactivity": {
+    "max_bonds": 2,
+    "geometry_preference_es": "Lineal / Red hcp",
+    "geometry_preference_eng": "Linear / hcp Lattice",
+    "ideal_bond_angle": 180,
+    "bond_energy_ev": 2.1,
+    "dissociation_energy_kj_mol": 203,
+    "standard_potential_v": -1.847,
+    "oxidation_states": [
+      2
+    ],
+    "common_ions": [
+      "Be2+"
+    ]
+  },
+  "nuclear_and_environmental": {
+    "isotopes": [
+      {
+        "mass": 7.0169,
+        "abundance": null,
+        "stable": false,
+        "half_life_s": 4598000,
+        "name_es": "Berilio-7",
+        "name_eng": "Beryllium-7"
+      },
+      {
+        "mass": 9.0122,
+        "abundance": 100,
+        "stable": true,
+        "name_es": "Berilio-9",
+        "name_eng": "Beryllium-9"
+      },
+      {
+        "mass": 10.0135,
+        "abundance": null,
+        "stable": false,
+        "half_life_s": 47600000000000,
+        "name_es": "Berilio-10",
+        "name_eng": "Beryllium-10"
+      }
+    ],
+    "neutron_cross_section_barns": 0.0092,
+    "nuclear_binding_energy_mev": 6.463,
+    "abundance_crust_mg_kg": 2.8,
+    "toxicity_level": 4
+  },
+  "cryogenic_data": {
+    "critical_solidification_pressure_mpa": null,
+    "lambda_point_k": null,
+    "superfluid_viscosity_pas": null
+  }
+}

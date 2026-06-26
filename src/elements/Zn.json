@@ -1,0 +1,147 @@
+{
+  "symbol": "Zn",
+  "identity": {
+    "name_es": "Zinc",
+    "name_eng": "Zinc",
+    "number": 30,
+    "category_es": "Metal de transición",
+    "category_eng": "Transition metal",
+    "color": "0xB8C0C8",
+    "cpk_color": "0x7D80B0",
+    "discovery_year": "1746"
+  },
+  "physical_properties": {
+    "mass": 65.38,
+    "density_g_cm3": 7.14,
+    "standard_state_es": "Sólido",
+    "standard_state_eng": "Solid",
+    "melt_K": 692.68,
+    "boil_K": 1180,
+    "allotropes_es": null,
+    "allotropes_eng": null,
+    "lattice_structure": "hcp"
+  },
+  "atomic_structure": {
+    "electronegativity": 1.65,
+    "valence": 2,
+    "ionization_energy_eV": 9.3942,
+    "electron_affinity_ev": 0,
+    "electron_affinity_kj_mol": 0,
+    "radius_atomic_pm": 134,
+    "radius_covalent_pm": 122,
+    "vanderwaals_radius_pm": 139,
+    "ionic_radius_pm": 74,
+    "effective_nuclear_charge": 5.916,
+    "electron_configuration_string": "[Ar] 3d10 4s2",
+    "shells": [
+      2,
+      8,
+      18,
+      2
+    ],
+    "quantum_numbers": {
+      "s": 2,
+      "p": 3,
+      "d": 10,
+      "f": 0
+    },
+    "work_function_ev": 4.33
+  },
+  "thermodynamics": {
+    "enthalpy_formation_kj_mol": 0,
+    "entropy_j_molk": 41.6,
+    "heat_capacity_j_molk": 25.47,
+    "specific_heat_j_gK": 0.388,
+    "latent_heat_fusion_kj_mol": 7.32,
+    "latent_heat_vaporization_kj_mol": 115.3,
+    "fusion_heat_kj_mol": 7.35,
+    "evaporation_heat_kj_mol": 115.3
+  },
+  "kinetics_and_phase": {
+    "vapor_pressure_constants": {
+      "A": 5.378,
+      "B": 6670,
+      "C": -10
+    },
+    "vapor_pressure_pa": null,
+    "viscosity_liquid_pas": 0.00385,
+    "viscosity_pa_s": null,
+    "critical_temp_K": null,
+    "critical_press_MPa": null,
+    "surface_tension_nm": 0.79
+  },
+  "electromagnetism_and_mechanics": {
+    "thermal_conductivity_wmk": 116,
+    "electrical_conductivity_sm": 16600000,
+    "magnetic_susceptibility": -1.57e-05,
+    "thermal_expansion_coefficient": 3.02e-05,
+    "polarizability_angstrom3": 7.1,
+    "refractive_index": null,
+    "youngs_modulus_gba": 108,
+    "poisson_ratio": 0.25,
+    "brinell_hardness_m_pa": 412
+  },
+  "reactivity": {
+    "max_bonds": 2,
+    "geometry_preference_es": "Tetraédrica",
+    "geometry_preference_eng": "Tetrahedral",
+    "ideal_bond_angle": 109.5,
+    "bond_energy_ev": null,
+    "dissociation_energy_kj_mol": null,
+    "standard_potential_v": -0.7618,
+    "oxidation_states": [
+      2
+    ],
+    "common_ions": [
+      "Zn2+"
+    ]
+  },
+  "nuclear_and_environmental": {
+    "isotopes": [
+      {
+        "mass": 63.929,
+        "abundance": 49.17,
+        "stable": true,
+        "name_es": "Zinc-64",
+        "name_eng": "Zinc-64"
+      },
+      {
+        "mass": 65.926,
+        "abundance": 27.73,
+        "stable": true,
+        "name_es": "Zinc-66",
+        "name_eng": "Zinc-66"
+      },
+      {
+        "mass": 66.927,
+        "abundance": 4.04,
+        "stable": true,
+        "name_es": "Zinc-67",
+        "name_eng": "Zinc-67"
+      },
+      {
+        "mass": 67.925,
+        "abundance": 18.45,
+        "stable": true,
+        "name_es": "Zinc-68",
+        "name_eng": "Zinc-68"
+      },
+      {
+        "mass": 69.925,
+        "abundance": 0.61,
+        "stable": true,
+        "name_es": "Zinc-70",
+        "name_eng": "Zinc-70"
+      }
+    ],
+    "neutron_cross_section_barns": 1.1,
+    "nuclear_binding_energy_mev": 8.736,
+    "abundance_crust_mg_kg": 70,
+    "toxicity_level": 1
+  },
+  "cryogenic_data": {
+    "critical_solidification_pressure_mpa": null,
+    "lambda_point_k": null,
+    "superfluid_viscosity_pas": null
+  }
+}

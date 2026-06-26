@@ -1,0 +1,140 @@
+{
+  "symbol": "Ca",
+  "identity": {
+    "name_es": "Calcio",
+    "name_eng": "Calcium",
+    "number": 20,
+    "category_es": "Metal alcalinotérreo",
+    "category_eng": "Alkaline earth metal",
+    "color": "0xD0D0C8",
+    "cpk_color": "0x3DFF00",
+    "discovery_year": "1808"
+  },
+  "physical_properties": {
+    "mass": 40.078,
+    "density_g_cm3": 1.54,
+    "standard_state_es": "Sólido",
+    "standard_state_eng": "Solid",
+    "melt_K": 1115,
+    "boil_K": 1757,
+    "allotropes_es": null,
+    "allotropes_eng": null,
+    "lattice_structure": "fcc"
+  },
+  "atomic_structure": {
+    "electronegativity": 1,
+    "valence": 2,
+    "ionization_energy_eV": 6.1132,
+    "electron_affinity_ev": 0.0245,
+    "electron_affinity_kj_mol": 2.37,
+    "radius_atomic_pm": 197,
+    "radius_covalent_pm": 174,
+    "vanderwaals_radius_pm": 231,
+    "ionic_radius_pm": 100,
+    "effective_nuclear_charge": 4.398,
+    "electron_configuration_string": "[Ar] 4s2",
+    "shells": [
+      2,
+      8,
+      8,
+      2
+    ],
+    "quantum_numbers": {
+      "s": 2,
+      "p": 3,
+      "d": 0,
+      "f": 0
+    },
+    "work_function_ev": 2.87
+  },
+  "thermodynamics": {
+    "enthalpy_formation_kj_mol": 0,
+    "entropy_j_molk": 41.59,
+    "heat_capacity_j_molk": 25.31,
+    "specific_heat_j_gK": 0.647,
+    "latent_heat_fusion_kj_mol": 8.54,
+    "latent_heat_vaporization_kj_mol": 154.7,
+    "fusion_heat_kj_mol": 8.54,
+    "evaporation_heat_kj_mol": 153.6
+  },
+  "kinetics_and_phase": {
+    "vapor_pressure_constants": {
+      "A": 5.073,
+      "B": 9310,
+      "C": -10
+    },
+    "vapor_pressure_pa": null,
+    "viscosity_liquid_pas": null,
+    "viscosity_pa_s": null,
+    "critical_temp_K": null,
+    "critical_press_MPa": null,
+    "surface_tension_nm": 0.355
+  },
+  "electromagnetism_and_mechanics": {
+    "thermal_conductivity_wmk": 201,
+    "electrical_conductivity_sm": 29800000,
+    "magnetic_susceptibility": 4e-05,
+    "thermal_expansion_coefficient": 2.23e-05,
+    "polarizability_angstrom3": 22.8,
+    "refractive_index": null,
+    "youngs_modulus_gba": 20,
+    "poisson_ratio": 0.31,
+    "brinell_hardness_m_pa": 170
+  },
+  "reactivity": {
+    "max_bonds": 2,
+    "geometry_preference_es": "Red fcc",
+    "geometry_preference_eng": "fcc Lattice",
+    "ideal_bond_angle": null,
+    "bond_energy_ev": 0.4,
+    "dissociation_energy_kj_mol": 46,
+    "standard_potential_v": -2.868,
+    "oxidation_states": [
+      2
+    ],
+    "common_ions": [
+      "Ca2+"
+    ]
+  },
+  "nuclear_and_environmental": {
+    "isotopes": [
+      {
+        "mass": 39.962,
+        "abundance": 96.941,
+        "stable": true,
+        "name_es": "Calcio-40",
+        "name_eng": "Calcium-40"
+      },
+      {
+        "mass": 41.958,
+        "abundance": 0.647,
+        "stable": true,
+        "name_es": "Calcio-42",
+        "name_eng": "Calcium-42"
+      },
+      {
+        "mass": 43.955,
+        "abundance": 2.086,
+        "stable": true,
+        "name_es": "Calcio-44",
+        "name_eng": "Calcium-44"
+      },
+      {
+        "mass": 47.952,
+        "abundance": 0.187,
+        "stable": true,
+        "name_es": "Calcio-48",
+        "name_eng": "Calcium-48"
+      }
+    ],
+    "neutron_cross_section_barns": 0.43,
+    "nuclear_binding_energy_mev": 8.551,
+    "abundance_crust_mg_kg": 41500,
+    "toxicity_level": 0
+  },
+  "cryogenic_data": {
+    "critical_solidification_pressure_mpa": null,
+    "lambda_point_k": null,
+    "superfluid_viscosity_pas": null
+  }
+}

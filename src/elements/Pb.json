@@ -1,0 +1,144 @@
+{
+  "symbol": "Pb",
+  "identity": {
+    "name_es": "Plomo",
+    "name_eng": "Lead",
+    "number": 82,
+    "category_es": "Metal del bloque p",
+    "category_eng": "Post-transition metal",
+    "color": "0xA0A0A8",
+    "cpk_color": "0x575961",
+    "discovery_year": "Prehistoria"
+  },
+  "physical_properties": {
+    "mass": 207.2,
+    "density_g_cm3": 11.34,
+    "standard_state_es": "Sólido",
+    "standard_state_eng": "Solid",
+    "melt_K": 600.61,
+    "boil_K": 2022,
+    "allotropes_es": null,
+    "allotropes_eng": null,
+    "lattice_structure": "fcc"
+  },
+  "atomic_structure": {
+    "electronegativity": 1.87,
+    "valence": 4,
+    "ionization_energy_eV": 7.4167,
+    "electron_affinity_ev": 0.356,
+    "electron_affinity_kj_mol": 34.4,
+    "radius_atomic_pm": 175,
+    "radius_covalent_pm": 146,
+    "vanderwaals_radius_pm": 202,
+    "ionic_radius_pm": 119,
+    "effective_nuclear_charge": 6.3,
+    "electron_configuration_string": "[Xe] 4f14 5d10 6s2 6p2",
+    "shells": [
+      2,
+      8,
+      18,
+      32,
+      18,
+      4
+    ],
+    "quantum_numbers": {
+      "s": 2,
+      "p": 2,
+      "d": 10,
+      "f": 14
+    },
+    "work_function_ev": 4.25
+  },
+  "thermodynamics": {
+    "enthalpy_formation_kj_mol": 0,
+    "entropy_j_molk": 64.8,
+    "heat_capacity_j_molk": 26.65,
+    "specific_heat_j_gK": 0.129,
+    "latent_heat_fusion_kj_mol": 4.77,
+    "latent_heat_vaporization_kj_mol": 179.5,
+    "fusion_heat_kj_mol": 4.77,
+    "evaporation_heat_kj_mol": 178
+  },
+  "kinetics_and_phase": {
+    "vapor_pressure_constants": {
+      "A": 5.1,
+      "B": 10000,
+      "C": -0.5
+    },
+    "vapor_pressure_pa": null,
+    "viscosity_liquid_pas": 0.002,
+    "viscosity_pa_s": null,
+    "critical_temp_K": null,
+    "critical_press_MPa": null,
+    "surface_tension_nm": 0.442
+  },
+  "electromagnetism_and_mechanics": {
+    "thermal_conductivity_wmk": 35.3,
+    "electrical_conductivity_sm": 4800000,
+    "magnetic_susceptibility": -1.5e-05,
+    "thermal_expansion_coefficient": 2.89e-05,
+    "polarizability_angstrom3": 6.8,
+    "refractive_index": null,
+    "youngs_modulus_gba": 16,
+    "poisson_ratio": 0.44,
+    "brinell_hardness_m_pa": 38.3
+  },
+  "reactivity": {
+    "max_bonds": 4,
+    "geometry_preference_es": "Tetraédrica",
+    "geometry_preference_eng": "Tetrahedral",
+    "ideal_bond_angle": 109.5,
+    "bond_energy_ev": null,
+    "dissociation_energy_kj_mol": null,
+    "standard_potential_v": -0.126,
+    "oxidation_states": [
+      2,
+      4
+    ],
+    "common_ions": [
+      "Pb2+",
+      "Pb4+"
+    ]
+  },
+  "nuclear_and_environmental": {
+    "isotopes": [
+      {
+        "mass": 203.973,
+        "abundance": 1.4,
+        "stable": true,
+        "name_es": "Plomo-204",
+        "name_eng": "Lead-204"
+      },
+      {
+        "mass": 205.974,
+        "abundance": 24.1,
+        "stable": true,
+        "name_es": "Plomo-206",
+        "name_eng": "Lead-206"
+      },
+      {
+        "mass": 206.975,
+        "abundance": 22.1,
+        "stable": true,
+        "name_es": "Plomo-207",
+        "name_eng": "Lead-207"
+      },
+      {
+        "mass": 207.976,
+        "abundance": 52.4,
+        "stable": true,
+        "name_es": "Plomo-208",
+        "name_eng": "Lead-208"
+      }
+    ],
+    "neutron_cross_section_barns": 0.17,
+    "nuclear_binding_energy_mev": 7.875,
+    "abundance_crust_mg_kg": 14,
+    "toxicity_level": 3
+  },
+  "cryogenic_data": {
+    "critical_solidification_pressure_mpa": null,
+    "lambda_point_k": 7.19,
+    "superfluid_viscosity_pas": null
+  }
+}

@@ -1,0 +1,129 @@
+{
+  "symbol": "Tb",
+  "identity": {
+    "name_es": "Terbio",
+    "name_eng": "Terbium",
+    "number": 65,
+    "category_es": "Lantánido",
+    "category_eng": "Lanthanide",
+    "color": "0xC0C0C0",
+    "cpk_color": "0x30FFC7",
+    "discovery_year": "1843"
+  },
+  "physical_properties": {
+    "mass": 158.925,
+    "density_g_cm3": 8.23,
+    "standard_state_es": "Sólido",
+    "standard_state_eng": "Solid",
+    "melt_K": 1629,
+    "boil_K": 3503,
+    "allotropes_es": [
+      "Alfa (hcp)",
+      "Beta (bcc)"
+    ],
+    "allotropes_eng": [
+      "Alpha (hcp)",
+      "Beta (bcc)"
+    ],
+    "lattice_structure": "hcp"
+  },
+  "atomic_structure": {
+    "electronegativity": 1.1,
+    "valence": 3,
+    "ionization_energy_eV": 5.8638,
+    "electron_affinity_ev": 0.117,
+    "electron_affinity_kj_mol": 11.3,
+    "radius_atomic_pm": 177,
+    "radius_covalent_pm": 194,
+    "vanderwaals_radius_pm": 233,
+    "ionic_radius_pm": 92.3,
+    "effective_nuclear_charge": 6.3,
+    "electron_configuration_string": "[Xe] 4f9 6s2",
+    "shells": [
+      2,
+      8,
+      18,
+      27,
+      8,
+      2
+    ],
+    "quantum_numbers": {
+      "s": 2,
+      "p": 0,
+      "d": 0,
+      "f": 9
+    },
+    "work_function_ev": 3
+  },
+  "thermodynamics": {
+    "enthalpy_formation_kj_mol": 0,
+    "entropy_j_molk": 73.22,
+    "heat_capacity_j_molk": 28.91,
+    "specific_heat_j_gK": 0.182,
+    "latent_heat_fusion_kj_mol": 10.15,
+    "latent_heat_vaporization_kj_mol": 330.9,
+    "fusion_heat_kj_mol": 10.1,
+    "evaporation_heat_kj_mol": 391
+  },
+  "kinetics_and_phase": {
+    "vapor_pressure_constants": {
+      "A": 5.1,
+      "B": 21000,
+      "C": -10
+    },
+    "vapor_pressure_pa": null,
+    "viscosity_liquid_pas": null,
+    "viscosity_pa_s": null,
+    "critical_temp_K": null,
+    "critical_press_MPa": null,
+    "surface_tension_nm": 0.647
+  },
+  "electromagnetism_and_mechanics": {
+    "thermal_conductivity_wmk": 11.1,
+    "electrical_conductivity_sm": 870000,
+    "magnetic_susceptibility": 0.000146,
+    "thermal_expansion_coefficient": 1.03e-05,
+    "polarizability_angstrom3": 25.5,
+    "refractive_index": null,
+    "youngs_modulus_gba": 55.7,
+    "poisson_ratio": 0.26,
+    "brinell_hardness_m_pa": 677
+  },
+  "reactivity": {
+    "max_bonds": 4,
+    "geometry_preference_es": "Octaédrica",
+    "geometry_preference_eng": "Octahedral",
+    "ideal_bond_angle": null,
+    "bond_energy_ev": null,
+    "dissociation_energy_kj_mol": null,
+    "standard_potential_v": -2.31,
+    "oxidation_states": [
+      3,
+      4
+    ],
+    "common_ions": [
+      "Tb3+",
+      "Tb4+"
+    ]
+  },
+  "nuclear_and_environmental": {
+    "isotopes": [
+      {
+        "mass": 158.925,
+        "abundance": 100,
+        "stable": true,
+        "name_es": "Terbio-159",
+        "name_eng": "Terbium-159"
+      }
+    ],
+    "neutron_cross_section_barns": 25.5,
+    "nuclear_binding_energy_mev": 8.196,
+    "abundance_crust_mg_kg": 1.2,
+    "toxicity_level": 1
+  },
+  "cryogenic_data": {
+    "critical_solidification_pressure_mpa": null,
+    "lambda_point_k": 230,
+    "superfluid_viscosity_pas": null
+  }
+}

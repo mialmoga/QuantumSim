@@ -1,0 +1,40 @@
+{
+  "id": "blink",
+  "name": "Blink",
+  "stage": "vert",
+  "target": [
+    "orbital",
+    "sphere"
+  ],
+  "color": "#00e5ff",
+  "desc": "Oscilaci\u00f3n temporal por part\u00edcula usando aPhase",
+  "sub": "vBlink = sin(t\u00b7freq + aPhase\u00b7\u03c4) \u00b7 amp",
+  "params": {
+    "speed": {
+      "label": "Velocidad",
+      "min": 0.0,
+      "max": 3.0,
+      "step": 0.05,
+      "val": 0.5
+    },
+    "amp": {
+      "label": "Amplitud",
+      "min": 0.0,
+      "max": 1.0,
+      "step": 0.01,
+      "val": 0.2
+    },
+    "fMul": {
+      "label": "Freq mult",
+      "min": 0.5,
+      "max": 4.0,
+      "step": 0.05,
+      "val": 1.5
+    }
+  },
+  "glsl": "vBlink = sin(uTime*({{fMul}}+uLevel)*{{speed}}+aPhase*6.2832)*{{amp}};",
+  "requires": [],
+  "provides": [
+    "vBlink"
+  ]
+}

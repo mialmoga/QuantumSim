@@ -1,0 +1,128 @@
+{
+  "symbol": "Db",
+  "identity": {
+    "name_es": "Dubnio",
+    "name_eng": "Dubnium",
+    "number": 105,
+    "category_es": "Metal de transición",
+    "category_eng": "Transition metal",
+    "color": "0xA0A0A0",
+    "cpk_color": "0xD1004F",
+    "discovery_year": "1968"
+  },
+  "physical_properties": {
+    "mass": 268.12,
+    "density_g_cm3": 29.3,
+    "standard_state_es": "Sólido (predicho)",
+    "standard_state_eng": "Solid (predicted)",
+    "melt_K": 2500,
+    "boil_K": null,
+    "allotropes_es": null,
+    "allotropes_eng": null,
+    "lattice_structure": "bcc (predicho)"
+  },
+  "atomic_structure": {
+    "electronegativity": 1.3,
+    "valence": 5,
+    "ionization_energy_eV": 6.35,
+    "electron_affinity_ev": null,
+    "electron_affinity_kj_mol": null,
+    "radius_atomic_pm": 139,
+    "radius_covalent_pm": 149,
+    "vanderwaals_radius_pm": 232,
+    "ionic_radius_pm": 74,
+    "effective_nuclear_charge": 6.8,
+    "electron_configuration_string": "[Rn] 5f14 6d3 7s2",
+    "shells": [
+      2,
+      8,
+      18,
+      32,
+      32,
+      11,
+      2
+    ],
+    "quantum_numbers": {
+      "s": 2,
+      "p": 0,
+      "d": 3,
+      "f": 14
+    },
+    "work_function_ev": null
+  },
+  "thermodynamics": {
+    "enthalpy_formation_kj_mol": 0,
+    "entropy_j_molk": null,
+    "heat_capacity_j_molk": 26,
+    "specific_heat_j_gK": 0.1,
+    "latent_heat_fusion_kj_mol": 29,
+    "latent_heat_vaporization_kj_mol": 600,
+    "fusion_heat_kj_mol": 29,
+    "evaporation_heat_kj_mol": 600
+  },
+  "kinetics_and_phase": {
+    "vapor_pressure_constants": {
+      "A": null,
+      "B": null,
+      "C": null
+    },
+    "vapor_pressure_pa": null,
+    "viscosity_liquid_pas": null,
+    "viscosity_pa_s": null,
+    "critical_temp_K": null,
+    "critical_press_MPa": null,
+    "surface_tension_nm": null
+  },
+  "electromagnetism_and_mechanics": {
+    "thermal_conductivity_wmk": 11,
+    "electrical_conductivity_sm": null,
+    "magnetic_susceptibility": null,
+    "thermal_expansion_coefficient": null,
+    "polarizability_angstrom3": 13.5,
+    "refractive_index": null,
+    "youngs_modulus_gba": null,
+    "poisson_ratio": null,
+    "brinell_hardness_m_pa": null
+  },
+  "reactivity": {
+    "max_bonds": 5,
+    "geometry_preference_es": "Bipiramidal trigonal",
+    "geometry_preference_eng": "Trigonal bipyramidal",
+    "ideal_bond_angle": 120,
+    "bond_energy_ev": 2.2,
+    "dissociation_energy_kj_mol": null,
+    "standard_potential_v": -1.1,
+    "oxidation_states": [
+      5,
+      4,
+      3
+    ],
+    "common_ions": [
+      "Db5+"
+    ]
+  },
+  "nuclear_and_environmental": {
+    "isotopes": [
+      {
+        "mass": 268.12,
+        "abundance": null,
+        "stable": false,
+        "half_life_s": 108000,
+        "name_es": "Dubnio-268",
+        "name_eng": "Dubnium-268"
+      },
+      {
+        "mass": 270.13,
+        "abundance": null,
+        "stable": false,
+        "half_life_s": 23.5,
+        "name_es": "Dubnio-270",
+        "name_eng": "Dubnium-270"
+      }
+    ],
+    "neutron_cross_section_barns": null,
+    "nuclear_binding_energy_mev": 7.18,
+    "abundance_crust_mg_kg": 0,
+    "toxicity_level": 5
+  }
+}

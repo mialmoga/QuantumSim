@@ -1,0 +1,138 @@
+{
+  "symbol": "Re",
+  "identity": {
+    "name_es": "Renio",
+    "name_eng": "Rhenium",
+    "number": 75,
+    "category_es": "Metal de transición",
+    "category_eng": "Transition metal",
+    "color": "0xB0B0B0",
+    "cpk_color": "0x267DAB",
+    "discovery_year": "1925"
+  },
+  "physical_properties": {
+    "mass": 186.207,
+    "density_g_cm3": 21.02,
+    "standard_state_es": "Sólido",
+    "standard_state_eng": "Solid",
+    "melt_K": 3459,
+    "boil_K": 5869,
+    "allotropes_es": null,
+    "allotropes_eng": null,
+    "lattice_structure": "hcp"
+  },
+  "atomic_structure": {
+    "electronegativity": 1.9,
+    "valence": 7,
+    "ionization_energy_eV": 7.8335,
+    "electron_affinity_ev": 0.15,
+    "electron_affinity_kj_mol": 14.5,
+    "radius_atomic_pm": 137,
+    "radius_covalent_pm": 151,
+    "vanderwaals_radius_pm": 216,
+    "ionic_radius_pm": 53,
+    "effective_nuclear_charge": 6.3,
+    "electron_configuration_string": "[Xe] 4f14 5d5 6s2",
+    "shells": [
+      2,
+      8,
+      18,
+      32,
+      13,
+      2
+    ],
+    "quantum_numbers": {
+      "s": 2,
+      "p": 0,
+      "d": 5,
+      "f": 14
+    },
+    "work_function_ev": 4.96
+  },
+  "thermodynamics": {
+    "enthalpy_formation_kj_mol": 0,
+    "entropy_j_molk": 36.53,
+    "heat_capacity_j_molk": 25.48,
+    "specific_heat_j_gK": 0.137,
+    "latent_heat_fusion_kj_mol": 33.2,
+    "latent_heat_vaporization_kj_mol": 704,
+    "fusion_heat_kj_mol": 60.4,
+    "evaporation_heat_kj_mol": 704
+  },
+  "kinetics_and_phase": {
+    "vapor_pressure_constants": {
+      "A": 5.15,
+      "B": 38000,
+      "C": -10
+    },
+    "vapor_pressure_pa": null,
+    "viscosity_liquid_pas": null,
+    "viscosity_pa_s": null,
+    "critical_temp_K": null,
+    "critical_press_MPa": null,
+    "surface_tension_nm": 2.7
+  },
+  "electromagnetism_and_mechanics": {
+    "thermal_conductivity_wmk": 48,
+    "electrical_conductivity_sm": 5400000,
+    "magnetic_susceptibility": 6.8e-05,
+    "thermal_expansion_coefficient": 6.2e-06,
+    "polarizability_angstrom3": 9.7,
+    "refractive_index": null,
+    "youngs_modulus_gba": 463,
+    "poisson_ratio": 0.26,
+    "brinell_hardness_m_pa": 2160
+  },
+  "reactivity": {
+    "max_bonds": 7,
+    "geometry_preference_es": "Octaédrica",
+    "geometry_preference_eng": "Octahedral",
+    "ideal_bond_angle": 90,
+    "bond_energy_ev": null,
+    "dissociation_energy_kj_mol": null,
+    "standard_potential_v": 0.3,
+    "oxidation_states": [
+      7,
+      6,
+      5,
+      4,
+      3,
+      2,
+      1,
+      0,
+      -1
+    ],
+    "common_ions": [
+      "ReO4-",
+      "Re7+"
+    ]
+  },
+  "nuclear_and_environmental": {
+    "isotopes": [
+      {
+        "mass": 184.953,
+        "abundance": 37.4,
+        "stable": true,
+        "name_es": "Renio-185",
+        "name_eng": "Rhenium-185"
+      },
+      {
+        "mass": 186.956,
+        "abundance": 62.6,
+        "stable": false,
+        "half_life_s": 1300000000000000000,
+        "name_es": "Renio-187",
+        "name_eng": "Rhenium-187"
+      }
+    ],
+    "neutron_cross_section_barns": 86,
+    "nuclear_binding_energy_mev": 7.962,
+    "abundance_crust_mg_kg": 0.0007,
+    "toxicity_level": 1
+  },
+  "cryogenic_data": {
+    "critical_solidification_pressure_mpa": null,
+    "lambda_point_k": null,
+    "superfluid_viscosity_pas": null
+  }
+}

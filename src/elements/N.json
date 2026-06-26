@@ -1,0 +1,131 @@
+{
+  "symbol": "N",
+  "identity": {
+    "name_es": "Nitrógeno",
+    "name_eng": "Nitrogen",
+    "number": 7,
+    "category_es": "No metal reactivo",
+    "category_eng": "Reactive nonmetal",
+    "color": "0xD0D8E8",
+    "cpk_color": "0x3050F8",
+    "discovery_year": "1772"
+  },
+  "physical_properties": {
+    "mass": 14.007,
+    "density_g_cm3": 0.0012506,
+    "standard_state_es": "Gas",
+    "standard_state_eng": "Gas",
+    "melt_K": 63.15,
+    "boil_K": 77.36,
+    "allotropes_es": null,
+    "allotropes_eng": null,
+    "lattice_structure": "hcp"
+  },
+  "atomic_structure": {
+    "electronegativity": 3.04,
+    "valence": 3,
+    "ionization_energy_eV": 14.5341,
+    "electron_affinity_ev": 0,
+    "electron_affinity_kj_mol": 0,
+    "radius_atomic_pm": 65,
+    "radius_covalent_pm": 71,
+    "vanderwaals_radius_pm": 155,
+    "ionic_radius_pm": 146,
+    "effective_nuclear_charge": 3.456,
+    "electron_configuration_string": "1s2 2s2 2p3",
+    "shells": [
+      2,
+      5
+    ],
+    "quantum_numbers": {
+      "s": 1,
+      "p": 1,
+      "d": 0,
+      "f": 0
+    },
+    "work_function_ev": null
+  },
+  "thermodynamics": {
+    "enthalpy_formation_kj_mol": 0,
+    "entropy_j_molk": 191.61,
+    "heat_capacity_j_molk": 29.124,
+    "specific_heat_j_gK": 1.04,
+    "latent_heat_fusion_kj_mol": 0.72,
+    "latent_heat_vaporization_kj_mol": 5.56,
+    "fusion_heat_kj_mol": 0.36,
+    "evaporation_heat_kj_mol": 2.79
+  },
+  "kinetics_and_phase": {
+    "vapor_pressure_constants": {
+      "A": 3.732,
+      "B": 255.7,
+      "C": -6.6
+    },
+    "vapor_pressure_pa": null,
+    "viscosity_liquid_pas": 0.000158,
+    "viscosity_pa_s": 1.74e-05,
+    "critical_temp_K": 126.19,
+    "critical_press_MPa": 3.39,
+    "surface_tension_nm": 0.00885
+  },
+  "electromagnetism_and_mechanics": {
+    "thermal_conductivity_wmk": 0.02583,
+    "electrical_conductivity_sm": null,
+    "magnetic_susceptibility": -6.7e-06,
+    "thermal_expansion_coefficient": null,
+    "polarizability_angstrom3": 1.74,
+    "refractive_index": 1.000298,
+    "youngs_modulus_gba": null,
+    "poisson_ratio": null,
+    "brinell_hardness_m_pa": null
+  },
+  "reactivity": {
+    "max_bonds": 3,
+    "geometry_preference_es": "Piramidal trigonal",
+    "geometry_preference_eng": "Trigonal pyramidal",
+    "ideal_bond_angle": 107,
+    "bond_energy_ev": 9.79,
+    "dissociation_energy_kj_mol": 945,
+    "standard_potential_v": null,
+    "oxidation_states": [
+      3,
+      5,
+      4,
+      2,
+      1,
+      -3
+    ],
+    "common_ions": [
+      "N3-",
+      "NO3-",
+      "NH4+"
+    ]
+  },
+  "nuclear_and_environmental": {
+    "isotopes": [
+      {
+        "mass": 14.003,
+        "abundance": 99.63,
+        "stable": true,
+        "name_es": "Nitrógeno-14",
+        "name_eng": "Nitrogen-14"
+      },
+      {
+        "mass": 15,
+        "abundance": 0.37,
+        "stable": true,
+        "name_es": "Nitrógeno-15",
+        "name_eng": "Nitrogen-15"
+      }
+    ],
+    "neutron_cross_section_barns": 1.91,
+    "nuclear_binding_energy_mev": 7.47,
+    "abundance_crust_mg_kg": 19,
+    "toxicity_level": 1
+  },
+  "cryogenic_data": {
+    "critical_solidification_pressure_mpa": null,
+    "lambda_point_k": null,
+    "superfluid_viscosity_pas": null
+  }
+}

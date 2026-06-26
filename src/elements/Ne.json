@@ -1,0 +1,129 @@
+{
+  "symbol": "Ne",
+  "identity": {
+    "name_es": "Neón",
+    "name_eng": "Neon",
+    "number": 10,
+    "category_es": "Gas noble",
+    "category_eng": "Noble gas",
+    "color": "0xFF6030",
+    "cpk_color": "0xB3E3F5",
+    "discovery_year": "1898"
+  },
+  "physical_properties": {
+    "mass": 20.18,
+    "density_g_cm3": 0.0008999,
+    "standard_state_es": "Gas",
+    "standard_state_eng": "Gas",
+    "melt_K": 24.56,
+    "boil_K": 27.07,
+    "allotropes_es": null,
+    "allotropes_eng": null,
+    "lattice_structure": "fcc"
+  },
+  "atomic_structure": {
+    "electronegativity": null,
+    "valence": 0,
+    "ionization_energy_eV": 21.5645,
+    "electron_affinity_ev": 0,
+    "electron_affinity_kj_mol": 0,
+    "radius_atomic_pm": 38,
+    "radius_covalent_pm": 58,
+    "vanderwaals_radius_pm": 154,
+    "ionic_radius_pm": null,
+    "effective_nuclear_charge": 5.85,
+    "electron_configuration_string": "1s2 2s2 2p6",
+    "shells": [
+      2,
+      8
+    ],
+    "quantum_numbers": {
+      "s": 1,
+      "p": 1,
+      "d": 0,
+      "f": 0
+    },
+    "work_function_ev": null
+  },
+  "thermodynamics": {
+    "enthalpy_formation_kj_mol": 0,
+    "entropy_j_molk": 146.33,
+    "heat_capacity_j_molk": 20.786,
+    "specific_heat_j_gK": 1.03,
+    "latent_heat_fusion_kj_mol": 0.335,
+    "latent_heat_vaporization_kj_mol": 1.71,
+    "fusion_heat_kj_mol": 0.3317,
+    "evaporation_heat_kj_mol": 1.71
+  },
+  "kinetics_and_phase": {
+    "vapor_pressure_constants": {
+      "A": 3.941,
+      "B": 105.4,
+      "C": -1.9
+    },
+    "vapor_pressure_pa": null,
+    "viscosity_liquid_pas": 0.000124,
+    "viscosity_pa_s": 3.13e-05,
+    "critical_temp_K": 44.4,
+    "critical_press_MPa": 2.76,
+    "surface_tension_nm": 0.0048
+  },
+  "electromagnetism_and_mechanics": {
+    "thermal_conductivity_wmk": 0.0491,
+    "electrical_conductivity_sm": 0,
+    "magnetic_susceptibility": -6.96e-06,
+    "thermal_expansion_coefficient": null,
+    "polarizability_angstrom3": 0.3956,
+    "refractive_index": 1.000067,
+    "youngs_modulus_gba": null,
+    "poisson_ratio": null,
+    "brinell_hardness_m_pa": null
+  },
+  "reactivity": {
+    "max_bonds": 0,
+    "geometry_preference_es": null,
+    "geometry_preference_eng": null,
+    "ideal_bond_angle": null,
+    "bond_energy_ev": 0,
+    "dissociation_energy_kj_mol": null,
+    "standard_potential_v": null,
+    "oxidation_states": [
+      0
+    ],
+    "common_ions": null
+  },
+  "nuclear_and_environmental": {
+    "isotopes": [
+      {
+        "mass": 19.992,
+        "abundance": 90.48,
+        "stable": true,
+        "name_es": "Neón-20",
+        "name_eng": "Neon-20"
+      },
+      {
+        "mass": 20.993,
+        "abundance": 0.27,
+        "stable": true,
+        "name_es": "Neón-21",
+        "name_eng": "Neon-21"
+      },
+      {
+        "mass": 21.991,
+        "abundance": 9.25,
+        "stable": true,
+        "name_es": "Neón-22",
+        "name_eng": "Neon-22"
+      }
+    ],
+    "neutron_cross_section_barns": 0.04,
+    "nuclear_binding_energy_mev": 8.032,
+    "abundance_crust_mg_kg": 0.005,
+    "toxicity_level": 0
+  },
+  "cryogenic_data": {
+    "critical_solidification_pressure_mpa": null,
+    "lambda_point_k": null,
+    "superfluid_viscosity_pas": null
+  }
+}

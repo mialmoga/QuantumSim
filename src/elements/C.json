@@ -1,0 +1,140 @@
+{
+  "symbol": "C",
+  "identity": {
+    "name_es": "Carbono",
+    "name_eng": "Carbon",
+    "number": 6,
+    "category_es": "No metal reactivo",
+    "category_eng": "Reactive nonmetal",
+    "color": "0x2A2A2A",
+    "cpk_color": "0x909090",
+    "discovery_year": "Antigüedad"
+  },
+  "physical_properties": {
+    "mass": 12.011,
+    "density_g_cm3": 2.267,
+    "standard_state_es": "Sólido",
+    "standard_state_eng": "Solid",
+    "melt_K": 3823,
+    "boil_K": 4300,
+    "allotropes_es": [
+      "Grafito",
+      "Diamante",
+      "Grafeno",
+      "Fullereno",
+      "Nanotubos"
+    ],
+    "allotropes_eng": [
+      "Graphite",
+      "Diamond",
+      "Graphene",
+      "Fullerene",
+      "Nanotubes"
+    ],
+    "lattice_structure": "diamond_cubic"
+  },
+  "atomic_structure": {
+    "electronegativity": 2.55,
+    "valence": 4,
+    "ionization_energy_eV": 11.2603,
+    "electron_affinity_ev": 1.2621,
+    "electron_affinity_kj_mol": 121.8,
+    "radius_atomic_pm": 70,
+    "radius_covalent_pm": 77,
+    "vanderwaals_radius_pm": 170,
+    "ionic_radius_pm": 16,
+    "effective_nuclear_charge": 2.82,
+    "electron_configuration_string": "1s2 2s2 2p2",
+    "shells": [
+      2,
+      4
+    ],
+    "quantum_numbers": {
+      "s": 1,
+      "p": 1,
+      "d": 0,
+      "f": 0
+    },
+    "work_function_ev": 5
+  },
+  "thermodynamics": {
+    "enthalpy_formation_kj_mol": 0,
+    "entropy_j_molk": 5.74,
+    "heat_capacity_j_molk": 8.517,
+    "specific_heat_j_gK": 0.709,
+    "latent_heat_fusion_kj_mol": 117,
+    "latent_heat_vaporization_kj_mol": 715,
+    "fusion_heat_kj_mol": 105,
+    "evaporation_heat_kj_mol": 715
+  },
+  "kinetics_and_phase": {
+    "vapor_pressure_constants": null,
+    "vapor_pressure_pa": null,
+    "viscosity_liquid_pas": null,
+    "viscosity_pa_s": null,
+    "critical_temp_K": 6810,
+    "critical_press_MPa": null,
+    "surface_tension_nm": null
+  },
+  "electromagnetism_and_mechanics": {
+    "thermal_conductivity_wmk": 140,
+    "electrical_conductivity_sm": 0.001,
+    "magnetic_susceptibility": -6e-06,
+    "thermal_expansion_coefficient": 7.1e-06,
+    "polarizability_angstrom3": 1.76,
+    "refractive_index": 2.417,
+    "youngs_modulus_gba": 1050,
+    "poisson_ratio": 0.1,
+    "brinell_hardness_m_pa": 10000
+  },
+  "reactivity": {
+    "max_bonds": 4,
+    "geometry_preference_es": "Tetraédrica",
+    "geometry_preference_eng": "Tetrahedral",
+    "ideal_bond_angle": 109.5,
+    "bond_energy_ev": 3.6,
+    "dissociation_energy_kj_mol": 348,
+    "standard_potential_v": null,
+    "oxidation_states": [
+      4,
+      2,
+      -4
+    ],
+    "common_ions": null
+  },
+  "nuclear_and_environmental": {
+    "isotopes": [
+      {
+        "mass": 12,
+        "abundance": 98.93,
+        "stable": true,
+        "name_es": "Carbono-12",
+        "name_eng": "Carbon-12"
+      },
+      {
+        "mass": 13.003,
+        "abundance": 1.07,
+        "stable": true,
+        "name_es": "Carbono-13",
+        "name_eng": "Carbon-13"
+      },
+      {
+        "mass": 14.003,
+        "abundance": 0,
+        "stable": false,
+        "half_life_s": 181000000000,
+        "name_es": "Carbono-14",
+        "name_eng": "Carbon-14"
+      }
+    ],
+    "neutron_cross_section_barns": 0.0035,
+    "nuclear_binding_energy_mev": 7.68,
+    "abundance_crust_mg_kg": 200,
+    "toxicity_level": 0
+  },
+  "cryogenic_data": {
+    "critical_solidification_pressure_mpa": null,
+    "lambda_point_k": null,
+    "superfluid_viscosity_pas": null
+  }
+}

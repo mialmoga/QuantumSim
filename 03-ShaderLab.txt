@@ -1,0 +1,11 @@
+Abrir el QSim, elegir cualquier resolucion.
+En el dock inferior hay un boton con una paleta de pintura, este boton abre el ShaderLab, esta diseñado pata funcionar en vertical.
+
+Al lado del header hay un botón con un punto, ha ilita el modo desarrollo, es importante para poblar la carpeta de materiales por primera vez, una vez que ya se han creado los parametros (la carpeta material_params debe tener un json por elemento con los patametros actualizados de la base de datos de elementos) una vez ahi, si se quiere hacer algun ajuste a alguno de los materiales este es el momento ideal, aunque no se recomienda, ya que los parametros son relativos a propiedades fisicas, en todo caso lo mejor seria que el algoritmo aprenda primero cono son los materiales y despues enteenarle con el gusto personal agregando nuevos materiales (personalizados) en la carpeta ShaderLab/custom/
+
+Una vez ahi solo hay que presionar el boton ↓zip 
+al descomprimir el archivo tendremos una carpeta llamada materials/ 
+
+esta carpeta debe ir en src/ 
+
+Una vez que src/materials/index.json y todos los json de los materiales esten ahi, ya estaran compilados y listos para ser visualizados en el Quantum Chemistry Simulator 

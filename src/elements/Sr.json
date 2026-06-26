@@ -1,0 +1,157 @@
+{
+  "symbol": "Sr",
+  "identity": {
+    "name_es": "Estroncio",
+    "name_eng": "Strontium",
+    "number": 38,
+    "category_es": "Metal alcalinotérreo",
+    "category_eng": "Alkaline earth metal",
+    "color": "0xC8C8B0",
+    "cpk_color": "0x00FF00",
+    "discovery_year": "1787"
+  },
+  "physical_properties": {
+    "mass": 87.62,
+    "density_g_cm3": 2.64,
+    "standard_state_es": "Sólido",
+    "standard_state_eng": "Solid",
+    "melt_K": 1050,
+    "boil_K": 1655,
+    "allotropes_es": [
+      "Alfa (fcc)",
+      "Beta (hcp)",
+      "Gamma (bcc)"
+    ],
+    "allotropes_eng": [
+      "Alpha (fcc)",
+      "Beta (hcp)",
+      "Gamma (bcc)"
+    ],
+    "lattice_structure": "fcc"
+  },
+  "atomic_structure": {
+    "electronegativity": 0.95,
+    "valence": 2,
+    "ionization_energy_eV": 5.6949,
+    "electron_affinity_ev": 0.052,
+    "electron_affinity_kj_mol": 5,
+    "radius_atomic_pm": 215,
+    "radius_covalent_pm": 192,
+    "vanderwaals_radius_pm": 249,
+    "ionic_radius_pm": 118,
+    "effective_nuclear_charge": 5.385,
+    "electron_configuration_string": "[Kr] 5s2",
+    "shells": [
+      2,
+      8,
+      18,
+      8,
+      2
+    ],
+    "quantum_numbers": {
+      "s": 2,
+      "p": 0,
+      "d": 0,
+      "f": 0
+    },
+    "work_function_ev": 2.59
+  },
+  "thermodynamics": {
+    "enthalpy_formation_kj_mol": 0,
+    "entropy_j_molk": 52.3,
+    "heat_capacity_j_molk": 26.4,
+    "specific_heat_j_gK": 0.301,
+    "latent_heat_fusion_kj_mol": 7.43,
+    "latent_heat_vaporization_kj_mol": 136.9,
+    "fusion_heat_kj_mol": 8,
+    "evaporation_heat_kj_mol": 144
+  },
+  "kinetics_and_phase": {
+    "vapor_pressure_constants": {
+      "A": 5,
+      "B": 7550,
+      "C": -10
+    },
+    "vapor_pressure_pa": null,
+    "viscosity_liquid_pas": null,
+    "viscosity_pa_s": null,
+    "critical_temp_K": null,
+    "critical_press_MPa": null,
+    "surface_tension_nm": 0.395
+  },
+  "electromagnetism_and_mechanics": {
+    "thermal_conductivity_wmk": 35.4,
+    "electrical_conductivity_sm": 7700000,
+    "magnetic_susceptibility": 1.04e-06,
+    "thermal_expansion_coefficient": 2.25e-05,
+    "polarizability_angstrom3": 27.6,
+    "refractive_index": null,
+    "youngs_modulus_gba": 15.7,
+    "poisson_ratio": 0.28,
+    "brinell_hardness_m_pa": null
+  },
+  "reactivity": {
+    "max_bonds": 2,
+    "geometry_preference_es": "Lineal / Octaédrica",
+    "geometry_preference_eng": "Linear / Octahedral",
+    "ideal_bond_angle": 180,
+    "bond_energy_ev": 1.7,
+    "dissociation_energy_kj_mol": 165,
+    "standard_potential_v": -2.89,
+    "oxidation_states": [
+      2
+    ],
+    "common_ions": [
+      "Sr2+"
+    ]
+  },
+  "nuclear_and_environmental": {
+    "isotopes": [
+      {
+        "mass": 83.913,
+        "abundance": 0.56,
+        "stable": true,
+        "name_es": "Estroncio-84",
+        "name_eng": "Strontium-84"
+      },
+      {
+        "mass": 85.909,
+        "abundance": 9.86,
+        "stable": true,
+        "name_es": "Estroncio-86",
+        "name_eng": "Strontium-86"
+      },
+      {
+        "mass": 86.908,
+        "abundance": 7,
+        "stable": true,
+        "name_es": "Estroncio-87",
+        "name_eng": "Strontium-87"
+      },
+      {
+        "mass": 87.905,
+        "abundance": 82.58,
+        "stable": true,
+        "name_es": "Estroncio-88",
+        "name_eng": "Strontium-88"
+      },
+      {
+        "mass": 89.907,
+        "abundance": null,
+        "stable": false,
+        "half_life_s": 912384000,
+        "name_es": "Estroncio-90",
+        "name_eng": "Strontium-90"
+      }
+    ],
+    "neutron_cross_section_barns": 1.28,
+    "nuclear_binding_energy_mev": 8.733,
+    "abundance_crust_mg_kg": 370,
+    "toxicity_level": 1
+  },
+  "cryogenic_data": {
+    "critical_solidification_pressure_mpa": null,
+    "lambda_point_k": null,
+    "superfluid_viscosity_pas": null
+  }
+}

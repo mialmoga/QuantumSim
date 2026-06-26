@@ -1,0 +1,166 @@
+{
+  "symbol": "Ru",
+  "identity": {
+    "name_es": "Rutenio",
+    "name_eng": "Ruthenium",
+    "number": 44,
+    "category_es": "Metal de transición",
+    "category_eng": "Transition metal",
+    "color": "0xB0B0B0",
+    "cpk_color": "0x248F8F",
+    "discovery_year": "1844"
+  },
+  "physical_properties": {
+    "mass": 101.07,
+    "density_g_cm3": 12.45,
+    "standard_state_es": "Sólido",
+    "standard_state_eng": "Solid",
+    "melt_K": 2606,
+    "boil_K": 4423,
+    "allotropes_es": null,
+    "allotropes_eng": null,
+    "lattice_structure": "hcp"
+  },
+  "atomic_structure": {
+    "electronegativity": 2.2,
+    "valence": 8,
+    "ionization_energy_eV": 7.3605,
+    "electron_affinity_ev": 1.05,
+    "electron_affinity_kj_mol": 101.3,
+    "radius_atomic_pm": 134,
+    "radius_covalent_pm": 146,
+    "vanderwaals_radius_pm": 207,
+    "ionic_radius_pm": 62,
+    "effective_nuclear_charge": 5.43,
+    "electron_configuration_string": "[Kr] 4d7 5s1",
+    "shells": [
+      2,
+      8,
+      18,
+      15,
+      1
+    ],
+    "quantum_numbers": {
+      "s": 1,
+      "p": 0,
+      "d": 7,
+      "f": 0
+    },
+    "work_function_ev": 4.71
+  },
+  "thermodynamics": {
+    "enthalpy_formation_kj_mol": 0,
+    "entropy_j_molk": 28.5,
+    "heat_capacity_j_molk": 24.06,
+    "specific_heat_j_gK": 0.238,
+    "latent_heat_fusion_kj_mol": 25.7,
+    "latent_heat_vaporization_kj_mol": 595,
+    "fusion_heat_kj_mol": 24,
+    "evaporation_heat_kj_mol": 567
+  },
+  "kinetics_and_phase": {
+    "vapor_pressure_constants": {
+      "A": 5.1,
+      "B": 27500,
+      "C": -10
+    },
+    "vapor_pressure_pa": null,
+    "viscosity_liquid_pas": null,
+    "viscosity_pa_s": null,
+    "critical_temp_K": null,
+    "critical_press_MPa": null,
+    "surface_tension_nm": 2.25
+  },
+  "electromagnetism_and_mechanics": {
+    "thermal_conductivity_wmk": 117,
+    "electrical_conductivity_sm": 13700000,
+    "magnetic_susceptibility": 4.32e-05,
+    "thermal_expansion_coefficient": 6.4e-06,
+    "polarizability_angstrom3": 9.6,
+    "refractive_index": null,
+    "youngs_modulus_gba": 447,
+    "poisson_ratio": 0.3,
+    "brinell_hardness_m_pa": 2160
+  },
+  "reactivity": {
+    "max_bonds": 8,
+    "geometry_preference_es": "Octaédrica / Tetraédrica",
+    "geometry_preference_eng": "Octahedral / Tetrahedral",
+    "ideal_bond_angle": null,
+    "bond_energy_ev": null,
+    "dissociation_energy_kj_mol": null,
+    "standard_potential_v": 0.45,
+    "oxidation_states": [
+      8,
+      6,
+      4,
+      3
+    ],
+    "common_ions": [
+      "Ru4+",
+      "Ru3+"
+    ]
+  },
+  "nuclear_and_environmental": {
+    "isotopes": [
+      {
+        "mass": 95.907,
+        "abundance": 5.54,
+        "stable": true,
+        "name_es": "Rutenio-96",
+        "name_eng": "Ruthenium-96"
+      },
+      {
+        "mass": 97.905,
+        "abundance": 1.87,
+        "stable": true,
+        "name_es": "Rutenio-98",
+        "name_eng": "Ruthenium-98"
+      },
+      {
+        "mass": 98.905,
+        "abundance": 12.76,
+        "stable": true,
+        "name_es": "Rutenio-99",
+        "name_eng": "Ruthenium-99"
+      },
+      {
+        "mass": 99.904,
+        "abundance": 12.6,
+        "stable": true,
+        "name_es": "Rutenio-100",
+        "name_eng": "Ruthenium-100"
+      },
+      {
+        "mass": 100.905,
+        "abundance": 17.06,
+        "stable": true,
+        "name_es": "Rutenio-101",
+        "name_eng": "Ruthenium-101"
+      },
+      {
+        "mass": 101.904,
+        "abundance": 31.55,
+        "stable": true,
+        "name_es": "Rutenio-102",
+        "name_eng": "Ruthenium-102"
+      },
+      {
+        "mass": 103.905,
+        "abundance": 18.62,
+        "stable": true,
+        "name_es": "Rutenio-104",
+        "name_eng": "Ruthenium-104"
+      }
+    ],
+    "neutron_cross_section_barns": 2.56,
+    "nuclear_binding_energy_mev": 8.636,
+    "abundance_crust_mg_kg": 0.001,
+    "toxicity_level": 2
+  },
+  "cryogenic_data": {
+    "critical_solidification_pressure_mpa": null,
+    "lambda_point_k": 0.49,
+    "superfluid_viscosity_pas": null
+  }
+}

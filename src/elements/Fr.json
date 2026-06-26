@@ -1,0 +1,131 @@
+{
+  "symbol": "Fr",
+  "identity": {
+    "name_es": "Francio",
+    "name_eng": "Francium",
+    "number": 87,
+    "category_es": "Metal alcalino",
+    "category_eng": "Alkali metal",
+    "color": "0xB0B0B0",
+    "cpk_color": "0x420066",
+    "discovery_year": "1939"
+  },
+  "physical_properties": {
+    "mass": 223.02,
+    "density_g_cm3": 1.87,
+    "standard_state_es": "Sólido (predicho)",
+    "standard_state_eng": "Solid (predicted)",
+    "melt_K": 300,
+    "boil_K": 950,
+    "allotropes_es": null,
+    "allotropes_eng": null,
+    "lattice_structure": "bcc (predicho)"
+  },
+  "atomic_structure": {
+    "electronegativity": 0.7,
+    "valence": 1,
+    "ionization_energy_eV": 4.0727,
+    "electron_affinity_ev": 0.456,
+    "electron_affinity_kj_mol": 44,
+    "radius_atomic_pm": 260,
+    "radius_covalent_pm": 242,
+    "vanderwaals_radius_pm": 348,
+    "ionic_radius_pm": 180,
+    "effective_nuclear_charge": 6.3,
+    "electron_configuration_string": "[Rn] 7s1",
+    "shells": [
+      2,
+      8,
+      18,
+      32,
+      18,
+      8,
+      1
+    ],
+    "quantum_numbers": {
+      "s": 1,
+      "p": 0,
+      "d": 0,
+      "f": 0
+    },
+    "work_function_ev": null
+  },
+  "thermodynamics": {
+    "enthalpy_formation_kj_mol": null,
+    "entropy_j_molk": 95,
+    "heat_capacity_j_molk": 31.8,
+    "specific_heat_j_gK": null,
+    "latent_heat_fusion_kj_mol": 2,
+    "latent_heat_vaporization_kj_mol": 65,
+    "fusion_heat_kj_mol": 15,
+    "evaporation_heat_kj_mol": 65
+  },
+  "kinetics_and_phase": {
+    "vapor_pressure_constants": {
+      "A": null,
+      "B": null,
+      "C": null
+    },
+    "vapor_pressure_pa": null,
+    "viscosity_liquid_pas": null,
+    "viscosity_pa_s": null,
+    "critical_temp_K": null,
+    "critical_press_MPa": null,
+    "surface_tension_nm": null
+  },
+  "electromagnetism_and_mechanics": {
+    "thermal_conductivity_wmk": 15,
+    "electrical_conductivity_sm": 3000000,
+    "magnetic_susceptibility": null,
+    "thermal_expansion_coefficient": null,
+    "polarizability_angstrom3": 48,
+    "refractive_index": null,
+    "youngs_modulus_gba": null,
+    "poisson_ratio": null,
+    "brinell_hardness_m_pa": null
+  },
+  "reactivity": {
+    "max_bonds": 1,
+    "geometry_preference_es": "Lineal",
+    "geometry_preference_eng": "Linear",
+    "ideal_bond_angle": 180,
+    "bond_energy_ev": null,
+    "dissociation_energy_kj_mol": null,
+    "standard_potential_v": -2.9,
+    "oxidation_states": [
+      1
+    ],
+    "common_ions": [
+      "Fr+"
+    ]
+  },
+  "nuclear_and_environmental": {
+    "isotopes": [
+      {
+        "mass": 223.02,
+        "abundance": null,
+        "stable": false,
+        "half_life_s": 1308,
+        "name_es": "Francio-223",
+        "name_eng": "Francium-223"
+      },
+      {
+        "mass": 212,
+        "abundance": null,
+        "stable": false,
+        "half_life_s": 1158,
+        "name_es": "Francio-212",
+        "name_eng": "Francium-212"
+      }
+    ],
+    "neutron_cross_section_barns": null,
+    "nuclear_binding_energy_mev": 7.68,
+    "abundance_crust_mg_kg": 1e-18,
+    "toxicity_level": 5
+  },
+  "cryogenic_data": {
+    "critical_solidification_pressure_mpa": null,
+    "lambda_point_k": null,
+    "superfluid_viscosity_pas": null
+  }
+}

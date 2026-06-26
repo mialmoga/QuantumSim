@@ -1,0 +1,48 @@
+{
+  "symbol": "Ti",
+  "generated_by": "generate_materials.py v1.2 (Stevens perceptual)",
+  "source_props": {
+    "mass": 47.867,
+    "melt_K": 1941,
+    "density": 4.506,
+    "ionization_eV": 6.8281,
+    "electronegativity": 1.54,
+    "polarizability": 14.6,
+    "standard_state": "Solid"
+  },
+  "shader_params": {
+    "sphere_pulse": {
+      "freq": 1.445,
+      "amp": 0.304
+    },
+    "blink": {
+      "amp": 0.0,
+      "speed": 0.434
+    },
+    "brightness": {
+      "bright": 0.999,
+      "base": 0.3,
+      "vari": 0.0
+    },
+    "disc_shape": {
+      "soft": 0.348,
+      "radius": 0.22,
+      "ring": 0.0
+    },
+    "point_size": {
+      "sz": 0.361,
+      "bAmp": 0.0,
+      "persp": 64.9
+    },
+    "alpha_curve": {
+      "opacity": 0.876,
+      "curve": 1.062,
+      "floor": 0.0
+    },
+    "color": {
+      "r": 0.6902,
+      "g": 0.6902,
+      "b": 0.7216
+    }
+  }
+}

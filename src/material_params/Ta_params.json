@@ -1,0 +1,48 @@
+{
+  "symbol": "Ta",
+  "generated_by": "generate_materials.py v1.2 (Stevens perceptual)",
+  "source_props": {
+    "mass": 180.947,
+    "melt_K": 3290,
+    "density": 16.69,
+    "ionization_eV": 7.5496,
+    "electronegativity": 1.5,
+    "polarizability": 13.1,
+    "standard_state": "Solid"
+  },
+  "shader_params": {
+    "sphere_pulse": {
+      "freq": 0.743,
+      "amp": 0.284
+    },
+    "blink": {
+      "amp": 0.0,
+      "speed": 0.223
+    },
+    "brightness": {
+      "bright": 1.126,
+      "base": 0.3,
+      "vari": 0.0
+    },
+    "disc_shape": {
+      "soft": 0.352,
+      "radius": 0.22,
+      "ring": 0.0
+    },
+    "point_size": {
+      "sz": 0.355,
+      "bAmp": 0.0,
+      "persp": 73.0
+    },
+    "alpha_curve": {
+      "opacity": 0.977,
+      "curve": 1.012,
+      "floor": 0.0
+    },
+    "color": {
+      "r": 0.6588,
+      "g": 0.6588,
+      "b": 0.6902
+    }
+  }
+}

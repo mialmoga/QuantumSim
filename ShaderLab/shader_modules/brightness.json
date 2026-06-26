@@ -1,0 +1,40 @@
+{
+  "id": "brightness",
+  "name": "Brillo",
+  "stage": "frag",
+  "target": [
+    "orbital",
+    "sphere"
+  ],
+  "color": "#fb923c",
+  "desc": "Modulaci\u00f3n de brillo base con varianza por vBlink",
+  "sub": "col = uColor \u00b7 bright \u00b7 (base + blink\u00b7var)",
+  "params": {
+    "bright": {
+      "label": "Brillo",
+      "min": 0.0,
+      "max": 10.0,
+      "step": 0.1,
+      "val": 1.0
+    },
+    "base": {
+      "label": "Base",
+      "min": 0.3,
+      "max": 1.0,
+      "step": 0.01,
+      "val": 0.3
+    },
+    "vari": {
+      "label": "Varianza",
+      "min": 0.0,
+      "max": 0.5,
+      "step": 0.01,
+      "val": 0.0
+    }
+  },
+  "glsl": "col=uColor*({{bright}}*({{base}}+vBlink*{{vari}}));",
+  "requires": [],
+  "provides": [
+    "col"
+  ]
+}

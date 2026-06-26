@@ -1,0 +1,48 @@
+{
+  "symbol": "Ga",
+  "generated_by": "generate_materials.py v1.2 (Stevens perceptual)",
+  "source_props": {
+    "mass": 69.723,
+    "melt_K": 302.91,
+    "density": 5.91,
+    "ionization_eV": 5.9993,
+    "electronegativity": 1.81,
+    "polarizability": 8.1,
+    "standard_state": "Solid"
+  },
+  "shader_params": {
+    "sphere_pulse": {
+      "freq": 1.198,
+      "amp": 0.4
+    },
+    "blink": {
+      "amp": 0.0,
+      "speed": 0.359
+    },
+    "brightness": {
+      "bright": 0.837,
+      "base": 0.3,
+      "vari": 0.0
+    },
+    "disc_shape": {
+      "soft": 0.315,
+      "radius": 0.22,
+      "ring": 0.0
+    },
+    "point_size": {
+      "sz": 0.334,
+      "bAmp": 0.0,
+      "persp": 61.2
+    },
+    "alpha_curve": {
+      "opacity": 0.897,
+      "curve": 1.052,
+      "floor": 0.0
+    },
+    "color": {
+      "r": 0.7843,
+      "g": 0.7843,
+      "b": 0.8157
+    }
+  }
+}

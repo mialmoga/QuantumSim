@@ -1,0 +1,129 @@
+{
+  "symbol": "Md",
+  "identity": {
+    "name_es": "Mendelevio",
+    "name_eng": "Mendelevium",
+    "number": 101,
+    "category_es": "Actínido",
+    "category_eng": "Actinide",
+    "color": "0xA0A0A0",
+    "cpk_color": "0xB31F8E",
+    "discovery_year": "1955"
+  },
+  "physical_properties": {
+    "mass": 258.1,
+    "density_g_cm3": 10.3,
+    "standard_state_es": "Sólido (predicho)",
+    "standard_state_eng": "Solid (predicted)",
+    "melt_K": 1100,
+    "boil_K": 1450,
+    "allotropes_es": null,
+    "allotropes_eng": null,
+    "lattice_structure": "fcc (predicho)"
+  },
+  "atomic_structure": {
+    "electronegativity": 1.3,
+    "valence": 3,
+    "ionization_energy_eV": 6.58,
+    "electron_affinity_ev": null,
+    "electron_affinity_kj_mol": null,
+    "radius_atomic_pm": 194,
+    "radius_covalent_pm": 182,
+    "vanderwaals_radius_pm": 246,
+    "ionic_radius_pm": 89.1,
+    "effective_nuclear_charge": 6.3,
+    "electron_configuration_string": "[Rn] 5f13 7s2",
+    "shells": [
+      2,
+      8,
+      18,
+      32,
+      31,
+      8,
+      2
+    ],
+    "quantum_numbers": {
+      "s": 2,
+      "p": 0,
+      "d": 0,
+      "f": 13
+    },
+    "work_function_ev": null
+  },
+  "thermodynamics": {
+    "enthalpy_formation_kj_mol": 0,
+    "entropy_j_molk": null,
+    "heat_capacity_j_molk": 28,
+    "specific_heat_j_gK": 0.11,
+    "latent_heat_fusion_kj_mol": 10,
+    "latent_heat_vaporization_kj_mol": 130,
+    "fusion_heat_kj_mol": 10,
+    "evaporation_heat_kj_mol": 130
+  },
+  "kinetics_and_phase": {
+    "vapor_pressure_constants": {
+      "A": null,
+      "B": null,
+      "C": null
+    },
+    "vapor_pressure_pa": null,
+    "viscosity_liquid_pas": null,
+    "viscosity_pa_s": null,
+    "critical_temp_K": null,
+    "critical_press_MPa": null,
+    "surface_tension_nm": null
+  },
+  "electromagnetism_and_mechanics": {
+    "thermal_conductivity_wmk": 10,
+    "electrical_conductivity_sm": null,
+    "magnetic_susceptibility": null,
+    "thermal_expansion_coefficient": null,
+    "polarizability_angstrom3": 19.5,
+    "refractive_index": null,
+    "youngs_modulus_gba": null,
+    "poisson_ratio": null,
+    "brinell_hardness_m_pa": null
+  },
+  "reactivity": {
+    "max_bonds": 3,
+    "geometry_preference_es": "Variable",
+    "geometry_preference_eng": "Variable",
+    "ideal_bond_angle": null,
+    "bond_energy_ev": 1.5,
+    "dissociation_energy_kj_mol": null,
+    "standard_potential_v": -1.6,
+    "oxidation_states": [
+      3,
+      2,
+      1
+    ],
+    "common_ions": [
+      "Md3+",
+      "Md2+"
+    ]
+  },
+  "nuclear_and_environmental": {
+    "isotopes": [
+      {
+        "mass": 258.1,
+        "abundance": null,
+        "stable": false,
+        "half_life_s": 4449600,
+        "name_es": "Mendelevio-258",
+        "name_eng": "Mendelevium-258"
+      },
+      {
+        "mass": 260.1,
+        "abundance": null,
+        "stable": false,
+        "half_life_s": 2700,
+        "name_es": "Mendelevio-260",
+        "name_eng": "Mendelevium-260"
+      }
+    ],
+    "neutron_cross_section_barns": null,
+    "nuclear_binding_energy_mev": 7.35,
+    "abundance_crust_mg_kg": 0,
+    "toxicity_level": 5
+  }
+}

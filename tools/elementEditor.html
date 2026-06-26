@@ -1,0 +1,1106 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>⚛ Element Editor — QuantumSim</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&family=Syne:wght@400;600;800&display=swap');
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+:root {
+  --bg:        #080b10;
+  --bg2:       #0d1117;
+  --bg3:       #131920;
+  --border:    rgba(100,180,255,0.10);
+  --border2:   rgba(100,180,255,0.18);
+  --accent:    #3bf0e4;
+  --accent2:   #7c6fff;
+  --red:       #ff4d6a;
+  --yellow:    #ffd060;
+  --green:     #4dffb4;
+  --text1:     rgba(220,240,255,0.92);
+  --text2:     rgba(160,200,240,0.45);
+  --text3:     rgba(120,160,200,0.28);
+  --mono:      'JetBrains Mono', monospace;
+  --sans:      'Syne', sans-serif;
+  --r:         4px;
+  --transition: 0.18s cubic-bezier(0.4,0,0.2,1);
+}
+
+html, body { height: 100%; overflow: hidden; background: var(--bg); color: var(--text1); font-family: var(--sans); }
+
+/* ── LAYOUT ───────────────────────────────────────── */
+.app { display: grid; grid-template-rows: 48px 1fr 36px; height: 100vh; }
+
+/* ── HEADER ───────────────────────────────────────── */
+header {
+  display: flex; align-items: center; gap: 12px;
+  padding: 0 16px;
+  background: var(--bg2);
+  border-bottom: 1px solid var(--border);
+  z-index: 100;
+}
+.logo { font-weight: 800; font-size: 13px; letter-spacing: 0.05em; color: var(--accent); white-space: nowrap; }
+.logo span { color: var(--text3); font-weight: 400; }
+.h-prog { flex: 1; display: flex; align-items: center; gap: 8px; min-width: 0; }
+.h-bar { flex: 1; height: 2px; background: var(--border); border-radius: 1px; overflow: hidden; }
+.h-fill { height: 100%; background: linear-gradient(90deg, var(--accent), var(--accent2)); border-radius: 1px; transition: width 0.4s; }
+.h-lbl { font-family: var(--mono); font-size: 10px; color: var(--text3); white-space: nowrap; }
+.h-btn {
+  padding: 0 12px; height: 30px; border: 1px solid var(--border2);
+  background: transparent; color: var(--text2); font-family: var(--sans);
+  font-size: 11px; letter-spacing: 0.06em; cursor: pointer;
+  transition: var(--transition); white-space: nowrap;
+}
+.h-btn:hover { background: rgba(59,240,228,0.07); border-color: var(--accent); color: var(--accent); }
+.h-btn.primary { background: rgba(59,240,228,0.10); border-color: var(--accent); color: var(--accent); }
+.h-btn.primary:hover { background: rgba(59,240,228,0.20); }
+
+/* ── BODY ─────────────────────────────────────────── */
+.body { display: grid; grid-template-columns: 220px 1fr 300px; overflow: hidden; }
+
+/* ── SIDEBAR ──────────────────────────────────────── */
+aside {
+  background: var(--bg2); border-right: 1px solid var(--border);
+  display: flex; flex-direction: column; overflow: hidden;
+}
+.sb-search { padding: 8px; border-bottom: 1px solid var(--border); }
+.sb-search input {
+  width: 100%; padding: 6px 10px; background: var(--bg3);
+  border: 1px solid var(--border); color: var(--text1);
+  font-family: var(--mono); font-size: 11px; outline: none;
+}
+.sb-search input:focus { border-color: var(--accent); }
+.sb-list { flex: 1; overflow-y: auto; scrollbar-width: thin; scrollbar-color: var(--border) transparent; }
+.ei {
+  display: flex; align-items: center; gap: 6px;
+  padding: 5px 10px; cursor: pointer; border-left: 2px solid transparent;
+  transition: var(--transition); user-select: none; min-height: 32px;
+}
+.ei:hover { background: rgba(59,240,228,0.04); }
+.ei.active { background: rgba(59,240,228,0.08); border-left-color: var(--accent); }
+.ei.loaded  { border-left-color: var(--accent2); }
+.ei.loaded.active { border-left-color: var(--accent); }
+.ei.no-file .ei-s { color: var(--red); font-size: 9px; }
+.ei.has-file .ei-s { color: var(--green); font-size: 9px; }
+.ei-n    { font-family: var(--mono); font-size: 9px; color: var(--text3); width: 24px; text-align: right; flex-shrink: 0; }
+.ei-sym  { font-family: var(--mono); font-size: 12px; font-weight: 700; width: 26px; flex-shrink: 0; }
+.ei-nm   { font-size: 10px; color: var(--text2); flex: 1; min-width: 0; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.ei-s    { flex-shrink: 0; font-size: 10px; }
+.group-tag {
+  font-family: var(--mono); font-size: 7px; letter-spacing: 0.06em;
+  padding: 1px 4px; border-radius: 2px; flex-shrink: 0;
+  background: rgba(120,160,200,0.08); color: var(--text3);
+  text-transform: uppercase; max-width: 44px; overflow: hidden;
+  text-overflow: ellipsis; white-space: nowrap;
+}
+
+/* ── MAIN ─────────────────────────────────────────── */
+main {
+  display: flex; flex-direction: column; overflow: hidden;
+  background: var(--bg);
+}
+.m-top {
+  display: flex; align-items: center; gap: 12px;
+  padding: 10px 16px; border-bottom: 1px solid var(--border);
+  background: var(--bg2); flex-shrink: 0;
+}
+.m-badge {
+  display: flex; flex-direction: column; align-items: center; justify-content: center;
+  width: 52px; height: 52px; border: 1px solid var(--border2); flex-shrink: 0;
+}
+.m-badge-n { font-family: var(--mono); font-size: 9px; color: var(--text3); line-height: 1; }
+.m-badge-s { font-family: var(--mono); font-size: 22px; font-weight: 700; line-height: 1.1; }
+.m-info { flex: 1; min-width: 0; }
+.m-info h2 { font-size: 16px; font-weight: 800; line-height: 1; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.m-info p  { font-size: 10px; color: var(--text2); margin-top: 3px; }
+.m-colors { display: flex; gap: 4px; align-items: center; margin-top: 5px; }
+.m-color-swatch {
+  width: 18px; height: 18px; border-radius: 50%;
+  border: 1px solid rgba(255,255,255,0.15); flex-shrink: 0;
+  cursor: pointer; transition: transform 0.12s;
+}
+.m-color-swatch:hover { transform: scale(1.2); }
+.m-color-label { font-family: var(--mono); font-size: 8px; color: var(--text3); }
+.m-acts { display: flex; gap: 6px; margin-left: auto; flex-shrink: 0; }
+.btn {
+  padding: 0 12px; height: 32px; border: 1px solid var(--border2);
+  background: transparent; color: var(--text2); font-family: var(--sans);
+  font-size: 11px; letter-spacing: 0.05em; cursor: pointer; transition: var(--transition);
+}
+.btn:hover { background: rgba(255,255,255,0.04); border-color: var(--border2); color: var(--text1); }
+.btn-s { background: rgba(77,255,180,0.08); border-color: var(--green); color: var(--green); }
+.btn-s:hover { background: rgba(77,255,180,0.18); }
+.btn-s:disabled { opacity: 0.3; cursor: default; }
+.btn-dl { background: rgba(124,111,255,0.08); border-color: var(--accent2); color: var(--accent2); }
+.btn-dl:hover { background: rgba(124,111,255,0.18); }
+
+/* ── TABS ─────────────────────────────────────────── */
+.m-tabs { display: flex; border-bottom: 1px solid var(--border); flex-shrink: 0; }
+.tab {
+  padding: 0 16px; height: 36px; display: flex; align-items: center;
+  font-size: 11px; letter-spacing: 0.06em; cursor: pointer; color: var(--text3);
+  border-bottom: 2px solid transparent; margin-bottom: -1px; transition: var(--transition);
+}
+.tab:hover { color: var(--text2); }
+.tab.active { color: var(--accent); border-bottom-color: var(--accent); }
+
+/* ── FORM FIELDS ──────────────────────────────────── */
+.m-body {
+  flex: 1; overflow-y: auto; padding: 14px 16px;
+  scrollbar-width: thin; scrollbar-color: var(--border) transparent;
+}
+.tab-panel { display: none; }
+.tab-panel.active { display: block; }
+
+.field-row { margin-bottom: 12px; }
+.field-2col { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-bottom: 12px; }
+.field-row label, .field-2col label {
+  display: block; font-size: 9px; letter-spacing: 0.12em; text-transform: uppercase;
+  color: var(--text3); margin-bottom: 5px;
+}
+.field-row input[type=text],
+.field-row input[type=number],
+.field-row select,
+.field-2col input[type=text],
+.field-2col input[type=number],
+.field-2col select {
+  width: 100%; padding: 7px 10px; background: var(--bg3);
+  border: 1px solid var(--border); color: var(--text1);
+  font-family: var(--mono); font-size: 11px; outline: none;
+  transition: var(--transition);
+}
+.field-row input:focus,
+.field-row select:focus,
+.field-2col input:focus,
+.field-2col select:focus { border-color: var(--accent2); }
+.field-row input[readonly] { opacity: 0.45; cursor: default; }
+.field-row textarea {
+  width: 100%; padding: 8px 10px; background: var(--bg3);
+  border: 1px solid var(--border); color: var(--text1);
+  font-family: var(--mono); font-size: 11px; outline: none;
+  resize: vertical; min-height: 70px; line-height: 1.5;
+  transition: var(--transition);
+}
+.field-row textarea:focus { border-color: var(--accent2); }
+
+.material-chips { display: flex; flex-wrap: wrap; gap: 5px; margin-top: 6px; }
+.chip {
+  padding: 3px 9px; font-size: 10px; border: 1px solid var(--border);
+  color: var(--text2); cursor: pointer; transition: var(--transition);
+}
+.chip:hover { border-color: var(--accent2); color: var(--accent2); }
+.chip.sel { background: rgba(124,111,255,0.12); border-color: var(--accent2); color: var(--accent2); }
+
+/* ── JSON EDITOR ──────────────────────────────────── */
+.json-toolbar {
+  display: flex; align-items: center; gap: 8px;
+  padding: 6px 0 8px; flex-shrink: 0;
+}
+.json-toolbar .jtag {
+  font-family: var(--mono); font-size: 9px; letter-spacing: 0.10em;
+  text-transform: uppercase; color: var(--text3); padding: 3px 8px;
+  border: 1px solid var(--border); background: var(--bg3);
+}
+.json-toolbar .jtag.valid   { color: var(--green); border-color: rgba(77,255,180,0.25); }
+.json-toolbar .jtag.invalid { color: var(--red);   border-color: rgba(255,77,106,0.25); }
+.json-status {
+  flex: 1; font-family: var(--mono); font-size: 10px; color: var(--text3);
+  white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
+}
+.json-status.err { color: var(--red); }
+
+#jsonEditor {
+  width: 100%; flex: 1; min-height: 0;
+  background: var(--bg3); border: 1px solid var(--border);
+  color: var(--text1); font-family: var(--mono); font-size: 12px;
+  line-height: 1.65; outline: none; resize: none; padding: 12px;
+  tab-size: 2; scrollbar-width: thin; scrollbar-color: var(--border) transparent;
+  transition: border-color var(--transition);
+}
+#jsonEditor:focus { border-color: var(--accent2); }
+#jsonEditor.invalid { border-color: var(--red); }
+
+/* ── DIFF / EXTENSION PANEL ───────────────────────── */
+.ext-panel {
+  background: var(--bg2); border-top: 1px solid var(--border); flex-shrink: 0;
+  transition: max-height 0.3s cubic-bezier(0.4,0,0.2,1);
+  max-height: 0; overflow: hidden;
+}
+.ext-panel.open { max-height: 260px; }
+.ext-inner { padding: 10px 16px 12px; display: flex; flex-direction: column; gap: 8px; }
+.ext-title {
+  font-size: 9px; letter-spacing: 0.14em; text-transform: uppercase;
+  color: var(--yellow); display: flex; align-items: center; gap: 8px;
+}
+.ext-title::after { content: ''; flex: 1; height: 1px; background: rgba(255,208,96,0.15); }
+.ext-desc { font-size: 10px; color: var(--text3); line-height: 1.5; }
+#extInput {
+  width: 100%; height: 110px;
+  background: var(--bg); border: 1px solid rgba(255,208,96,0.2);
+  color: var(--yellow); font-family: var(--mono); font-size: 11px;
+  line-height: 1.6; outline: none; resize: none; padding: 10px;
+  scrollbar-width: thin; scrollbar-color: rgba(255,208,96,0.15) transparent;
+  transition: border-color var(--transition);
+}
+#extInput:focus { border-color: rgba(255,208,96,0.45); }
+.ext-actions { display: flex; gap: 8px; }
+.ext-btn {
+  padding: 0 14px; height: 28px; font-family: var(--sans); font-size: 10px;
+  letter-spacing: 0.08em; cursor: pointer; border: 1px solid; transition: var(--transition);
+}
+.ext-btn.apply   { border-color: rgba(255,208,96,0.4); color: var(--yellow); background: rgba(255,208,96,0.07); }
+.ext-btn.apply:hover  { background: rgba(255,208,96,0.16); }
+.ext-btn.cancel  { border-color: var(--border); color: var(--text3); background: transparent; }
+.ext-btn.cancel:hover { color: var(--text2); border-color: var(--border2); }
+.ext-preview { font-family: var(--mono); font-size: 10px; color: var(--text3); min-height: 16px; }
+.ext-preview.ok  { color: var(--green); }
+.ext-preview.err { color: var(--red); }
+
+/* Tab JSON layout */
+#panelJson { display: flex; flex-direction: column; height: 100%; min-height: 0; }
+.json-main-area { flex: 1; min-height: 0; display: flex; flex-direction: column; }
+
+/* ── INSPECTOR ────────────────────────────────────── */
+.inspector {
+  background: var(--bg2); border-left: 1px solid var(--border);
+  display: flex; flex-direction: column; overflow: hidden;
+}
+.ins-head {
+  padding: 10px 14px; border-bottom: 1px solid var(--border);
+  font-size: 9px; letter-spacing: 0.14em; text-transform: uppercase;
+  color: var(--text3); flex-shrink: 0;
+}
+.ins-body { flex: 1; overflow-y: auto; padding: 10px; scrollbar-width: thin; scrollbar-color: var(--border) transparent; }
+.ins-card { background: var(--bg3); border: 1px solid var(--border); padding: 10px 12px; margin-bottom: 8px; }
+.ins-card h3 { font-size: 9px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--text3); margin-bottom: 8px; }
+.ins-row { display: flex; justify-content: space-between; align-items: baseline; gap: 8px; padding: 3px 0; border-bottom: 1px solid rgba(255,255,255,0.03); }
+.ins-row:last-child { border-bottom: none; }
+.ins-key { font-family: var(--mono); font-size: 9px; color: var(--text3); flex-shrink: 0; }
+.ins-val { font-family: var(--mono); font-size: 10px; color: var(--text1); text-align: right; word-break: break-all; }
+.ins-val.missing { color: var(--red); opacity: 0.6; }
+.ins-val.ok { color: var(--green); }
+.ins-section { font-size: 8px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--accent); margin: 10px 0 5px; }
+
+/* ── FOOTER ───────────────────────────────────────── */
+footer {
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 0 16px; background: var(--bg2); border-top: 1px solid var(--border);
+  font-size: 10px; color: var(--text3); font-family: var(--mono);
+}
+
+/* ── INFO BOX ─────────────────────────────────────── */
+.info-box {
+  padding: 8px 12px; border: 1px solid; font-size: 11px; margin-bottom: 12px;
+  line-height: 1.5;
+}
+.info-box.warn { border-color: rgba(255,208,96,0.25); color: var(--yellow); background: rgba(255,208,96,0.05); }
+.info-box.ok   { border-color: rgba(77,255,180,0.25); color: var(--green);  background: rgba(77,255,180,0.05); }
+.info-box.err  { border-color: rgba(255,77,106,0.25); color: var(--red);    background: rgba(255,77,106,0.05); }
+
+/* ── TOAST ────────────────────────────────────────── */
+.toast {
+  position: fixed; bottom: 48px; left: 50%; transform: translateX(-50%) translateY(20px);
+  background: var(--bg3); border: 1px solid var(--border2);
+  padding: 8px 20px; font-size: 11px; letter-spacing: 0.06em;
+  opacity: 0; pointer-events: none; transition: all 0.2s; z-index: 999; white-space: nowrap;
+}
+.toast.show { opacity: 1; transform: translateX(-50%) translateY(0); }
+.toast.ok   { border-color: rgba(77,255,180,0.4); color: var(--green); }
+.toast.err  { border-color: rgba(255,77,106,0.4); color: var(--red); }
+
+/* ── SCROLLBAR ────────────────────────────────────── */
+::-webkit-scrollbar { width: 4px; height: 4px; }
+::-webkit-scrollbar-thumb { background: var(--border); border-radius: 2px; }
+
+select option { background: var(--bg3); }
+</style>
+</head>
+<body>
+
+<div class="app">
+
+<!-- HEADER -->
+<header>
+  <div class="logo">⚛ QuantumSim <span>/ Element Editor</span></div>
+  <div class="h-prog">
+    <div class="h-bar"><div class="h-fill" id="pFill" style="width:0%"></div></div>
+    <span class="h-lbl" id="pLbl">0 / 118</span>
+  </div>
+  <button class="h-btn" id="btnLoad">📂 Cargar /elements/</button>
+  <button class="h-btn primary" id="btnSaveAll">💾 Guardar todos</button>
+</header>
+
+<!-- BODY -->
+<div class="body">
+
+  <!-- SIDEBAR -->
+  <aside>
+    <div class="sb-search">
+      <input type="text" id="sbSearch" placeholder="Buscar elemento...">
+    </div>
+    <div class="sb-list" id="sbList"></div>
+  </aside>
+
+  <!-- MAIN -->
+  <main>
+    <div class="m-top">
+      <div class="m-badge">
+        <span class="m-badge-n" id="bNum">—</span>
+        <span class="m-badge-s" id="bSym">—</span>
+      </div>
+      <div style="flex:1;min-width:0">
+        <div style="display:flex;align-items:center;gap:10px">
+          <div class="m-colors" id="mColors"></div>
+          <div class="m-info">
+            <h2 id="bName">Sin elemento</h2>
+            <p  id="bGroup">Carga la carpeta /elements/ para comenzar</p>
+          </div>
+        </div>
+      </div>
+      <div class="m-acts">
+        <button class="btn btn-p" id="btnPrev">← Prev</button>
+        <button class="btn btn-s" id="btnSave" disabled>✓ Guardar</button>
+        <button class="btn btn-dl" id="btnDownload" disabled>⬇ .json</button>
+        <button class="btn btn-nx" id="btnNext">Next →</button>
+      </div>
+    </div>
+
+    <div class="m-tabs">
+      <div class="tab active" data-tab="editorial">Editorial</div>
+      <div class="tab"        data-tab="json">JSON completo</div>
+    </div>
+
+    <div class="m-body">
+
+      <!-- TAB: Editorial -->
+      <div class="tab-panel active" id="panelEditorial">
+        <div class="info-box warn" id="infoBox">Carga la carpeta /elements/ para comenzar.</div>
+
+        <div class="field-row">
+          <label>Material (shader/renderer)</label>
+          <input type="text" id="fMaterial" placeholder="ej: metallic_gold, radioactive_glow, liquid_mercury...">
+          <div class="material-chips" id="matChips">
+            <span class="chip" data-v="metallic">metallic</span>
+            <span class="chip" data-v="polished_metal">polished_metal</span>
+            <span class="chip" data-v="dark_metal">dark_metal</span>
+            <span class="chip" data-v="magnetic_metal">magnetic_metal</span>
+            <span class="chip" data-v="radioactive_glow">radioactive_glow</span>
+            <span class="chip" data-v="liquid_mercury">liquid_mercury</span>
+            <span class="chip" data-v="noble_gas_glow">noble_gas_glow</span>
+            <span class="chip" data-v="transparent_glass">transparent_glass</span>
+          </div>
+        </div>
+
+        <div class="field-2col">
+          <div class="field-row">
+            <label>Grupo (del JSON)</label>
+            <input type="text" id="fGroup" readonly placeholder="—">
+          </div>
+          <div class="field-row">
+            <label>Grupo override</label>
+            <select id="fGroupOvr">
+              <option value="">— sin cambio —</option>
+              <option value="nonmetal">Nonmetal</option>
+              <option value="alkali_metal">Alkali Metal</option>
+              <option value="alkaline_earth_metal">Alkaline Earth Metal</option>
+              <option value="transition_metal">Transition Metal</option>
+              <option value="post_transition_metal">Post-Transition Metal</option>
+              <option value="metalloid">Metalloid</option>
+              <option value="halogen">Halogen</option>
+              <option value="noble_gas">Noble Gas</option>
+              <option value="lanthanide">Lanthanide</option>
+              <option value="actinide">Actinide</option>
+              <option value="superheavy">Superheavy</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="field-2col">
+          <div class="field-row">
+            <label>Color (hex sim) 0x…</label>
+            <input type="text" id="fColor" placeholder="0xAAAAAA">
+          </div>
+          <div class="field-row">
+            <label>Color CPK (hex) 0x…</label>
+            <input type="text" id="fCpk" placeholder="0xAAAAAA">
+          </div>
+        </div>
+
+        <div class="field-row">
+          <label>Notas editoriales (Markdown)</label>
+          <textarea id="fNotes" rows="4" placeholder="Escribe algo fascinante sobre este elemento..."></textarea>
+        </div>
+
+        <div class="field-row">
+          <label>Tags (separados por coma)</label>
+          <input type="text" id="fTags" placeholder="radioactive, magnetic, biological, toxic...">
+        </div>
+      </div>
+
+      <!-- TAB: JSON completo -->
+      <div class="tab-panel" id="panelJson">
+        <div class="json-main-area">
+          <div class="json-toolbar">
+            <span class="jtag" id="jsonTag">JSON</span>
+            <span class="json-status" id="jsonStatus">Carga un elemento para editar</span>
+            <button class="h-btn" id="btnFormat" style="height:26px;font-size:10px;padding:0 10px">⇥ Formatear</button>
+            <button class="h-btn" id="btnRevert" style="height:26px;font-size:10px;padding:0 10px">↺ Revertir</button>
+          </div>
+          <textarea id="jsonEditor" spellcheck="false" placeholder="Selecciona un elemento en la barra lateral..."></textarea>
+          <!-- Panel de extensión + -->
+          <div class="ext-panel" id="extPanel">
+            <div class="ext-inner">
+              <div class="ext-title">Extensión / patch de datos</div>
+              <div class="ext-desc">Pega un objeto JSON parcial para hacer merge con el JSON actual. Solo los campos que incluyas serán actualizados — el resto se mantiene intacto.</div>
+              <textarea id="extInput" spellcheck="false" placeholder='{\n  "atomic_structure": {\n    "radius_covalent_pm": 152\n  },\n  "identity": {\n    "cpk_color": "0xFF6600"\n  }\n}'></textarea>
+              <div class="ext-preview" id="extPreview"></div>
+              <div class="ext-actions">
+                <button class="ext-btn apply" id="btnApplyExt">⟳ Aplicar merge</button>
+                <button class="ext-btn cancel" id="btnCancelExt">Cancelar</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div style="display:flex;gap:8px;padding:10px 0 0;flex-shrink:0">
+          <button class="h-btn" id="btnToggleExt" style="height:32px">＋ Extender / patch</button>
+        </div>
+      </div>
+
+    </div><!-- m-body -->
+  </main>
+
+  <!-- INSPECTOR -->
+  <div class="inspector">
+    <div class="ins-head">Inspector</div>
+    <div class="ins-body" id="insBody">
+      <div class="ins-card"><p style="color:var(--text3);font-size:11px">Selecciona un elemento.</p></div>
+    </div>
+  </div>
+
+</div><!-- body -->
+
+<!-- FOOTER -->
+<footer>
+  <span id="msg">Carga la carpeta /elements/ para comenzar.</span>
+  <span>QuantumSim Element Editor v2.0</span>
+</footer>
+
+</div><!-- app -->
+
+<div class="toast" id="toast"></div>
+
+<script>
+// ── Elementos del simulador (118 definidos) ──────────────────────────────────
+const ELEMENTS = [
+  {n:1,sym:'H',name:'Hidrógeno'},{n:2,sym:'He',name:'Helio'},{n:3,sym:'Li',name:'Litio'},
+  {n:4,sym:'Be',name:'Berilio'},{n:5,sym:'B',name:'Boro'},{n:6,sym:'C',name:'Carbono'},
+  {n:7,sym:'N',name:'Nitrógeno'},{n:8,sym:'O',name:'Oxígeno'},{n:9,sym:'F',name:'Flúor'},
+  {n:10,sym:'Ne',name:'Neón'},{n:11,sym:'Na',name:'Sodio'},{n:12,sym:'Mg',name:'Magnesio'},
+  {n:13,sym:'Al',name:'Aluminio'},{n:14,sym:'Si',name:'Silicio'},{n:15,sym:'P',name:'Fósforo'},
+  {n:16,sym:'S',name:'Azufre'},{n:17,sym:'Cl',name:'Cloro'},{n:18,sym:'Ar',name:'Argón'},
+  {n:19,sym:'K',name:'Potasio'},{n:20,sym:'Ca',name:'Calcio'},{n:21,sym:'Sc',name:'Escandio'},
+  {n:22,sym:'Ti',name:'Titanio'},{n:23,sym:'V',name:'Vanadio'},{n:24,sym:'Cr',name:'Cromo'},
+  {n:25,sym:'Mn',name:'Manganeso'},{n:26,sym:'Fe',name:'Hierro'},{n:27,sym:'Co',name:'Cobalto'},
+  {n:28,sym:'Ni',name:'Níquel'},{n:29,sym:'Cu',name:'Cobre'},{n:30,sym:'Zn',name:'Zinc'},
+  {n:31,sym:'Ga',name:'Galio'},{n:32,sym:'Ge',name:'Germanio'},{n:33,sym:'As',name:'Arsénico'},
+  {n:34,sym:'Se',name:'Selenio'},{n:35,sym:'Br',name:'Bromo'},{n:36,sym:'Kr',name:'Kriptón'},
+  {n:37,sym:'Rb',name:'Rubidio'},{n:38,sym:'Sr',name:'Estroncio'},{n:39,sym:'Y',name:'Itrio'},
+  {n:40,sym:'Zr',name:'Circonio'},{n:41,sym:'Nb',name:'Niobio'},{n:42,sym:'Mo',name:'Molibdeno'},
+  {n:43,sym:'Tc',name:'Tecnecio'},{n:44,sym:'Ru',name:'Rutenio'},{n:45,sym:'Rh',name:'Rodio'},
+  {n:46,sym:'Pd',name:'Paladio'},{n:47,sym:'Ag',name:'Plata'},{n:48,sym:'Cd',name:'Cadmio'},
+  {n:49,sym:'In',name:'Indio'},{n:50,sym:'Sn',name:'Estaño'},{n:51,sym:'Sb',name:'Antimonio'},
+  {n:52,sym:'Te',name:'Teluro'},{n:53,sym:'I',name:'Yodo'},{n:54,sym:'Xe',name:'Xenón'},
+  {n:55,sym:'Cs',name:'Cesio'},{n:56,sym:'Ba',name:'Bario'},{n:57,sym:'La',name:'Lantano'},
+  {n:58,sym:'Ce',name:'Cerio'},{n:59,sym:'Pr',name:'Praseodimio'},{n:60,sym:'Nd',name:'Neodimio'},
+  {n:61,sym:'Pm',name:'Prometio'},{n:62,sym:'Sm',name:'Samario'},{n:63,sym:'Eu',name:'Europio'},
+  {n:64,sym:'Gd',name:'Gadolinio'},{n:65,sym:'Tb',name:'Terbio'},{n:66,sym:'Dy',name:'Disprosio'},
+  {n:67,sym:'Ho',name:'Holmio'},{n:68,sym:'Er',name:'Erbio'},{n:69,sym:'Tm',name:'Tulio'},
+  {n:70,sym:'Yb',name:'Iterbio'},{n:71,sym:'Lu',name:'Lutecio'},{n:72,sym:'Hf',name:'Hafnio'},
+  {n:73,sym:'Ta',name:'Tántalo'},{n:74,sym:'W',name:'Wolframio'},{n:75,sym:'Re',name:'Renio'},
+  {n:76,sym:'Os',name:'Osmio'},{n:77,sym:'Ir',name:'Iridio'},{n:78,sym:'Pt',name:'Platino'},
+  {n:79,sym:'Au',name:'Oro'},{n:80,sym:'Hg',name:'Mercurio'},{n:81,sym:'Tl',name:'Talio'},
+  {n:82,sym:'Pb',name:'Plomo'},{n:83,sym:'Bi',name:'Bismuto'},{n:84,sym:'Po',name:'Polonio'},
+  {n:85,sym:'At',name:'Astato'},{n:86,sym:'Rn',name:'Radón'},{n:87,sym:'Fr',name:'Francio'},
+  {n:88,sym:'Ra',name:'Radio'},{n:89,sym:'Ac',name:'Actinio'},{n:90,sym:'Th',name:'Torio'},
+  {n:91,sym:'Pa',name:'Protactinio'},{n:92,sym:'U',name:'Uranio'},{n:93,sym:'Np',name:'Neptunio'},
+  {n:94,sym:'Pu',name:'Plutonio'},{n:95,sym:'Am',name:'Americio'},{n:96,sym:'Cm',name:'Curio'},
+  {n:97,sym:'Bk',name:'Berkelio'},{n:98,sym:'Cf',name:'Californio'},{n:99,sym:'Es',name:'Einsteinio'},
+  {n:100,sym:'Fm',name:'Fermio'},{n:101,sym:'Md',name:'Mendelevio'},{n:102,sym:'No',name:'Nobelio'},
+  {n:103,sym:'Lr',name:'Laurencio'},{n:104,sym:'Rf',name:'Rutherfordio'},{n:105,sym:'Db',name:'Dubnio'},
+  {n:106,sym:'Sg',name:'Seaborgio'},{n:107,sym:'Bh',name:'Bohrio'},{n:108,sym:'Hs',name:'Hasio'},
+  {n:109,sym:'Mt',name:'Meitnerio'},{n:110,sym:'Ds',name:'Darmstadtio'},{n:111,sym:'Rg',name:'Roentgenio'},
+  {n:112,sym:'Cn',name:'Copernicio'},{n:113,sym:'Nh',name:'Nihonio'},{n:114,sym:'Fl',name:'Flerovio'},
+  {n:115,sym:'Mc',name:'Moscovio'},{n:116,sym:'Lv',name:'Livermorio'},{n:117,sym:'Ts',name:'Teneso'},
+  {n:118,sym:'Og',name:'Oganesón'},
+];
+
+// ── Estado ───────────────────────────────────────────────────────────────────
+let dirHandle   = null;
+let fileMap     = {};          // sym → FileSystemFileHandle
+let jsonCache   = {};          // sym → {original, current} string
+let dirty       = new Set();   // syms con cambios no guardados
+let currentSym  = null;
+let currentIdx  = 0;
+
+// ── Sidebar ──────────────────────────────────────────────────────────────────
+function buildSidebar(filter = '') {
+  const list = document.getElementById('sbList');
+  list.innerHTML = '';
+  const q = filter.trim().toLowerCase();
+  ELEMENTS.forEach((el, i) => {
+    if (q && !el.sym.toLowerCase().includes(q) && !el.name.toLowerCase().includes(q) && !String(el.n).includes(q)) return;
+    const loaded = !!fileMap[el.sym];
+    const isDirty = dirty.has(el.sym);
+    const d = document.createElement('div');
+    d.className = `ei ${loaded ? 'has-file' : 'no-file'}${el.sym === currentSym ? ' active' : ''}`;
+    d.id = `ei-${el.sym}`;
+
+    // color del elemento si está cargado
+    let symColor = 'var(--text1)';
+    if (loaded && jsonCache[el.sym]) {
+      try {
+        const j = JSON.parse(jsonCache[el.sym].current);
+        const c = j?.identity?.color ?? j?.color;
+        if (c) symColor = '#' + parseInt(String(c).replace('0x',''), 16).toString(16).padStart(6,'0');
+      } catch(e) {}
+    }
+
+    // Grupo del JSON
+    let grpTag = '?';
+    if (loaded && jsonCache[el.sym]) {
+      try {
+        const j = JSON.parse(jsonCache[el.sym].current);
+        const g = j?.identity?.category_es ?? j?.identity?.category_eng ?? '';
+        grpTag = g ? g.split(' ')[0].substring(0,7) : '?';
+      } catch(e) {}
+    }
+
+    d.innerHTML = `
+      <span class="ei-n">${el.n}</span>
+      <span class="ei-sym" style="color:${symColor}">${el.sym}</span>
+      <span class="ei-nm">${el.name}</span>
+      <span class="group-tag">${grpTag}</span>
+      <span class="ei-s">${loaded ? (isDirty ? '✎' : '✓') : '✗'}</span>`;
+    d.addEventListener('click', () => selectElement(el.sym, i));
+    list.appendChild(d);
+  });
+}
+
+document.getElementById('sbSearch').addEventListener('input', e => buildSidebar(e.target.value));
+
+// ── Cargar carpeta ───────────────────────────────────────────────────────────
+document.getElementById('btnLoad').addEventListener('click', async () => {
+  try {
+    dirHandle = await window.showDirectoryPicker({ mode: 'readwrite' });
+    fileMap = {};
+    jsonCache = {};
+
+    for await (const [name, handle] of dirHandle.entries()) {
+      if (handle.kind === 'file' && name.endsWith('.json') && name !== 'metadata.json') {
+        const sym = name.replace('.json','');
+        if (ELEMENTS.find(e => e.sym === sym)) {
+          fileMap[sym] = handle;
+          const file = await handle.getFile();
+          const text = await file.text();
+          jsonCache[sym] = { original: text, current: text };
+        }
+      }
+    }
+
+    const loaded = Object.keys(fileMap).length;
+    updateProgress();
+    buildSidebar();
+    toast(`${loaded} archivos cargados`, 'ok');
+    setMsg(`${loaded} / 118 elementos cargados`);
+
+    // Auto-seleccionar el primero disponible
+    const first = ELEMENTS.find(e => fileMap[e.sym]);
+    if (first) selectElement(first.sym, ELEMENTS.indexOf(first));
+
+  } catch (err) {
+    if (err.name !== 'AbortError') toast('Error al cargar carpeta: ' + err.message, 'err');
+  }
+});
+
+// ── Progreso ─────────────────────────────────────────────────────────────────
+function updateProgress() {
+  const loaded = Object.keys(fileMap).length;
+  const pct = (loaded / 118) * 100;
+  document.getElementById('pFill').style.width = pct + '%';
+  document.getElementById('pLbl').textContent = `${loaded} / 118`;
+}
+
+// ── Seleccionar elemento ──────────────────────────────────────────────────────
+function selectElement(sym, idx) {
+  currentSym = sym;
+  currentIdx = idx ?? ELEMENTS.findIndex(e => e.sym === sym);
+  const el   = ELEMENTS[currentIdx];
+
+  // Actualizar sidebar
+  document.querySelectorAll('.ei').forEach(e => e.classList.remove('active'));
+  document.getElementById(`ei-${sym}`)?.classList.add('active');
+  document.getElementById(`ei-${sym}`)?.scrollIntoView({ block:'nearest' });
+
+  // Badge
+  document.getElementById('bNum').textContent = el.n;
+  document.getElementById('bSym').textContent = sym;
+
+  const loaded = !!fileMap[sym];
+  document.getElementById('btnSave').disabled     = !loaded;
+  document.getElementById('btnDownload').disabled = !loaded;
+
+  if (!loaded) {
+    document.getElementById('bName').textContent  = el.name;
+    document.getElementById('bGroup').textContent = 'Archivo no cargado';
+    document.getElementById('infoBox').textContent = `⚠ ${sym}.json no encontrado en la carpeta cargada.`;
+    document.getElementById('infoBox').className  = 'info-box warn';
+    document.getElementById('mColors').innerHTML  = '';
+    clearForms();
+    renderInspector(null);
+    document.getElementById('jsonEditor').value   = '';
+    document.getElementById('jsonStatus').textContent = 'Archivo no disponible';
+    return;
+  }
+
+  try {
+    const data = JSON.parse(jsonCache[sym].current);
+    populateForms(data, sym);
+    renderInspector(data);
+    // JSON editor
+    document.getElementById('jsonEditor').value = jsonCache[sym].current;
+    validateJson();
+  } catch(err) {
+    document.getElementById('infoBox').textContent = `⚠ JSON inválido: ${err.message}`;
+    document.getElementById('infoBox').className = 'info-box err';
+  }
+}
+
+// ── Poblar formularios ────────────────────────────────────────────────────────
+function populateForms(data, sym) {
+  const ident  = data.identity ?? {};
+  const atomic = data.atomic_structure ?? {};
+  const phys   = data.physical_properties ?? {};
+
+  // Nombres reales de los campos del JSON
+  const name     = ident.name_es ?? sym;
+  const category = ident.category_es ?? ident.category_eng ?? '';
+  const color    = ident.color ?? '';
+  const cpk      = ident.cpk_color ?? '';
+
+  document.getElementById('bName').textContent  = name;
+  document.getElementById('bGroup').textContent = category || '—';
+  document.getElementById('fGroup').value       = category;
+  document.getElementById('fGroupOvr').value    = data._group_override ?? '';
+  document.getElementById('fColor').value       = color;
+  document.getElementById('fCpk').value         = cpk;
+  document.getElementById('fMaterial').value    = data._material ?? '';
+  document.getElementById('fNotes').value       = data._notes ?? '';
+  document.getElementById('fTags').value        = (data._tags ?? []).join(', ');
+
+  document.querySelectorAll('.chip').forEach(c => {
+    c.classList.toggle('sel', c.dataset.v === (data._material ?? ''));
+  });
+
+  const box = document.getElementById('infoBox');
+  box.textContent = `✓ ${sym}.json cargado — ${Object.keys(data).length} secciones`;
+  box.className = 'info-box ok';
+
+  const mc = document.getElementById('mColors');
+  mc.innerHTML = '';
+  [{ label:'sim', val: color }, { label:'cpk', val: cpk }].forEach(sw => {
+    if (!sw.val) return;
+    const hex = parseInt(String(sw.val).replace('0x',''), 16);
+    const css = '#' + hex.toString(16).padStart(6,'0');
+    const d = document.createElement('div');
+    d.style.cssText = 'display:flex;align-items:center;gap:4px;';
+    d.innerHTML = '<div class="m-color-swatch" style="background:' + css + '" title="' + sw.label + ': ' + sw.val + '"></div><span class="m-color-label">' + sw.label + '</span>';
+    mc.appendChild(d);
+  });
+}
+
+function clearForms() {
+  ['fGroup','fGroupOvr','fColor','fCpk','fMaterial','fNotes','fTags'].forEach(id => {
+    const el = document.getElementById(id);
+    if (el) el.value = '';
+  });
+}
+
+// ── Inspector ─────────────────────────────────────────────────────────────────
+function renderInspector(data) {
+  const body = document.getElementById('insBody');
+  if (!data) { body.innerHTML = '<div class="ins-card"><p style="color:var(--text3);font-size:11px">Sin datos.</p></div>'; return; }
+
+  const ident  = data.identity ?? {};
+  const atomic = data.atomic_structure ?? {};
+  const phys   = data.physical_properties ?? {};
+  const thermo = data.thermodynamics ?? {};
+  const em     = data.electromagnetism_and_mechanics ?? {};
+  const react  = data.reactivity ?? {};
+  const nuclear = data.nuclear_and_environmental ?? {};
+
+  const sections = [
+    { title: 'Identidad', rows: [
+      ['number',       ident.number ?? data.number ?? '—'],
+      ['symbol',       data.symbol ?? '—'],
+      ['name_es',      ident.name_es ?? '—'],
+      ['name_eng',     ident.name_eng ?? '—'],
+      ['category_es',  ident.category_es ?? '—'],
+      ['color',        ident.color ?? '—'],
+      ['cpk_color',    ident.cpk_color ?? '—'],
+      ['discovery',    ident.discovery_year ?? '—'],
+    ]},
+    { title: 'Propiedades físicas', rows: [
+      ['mass',         phys.mass != null ? phys.mass + ' u' : null],
+      ['density',      phys.density_g_cm3 != null ? phys.density_g_cm3 + ' g/cm³' : null],
+      ['melt_K',       phys.melt_K != null ? phys.melt_K + ' K' : null],
+      ['boil_K',       phys.boil_K != null ? phys.boil_K + ' K' : null],
+      ['lattice',      phys.lattice_structure ?? '—'],
+      ['state',        phys.standard_state_es ?? '—'],
+    ]},
+    { title: 'Estructura atómica', rows: [
+      ['config',       atomic.electron_configuration_string ?? '—'],
+      ['shells',       JSON.stringify(atomic.shells ?? [])],
+      ['electronegativity', atomic.electronegativity != null ? atomic.electronegativity : null],
+      ['valence',      atomic.valence ?? '—'],
+      ['r_covalent',   atomic.radius_covalent_pm != null ? atomic.radius_covalent_pm + ' pm' : null],
+      ['r_vdw',        atomic.vanderwaals_radius_pm != null ? atomic.vanderwaals_radius_pm + ' pm' : null],
+      ['r_atomic',     atomic.radius_atomic_pm != null ? atomic.radius_atomic_pm + ' pm' : null],
+      ['ionization_eV', atomic.ionization_energy_eV ?? '—'],
+    ]},
+    { title: 'Termodinámica', rows: [
+      ['heat_cap',     thermo.heat_capacity_j_molk != null ? thermo.heat_capacity_j_molk + ' J/mol·K' : null],
+      ['fusion_kJ',    thermo.fusion_heat_kj_mol != null ? thermo.fusion_heat_kj_mol + ' kJ/mol' : null],
+      ['evap_kJ',      thermo.evaporation_heat_kj_mol != null ? thermo.evaporation_heat_kj_mol + ' kJ/mol' : null],
+    ]},
+    { title: 'Electromagnético / Mecánico', rows: [
+      ['conductivity', em.electrical_conductivity_sm != null ? em.electrical_conductivity_sm + ' S/m' : null],
+      ['thermal_cond', em.thermal_conductivity_wmk != null ? em.thermal_conductivity_wmk + ' W/m·K' : null],
+      ['mag_suscept',  em.magnetic_susceptibility ?? '—'],
+      ['youngs_mod',   em.youngs_modulus_gba != null ? em.youngs_modulus_gba + ' GPa' : null],
+    ]},
+    { title: 'Reactividad', rows: [
+      ['oxidation',    (react.oxidation_states ?? []).join(', ') || '—'],
+      ['max_bonds',    react.max_bonds ?? '—'],
+      ['geometry',     react.geometry_preference_es ?? '—'],
+      ['std_potential', react.standard_potential_v != null ? react.standard_potential_v + ' V' : null],
+    ]},
+    { title: 'Nuclear / Ambiental', rows: [
+      ['isotopes',     (nuclear.isotopes ?? []).length ? nuclear.isotopes.length + ' isótopos' : '—'],
+      ['n_cross_sect', nuclear.neutron_cross_section_barns != null ? nuclear.neutron_cross_section_barns + ' barns' : null],
+      ['crust_abund',  nuclear.abundance_crust_mg_kg != null ? nuclear.abundance_crust_mg_kg + ' mg/kg' : null],
+      ['toxicity',     nuclear.toxicity_level ?? '—'],
+    ]},
+    { title: 'Editorial', rows: [
+      ['_material',    data._material ?? '—'],
+      ['_notes',       data._notes ? data._notes.substring(0,50)+'…' : '—'],
+      ['_tags',        (data._tags ?? []).join(', ') || '—'],
+    ]},
+  ];
+
+  body.innerHTML = sections.map(sec => `
+    <div class="ins-card">
+      <h3>${sec.title}</h3>
+      ${sec.rows.map(([k,v]) => `
+        <div class="ins-row">
+          <span class="ins-key">${k}</span>
+          <span class="ins-val ${v == null ? 'missing' : ''}">${v ?? '✗'}</span>
+        </div>`).join('')}
+    </div>`).join('');
+}
+
+// ── Guardar cambios del formulario al JSON ────────────────────────────────────
+function collectFormChanges() {
+  if (!currentSym || !jsonCache[currentSym]) return null;
+  try {
+    const data = JSON.parse(jsonCache[currentSym].current);
+    const mat  = document.getElementById('fMaterial').value.trim();
+    const ovr  = document.getElementById('fGroupOvr').value;
+    const clr  = document.getElementById('fColor').value.trim();
+    const cpk  = document.getElementById('fCpk').value.trim();
+    const notes = document.getElementById('fNotes').value;
+    const tags  = document.getElementById('fTags').value.split(',').map(t => t.trim()).filter(Boolean);
+
+    if (mat)   data._material       = mat;
+    if (ovr)   data._group_override = ovr;
+    if (clr) { if (!data.identity) data.identity = {}; data.identity.color     = clr; }
+    if (cpk) { if (!data.identity) data.identity = {}; data.identity.cpk_color = cpk; }
+    if (notes) data._notes = notes; else delete data._notes;
+    if (tags.length) data._tags = tags; else delete data._tags;
+
+    return JSON.stringify(data, null, 2);
+  } catch(e) {
+    return null;
+  }
+}
+
+// ── Tabs ──────────────────────────────────────────────────────────────────────
+document.querySelectorAll('.tab').forEach(tab => {
+  tab.addEventListener('click', () => {
+    document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
+    document.querySelectorAll('.tab-panel').forEach(p => p.classList.remove('active'));
+    tab.classList.add('active');
+    document.getElementById(`panel${tab.dataset.tab.charAt(0).toUpperCase() + tab.dataset.tab.slice(1)}`).classList.add('active');
+    if (tab.dataset.tab === 'json' && currentSym && jsonCache[currentSym]) {
+      document.getElementById('jsonEditor').value = jsonCache[currentSym].current;
+      validateJson();
+    }
+  });
+});
+
+// ── JSON Editor ───────────────────────────────────────────────────────────────
+const jsonEditor = document.getElementById('jsonEditor');
+
+jsonEditor.addEventListener('input', () => {
+  if (!currentSym) return;
+  jsonCache[currentSym].current = jsonEditor.value;
+  dirty.add(currentSym);
+  validateJson();
+  updateSidebarItem(currentSym);
+});
+
+jsonEditor.addEventListener('keydown', e => {
+  if (e.key === 'Tab') {
+    e.preventDefault();
+    const s = jsonEditor.selectionStart, end = jsonEditor.selectionEnd;
+    jsonEditor.value = jsonEditor.value.substring(0,s) + '  ' + jsonEditor.value.substring(end);
+    jsonEditor.selectionStart = jsonEditor.selectionEnd = s + 2;
+  }
+});
+
+function validateJson() {
+  const tag = document.getElementById('jsonTag');
+  const status = document.getElementById('jsonStatus');
+  try {
+    JSON.parse(jsonEditor.value);
+    tag.className = 'jtag valid';
+    tag.textContent = 'JSON ✓';
+    status.className = 'json-status';
+    status.textContent = `${jsonEditor.value.split('\n').length} líneas · ${(jsonEditor.value.length/1024).toFixed(1)} KB`;
+    jsonEditor.classList.remove('invalid');
+    return true;
+  } catch(err) {
+    tag.className = 'jtag invalid';
+    tag.textContent = 'JSON ✗';
+    status.className = 'json-status err';
+    status.textContent = err.message;
+    jsonEditor.classList.add('invalid');
+    return false;
+  }
+}
+
+document.getElementById('btnFormat').addEventListener('click', () => {
+  if (!validateJson()) return;
+  try {
+    const pretty = JSON.stringify(JSON.parse(jsonEditor.value), null, 2);
+    jsonEditor.value = pretty;
+    if (currentSym) { jsonCache[currentSym].current = pretty; dirty.add(currentSym); }
+    validateJson();
+  } catch(e) {}
+});
+
+document.getElementById('btnRevert').addEventListener('click', () => {
+  if (!currentSym || !jsonCache[currentSym]) return;
+  if (!confirm(`¿Revertir ${currentSym}.json a la versión del disco?`)) return;
+  jsonCache[currentSym].current = jsonCache[currentSym].original;
+  jsonEditor.value = jsonCache[currentSym].original;
+  dirty.delete(currentSym);
+  validateJson();
+  updateSidebarItem(currentSym);
+  toast('Revertido', 'ok');
+});
+
+// ── Panel de extensión / patch ────────────────────────────────────────────────
+const extPanel = document.getElementById('extPanel');
+const extInput = document.getElementById('extInput');
+const extPreview = document.getElementById('extPreview');
+
+document.getElementById('btnToggleExt').addEventListener('click', () => {
+  extPanel.classList.toggle('open');
+  if (extPanel.classList.contains('open')) extInput.focus();
+});
+
+document.getElementById('btnCancelExt').addEventListener('click', () => {
+  extPanel.classList.remove('open');
+  extInput.value = '';
+  extPreview.textContent = '';
+  extPreview.className = 'ext-preview';
+});
+
+extInput.addEventListener('input', () => {
+  const val = extInput.value.trim();
+  if (!val) { extPreview.textContent = ''; extPreview.className = 'ext-preview'; return; }
+  try {
+    const patch = JSON.parse(val);
+    const keys  = flatKeys(patch);
+    extPreview.textContent = `✓ Patch válido — ${keys.length} campo(s): ${keys.slice(0,5).join(', ')}${keys.length > 5 ? '…' : ''}`;
+    extPreview.className = 'ext-preview ok';
+  } catch(err) {
+    extPreview.textContent = '✗ ' + err.message;
+    extPreview.className = 'ext-preview err';
+  }
+});
+
+function flatKeys(obj, prefix = '') {
+  let keys = [];
+  for (const k of Object.keys(obj)) {
+    const full = prefix ? `${prefix}.${k}` : k;
+    if (typeof obj[k] === 'object' && obj[k] !== null && !Array.isArray(obj[k])) {
+      keys = keys.concat(flatKeys(obj[k], full));
+    } else {
+      keys.push(full);
+    }
+  }
+  return keys;
+}
+
+function deepMerge(target, patch) {
+  const result = { ...target };
+  for (const key of Object.keys(patch)) {
+    if (patch[key] !== null && typeof patch[key] === 'object' && !Array.isArray(patch[key])
+        && typeof result[key] === 'object' && result[key] !== null && !Array.isArray(result[key])) {
+      result[key] = deepMerge(result[key], patch[key]);
+    } else {
+      result[key] = patch[key];
+    }
+  }
+  return result;
+}
+
+document.getElementById('btnApplyExt').addEventListener('click', () => {
+  if (!currentSym || !jsonCache[currentSym]) { toast('Sin elemento seleccionado', 'err'); return; }
+  try {
+    const current = JSON.parse(jsonCache[currentSym].current);
+    const patch   = JSON.parse(extInput.value);
+    const merged  = deepMerge(current, patch);
+    const pretty  = JSON.stringify(merged, null, 2);
+    jsonCache[currentSym].current = pretty;
+    jsonEditor.value = pretty;
+    dirty.add(currentSym);
+    validateJson();
+    updateSidebarItem(currentSym);
+    extPanel.classList.remove('open');
+    extInput.value = '';
+    extPreview.textContent = '';
+    extPreview.className = 'ext-preview';
+    toast(`Patch aplicado — ${flatKeys(patch).length} campo(s)`, 'ok');
+  } catch(err) {
+    toast('Error: ' + err.message, 'err');
+  }
+});
+
+// ── Chips de material ─────────────────────────────────────────────────────────
+document.getElementById('matChips').addEventListener('click', e => {
+  const chip = e.target.closest('.chip');
+  if (!chip) return;
+  document.querySelectorAll('.chip').forEach(c => c.classList.remove('sel'));
+  chip.classList.add('sel');
+  document.getElementById('fMaterial').value = chip.dataset.v;
+});
+
+// ── Guardar ───────────────────────────────────────────────────────────────────
+document.getElementById('btnSave').addEventListener('click', () => saveCurrent());
+
+async function saveCurrent() {
+  if (!currentSym || !fileMap[currentSym]) return;
+
+  // Recoger cambios del formulario si el tab activo es editorial
+  const activeTab = document.querySelector('.tab.active')?.dataset.tab;
+  if (activeTab === 'editorial') {
+    const updated = collectFormChanges();
+    if (updated) {
+      jsonCache[currentSym].current = updated;
+      jsonEditor.value = updated;
+    }
+  }
+
+  if (!validateJson()) { toast('JSON inválido — no se puede guardar', 'err'); return; }
+
+  try {
+    const writable = await fileMap[currentSym].createWritable();
+    await writable.write(jsonCache[currentSym].current);
+    await writable.close();
+    jsonCache[currentSym].original = jsonCache[currentSym].current;
+    dirty.delete(currentSym);
+    updateSidebarItem(currentSym);
+    toast(`${currentSym}.json guardado`, 'ok');
+    buildSidebar(document.getElementById('sbSearch').value);
+  } catch(err) {
+    toast('Error al guardar: ' + err.message, 'err');
+  }
+}
+
+document.getElementById('btnSaveAll').addEventListener('click', async () => {
+  if (dirty.size === 0) { toast('Sin cambios pendientes', 'ok'); return; }
+  let ok = 0, fail = 0;
+  for (const sym of dirty) {
+    try {
+      if (!fileMap[sym]) continue;
+      const writable = await fileMap[sym].createWritable();
+      await writable.write(jsonCache[sym].current);
+      await writable.close();
+      jsonCache[sym].original = jsonCache[sym].current;
+      ok++;
+    } catch(e) { fail++; }
+  }
+  dirty.clear();
+  buildSidebar(document.getElementById('sbSearch').value);
+  toast(`${ok} guardados${fail ? ` · ${fail} errores` : ''}`, fail ? 'err' : 'ok');
+});
+
+// ── Descargar ─────────────────────────────────────────────────────────────────
+document.getElementById('btnDownload').addEventListener('click', () => {
+  if (!currentSym || !jsonCache[currentSym]) return;
+  const blob = new Blob([jsonCache[currentSym].current], { type: 'application/json' });
+  const url  = URL.createObjectURL(blob);
+  const a    = document.createElement('a');
+  a.href = url; a.download = `${currentSym}.json`;
+  a.click(); URL.revokeObjectURL(url);
+});
+
+// ── Navegación prev/next ──────────────────────────────────────────────────────
+document.getElementById('btnPrev').addEventListener('click', () => navigate(-1));
+document.getElementById('btnNext').addEventListener('click', () => navigate(+1));
+
+function navigate(dir) {
+  const next = currentIdx + dir;
+  if (next < 0 || next >= ELEMENTS.length) return;
+  selectElement(ELEMENTS[next].sym, next);
+}
+
+document.addEventListener('keydown', e => {
+  if (document.activeElement === jsonEditor || document.activeElement === extInput) return;
+  if (e.key === 'ArrowDown' || e.key === 'ArrowRight') { e.preventDefault(); navigate(+1); }
+  if (e.key === 'ArrowUp'   || e.key === 'ArrowLeft')  { e.preventDefault(); navigate(-1); }
+  if ((e.ctrlKey || e.metaKey) && e.key === 's')       { e.preventDefault(); saveCurrent(); }
+});
+
+// ── Helpers ───────────────────────────────────────────────────────────────────
+function updateSidebarItem(sym) {
+  const el = document.getElementById(`ei-${sym}`);
+  if (!el) return;
+  const isDirty = dirty.has(sym);
+  el.classList.toggle('has-file', true);
+  el.classList.toggle('no-file', false);
+  const s = el.querySelector('.ei-s');
+  if (s) s.textContent = isDirty ? '✎' : '✓';
+}
+
+function toast(msg, type = 'ok') {
+  const t = document.getElementById('toast');
+  t.textContent = msg;
+  t.className = `toast show ${type}`;
+  clearTimeout(t._timer);
+  t._timer = setTimeout(() => t.classList.remove('show'), 2400);
+}
+
+function setMsg(m) { document.getElementById('msg').textContent = m; }
+
+// ── Init ──────────────────────────────────────────────────────────────────────
+buildSidebar();
+selectElement('H', 0);
+</script>
+</body>
+</html>

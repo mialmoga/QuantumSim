@@ -1,0 +1,48 @@
+{
+  "symbol": "Br",
+  "generated_by": "generate_materials.py v1.2 (Stevens perceptual)",
+  "source_props": {
+    "mass": 79.904,
+    "melt_K": 265.8,
+    "density": 3.1028,
+    "ionization_eV": 11.8138,
+    "electronegativity": 2.96,
+    "polarizability": 3.1,
+    "standard_state": "Solid"
+  },
+  "shader_params": {
+    "sphere_pulse": {
+      "freq": 1.119,
+      "amp": 0.4
+    },
+    "blink": {
+      "amp": 0.0,
+      "speed": 0.336
+    },
+    "brightness": {
+      "bright": 1.73,
+      "base": 0.3,
+      "vari": 0.0
+    },
+    "disc_shape": {
+      "soft": 0.174,
+      "radius": 0.22,
+      "ring": 0.0
+    },
+    "point_size": {
+      "sz": 0.312,
+      "bAmp": 0.0,
+      "persp": 60.7
+    },
+    "alpha_curve": {
+      "opacity": 0.847,
+      "curve": 1.076,
+      "floor": 0.0
+    },
+    "color": {
+      "r": 0.6275,
+      "g": 0.251,
+      "b": 0.1255
+    }
+  }
+}

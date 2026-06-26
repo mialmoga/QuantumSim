@@ -1,0 +1,40 @@
+{
+  "id": "glow",
+  "name": "Glow",
+  "stage": "frag",
+  "target": [
+    "orbital",
+    "sphere"
+  ],
+  "color": "#fbbf24",
+  "desc": "Halo exponencial desde el centro del punto",
+  "sub": "col += exp(-d\u00b7falloff) \u00b7 intensity",
+  "params": {
+    "intensity": {
+      "label": "Intensidad",
+      "min": 0.0,
+      "max": 4.0,
+      "step": 0.1,
+      "val": 0.2
+    },
+    "falloff": {
+      "label": "Ca\u00edda",
+      "min": 1.0,
+      "max": 30.0,
+      "step": 0.5,
+      "val": 6.0
+    },
+    "mix": {
+      "label": "Mix",
+      "min": 0.0,
+      "max": 1.0,
+      "step": 0.01,
+      "val": 0.15
+    }
+  },
+  "glsl": "{float _gf=exp(-d*{{falloff}})*{{intensity}};col=mix(col,col*2.5,_gf*{{mix}});}",
+  "requires": [
+    "disc_shape"
+  ],
+  "provides": []
+}

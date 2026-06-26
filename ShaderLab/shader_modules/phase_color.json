@@ -1,0 +1,40 @@
+{
+  "id": "phase_color",
+  "name": "Phase Color",
+  "stage": "frag",
+  "target": [
+    "orbital",
+    "sphere"
+  ],
+  "color": "#4ade80",
+  "desc": "Colorea seg\u00fan distancia radial al n\u00facleo (vPhase)",
+  "sub": "col *= mix(inner, outer, phase^pow)",
+  "params": {
+    "inner": {
+      "label": "Inner boost",
+      "min": 0.5,
+      "max": 4.0,
+      "step": 0.05,
+      "val": 1.2
+    },
+    "outer": {
+      "label": "Outer fade",
+      "min": 0.0,
+      "max": 1.0,
+      "step": 0.01,
+      "val": 0.4
+    },
+    "pow": {
+      "label": "Power",
+      "min": 0.2,
+      "max": 3.0,
+      "step": 0.05,
+      "val": 1.0
+    }
+  },
+  "glsl": "{float _pw=pow(clamp(vPhase,0.0,1.0),{{pow}});col*=mix({{inner}},{{outer}},_pw);}",
+  "requires": [
+    "brightness"
+  ],
+  "provides": []
+}

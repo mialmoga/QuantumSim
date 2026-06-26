@@ -1,0 +1,139 @@
+{
+  "symbol": "Si",
+  "identity": {
+    "name_es": "Silicio",
+    "name_eng": "Silicon",
+    "number": 14,
+    "category_es": "Metaloide",
+    "category_eng": "Metalloid",
+    "color": "0x788090",
+    "cpk_color": "0xF0C8A0",
+    "discovery_year": "1823"
+  },
+  "physical_properties": {
+    "mass": 28.085,
+    "density_g_cm3": 2.329,
+    "standard_state_es": "Sólido",
+    "standard_state_eng": "Solid",
+    "melt_K": 1687,
+    "boil_K": 3538,
+    "allotropes_es": [
+      "Silicio cristalino",
+      "Silicio amorfo"
+    ],
+    "allotropes_eng": [
+      "Crystalline silicon",
+      "Amorphous silicon"
+    ],
+    "lattice_structure": "diamond_cubic"
+  },
+  "atomic_structure": {
+    "electronegativity": 1.9,
+    "valence": 4,
+    "ionization_energy_eV": 8.1517,
+    "electron_affinity_ev": 1.385,
+    "electron_affinity_kj_mol": 133.6,
+    "radius_atomic_pm": 111,
+    "radius_covalent_pm": 111,
+    "vanderwaals_radius_pm": 210,
+    "ionic_radius_pm": 40,
+    "effective_nuclear_charge": 4.285,
+    "electron_configuration_string": "1s2 2s2 2p6 3s2 3p2",
+    "shells": [
+      2,
+      8,
+      4
+    ],
+    "quantum_numbers": {
+      "s": 2,
+      "p": 2,
+      "d": 0,
+      "f": 0
+    },
+    "work_function_ev": 4.85
+  },
+  "thermodynamics": {
+    "enthalpy_formation_kj_mol": 0,
+    "entropy_j_molk": 18.8,
+    "heat_capacity_j_molk": 19.789,
+    "specific_heat_j_gK": 0.705,
+    "latent_heat_fusion_kj_mol": 50.2,
+    "latent_heat_vaporization_kj_mol": 384,
+    "fusion_heat_kj_mol": 50.21,
+    "evaporation_heat_kj_mol": 359
+  },
+  "kinetics_and_phase": {
+    "vapor_pressure_constants": {
+      "A": 5.195,
+      "B": 20960,
+      "C": -10
+    },
+    "vapor_pressure_pa": null,
+    "viscosity_liquid_pas": 0.00088,
+    "viscosity_pa_s": null,
+    "critical_temp_K": 5193,
+    "critical_press_MPa": null,
+    "surface_tension_nm": 0.736
+  },
+  "electromagnetism_and_mechanics": {
+    "thermal_conductivity_wmk": 149,
+    "electrical_conductivity_sm": 0.001,
+    "magnetic_susceptibility": -3.9e-06,
+    "thermal_expansion_coefficient": 2.6e-06,
+    "polarizability_angstrom3": 5.4,
+    "refractive_index": 3.419,
+    "youngs_modulus_gba": 130,
+    "poisson_ratio": 0.22,
+    "brinell_hardness_m_pa": null
+  },
+  "reactivity": {
+    "max_bonds": 4,
+    "geometry_preference_es": "Tetraédrica",
+    "geometry_preference_eng": "Tetrahedral",
+    "ideal_bond_angle": 109.5,
+    "bond_energy_ev": 4.7,
+    "dissociation_energy_kj_mol": 452,
+    "standard_potential_v": -0.91,
+    "oxidation_states": [
+      4,
+      -4
+    ],
+    "common_ions": [
+      "SiO4 4-"
+    ]
+  },
+  "nuclear_and_environmental": {
+    "isotopes": [
+      {
+        "mass": 27.976,
+        "abundance": 92.22,
+        "stable": true,
+        "name_es": "Silicio-28",
+        "name_eng": "Silicon-28"
+      },
+      {
+        "mass": 28.976,
+        "abundance": 4.69,
+        "stable": true,
+        "name_es": "Silicio-29",
+        "name_eng": "Silicon-29"
+      },
+      {
+        "mass": 29.973,
+        "abundance": 3.09,
+        "stable": true,
+        "name_es": "Silicio-30",
+        "name_eng": "Silicon-30"
+      }
+    ],
+    "neutron_cross_section_barns": 0.171,
+    "nuclear_binding_energy_mev": 8.447,
+    "abundance_crust_mg_kg": 282000,
+    "toxicity_level": 0
+  },
+  "cryogenic_data": {
+    "critical_solidification_pressure_mpa": null,
+    "lambda_point_k": null,
+    "superfluid_viscosity_pas": null
+  }
+}
