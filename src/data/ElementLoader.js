@@ -30,8 +30,8 @@
  */
 
 // Ruta base — relativa a /src/
-const INDEX_PATH = '/src/elements-index.json';
-const BASE_PATH  = '/src/';
+const INDEX_PATH = './src/elements-index.json';
+const BASE_PATH  = './src/';
 
 class _ElementLoader {
 
