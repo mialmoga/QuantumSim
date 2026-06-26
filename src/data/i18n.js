@@ -47,7 +47,7 @@ export async function setLanguage(lang) {
     const target = LANGUAGES[lang] ? lang : 'es';
 
     try {
-        const response = await fetch(`/src/i18n/${target}.json`);
+        const response = await fetch(`./src/i18n/${target}.json`);
         if (!response.ok) throw new Error(`HTTP ${response.status}`);
         _strings = await response.json();
         _currentLang = target;
