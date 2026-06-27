@@ -48,6 +48,8 @@ header {
   position: relative;
 }
 .logo span { color: var(--text3); font-weight: 400; }
+.logo a { color: var(--accent); text-decoration: none; font-weight: 700; }
+.logo a:hover { text-decoration: none; opacity: .75; }
 
 /* Botón Dev — discreto sobre el ícono ⚗, igual que el reload del sim */
 .dev-tab {
