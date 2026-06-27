@@ -22,7 +22,7 @@
  *   gc.stop();
  */
 
-const MEDIAPIPE_BASE = '../components/mediapipe';
+const MEDIAPIPE_BASE = '/QuantumSim/components/mediapipe';
 const SMOOTH_FACTOR  = 0.4;
 
 export class GestureController extends EventTarget {
