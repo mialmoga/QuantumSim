@@ -16,9 +16,12 @@
  */
 
 import * as THREE          from 'three';
-import { OrbitalCache }    from '../../src/renderer/OrbitalCache.js';
-import { ElementLoader }   from '../../src/data/ElementLoader.js';
+import { OrbitalCache }    from '../src/renderer/OrbitalCache.js';
+import { ElementLoader }   from '../src/data/ElementLoader.js';
 import { makeUniforms, SHADER_INTERFACE } from './compiler.js';
+
+// ShaderLab vive un nivel más profundo que la raíz — ajustar ruta del cache
+OrbitalCache.setCacheBase('../src/orbital_cache');
 
 // Misma constante que QuantumRenderer — escala unificada
 const TARGET_WU = 100;

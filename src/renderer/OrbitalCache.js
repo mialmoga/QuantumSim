@@ -25,7 +25,7 @@
 import * as THREE from 'three';
 
 // ── Rutas ─────────────────────────────────────────────────────────────────────
-const CACHE_BASE = './src/orbital_cache';  // carpeta orbital_cache/ en el servidor
+let CACHE_BASE = './src/orbital_cache';  // relativo al HTML que carga la app
 
 // ── Helpers ───────────────────────────────────────────────────────────────────
 const L_LABELS = { 0: 's', 1: 'p', 2: 'd', 3: 'f' };
@@ -77,6 +77,9 @@ class _OrbitalCache {
         this._resolution    = 'standard';
         this._maxPts        = 5_000;
     }
+
+    /** Cambia la ruta base del cache — llamar antes de cualquier load. */
+    setCacheBase(path) { CACHE_BASE = path; }
 
     // ══════════════════════════════════════════════════════════════════════
     //  MOLECULAR ORBITAL ATLAS
