@@ -1,7 +1,7 @@
 {
   "format_version": "1.0",
   "mode": "atlas",
-  "description": "Formas canonicas normalizadas a radio unitario. Escalar por r_sample_pm del elemento.",
+  "description": "Formas canónicas normalizadas a radio unitario. Escalar por r_sample_pm del elemento.",
   "total_forms": 39,
   "points_per_form": 30000,
   "bake_time_s": 3.5,
