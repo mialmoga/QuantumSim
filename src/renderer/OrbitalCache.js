@@ -25,7 +25,7 @@
 import * as THREE from 'three';
 
 // ── Rutas ─────────────────────────────────────────────────────────────────────
-const CACHE_BASE = './src/orbital_cache';
+const CACHE_BASE = '../src/orbital_cache';
 
 // ── Helpers ───────────────────────────────────────────────────────────────────
 const L_LABELS = { 0: 's', 1: 'p', 2: 'd', 3: 'f' };
