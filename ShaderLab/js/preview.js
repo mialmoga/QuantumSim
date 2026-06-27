@@ -15,7 +15,7 @@
  *   - disposeElement() libera GPU al cambiar elemento
  */
 
-import * as THREE from '/lib/three/build/three.module.js';
+import * as THREE          from 'three';
 import { OrbitalCache }    from '../../src/renderer/OrbitalCache.js';
 import { ElementLoader }   from '../../src/data/ElementLoader.js';
 import { makeUniforms, SHADER_INTERFACE } from './compiler.js';
