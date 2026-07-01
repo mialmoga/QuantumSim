@@ -1130,6 +1130,7 @@ async function init() {
             _ensureProfile(_panelSym).tuning = _ensureProfile(_panelSym).tuning ?? {};
             _ensureProfile(_panelSym).tuning.global = { ..._ensureProfile(_panelSym).tuning.global, size: v };
         });
+        window.QSim = { world, qr, pool, joystick, DevConsole, SoundEngine, gesture };
         DevConsole.sys('window.QSim ✅');
         SessionSetup.set(t('app.ready'), '', 100);
 

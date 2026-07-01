@@ -8,7 +8,18 @@
         body { margin: 0; overflow: hidden; background-color: #050a0f; }
         canvas { display: block; }
     </style>
+
     <script type="importmap">
+    {
+        "imports": {
+            "three": "https://cdn.jsdelivr.net/npm/three@0.185.0/build/three.module.js",
+            "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.185.0/examples/jsm/",
+            "three/webgpu":   "https://cdn.jsdelivr.net/npm/three@0.185.0/build/three.webgpu.js",
+            "three/tsl":      "https://cdn.jsdelivr.net/npm/three@0.185.0/build/three.tsl.js"
+        }
+    }
+    </script>
+    <!--<script type="importmap">
     {
       "imports": {
         "three":          "/lib/three/build/three.module.js",
@@ -17,7 +28,7 @@
         "three/tsl":      "/lib/three/build/three.tsl.js"
       }
     }
-    </script>
+    </script>-->
 </head>
 <body>
     <script type="module">
